@@ -1,0 +1,33 @@
+{
+  "categoria": "Emergência",
+  "questoes": [
+    {
+      "pergunta": "Qual o principal agente da bronquiolite viral aguda no lactente?",
+      "opcoes": [
+        "Influenza",
+        "Vírus sincicial respiratório (VSR)",
+        "Adenovírus",
+        "Rinovírus"
+      ],
+      "correta": 1,
+      "explicacao": "O vírus sincicial respiratório (VSR) é a causa mais comum de bronquiolite em lactentes."
+    },
+    {
+      "pergunta": "A crise febril típica ocorre caracteristicamente em qual faixa etária?",
+      "opcoes": [
+        "0 a 3 meses",
+        "6 meses a 5 anos",
+        "5 a 10 anos",
+        "Acima de 10 anos"
+      ],
+      "correta": 1,
+      "explicacao": "A crise febril típica ocorre entre 6 meses e 5 anos, com pico por volta dos 18 meses."
+    },
+    {
+      "pergunta": "Na diarreia aguda do lactente, qual a principal complicação a ser prevenida?",
+      "opcoes": ["Desidratação", "Anemia", "Hipertensão", "Obesidade"],
+      "correta": 0,
+      "explicacao": "A desidratação é o maior risco. A hidratação oral com sais de reidratação é a base do tratamento."
+    }
+  ]
+}

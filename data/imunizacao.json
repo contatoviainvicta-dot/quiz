@@ -1,0 +1,22 @@
+{
+  "categoria": "Imunização",
+  "questoes": [
+    {
+      "pergunta": "Quais vacinas são aplicadas ao nascimento no calendário do PNI (Brasil)?",
+      "opcoes": [
+        "BCG e Hepatite B",
+        "Tríplice viral e VIP",
+        "Pentavalente e Rotavírus",
+        "Meningocócica C e Pneumocócica"
+      ],
+      "correta": 0,
+      "explicacao": "Ao nascer aplicam-se BCG (dose única) e a 1ª dose de Hepatite B, idealmente nas primeiras 12 a 24 horas de vida."
+    },
+    {
+      "pergunta": "A vacina BCG protege principalmente contra as formas graves de qual doença?",
+      "opcoes": ["Coqueluche", "Tuberculose", "Difteria", "Hepatite"],
+      "correta": 1,
+      "explicacao": "A BCG protege contra as formas graves da tuberculose, como a tuberculose miliar e a meningite tuberculosa."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "categoria": "Farmacologia",
+  "questoes": [
+    {
+      "pergunta": "Qual a dose usual de paracetamol para analgesia/antitermia em pediatria, por dose?",
+      "opcoes": [
+        "1 a 3 mg/kg",
+        "10 a 15 mg/kg",
+        "30 a 50 mg/kg",
+        "Dose fixa de 500 mg"
+      ],
+      "correta": 1,
+      "explicacao": "A dose usual é de 10 a 15 mg/kg por dose, a cada 4 a 6 horas, respeitando o teto diário. Sempre confira o protocolo local."
+    }
+  ]
+}

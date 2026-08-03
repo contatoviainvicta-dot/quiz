@@ -1,0 +1,11 @@
+{
+  "categoria": "Aleitamento",
+  "questoes": [
+    {
+      "pergunta": "Até que idade se recomenda o aleitamento materno exclusivo?",
+      "opcoes": ["3 meses", "4 meses", "6 meses", "12 meses"],
+      "correta": 2,
+      "explicacao": "Recomenda-se aleitamento materno exclusivo até os 6 meses e complementado até 2 anos ou mais."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "categoria": "Desenvolvimento",
+  "questoes": [
+    {
+      "pergunta": "Por volta de que idade surge o sorriso social?",
+      "opcoes": ["Ao nascer", "2 meses", "6 meses", "12 meses"],
+      "correta": 1,
+      "explicacao": "O sorriso social costuma aparecer por volta de 2 meses (entre 6 e 8 semanas)."
+    },
+    {
+      "pergunta": "Qual a idade média em que a criança senta sem apoio?",
+      "opcoes": ["3 meses", "6 meses", "9 meses", "12 meses"],
+      "correta": 1,
+      "explicacao": "Sentar sem apoio ocorre em média aos 6 meses."
+    },
+    {
+      "pergunta": "Qual a idade média para a marcha sem apoio?",
+      "opcoes": ["9 meses", "12 meses", "18 meses", "24 meses"],
+      "correta": 1,
+      "explicacao": "A marcha independente surge em média aos 12 meses, com faixa de normalidade entre 9 e 15 meses."
+    }
+  ]
+}

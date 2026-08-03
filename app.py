@@ -302,13 +302,17 @@ if not st.session_state.iniciado:
         disponiveis = len(
             [q for q in QUESTOES if categoria == "Todas" or q["categoria"] == categoria]
         )
-        maximo = max(3, disponiveis)
-        quantidade = st.slider(
-            "Número de questões",
-            min_value=3,
-            max_value=maximo,
-            value=min(5, maximo),
-        )
+        if disponiveis <= 1:
+            # Com uma única questão, o slider não faz sentido (min == max).
+            quantidade = disponiveis
+            st.caption(f"Este tema tem {disponiveis} questão disponível.")
+        else:
+            quantidade = st.slider(
+                "Número de questões",
+                min_value=1,
+                max_value=disponiveis,
+                value=min(5, disponiveis),
+            )
 
         if st.button("Começar", type="primary", use_container_width=True):
             st.session_state.quiz = preparar_quiz(categoria, quantidade)

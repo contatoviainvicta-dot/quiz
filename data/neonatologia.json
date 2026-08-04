@@ -252,11 +252,6 @@
       "explicacao": "É mais frequente em prematuros, especialmente de muito baixo peso, e se relaciona à imaturidade intestinal e à alimentação."
     }
   ]
-}
-
-{
-  "categoria": "Neonatologia",
-  "questoes": [
     {
       "pergunta": "A encefalopatia bilirrubínica (kernicterus) resulta do depósito, em núcleos da base, de:",
       "opcoes": [
@@ -510,13 +505,6 @@
       ],
       "correta": 0,
       "explicacao": "A vérnix caseosa protege a pele do RN e auxilia na termorregulação e na barreira contra infecções nos primeiros momentos de vida."
-    }
-  ]
-}
-
-{
-  "categoria": "Neonatologia",
-  "questoes": [
     {
       "pergunta": "A fontanela anterior (bregmática) normalmente se fecha entre:",
       "opcoes": [
@@ -781,13 +769,7 @@
       ],
       "correta": 0,
       "explicacao": "No RN, as crises costumam ser sutis: desvio ocular, movimentos de sucção, pedalar ou apneia, exigindo atenção para o reconhecimento."
-    }
-  ]
-}
-
-{
-  "categoria": "Neonatologia",
-  "questoes": [
+  
     {
       "pergunta": "O colostro, primeiro leite produzido pela mãe, é especialmente rico em:",
       "opcoes": [

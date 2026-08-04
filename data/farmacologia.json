@@ -2,15 +2,1093 @@
   "categoria": "Farmacologia",
   "questoes": [
     {
-      "pergunta": "Qual a dose usual de paracetamol para analgesia/antitermia em pediatria, por dose?",
+      "pergunta": "Em pediatria, as doses dos medicamentos são, em geral, calculadas com base em:",
       "opcoes": [
-        "1 a 3 mg/kg",
-        "10 a 15 mg/kg",
-        "30 a 50 mg/kg",
-        "Dose fixa de 500 mg"
+        "Dose fixa de adulto",
+        "Altura apenas",
+        "Idade em anos apenas",
+        "Peso corporal (mg/kg)"
+      ],
+      "correta": 3,
+      "explicacao": "Na criança, a maioria das doses é ajustada pelo peso (mg/kg), respeitando o teto da dose de adulto."
+    },
+    {
+      "pergunta": "Em relação à farmacologia, a criança:",
+      "opcoes": [
+        "Não precisa de ajuste de dose",
+        "Responde igual ao adulto",
+        "Não é um 'adulto em miniatura', tendo particularidades farmacocinéticas",
+        "Metaboliza tudo mais rápido que o adulto"
+      ],
+      "correta": 2,
+      "explicacao": "A criança tem diferenças de absorção, distribuição, metabolismo e excreção; não deve ser tratada como adulto pequeno."
+    },
+    {
+      "pergunta": "No recém-nascido, o metabolismo hepático de fármacos costuma ser:",
+      "opcoes": [
+        "Imaturo/reduzido",
+        "Ausente por completo",
+        "Mais rápido que no adulto",
+        "Idêntico ao do adulto"
+      ],
+      "correta": 0,
+      "explicacao": "A imaturidade das enzimas hepáticas no neonato reduz o metabolismo de vários fármacos, exigindo cautela."
+    },
+    {
+      "pergunta": "No recém-nascido, a função renal (excreção de fármacos) é:",
+      "opcoes": [
+        "Sempre normal",
+        "Reduzida/imatura",
+        "Superior à do adulto",
+        "Irrelevante para as doses"
       ],
       "correta": 1,
-      "explicacao": "A dose usual é de 10 a 15 mg/kg por dose, a cada 4 a 6 horas, respeitando o teto diário. Sempre confira o protocolo local."
+      "explicacao": "A filtração glomerular é reduzida no neonato, diminuindo a excreção renal de fármacos e seus metabólitos."
+    },
+    {
+      "pergunta": "A maior proporção de água corporal no lactente influencia principalmente:",
+      "opcoes": [
+        "A cor do fármaco",
+        "A validade do produto",
+        "O sabor do medicamento",
+        "O volume de distribuição de fármacos hidrossolúveis"
+      ],
+      "correta": 3,
+      "explicacao": "O maior conteúdo de água altera o volume de distribuição, sobretudo de fármacos hidrossolúveis."
+    },
+    {
+      "pergunta": "Fármacos com janela terapêutica estreita (ex.: aminoglicosídeos, digoxina) exigem:",
+      "opcoes": [
+        "Suspensão imediata sempre",
+        "Monitorização cuidadosa",
+        "Uso sem controle",
+        "Doses aleatórias"
+      ],
+      "correta": 1,
+      "explicacao": "A janela terapêutica estreita aproxima a dose eficaz da tóxica, exigindo monitorização (clínica e, às vezes, de níveis)."
+    },
+    {
+      "pergunta": "Alguns fármacos, como certos quimioterápicos, têm a dose calculada por:",
+      "opcoes": [
+        "Idade gestacional",
+        "Número de dentes",
+        "Perímetro cefálico",
+        "Superfície corporal"
+      ],
+      "correta": 3,
+      "explicacao": "Determinados fármacos, como quimioterápicos, são dosados pela superfície corporal (m²)."
+    },
+    {
+      "pergunta": "As formulações mais usadas em pediatria, que facilitam o ajuste por peso, são:",
+      "opcoes": [
+        "Somente injetáveis",
+        "Supositórios exclusivamente",
+        "Apenas comprimidos grandes",
+        "Suspensões e gotas"
+      ],
+      "correta": 3,
+      "explicacao": "Suspensões e gotas permitem ajustar o volume à dose por peso da criança."
+    },
+    {
+      "pergunta": "O uso 'off-label' de medicamentos em pediatria:",
+      "opcoes": [
+        "É proibido em qualquer situação",
+        "Significa uso vencido",
+        "É relativamente comum, por falta de estudos específicos na faixa etária",
+        "Não existe"
+      ],
+      "correta": 2,
+      "explicacao": "Muitos fármacos têm poucos estudos em crianças, tornando o uso off-label frequente, sob avaliação criteriosa."
+    },
+    {
+      "pergunta": "Uma medida para reduzir erros de dose em pediatria é:",
+      "opcoes": [
+        "Usar a dose do adulto sempre",
+        "Dupla conferência do cálculo por peso",
+        "Arredondar para cima livremente",
+        "Estimar a dose de cabeça"
+      ],
+      "correta": 1,
+      "explicacao": "Como a dose é calculada por peso, a dupla checagem reduz erros, especialmente em medicamentos de alto risco."
+    },
+    {
+      "pergunta": "Ao calcular a dose por peso, deve-se atentar para:",
+      "opcoes": [
+        "Usar o dobro do teto do adulto",
+        "Não ultrapassar a dose máxima (teto) recomendada",
+        "Sempre dobrar a dose",
+        "Ignorar o peso real"
+      ],
+      "correta": 1,
+      "explicacao": "A dose por peso não deve exceder a dose máxima recomendada (geralmente a dose de adulto)."
+    },
+    {
+      "pergunta": "O principal risco da superdosagem de paracetamol é:",
+      "opcoes": [
+        "Hiperglicemia",
+        "Surdez",
+        "Hepatotoxicidade",
+        "Insuficiência renal isolada"
+      ],
+      "correta": 2,
+      "explicacao": "A superdosagem de paracetamol pode causar lesão hepática grave (hepatotoxicidade)."
+    },
+    {
+      "pergunta": "O antídoto na intoxicação por paracetamol é:",
+      "opcoes": [
+        "Flumazenil",
+        "Atropina",
+        "N-acetilcisteína",
+        "Naloxona"
+      ],
+      "correta": 2,
+      "explicacao": "A N-acetilcisteína repõe glutationa e é o antídoto da intoxicação por paracetamol."
+    },
+    {
+      "pergunta": "O ibuprofeno pertence a qual classe?",
+      "opcoes": [
+        "Opioide",
+        "Antibiótico",
+        "Anti-inflamatório não esteroidal (AINE)",
+        "Corticoide"
+      ],
+      "correta": 2,
+      "explicacao": "O ibuprofeno é um AINE, com ação analgésica, antitérmica e anti-inflamatória."
+    },
+    {
+      "pergunta": "O uso de AINEs exige precaução em crianças com:",
+      "opcoes": [
+        "Febre baixa isolada",
+        "Boa hidratação",
+        "Apetite preservado",
+        "Desidratação ou disfunção renal"
+      ],
+      "correta": 3,
+      "explicacao": "Os AINEs podem prejudicar a perfusão renal; há precaução em desidratação e disfunção renal."
+    },
+    {
+      "pergunta": "O ácido acetilsalicílico (AAS) deve ser EVITADO em crianças com quadro viral porque:",
+      "opcoes": [
+        "Causa hipoglicemia",
+        "Mancha os dentes",
+        "Não tem efeito antitérmico",
+        "Associa-se à síndrome de Reye"
+      ],
+      "correta": 3,
+      "explicacao": "O AAS em viroses (como varicela e influenza) associa-se à síndrome de Reye, uma encefalopatia com disfunção hepática."
+    },
+    {
+      "pergunta": "A síndrome de Reye está classicamente associada ao uso de:",
+      "opcoes": [
+        "Salbutamol",
+        "AAS durante infecções virais",
+        "Paracetamol",
+        "Amoxicilina"
+      ],
+      "correta": 1,
+      "explicacao": "A síndrome de Reye associa-se ao uso de AAS em crianças com infecções virais."
+    },
+    {
+      "pergunta": "A dipirona é utilizada principalmente como:",
+      "opcoes": [
+        "Analgésico e antitérmico",
+        "Broncodilatador",
+        "Antibiótico",
+        "Corticoide"
+      ],
+      "correta": 0,
+      "explicacao": "A dipirona é amplamente usada no Brasil como analgésico e antitérmico."
+    },
+    {
+      "pergunta": "Um efeito adverso gastrointestinal dos AINEs é:",
+      "opcoes": [
+        "Irritação gástrica",
+        "Melhora da mucosa gástrica",
+        "Constipação exclusiva",
+        "Aumento do apetite"
+      ],
+      "correta": 0,
+      "explicacao": "Os AINEs podem causar irritação gástrica e, em uso prolongado, lesões da mucosa."
+    },
+    {
+      "pergunta": "Um efeito adverso grave dos opioides é:",
+      "opcoes": [
+        "Depressão respiratória",
+        "Taquicardia intensa",
+        "Hipertensão grave",
+        "Diarreia"
+      ],
+      "correta": 0,
+      "explicacao": "A depressão respiratória é o efeito adverso mais temido dos opioides."
+    },
+    {
+      "pergunta": "Em relação à codeína em crianças, a recomendação atual é:",
+      "opcoes": [
+        "Usar apenas em recém-nascidos",
+        "Preferir à dipirona sempre",
+        "Evitar/contraindicar, pela metabolização imprevisível",
+        "Usar livremente"
+      ],
+      "correta": 2,
+      "explicacao": "A codeína é evitada/contraindicada em crianças pela variabilidade de metabolização e risco de toxicidade."
+    },
+    {
+      "pergunta": "Comparado ao ibuprofeno, o paracetamol:",
+      "opcoes": [
+        "É um AINE potente",
+        "Causa mais lesão gástrica",
+        "É um corticoide",
+        "Tem pouca ação anti-inflamatória"
+      ],
+      "correta": 3,
+      "explicacao": "O paracetamol é analgésico e antitérmico, mas tem ação anti-inflamatória mínima, diferente dos AINEs."
+    },
+    {
+      "pergunta": "A amoxicilina é frequentemente primeira escolha em:",
+      "opcoes": [
+        "Otite média aguda e pneumonia comunitária",
+        "Diarreia viral",
+        "Dermatite atópica",
+        "Infecções virais"
+      ],
+      "correta": 0,
+      "explicacao": "A amoxicilina é 1ª linha em várias infecções bacterianas comuns, como otite média e pneumonia comunitária."
+    },
+    {
+      "pergunta": "O mecanismo de ação das penicilinas é:",
+      "opcoes": [
+        "Bloquear ribossomos",
+        "Inibir a DNA-girase",
+        "Romper a membrana viral",
+        "Inibir a síntese da parede celular bacteriana"
+      ],
+      "correta": 3,
+      "explicacao": "As penicilinas (betalactâmicos) inibem a síntese da parede celular bacteriana."
+    },
+    {
+      "pergunta": "As tetraciclinas devem ser evitadas em menores de 8 anos porque:",
+      "opcoes": [
+        "Podem manchar os dentes em formação",
+        "Causam surdez",
+        "São inativas nessa idade",
+        "Reduzem o crescimento cerebral"
+      ],
+      "correta": 0,
+      "explicacao": "As tetraciclinas depositam-se em dentes e ossos em formação, podendo manchar os dentes; evitam-se abaixo de 8 anos."
+    },
+    {
+      "pergunta": "O cloranfenicol no recém-nascido pode causar:",
+      "opcoes": [
+        "Surdez imediata",
+        "Síndrome do bebê cinzento (gray baby)",
+        "Hiperglicemia",
+        "Manchas nos dentes"
+      ],
+      "correta": 1,
+      "explicacao": "A imaturidade hepática do neonato favorece o acúmulo de cloranfenicol, causando a síndrome do bebê cinzento."
+    },
+    {
+      "pergunta": "A ceftriaxona deve ser evitada no recém-nascido ictérico porque:",
+      "opcoes": [
+        "Causa manchas nos dentes",
+        "Desloca a bilirrubina, aumentando o risco de kernicterus",
+        "Reduz a glicemia",
+        "Não tem ação antibacteriana"
+      ],
+      "correta": 1,
+      "explicacao": "A ceftriaxona desloca a bilirrubina da albumina, aumentando o risco de kernicterus no neonato ictérico."
+    },
+    {
+      "pergunta": "Os aminoglicosídeos (ex.: gentamicina) têm como toxicidades importantes:",
+      "opcoes": [
+        "Hiperglicemia e obesidade",
+        "Nefrotoxicidade e ototoxicidade",
+        "Fotossensibilidade apenas",
+        "Hepatotoxicidade e cárie"
+      ],
+      "correta": 1,
+      "explicacao": "Os aminoglicosídeos podem causar lesão renal e do ouvido (nefro e ototoxicidade), exigindo monitorização."
+    },
+    {
+      "pergunta": "A infusão rápida de vancomicina pode causar:",
+      "opcoes": [
+        "Kernicterus",
+        "Síndrome do homem vermelho",
+        "Gray baby",
+        "Síndrome de Reye"
+      ],
+      "correta": 1,
+      "explicacao": "A infusão rápida de vancomicina pode causar rubor e prurido (síndrome do homem vermelho), por liberação de histamina."
+    },
+    {
+      "pergunta": "Os macrolídeos (ex.: azitromicina) são úteis como:",
+      "opcoes": [
+        "Alternativa em alérgicos à penicilina e no tratamento da coqueluche",
+        "Antivirais",
+        "Antifúngicos",
+        "Broncodilatadores"
+      ],
+      "correta": 0,
+      "explicacao": "Os macrolídeos são alternativa em alérgicos à penicilina e o tratamento de escolha na coqueluche."
+    },
+    {
+      "pergunta": "Diante de alergia à penicilina, uma conduta possível é:",
+      "opcoes": [
+        "Aumentar a dose da penicilina",
+        "Associar duas penicilinas",
+        "Utilizar um antibiótico de outra classe (ex.: macrolídeo)",
+        "Ignorar a alergia"
+      ],
+      "correta": 2,
+      "explicacao": "Na alergia à penicilina, escolhe-se um antibiótico alternativo apropriado, conforme a infecção."
+    },
+    {
+      "pergunta": "As cefalosporinas pertencem a qual grupo de antibióticos?",
+      "opcoes": [
+        "Betalactâmicos",
+        "Macrolídeos",
+        "Sulfonamidas",
+        "Aminoglicosídeos"
+      ],
+      "correta": 0,
+      "explicacao": "As cefalosporinas são betalactâmicos e agem na parede celular bacteriana."
+    },
+    {
+      "pergunta": "O uso indiscriminado de antibióticos contribui para:",
+      "opcoes": [
+        "A cura das viroses",
+        "A redução de alergias",
+        "O aumento da imunidade natural",
+        "A resistência bacteriana"
+      ],
+      "correta": 3,
+      "explicacao": "O uso inadequado de antibióticos seleciona bactérias resistentes, um problema de saúde pública."
+    },
+    {
+      "pergunta": "Os antibióticos NÃO são indicados para:",
+      "opcoes": [
+        "Pneumonia bacteriana",
+        "Infecções virais, como o resfriado comum",
+        "Otite média bacteriana",
+        "Infecção urinária bacteriana"
+      ],
+      "correta": 1,
+      "explicacao": "Antibióticos não tratam vírus; o resfriado comum, viral, não deve ser tratado com antibiótico."
+    },
+    {
+      "pergunta": "O metronidazol é utilizado no tratamento de:",
+      "opcoes": [
+        "Otite média",
+        "Giardíase e amebíase",
+        "Anemia ferropriva",
+        "Asma"
+      ],
+      "correta": 1,
+      "explicacao": "O metronidazol atua contra protozoários e anaeróbios, sendo usado na giardíase e na amebíase, entre outros."
+    },
+    {
+      "pergunta": "A penicilina benzatina é classicamente usada na:",
+      "opcoes": [
+        "Profilaxia da febre reumática",
+        "Anemia",
+        "Diarreia viral",
+        "Asma"
+      ],
+      "correta": 0,
+      "explicacao": "A penicilina benzatina é usada no tratamento de infecções estreptocócicas e na profilaxia da febre reumática."
+    },
+    {
+      "pergunta": "Completar todo o curso prescrito de antibiótico é importante para:",
+      "opcoes": [
+        "Reduzir a eficácia",
+        "Aumentar os efeitos adversos",
+        "Evitar recidiva e resistência",
+        "Encarecer o tratamento"
+      ],
+      "correta": 2,
+      "explicacao": "Interromper o antibiótico antes do fim favorece recidivas e a seleção de bactérias resistentes."
+    },
+    {
+      "pergunta": "A associação amoxicilina-clavulanato amplia a cobertura porque o clavulanato:",
+      "opcoes": [
+        "É um segundo antibiótico aminoglicosídeo",
+        "Aumenta a absorção da vitamina C",
+        "Reduz a febre",
+        "Inibe betalactamases bacterianas"
+      ],
+      "correta": 3,
+      "explicacao": "O ácido clavulânico inibe betalactamases, restaurando a ação da amoxicilina sobre bactérias produtoras dessas enzimas."
+    },
+    {
+      "pergunta": "O sulfametoxazol-trimetoprim deve ser usado com cautela no neonato porque:",
+      "opcoes": [
+        "Não tem ação antibacteriana",
+        "Causa surdez imediata",
+        "Pode deslocar a bilirrubina",
+        "Provoca hiperglicemia"
+      ],
+      "correta": 2,
+      "explicacao": "As sulfonamidas podem deslocar a bilirrubina, sendo usadas com cautela no recém-nascido pelo risco de kernicterus."
+    },
+    {
+      "pergunta": "Entre os efeitos adversos dos corticoides sistêmicos em uso prolongado está:",
+      "opcoes": [
+        "Hipoglicemia crônica",
+        "Ganho de estatura acelerado",
+        "Imunossupressão e déficit de crescimento",
+        "Redução do apetite sempre"
+      ],
+      "correta": 2,
+      "explicacao": "O uso prolongado de corticoides pode causar imunossupressão, síndrome de Cushing, déficit de crescimento, entre outros."
+    },
+    {
+      "pergunta": "O corticoide de uso crônico não deve ser suspenso abruptamente porque:",
+      "opcoes": [
+        "Há risco de insuficiência adrenal",
+        "Causa alergia",
+        "Aumenta a imunidade",
+        "Perde o efeito imediatamente"
+      ],
+      "correta": 0,
+      "explicacao": "A supressão do eixo adrenal pelo uso crônico exige retirada gradual, evitando insuficiência adrenal."
+    },
+    {
+      "pergunta": "Na asma, o corticoide inalado é uma medicação:",
+      "opcoes": [
+        "Broncodilatadora de curta ação",
+        "Antibiótica",
+        "Controladora (de manutenção)",
+        "De resgate imediato"
+      ],
+      "correta": 2,
+      "explicacao": "O corticoide inalado é a medicação controladora da asma, reduzindo a inflamação a longo prazo."
+    },
+    {
+      "pergunta": "A dexametasona é utilizada no crupe (laringite) porque:",
+      "opcoes": [
+        "Reduz o edema das vias aéreas",
+        "É um antibiótico",
+        "É broncodilatador",
+        "Trata a febre apenas"
+      ],
+      "correta": 0,
+      "explicacao": "O corticoide reduz o edema da via aérea no crupe, aliviando o estridor e o desconforto."
+    },
+    {
+      "pergunta": "Um efeito dos corticoides sobre o metabolismo da glicose é:",
+      "opcoes": [
+        "Nenhum efeito",
+        "Hipoglicemia",
+        "Redução da glicose sempre",
+        "Hiperglicemia"
+      ],
+      "correta": 3,
+      "explicacao": "Os corticoides tendem a elevar a glicemia (hiperglicemia)."
+    },
+    {
+      "pergunta": "Um efeito adverso local do corticoide inalado, prevenido pela higiene oral, é:",
+      "opcoes": [
+        "Perda de dentes",
+        "Cárie generalizada",
+        "Candidíase oral",
+        "Gengivite hemorrágica"
+      ],
+      "correta": 2,
+      "explicacao": "O corticoide inalado pode causar candidíase oral; recomenda-se enxaguar a boca após o uso."
+    },
+    {
+      "pergunta": "O salbutamol pertence a qual classe?",
+      "opcoes": [
+        "Beta-2 agonista de curta ação",
+        "Anticolinérgico",
+        "Corticoide",
+        "Antibiótico"
+      ],
+      "correta": 0,
+      "explicacao": "O salbutamol é um beta-2 agonista de curta ação, broncodilatador de resgate na asma."
+    },
+    {
+      "pergunta": "Efeitos adversos comuns do salbutamol incluem:",
+      "opcoes": [
+        "Bradicardia e sonolência",
+        "Diarreia",
+        "Hipertensão grave",
+        "Taquicardia e tremor"
+      ],
+      "correta": 3,
+      "explicacao": "Por estímulo beta-adrenérgico, o salbutamol pode causar taquicardia e tremor de extremidades."
+    },
+    {
+      "pergunta": "Na crise asmática, o beta-2 agonista de curta ação é a medicação de:",
+      "opcoes": [
+        "Manutenção",
+        "Sedação",
+        "Profilaxia antibiótica",
+        "Resgate (alívio)"
+      ],
+      "correta": 3,
+      "explicacao": "O beta-2 de curta ação é a medicação de resgate, para alívio rápido do broncoespasmo."
+    },
+    {
+      "pergunta": "O brometo de ipratrópio, usado em algumas crises respiratórias, é um:",
+      "opcoes": [
+        "Anticolinérgico broncodilatador",
+        "Antibiótico",
+        "Corticoide",
+        "Beta-bloqueador"
+      ],
+      "correta": 0,
+      "explicacao": "O ipratrópio é um anticolinérgico com ação broncodilatadora, por vezes associado ao beta-2 nas crises graves."
+    },
+    {
+      "pergunta": "A via inalatória do salbutamol, comparada à oral, tende a:",
+      "opcoes": [
+        "Ser menos eficaz na crise",
+        "Causar mais tremor",
+        "Ter início mais rápido e menos efeitos sistêmicos",
+        "Ser mais lenta"
+      ],
+      "correta": 2,
+      "explicacao": "A via inalatória leva o fármaco diretamente às vias aéreas, com início rápido e menos efeitos sistêmicos."
+    },
+    {
+      "pergunta": "A ondansetrona é utilizada como:",
+      "opcoes": [
+        "Broncodilatador",
+        "Corticoide",
+        "Antiemético",
+        "Antibiótico"
+      ],
+      "correta": 2,
+      "explicacao": "A ondansetrona é um antiemético (antagonista 5-HT3), útil em vômitos, inclusive na gastroenterite."
+    },
+    {
+      "pergunta": "A metoclopramida, em crianças, pode causar como efeito adverso:",
+      "opcoes": [
+        "Cárie",
+        "Surdez",
+        "Hiperglicemia",
+        "Sintomas extrapiramidais"
+      ],
+      "correta": 3,
+      "explicacao": "A metoclopramida pode causar reações extrapiramidais (distonia), mais frequentes em crianças."
+    },
+    {
+      "pergunta": "A base do tratamento da diarreia aguda com desidratação leve/moderada é:",
+      "opcoes": [
+        "Antidiarreico potente",
+        "Sais de reidratação oral (SRO)",
+        "Antibiótico de rotina",
+        "Jejum prolongado"
+      ],
+      "correta": 1,
+      "explicacao": "A reidratação oral com SRO é a base do tratamento da diarreia aguda, prevenindo e corrigindo a desidratação."
+    },
+    {
+      "pergunta": "Na diarreia aguda da criança, a suplementação de zinco:",
+      "opcoes": [
+        "Piora a diarreia",
+        "Substitui a hidratação",
+        "É contraindicada",
+        "Reduz a duração e a gravidade do episódio"
+      ],
+      "correta": 3,
+      "explicacao": "O zinco é recomendado na diarreia aguda infantil, pois reduz duração e gravidade e previne novos episódios."
+    },
+    {
+      "pergunta": "Antidiarreicos que reduzem a motilidade (ex.: loperamida) em crianças pequenas:",
+      "opcoes": [
+        "Curam a infecção",
+        "Devem ser evitados",
+        "Substituem o SRO",
+        "São a primeira escolha"
+      ],
+      "correta": 1,
+      "explicacao": "Antimotilidade como a loperamida devem ser evitados em crianças pequenas, pelo risco de efeitos adversos e complicações."
+    },
+    {
+      "pergunta": "O omeprazol pertence a qual classe de medicamentos?",
+      "opcoes": [
+        "Broncodilatador",
+        "Antibiótico",
+        "Inibidor da bomba de prótons",
+        "Corticoide"
+      ],
+      "correta": 2,
+      "explicacao": "O omeprazol é um inibidor da bomba de prótons, reduzindo a secreção ácida gástrica."
+    },
+    {
+      "pergunta": "Na crise convulsiva aguda, a primeira linha medicamentosa é:",
+      "opcoes": [
+        "Benzodiazepínico (diazepam ou midazolam)",
+        "Antibiótico",
+        "Antitérmico",
+        "Corticoide"
+      ],
+      "correta": 0,
+      "explicacao": "Os benzodiazepínicos são a primeira escolha para abortar a crise convulsiva aguda."
+    },
+    {
+      "pergunta": "O ácido valproico tem como efeito adverso importante:",
+      "opcoes": [
+        "Hepatotoxicidade",
+        "Cárie",
+        "Hiperglicemia isolada",
+        "Surdez"
+      ],
+      "correta": 0,
+      "explicacao": "O ácido valproico pode causar hepatotoxicidade, exigindo atenção, sobretudo em crianças pequenas."
+    },
+    {
+      "pergunta": "O fenobarbital é um anticonvulsivante frequentemente usado em:",
+      "opcoes": [
+        "Asma",
+        "Diarreia",
+        "Convulsões neonatais",
+        "Anemia"
+      ],
+      "correta": 2,
+      "explicacao": "O fenobarbital é usado no controle de convulsões, incluindo as neonatais."
+    },
+    {
+      "pergunta": "Um efeito adverso característico da fenitoína é:",
+      "opcoes": [
+        "Cegueira",
+        "Hiperglicemia",
+        "Hiperplasia gengival",
+        "Perda auditiva"
+      ],
+      "correta": 2,
+      "explicacao": "A fenitoína pode causar hiperplasia gengival, além de outros efeitos adversos."
+    },
+    {
+      "pergunta": "A retirada de um anticonvulsivante de uso contínuo deve ser:",
+      "opcoes": [
+        "Feita apenas pela família",
+        "Imediata ao primeiro dia sem crise",
+        "Abrupta",
+        "Gradual"
+      ],
+      "correta": 3,
+      "explicacao": "A suspensão de anticonvulsivantes deve ser gradual, pelo risco de crises de retirada."
+    },
+    {
+      "pergunta": "Os anti-histamínicos de 1ª geração (ex.: difenidramina) caracterizam-se por:",
+      "opcoes": [
+        "Serem sedativos",
+        "Serem antibióticos",
+        "Não atravessarem barreiras",
+        "Não terem efeito"
+      ],
+      "correta": 0,
+      "explicacao": "Os anti-histamínicos de 1ª geração atravessam a barreira hematoencefálica e causam sedação."
+    },
+    {
+      "pergunta": "Os anti-histamínicos de 2ª geração (ex.: loratadina) diferenciam-se por:",
+      "opcoes": [
+        "Serem menos sedativos",
+        "Não tratarem alergia",
+        "Serem mais sedativos",
+        "Serem antibióticos"
+      ],
+      "correta": 0,
+      "explicacao": "Os de 2ª geração causam menos sedação, por menor penetração no sistema nervoso central."
+    },
+    {
+      "pergunta": "Na anafilaxia, a medicação de primeira linha é:",
+      "opcoes": [
+        "Antibiótico",
+        "Corticoide isolado",
+        "Adrenalina intramuscular",
+        "Anti-histamínico oral"
+      ],
+      "correta": 2,
+      "explicacao": "A adrenalina IM é a primeira linha na anafilaxia; anti-histamínicos e corticoides são adjuvantes."
+    },
+    {
+      "pergunta": "Na anafilaxia, o anti-histamínico:",
+      "opcoes": [
+        "É adjuvante e não substitui a adrenalina",
+        "É a primeira escolha",
+        "Substitui a adrenalina",
+        "Está contraindicado"
+      ],
+      "correta": 0,
+      "explicacao": "O anti-histamínico alivia sintomas cutâneos, mas não substitui a adrenalina no tratamento da anafilaxia."
+    },
+    {
+      "pergunta": "O sulfato ferroso é utilizado principalmente para:",
+      "opcoes": [
+        "Tratar asma",
+        "Reduzir a febre",
+        "Tratar infecções",
+        "Prevenção e tratamento da anemia ferropriva"
+      ],
+      "correta": 3,
+      "explicacao": "O sulfato ferroso é a base da profilaxia e do tratamento da anemia por deficiência de ferro."
+    },
+    {
+      "pergunta": "Um efeito comum do sulfato ferroso é:",
+      "opcoes": [
+        "Perda auditiva",
+        "Hiperglicemia",
+        "Fezes esbranquiçadas",
+        "Fezes escuras e desconforto gastrointestinal"
+      ],
+      "correta": 3,
+      "explicacao": "O ferro oral costuma causar escurecimento das fezes e desconforto GI, que podem afetar a adesão."
+    },
+    {
+      "pergunta": "A suplementação de vitamina D no lactente previne:",
+      "opcoes": [
+        "Surdez",
+        "Raquitismo",
+        "Anemia",
+        "Cárie"
+      ],
+      "correta": 1,
+      "explicacao": "A vitamina D previne o raquitismo, sendo suplementada no lactente amamentado."
+    },
+    {
+      "pergunta": "A administração de vitamina K ao nascer previne:",
+      "opcoes": [
+        "A hipoglicemia",
+        "A doença hemorrágica do recém-nascido",
+        "A anemia ferropriva",
+        "A icterícia"
+      ],
+      "correta": 1,
+      "explicacao": "A vitamina K ao nascer previne a doença hemorrágica do recém-nascido, por deficiência fisiológica de fatores da coagulação."
+    },
+    {
+      "pergunta": "A intoxicação por ferro é potencialmente grave; seu quelante (antídoto) é:",
+      "opcoes": [
+        "Atropina",
+        "Deferoxamina",
+        "Naloxona",
+        "Flumazenil"
+      ],
+      "correta": 1,
+      "explicacao": "A deferoxamina é o quelante usado na intoxicação grave por ferro, causa relevante de intoxicação acidental na infância."
+    },
+    {
+      "pergunta": "A suplementação de vitamina A é uma estratégia usada para prevenir:",
+      "opcoes": [
+        "Anemia ferropriva",
+        "Cárie",
+        "Raquitismo",
+        "Deficiência de vitamina A em áreas de risco"
+      ],
+      "correta": 3,
+      "explicacao": "A suplementação de vitamina A previne sua deficiência (associada a problemas oculares e imunológicos) em áreas de risco."
+    },
+    {
+      "pergunta": "A cafeína, em neonatologia, é utilizada no tratamento de:",
+      "opcoes": [
+        "Convulsão febril",
+        "Anemia",
+        "Apneia da prematuridade",
+        "Icterícia"
+      ],
+      "correta": 2,
+      "explicacao": "A cafeína (metilxantina) é usada no tratamento da apneia da prematuridade."
+    },
+    {
+      "pergunta": "O surfactante exógeno é utilizado no tratamento de:",
+      "opcoes": [
+        "Síndrome do desconforto respiratório do prematuro",
+        "Bronquiolite",
+        "Otite",
+        "Diarreia"
+      ],
+      "correta": 0,
+      "explicacao": "O surfactante trata a síndrome do desconforto respiratório (doença da membrana hialina) do prematuro."
+    },
+    {
+      "pergunta": "Os antitussígenos e descongestionantes de venda livre em menores de 2 anos:",
+      "opcoes": [
+        "Curam o resfriado",
+        "São a primeira escolha",
+        "Não são recomendados",
+        "Substituem a hidratação"
+      ],
+      "correta": 2,
+      "explicacao": "Esses medicamentos não são recomendados em menores de 2 anos, pela falta de eficácia e risco de efeitos adversos."
+    },
+    {
+      "pergunta": "A prometazina em menores de 2 anos é:",
+      "opcoes": [
+        "Um antibiótico",
+        "Isenta de riscos",
+        "Recomendada de rotina",
+        "Contraindicada, pelo risco de depressão respiratória"
+      ],
+      "correta": 3,
+      "explicacao": "A prometazina é contraindicada em menores de 2 anos pelo risco de depressão respiratória grave."
+    },
+    {
+      "pergunta": "A nistatina é utilizada no tratamento de:",
+      "opcoes": [
+        "Candidíase oral (sapinho)",
+        "Otite bacteriana",
+        "Anemia",
+        "Asma"
+      ],
+      "correta": 0,
+      "explicacao": "A nistatina é um antifúngico tópico usado na candidíase oral do lactente (sapinho)."
+    },
+    {
+      "pergunta": "O albendazol e o mebendazol são usados no tratamento de:",
+      "opcoes": [
+        "Anemia",
+        "Asma",
+        "Infecções virais",
+        "Parasitoses por helmintos"
+      ],
+      "correta": 3,
+      "explicacao": "Albendazol e mebendazol são anti-helmínticos, usados no tratamento de verminoses."
+    },
+    {
+      "pergunta": "O uso frequente de xaropes açucarados exige atenção quanto a:",
+      "opcoes": [
+        "Hiperglicemia grave",
+        "Alergia respiratória",
+        "Perda auditiva",
+        "Cárie dentária (higiene oral)"
+      ],
+      "correta": 3,
+      "explicacao": "Xaropes com açúcar, em uso frequente, favorecem cáries; recomenda-se higiene oral após o uso."
+    },
+    {
+      "pergunta": "A digoxina, usada em algumas cardiopatias, caracteriza-se por:",
+      "opcoes": [
+        "Ausência de efeitos adversos",
+        "Janela terapêutica estreita, com risco de intoxicação",
+        "Não precisar de ajuste",
+        "Ser um antibiótico"
+      ],
+      "correta": 1,
+      "explicacao": "A digoxina tem janela terapêutica estreita, exigindo cautela pelo risco de intoxicação."
+    },
+    {
+      "pergunta": "A naloxona reverte a intoxicação por:",
+      "opcoes": [
+        "Ferro",
+        "Opioides",
+        "Benzodiazepínicos",
+        "Paracetamol"
+      ],
+      "correta": 1,
+      "explicacao": "A naloxona é o antagonista dos opioides, revertendo a depressão respiratória e do SNC."
+    },
+    {
+      "pergunta": "O flumazenil é o antídoto para intoxicação por:",
+      "opcoes": [
+        "Organofosforados",
+        "Opioides",
+        "Benzodiazepínicos",
+        "Ferro"
+      ],
+      "correta": 2,
+      "explicacao": "O flumazenil é o antagonista dos benzodiazepínicos, usado com cautela pelo risco de convulsão."
+    },
+    {
+      "pergunta": "Na intoxicação por organofosforados, o antídoto é:",
+      "opcoes": [
+        "Naloxona",
+        "Atropina",
+        "N-acetilcisteína",
+        "Deferoxamina"
+      ],
+      "correta": 1,
+      "explicacao": "A atropina antagoniza os efeitos muscarínicos dos organofosforados; a pralidoxima também pode ser usada."
+    },
+    {
+      "pergunta": "Diante de uma intoxicação medicamentosa, uma fonte útil de orientação é:",
+      "opcoes": [
+        "O Centro de Informação e Assistência Toxicológica (CIATox)",
+        "O senso comum",
+        "A bula do sabão",
+        "A internet sem filtro"
+      ],
+      "correta": 0,
+      "explicacao": "Os centros de informação toxicológica orientam a conduta em intoxicações, sendo um recurso importante."
+    },
+    {
+      "pergunta": "O carvão ativado é usado em algumas intoxicações para:",
+      "opcoes": [
+        "Provocar vômito",
+        "Repor eletrólitos",
+        "Neutralizar ácidos no estômago",
+        "Adsorver substâncias ingeridas recentemente"
+      ],
+      "correta": 3,
+      "explicacao": "O carvão ativado adsorve muitas substâncias no trato gastrointestinal, reduzindo sua absorção, com indicações e contraindicações específicas."
+    },
+    {
+      "pergunta": "Para melhorar a adesão ao tratamento na criança, ajuda:",
+      "opcoes": [
+        "Sabor amargo",
+        "Instruções complexas",
+        "Muitas doses ao dia",
+        "Sabor agradável, posologia simples e boa orientação aos pais"
+      ],
+      "correta": 3,
+      "explicacao": "Palatabilidade, esquema posológico simples e boa orientação aos cuidadores melhoram a adesão ao tratamento."
+    },
+    {
+      "pergunta": "As interações medicamentosas são importantes porque podem:",
+      "opcoes": [
+        "Não ter qualquer efeito",
+        "Aumentar a toxicidade ou reduzir a eficácia dos fármacos",
+        "Sempre melhorar o efeito",
+        "Curar as viroses"
+      ],
+      "correta": 1,
+      "explicacao": "Interações podem potencializar efeitos tóxicos ou diminuir a eficácia; devem ser avaliadas ao prescrever."
+    },
+    {
+      "pergunta": "Reações adversas a medicamentos devem ser:",
+      "opcoes": [
+        "Tratadas apenas em adultos",
+        "Ignoradas",
+        "Mantidas em segredo",
+        "Notificadas (farmacovigilância)"
+      ],
+      "correta": 3,
+      "explicacao": "A notificação de reações adversas alimenta a farmacovigilância e a segurança do uso de medicamentos."
+    },
+    {
+      "pergunta": "Antes de administrar uma suspensão oral, deve-se:",
+      "opcoes": [
+        "Agitar bem o frasco para homogeneizar",
+        "Diluir em refrigerante",
+        "Congelar",
+        "Aquecer no micro-ondas"
+      ],
+      "correta": 0,
+      "explicacao": "Agitar a suspensão homogeneíza o fármaco, garantindo a dose correta em cada administração."
+    },
+    {
+      "pergunta": "Uma medida importante para prevenir intoxicações acidentais é:",
+      "opcoes": [
+        "Deixar remédios coloridos à vista",
+        "Usar frascos sem tampa",
+        "Guardar medicamentos fora do alcance das crianças",
+        "Chamar remédio de 'docinho'"
+      ],
+      "correta": 2,
+      "explicacao": "Manter medicamentos em local seguro, fora do alcance, previne intoxicações acidentais, comuns na primeira infância."
+    },
+    {
+      "pergunta": "Medicamentos de alto risco (ex.: insulina, opioides) exigem:",
+      "opcoes": [
+        "Administração sem conferência",
+        "Menos atenção",
+        "Cálculo aproximado",
+        "Dupla checagem da dose"
+      ],
+      "correta": 3,
+      "explicacao": "Fármacos de alto risco requerem dupla checagem para reduzir erros com potencial de dano grave."
+    },
+    {
+      "pergunta": "A insulina, quanto ao armazenamento e à ação, caracteriza-se por:",
+      "opcoes": [
+        "Ser conservada refrigerada e ter ação hipoglicemiante",
+        "Ser guardada no congelador e elevar a glicose",
+        "Ser um antibiótico",
+        "Não precisar de refrigeração nunca"
+      ],
+      "correta": 0,
+      "explicacao": "A insulina é conservada sob refrigeração (sem congelar) e reduz a glicemia (ação hipoglicemiante)."
+    },
+    {
+      "pergunta": "A via oral, quando possível, costuma ser preferida em pediatria porque:",
+      "opcoes": [
+        "É sempre mais rápida que a EV",
+        "Não depende de adesão",
+        "É menos invasiva e mais confortável",
+        "Elimina efeitos adversos"
+      ],
+      "correta": 2,
+      "explicacao": "A via oral é preferida quando adequada por ser menos invasiva e confortável, favorecendo a adesão."
+    },
+    {
+      "pergunta": "A escolha entre suspensão, gotas ou comprimido em pediatria depende principalmente de:",
+      "opcoes": [
+        "Cor do medicamento",
+        "Fase da lua",
+        "Preferência do fabricante",
+        "Idade, peso e capacidade de deglutir da criança"
+      ],
+      "correta": 3,
+      "explicacao": "A formulação é escolhida conforme a idade, o peso e a capacidade de deglutição, garantindo dose correta e segurança."
+    },
+    {
+      "pergunta": "Após reconstituir (preparar com água) um antibiótico em pó para suspensão, é importante:",
+      "opcoes": [
+        "Congelar sempre",
+        "Respeitar a validade reduzida e conservar conforme a orientação (geralmente geladeira)",
+        "Guardar por meses em temperatura ambiente",
+        "Usar por tempo ilimitado"
+      ],
+      "correta": 1,
+      "explicacao": "A suspensão reconstituída tem validade curta (dias); deve ser conservada conforme a bula, em geral sob refrigeração."
+    },
+    {
+      "pergunta": "O fluconazol é um medicamento da classe dos:",
+      "opcoes": [
+        "Broncodilatadores",
+        "Antifúngicos",
+        "Corticoides",
+        "Antibióticos betalactâmicos"
+      ],
+      "correta": 1,
+      "explicacao": "O fluconazol é um antifúngico sistêmico, usado em candidíases mais extensas ou sistêmicas, entre outras micoses."
+    },
+    {
+      "pergunta": "A loratadina é frequentemente usada no tratamento de:",
+      "opcoes": [
+        "Anemia",
+        "Pneumonia bacteriana",
+        "Convulsões",
+        "Rinite alérgica e urticária"
+      ],
+      "correta": 3,
+      "explicacao": "A loratadina, anti-histamínico de 2ª geração, é usada em rinite alérgica e urticária."
+    },
+    {
+      "pergunta": "A escolha entre antibiótico por via oral ou endovenosa depende principalmente de:",
+      "opcoes": [
+        "Gravidade da infecção e condições do paciente",
+        "Dia da semana",
+        "Preferência da farmácia",
+        "Cor do medicamento"
+      ],
+      "correta": 0,
+      "explicacao": "Infecções leves costumam ser tratadas por via oral; casos graves ou com intolerância oral indicam a via endovenosa."
+    },
+    {
+      "pergunta": "A meia-vida de um fármaco corresponde ao tempo necessário para:",
+      "opcoes": [
+        "Iniciar o efeito",
+        "Dobrar a concentração",
+        "Eliminar todo o fármaco",
+        "Reduzir pela metade a sua concentração no organismo"
+      ],
+      "correta": 3,
+      "explicacao": "A meia-vida é o tempo para a concentração cair à metade; influencia o intervalo entre as doses."
+    },
+    {
+      "pergunta": "Em geral, fármacos lipossolúveis, comparados aos hidrossolúveis:",
+      "opcoes": [
+        "Não têm efeito no SNC",
+        "Não penetram no cérebro",
+        "Atravessam mais facilmente a barreira hematoencefálica",
+        "São sempre mais seguros"
+      ],
+      "correta": 2,
+      "explicacao": "A lipossolubilidade facilita a passagem pela barreira hematoencefálica, influenciando os efeitos no sistema nervoso central."
     }
   ]
 }

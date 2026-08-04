@@ -2,6 +2,262 @@
   "categoria": "Neonatologia",
   "questoes": [
     {
+      "pergunta": "Qual a idade gestacional que define o recém-nascido a termo?",
+      "opcoes": [
+        "Menos de 37 semanas",
+        "De 37 a 41 semanas e 6 dias",
+        "Exatamente 40 semanas",
+        "42 semanas ou mais"
+      ],
+      "correta": 1,
+      "explicacao": "A termo é de 37 a 41 semanas e 6 dias. Abaixo de 37 é pré-termo; 42 semanas ou mais é pós-termo."
+    },
+    {
+      "pergunta": "Baixo peso ao nascer é definido como peso inferior a:",
+      "opcoes": ["3000 g", "2500 g", "2000 g", "1500 g"],
+      "correta": 1,
+      "explicacao": "Baixo peso: menor que 2500 g. Muito baixo peso: menor que 1500 g. Extremo baixo peso: menor que 1000 g."
+    },
+    {
+      "pergunta": "Qual a frequência respiratória normal do recém-nascido?",
+      "opcoes": ["12 a 20 irpm", "20 a 40 irpm", "40 a 60 irpm", "60 a 80 irpm"],
+      "correta": 2,
+      "explicacao": "A frequência respiratória normal do RN é de 40 a 60 irpm. Acima de 60 caracteriza taquipneia."
+    },
+    {
+      "pergunta": "Qual a via de administração habitual da vitamina K profilática no recém-nascido?",
+      "opcoes": ["Intramuscular", "Endovenosa", "Subcutânea", "Inalatória"],
+      "correta": 0,
+      "explicacao": "A profilaxia é feita por via intramuscular ao nascer. Existe apresentação oral, mas a via IM é o padrão."
+    },
+    {
+      "pergunta": "O teste do pezinho (triagem neonatal biológica) é idealmente coletado em qual período?",
+      "opcoes": [
+        "Nas primeiras 24 horas de vida",
+        "Entre o 3º e o 5º dia de vida",
+        "Somente após 15 dias",
+        "No primeiro mês, sem período ideal"
+      ],
+      "correta": 1,
+      "explicacao": "O ideal é entre o 3º e o 5º dia de vida, após o início da alimentação, para não gerar resultados falsos."
+    },
+    {
+      "pergunta": "O teste do olhinho (reflexo vermelho) permite a detecção precoce de:",
+      "opcoes": [
+        "Surdez congênita",
+        "Catarata congênita e retinoblastoma",
+        "Cardiopatias congênitas",
+        "Luxação do quadril"
+      ],
+      "correta": 1,
+      "explicacao": "O reflexo vermelho avalia a transparência dos meios oculares e ajuda a detectar catarata congênita, retinoblastoma e glaucoma, entre outros."
+    },
+    {
+      "pergunta": "Por qual método é realizado o teste do coraçãozinho?",
+      "opcoes": [
+        "Ausculta cardíaca",
+        "Eletrocardiograma",
+        "Oximetria de pulso pré e pós-ductal",
+        "Radiografia de tórax"
+      ],
+      "correta": 2,
+      "explicacao": "É a oximetria de pulso medida no membro superior direito (pré-ductal) e em um membro inferior (pós-ductal), para rastrear cardiopatias congênitas críticas."
+    },
+    {
+      "pergunta": "O teste da orelhinha avalia principalmente:",
+      "opcoes": [
+        "A audição",
+        "O equilíbrio",
+        "A pressão intracraniana",
+        "A função vestibular motora"
+      ],
+      "correta": 0,
+      "explicacao": "O teste da orelhinha avalia a audição, geralmente por emissões otoacústicas evocadas."
+    },
+    {
+      "pergunta": "A perda de peso fisiológica nos primeiros dias de vida costuma ser de até:",
+      "opcoes": ["1 a 3%", "7 a 10%", "15 a 20%", "25%"],
+      "correta": 1,
+      "explicacao": "A perda fisiológica é de até cerca de 7 a 10% do peso, recuperada por volta do 10º ao 14º dia de vida."
+    },
+    {
+      "pergunta": "Uma tumefação no couro cabeludo do RN que ULTRAPASSA as linhas de sutura corresponde a:",
+      "opcoes": [
+        "Céfalo-hematoma",
+        "Bossa serossanguínea (caput succedaneum)",
+        "Hematoma subgaleal exclusivamente",
+        "Craniossinostose"
+      ],
+      "correta": 1,
+      "explicacao": "A bossa serossanguínea (caput) é edema que cruza as suturas. O céfalo-hematoma, por ser subperiosteal, respeita os limites das suturas."
+    },
+    {
+      "pergunta": "O céfalo-hematoma caracteristicamente:",
+      "opcoes": [
+        "Ultrapassa as linhas de sutura",
+        "Não ultrapassa as linhas de sutura",
+        "Regride em poucas horas",
+        "É sempre patológico e cirúrgico"
+      ],
+      "correta": 1,
+      "explicacao": "Por ser uma coleção subperiosteal, o céfalo-hematoma é delimitado pelas suturas e não as ultrapassa."
+    },
+    {
+      "pergunta": "O cordão umbilical normal apresenta:",
+      "opcoes": [
+        "1 artéria e 1 veia",
+        "2 artérias e 1 veia",
+        "1 artéria e 2 veias",
+        "2 artérias e 2 veias"
+      ],
+      "correta": 1,
+      "explicacao": "O cordão normal tem 2 artérias e 1 veia. A artéria umbilical única pode se associar a malformações."
+    },
+    {
+      "pergunta": "Qual é o principal agente da sepse neonatal precoce (nas primeiras 72 horas)?",
+      "opcoes": [
+        "Staphylococcus aureus",
+        "Streptococcus agalactiae (estreptococo do grupo B)",
+        "Pseudomonas aeruginosa",
+        "Candida albicans"
+      ],
+      "correta": 1,
+      "explicacao": "O estreptococo do grupo B (S. agalactiae) é o principal agente da sepse precoce, seguido pela E. coli. A profilaxia intraparto reduz o risco."
+    },
+    {
+      "pergunta": "A síndrome do desconforto respiratório (doença da membrana hialina) do prematuro decorre da deficiência de:",
+      "opcoes": ["Surfactante", "Ferro", "Vitamina D", "Insulina"],
+      "correta": 0,
+      "explicacao": "A deficiência de surfactante aumenta a tensão superficial alveolar e leva a colapso alveolar, típico do prematuro."
+    },
+    {
+      "pergunta": "O surfactante pulmonar é produzido pelos:",
+      "opcoes": [
+        "Pneumócitos tipo I",
+        "Pneumócitos tipo II",
+        "Macrófagos alveolares",
+        "Cílios das vias aéreas"
+      ],
+      "correta": 1,
+      "explicacao": "Os pneumócitos tipo II produzem o surfactante, que reduz a tensão superficial e evita o colapso alveolar."
+    },
+    {
+      "pergunta": "A administração de corticoide antenatal à gestante em risco de parto prematuro visa principalmente:",
+      "opcoes": [
+        "Acelerar a maturidade pulmonar fetal",
+        "Aumentar o peso ao nascer",
+        "Prevenir icterícia",
+        "Reduzir a icterícia fisiológica"
+      ],
+      "correta": 0,
+      "explicacao": "O corticoide antenatal acelera a maturação pulmonar e reduz a incidência e a gravidade da síndrome do desconforto respiratório."
+    },
+    {
+      "pergunta": "A taquipneia transitória do recém-nascido está associada a:",
+      "opcoes": [
+        "Deficiência de surfactante",
+        "Retardo na reabsorção do líquido pulmonar",
+        "Aspiração de mecônio",
+        "Hipertensão pulmonar persistente"
+      ],
+      "correta": 1,
+      "explicacao": "Resulta do retardo na reabsorção do líquido pulmonar fetal; é mais comum após cesariana e costuma ser autolimitada."
+    },
+    {
+      "pergunta": "A síndrome de aspiração meconial é mais frequente em qual recém-nascido?",
+      "opcoes": [
+        "Pré-termo extremo",
+        "A termo precoce",
+        "Pós-termo",
+        "De baixo peso"
+      ],
+      "correta": 2,
+      "explicacao": "É mais comum no pós-termo, situação com maior chance de líquido amniótico meconial."
+    },
+    {
+      "pergunta": "O reflexo de Moro normalmente desaparece por volta de:",
+      "opcoes": [
+        "2 meses",
+        "4 a 6 meses",
+        "12 meses",
+        "Não desaparece"
+      ],
+      "correta": 1,
+      "explicacao": "O reflexo de Moro é um reflexo primitivo que costuma desaparecer entre 4 e 6 meses. Persistência prolongada pode indicar alteração neurológica."
+    },
+    {
+      "pergunta": "A primeira eliminação de mecônio geralmente ocorre em até:",
+      "opcoes": [
+        "6 horas",
+        "24 a 48 horas",
+        "72 a 96 horas",
+        "1 semana"
+      ],
+      "correta": 1,
+      "explicacao": "Costuma ocorrer nas primeiras 24 a 48 horas. Atraso pode sugerir obstrução intestinal ou doença de Hirschsprung."
+    },
+    {
+      "pergunta": "A profilaxia de Credé, aplicada nos olhos do RN ao nascer, previne principalmente:",
+      "opcoes": [
+        "Catarata congênita",
+        "Conjuntivite gonocócica (oftalmia neonatal)",
+        "Glaucoma congênito",
+        "Retinopatia da prematuridade"
+      ],
+      "correta": 1,
+      "explicacao": "A profilaxia ocular ao nascimento previne a oftalmia neonatal, sobretudo a conjuntivite gonocócica adquirida no canal de parto."
+    },
+    {
+      "pergunta": "A icterícia fisiológica do recém-nascido a termo tipicamente atinge o pico:",
+      "opcoes": [
+        "Nas primeiras 12 horas",
+        "Entre o 3º e o 5º dia",
+        "Somente após 2 semanas",
+        "No primeiro mês"
+      ],
+      "correta": 1,
+      "explicacao": "No RN a termo, a icterícia fisiológica costuma atingir o pico entre o 3º e o 5º dia e regredir em seguida."
+    },
+    {
+      "pergunta": "Recém-nascido pré-termo é aquele nascido com idade gestacional:",
+      "opcoes": [
+        "Menor que 37 semanas",
+        "Menor que 40 semanas",
+        "Entre 37 e 42 semanas",
+        "Maior que 42 semanas"
+      ],
+      "correta": 0,
+      "explicacao": "Pré-termo é o nascido antes de 37 semanas completas de idade gestacional."
+    },
+    {
+      "pergunta": "Quais são os principais fatores de risco para a retinopatia da prematuridade?",
+      "opcoes": [
+        "Prematuridade e uso de oxigênio",
+        "Icterícia e fototerapia",
+        "Aleitamento materno exclusivo",
+        "Parto vaginal"
+      ],
+      "correta": 0,
+      "explicacao": "A prematuridade e a exposição ao oxigênio suplementar são os principais fatores de risco; por isso o rastreio oftalmológico do prematuro."
+    },
+    {
+      "pergunta": "A enterocolite necrosante acomete mais frequentemente qual grupo?",
+      "opcoes": [
+        "Recém-nascidos a termo saudáveis",
+        "Recém-nascidos prematuros",
+        "Pós-termo exclusivamente",
+        "Lactentes maiores de 6 meses"
+      ],
+      "correta": 1,
+      "explicacao": "É mais frequente em prematuros, especialmente de muito baixo peso, e se relaciona à imaturidade intestinal e à alimentação."
+    }
+  ]
+}
+
+{
+  "categoria": "Neonatologia",
+  "questoes": [
+    {
       "pergunta": "A encefalopatia bilirrubínica (kernicterus) resulta do depósito, em núcleos da base, de:",
       "opcoes": [
         "Bilirrubina indireta (não conjugada)",
@@ -257,3 +513,550 @@
     }
   ]
 }
+
+{
+  "categoria": "Neonatologia",
+  "questoes": [
+    {
+      "pergunta": "A fontanela anterior (bregmática) normalmente se fecha entre:",
+      "opcoes": [
+        "1 e 2 meses",
+        "9 e 18 meses",
+        "3 e 4 anos",
+        "5 e 6 anos"
+      ],
+      "correta": 1,
+      "explicacao": "A fontanela anterior costuma fechar entre 9 e 18 meses. A posterior fecha bem antes, por volta dos 2 meses."
+    },
+    {
+      "pergunta": "A fontanela posterior (lambdoide) geralmente se fecha até:",
+      "opcoes": [
+        "2 meses",
+        "6 meses",
+        "12 meses",
+        "18 meses"
+      ],
+      "correta": 0,
+      "explicacao": "A fontanela posterior é pequena e costuma fechar até cerca de 2 meses de vida."
+    },
+    {
+      "pergunta": "Uma fontanela anterior abaulada e tensa sugere:",
+      "opcoes": [
+        "Desidratação",
+        "Hipertensão intracraniana",
+        "Boa hidratação",
+        "Hipoglicemia"
+      ],
+      "correta": 1,
+      "explicacao": "Fontanela abaulada e tensa sugere aumento da pressão intracraniana (por exemplo, meningite ou hidrocefalia)."
+    },
+    {
+      "pergunta": "Uma fontanela anterior deprimida costuma indicar:",
+      "opcoes": [
+        "Hipertensão intracraniana",
+        "Desidratação",
+        "Hidrocefalia",
+        "Meningite"
+      ],
+      "correta": 1,
+      "explicacao": "A fontanela deprimida é um sinal clássico de desidratação no lactente."
+    },
+    {
+      "pergunta": "O eritema tóxico neonatal é uma condição:",
+      "opcoes": [
+        "Benigna e autolimitada",
+        "Grave, que exige antibiótico",
+        "Sinal de sepse",
+        "Indicativa de imunodeficiência"
+      ],
+      "correta": 0,
+      "explicacao": "O eritema tóxico neonatal é uma erupção benigna e autolimitada, muito comum nos primeiros dias de vida, sem necessidade de tratamento."
+    },
+    {
+      "pergunta": "A mancha mongólica (melanocitose dérmica) do recém-nascido é:",
+      "opcoes": [
+        "Uma lesão benigna que tende a desaparecer com o tempo",
+        "Sinal de maus-tratos",
+        "Uma malformação vascular grave",
+        "Indicativa de doença hematológica"
+      ],
+      "correta": 0,
+      "explicacao": "É uma mancha azulada benigna, comum na região sacral, que costuma regredir ao longo da infância."
+    },
+    {
+      "pergunta": "As pequenas pápulas esbranquiçadas no nariz e na face do RN, chamadas mília, correspondem a:",
+      "opcoes": [
+        "Cistos de retenção benignos",
+        "Lesões infecciosas",
+        "Petéquias",
+        "Sinais de alergia"
+      ],
+      "correta": 0,
+      "explicacao": "A mília são cistos de retenção benignos de queratina/sebo, que desaparecem espontaneamente nas primeiras semanas."
+    },
+    {
+      "pergunta": "Os reflexos de procura e de sucção do recém-nascido são especialmente importantes para:",
+      "opcoes": [
+        "A amamentação",
+        "A marcha",
+        "O controle da temperatura",
+        "A visão"
+      ],
+      "correta": 0,
+      "explicacao": "Os reflexos de procura (busca) e sucção garantem a pega e a alimentação ao seio, sendo fundamentais para a amamentação."
+    },
+    {
+      "pergunta": "Hiperemia e secreção purulenta ao redor do coto umbilical caracterizam:",
+      "opcoes": [
+        "Onfalite",
+        "Granuloma umbilical simples",
+        "Hérnia umbilical",
+        "Achado fisiológico"
+      ],
+      "correta": 0,
+      "explicacao": "A onfalite é a infecção do coto/região umbilical e representa sinal de alarme, com risco de disseminação; exige avaliação imediata."
+    },
+    {
+      "pergunta": "Qual a orientação correta para o cuidado do coto umbilical?",
+      "opcoes": [
+        "Mantê-lo limpo e seco, com álcool 70%",
+        "Cobrir com faixa apertada",
+        "Aplicar pó de café",
+        "Mantê-lo sempre úmido"
+      ],
+      "correta": 0,
+      "explicacao": "O coto deve ser mantido limpo e seco, com uso de álcool 70%. Ele costuma cair entre 1 e 2 semanas."
+    },
+    {
+      "pergunta": "Um escore de Apgar de 0 a 3 no 5º minuto indica:",
+      "opcoes": [
+        "Boa vitalidade",
+        "Depressão leve",
+        "Depressão moderada",
+        "Depressão grave"
+      ],
+      "correta": 3,
+      "explicacao": "Apgar de 0 a 3 indica depressão grave; 4 a 6, depressão moderada; 7 a 10, boa vitalidade."
+    },
+    {
+      "pergunta": "A tríade clássica da toxoplasmose congênita inclui:",
+      "opcoes": [
+        "Coriorretinite, hidrocefalia e calcificações intracranianas difusas",
+        "Catarata, surdez e cardiopatia",
+        "Icterícia, anemia e edema",
+        "Febre, tosse e coriza"
+      ],
+      "correta": 0,
+      "explicacao": "A tríade da toxoplasmose congênita é coriorretinite, hidrocefalia e calcificações intracranianas difusas."
+    },
+    {
+      "pergunta": "A tríade de Gregg, da síndrome da rubéola congênita, inclui:",
+      "opcoes": [
+        "Catarata, surdez e cardiopatia",
+        "Hidrocefalia, coriorretinite e calcificações",
+        "Microcefalia isolada",
+        "Anemia, icterícia e hepatoesplenomegalia"
+      ],
+      "correta": 0,
+      "explicacao": "A tríade de Gregg reúne catarata, surdez e cardiopatia congênita (classicamente a persistência do canal arterial)."
+    },
+    {
+      "pergunta": "A infecção congênita por citomegalovírus é uma causa importante de:",
+      "opcoes": [
+        "Surdez neurossensorial",
+        "Luxação do quadril",
+        "Pé torto congênito",
+        "Fenda palatina"
+      ],
+      "correta": 0,
+      "explicacao": "O CMV congênito é uma das principais causas de surdez neurossensorial; pode cursar com microcefalia e calcificações periventriculares."
+    },
+    {
+      "pergunta": "Qual exame é usado na triagem da sífilis congênita?",
+      "opcoes": ["VDRL", "Hemograma", "Glicemia", "Oximetria"],
+      "correta": 0,
+      "explicacao": "O VDRL (teste não treponêmico) é usado na triagem materna e do RN para sífilis congênita."
+    },
+    {
+      "pergunta": "A infecção congênita pelo vírus Zika está classicamente associada a:",
+      "opcoes": [
+        "Microcefalia",
+        "Macrossomia",
+        "Cardiopatia cianótica",
+        "Pé torto isolado"
+      ],
+      "correta": 0,
+      "explicacao": "A infecção congênita pelo Zika associa-se a microcefalia e outras alterações do neurodesenvolvimento."
+    },
+    {
+      "pergunta": "O hipotireoidismo congênito, se não tratado precocemente, é causa importante e evitável de:",
+      "opcoes": [
+        "Deficiência intelectual",
+        "Surdez isolada",
+        "Cegueira",
+        "Anemia"
+      ],
+      "correta": 0,
+      "explicacao": "O hipotireoidismo congênito é causa evitável de deficiência intelectual; por isso é rastreado no teste do pezinho e tratado com levotiroxina."
+    },
+    {
+      "pergunta": "Qual o tratamento de base da fenilcetonúria?",
+      "opcoes": [
+        "Dieta restrita em fenilalanina",
+        "Levotiroxina",
+        "Insulina",
+        "Corticoide"
+      ],
+      "correta": 0,
+      "explicacao": "A fenilcetonúria é tratada com dieta restrita em fenilalanina, evitando o acúmulo tóxico do aminoácido no organismo."
+    },
+    {
+      "pergunta": "No teste do pezinho, a fibrose cística é rastreada pela dosagem de:",
+      "opcoes": [
+        "Tripsinogênio imunorreativo (IRT)",
+        "17-OH-progesterona",
+        "TSH",
+        "Fenilalanina"
+      ],
+      "correta": 0,
+      "explicacao": "A triagem da fibrose cística usa a dosagem do tripsinogênio imunorreativo (IRT)."
+    },
+    {
+      "pergunta": "No teste do pezinho, a hiperplasia adrenal congênita é rastreada pela dosagem de:",
+      "opcoes": [
+        "17-OH-progesterona",
+        "TSH",
+        "Fenilalanina",
+        "Tripsinogênio imunorreativo"
+      ],
+      "correta": 0,
+      "explicacao": "A triagem da hiperplasia adrenal congênita utiliza a dosagem da 17-OH-progesterona."
+    },
+    {
+      "pergunta": "No teste do pezinho, as hemoglobinopatias (como a anemia falciforme) são rastreadas por:",
+      "opcoes": [
+        "Eletroforese de hemoglobina",
+        "Dosagem de TSH",
+        "Dosagem de fenilalanina",
+        "Glicemia"
+      ],
+      "correta": 0,
+      "explicacao": "A triagem das hemoglobinopatias é feita por eletroforese (ou técnica equivalente) de hemoglobina."
+    },
+    {
+      "pergunta": "A policitemia neonatal é definida por hematócrito venoso acima de:",
+      "opcoes": ["45%", "55%", "65%", "75%"],
+      "correta": 2,
+      "explicacao": "A policitemia neonatal é definida por hematócrito venoso central acima de 65%, com risco de hiperviscosidade."
+    },
+    {
+      "pergunta": "Secar o recém-nascido e retirar os campos úmidos logo após o parto previne a perda de calor por:",
+      "opcoes": [
+        "Evaporação",
+        "Digestão",
+        "Fototerapia",
+        "Sudorese excessiva"
+      ],
+      "correta": 0,
+      "explicacao": "A pele molhada perde calor por evaporação; secar o RN e trocar os campos úmidos é medida essencial de termorregulação."
+    },
+    {
+      "pergunta": "O objetivo de manter o RN em ambiente térmico neutro (por exemplo, incubadora) é:",
+      "opcoes": [
+        "Minimizar o consumo de oxigênio e o gasto energético",
+        "Acelerar a icterícia",
+        "Estimular a diurese",
+        "Aumentar a frequência cardíaca"
+      ],
+      "correta": 0,
+      "explicacao": "O ambiente térmico neutro mantém a temperatura corporal com o menor consumo de oxigênio e gasto energético possível."
+    },
+    {
+      "pergunta": "As convulsões neonatais frequentemente se manifestam de forma:",
+      "opcoes": [
+        "Sutil (movimentos oculares, sucção, pedalar)",
+        "Sempre tônico-clônica generalizada evidente",
+        "Apenas com perda de consciência prolongada",
+        "Exclusivamente com febre alta"
+      ],
+      "correta": 0,
+      "explicacao": "No RN, as crises costumam ser sutis: desvio ocular, movimentos de sucção, pedalar ou apneia, exigindo atenção para o reconhecimento."
+    }
+  ]
+}
+
+{
+  "categoria": "Neonatologia",
+  "questoes": [
+    {
+      "pergunta": "O colostro, primeiro leite produzido pela mãe, é especialmente rico em:",
+      "opcoes": [
+        "Anticorpos (IgA) e proteínas",
+        "Gordura e açúcar",
+        "Ferro e cálcio",
+        "Água apenas"
+      ],
+      "correta": 0,
+      "explicacao": "O colostro é rico em imunoglobulina A e proteínas, oferecendo proteção imunológica importante nos primeiros dias de vida."
+    },
+    {
+      "pergunta": "O Boletim de Silverman-Andersen é usado para avaliar:",
+      "opcoes": [
+        "O grau de desconforto respiratório do RN",
+        "A idade gestacional",
+        "O grau de icterícia",
+        "A vitalidade ao nascer, substituindo o Apgar"
+      ],
+      "correta": 0,
+      "explicacao": "O Boletim de Silverman-Andersen quantifica o desconforto respiratório do recém-nascido por meio de sinais como gemido, tiragem e batimento de asa de nariz."
+    },
+    {
+      "pergunta": "A acrocianose isolada (mãos e pés azulados) nas primeiras horas de vida é:",
+      "opcoes": [
+        "Um achado benigno",
+        "Sinal de cardiopatia grave",
+        "Indicativa de sepse",
+        "Sempre patológica"
+      ],
+      "correta": 0,
+      "explicacao": "A acrocianose isolada nas primeiras horas é benigna. Já a cianose central (língua e mucosas) é sempre patológica."
+    },
+    {
+      "pergunta": "Cianose central que não melhora com a oferta de oxigênio deve levantar suspeita de:",
+      "opcoes": [
+        "Cardiopatia congênita cianótica",
+        "Icterícia fisiológica",
+        "Acrocianose benigna",
+        "Hipoglicemia leve"
+      ],
+      "correta": 0,
+      "explicacao": "A cianose central refratária ao oxigênio sugere cardiopatia congênita cianótica, que deve ser investigada com ecocardiograma."
+    },
+    {
+      "pergunta": "Qual cardiopatia congênita cianótica classicamente se manifesta de forma precoce e é dependente do canal arterial?",
+      "opcoes": [
+        "Transposição das grandes artérias",
+        "Comunicação interatrial isolada",
+        "Persistência do canal arterial isolada",
+        "Estenose pulmonar leve"
+      ],
+      "correta": 0,
+      "explicacao": "A transposição das grandes artérias cursa com cianose precoce e depende do canal arterial (e de comunicações) para a mistura sanguínea."
+    },
+    {
+      "pergunta": "Sialorreia intensa, engasgos e impossibilidade de progredir a sonda gástrica no RN sugerem:",
+      "opcoes": [
+        "Atresia de esôfago",
+        "Refluxo fisiológico",
+        "Estenose hipertrófica de piloro",
+        "Onfalite"
+      ],
+      "correta": 0,
+      "explicacao": "A atresia de esôfago cursa com excesso de salivação e sonda que não progride; associa-se ao espectro VACTERL."
+    },
+    {
+      "pergunta": "Cianose que melhora quando o RN chora e piora quando ele se acalma sugere:",
+      "opcoes": [
+        "Atresia de coanas",
+        "Cardiopatia cianótica",
+        "Pneumonia",
+        "Hérnia umbilical"
+      ],
+      "correta": 0,
+      "explicacao": "Na atresia de coanas, a obstrução nasal causa cianose em repouso que melhora ao chorar, quando o RN respira pela boca."
+    },
+    {
+      "pergunta": "Desconforto respiratório grave associado a abdome escavado no RN sugere:",
+      "opcoes": [
+        "Hérnia diafragmática congênita",
+        "Taquipneia transitória",
+        "Icterícia",
+        "Onfalocele"
+      ],
+      "correta": 0,
+      "explicacao": "Na hérnia diafragmática congênita, vísceras abdominais ocupam o tórax, causando desconforto respiratório grave e abdome escavado."
+    },
+    {
+      "pergunta": "Qual defeito da parede abdominal se apresenta com as alças intestinais recobertas por uma membrana?",
+      "opcoes": [
+        "Onfalocele",
+        "Gastrosquise",
+        "Hérnia inguinal",
+        "Diástase de retos"
+      ],
+      "correta": 0,
+      "explicacao": "Na onfalocele, o conteúdo herniado é recoberto por membrana. Na gastrosquise, as alças ficam expostas, sem membrana."
+    },
+    {
+      "pergunta": "A suplementação periconcepcional de ácido fólico previne principalmente:",
+      "opcoes": [
+        "Defeitos do tubo neural",
+        "Icterícia neonatal",
+        "Cardiopatias cianóticas",
+        "Displasia do quadril"
+      ],
+      "correta": 0,
+      "explicacao": "O ácido fólico antes e no início da gestação reduz o risco de defeitos do tubo neural, como a mielomeningocele."
+    },
+    {
+      "pergunta": "As manobras de Ortolani e Barlow são usadas para pesquisar:",
+      "opcoes": [
+        "Displasia do desenvolvimento do quadril",
+        "Luxação do ombro",
+        "Fratura de clavícula",
+        "Pé torto"
+      ],
+      "correta": 0,
+      "explicacao": "Ortolani e Barlow avaliam a estabilidade do quadril e detectam a displasia do desenvolvimento do quadril no exame do RN."
+    },
+    {
+      "pergunta": "Tumefação mamária e pequeno sangramento vaginal (pseudomenstruação) na RN correspondem a:",
+      "opcoes": [
+        "Efeito benigno de hormônios maternos",
+        "Sinal de infecção",
+        "Distúrbio hormonal grave",
+        "Reação alérgica"
+      ],
+      "correta": 0,
+      "explicacao": "São efeitos transitórios e benignos da passagem de hormônios maternos, que regridem espontaneamente."
+    },
+    {
+      "pergunta": "Qual o peso médio aproximado do recém-nascido a termo?",
+      "opcoes": [
+        "1500 a 2000 g",
+        "2000 a 2500 g",
+        "3000 a 3500 g",
+        "4500 a 5000 g"
+      ],
+      "correta": 2,
+      "explicacao": "O peso médio do RN a termo fica em torno de 3000 a 3500 g."
+    },
+    {
+      "pergunta": "Qual o perímetro cefálico médio aproximado do recém-nascido a termo?",
+      "opcoes": ["28 a 30 cm", "34 a 35 cm", "40 a 42 cm", "45 a 47 cm"],
+      "correta": 1,
+      "explicacao": "O perímetro cefálico médio do RN a termo é de cerca de 34 a 35 cm."
+    },
+    {
+      "pergunta": "Qual o comprimento médio aproximado do recém-nascido a termo?",
+      "opcoes": ["40 a 42 cm", "48 a 50 cm", "55 a 58 cm", "60 a 62 cm"],
+      "correta": 1,
+      "explicacao": "O comprimento médio do RN a termo é de cerca de 48 a 50 cm."
+    },
+    {
+      "pergunta": "A fenda labiopalatina no recém-nascido pode dificultar principalmente:",
+      "opcoes": [
+        "A amamentação",
+        "A audição",
+        "A visão",
+        "A marcha"
+      ],
+      "correta": 0,
+      "explicacao": "A fenda labiopalatina pode comprometer a vedação e a sucção, dificultando a amamentação e exigindo estratégias específicas."
+    },
+    {
+      "pergunta": "No recém-nascido, a instabilidade térmica (hipotermia ou hipertermia) pode ser sinal de:",
+      "opcoes": [
+        "Sepse neonatal",
+        "Boa adaptação",
+        "Icterícia fisiológica",
+        "Refluxo"
+      ],
+      "correta": 0,
+      "explicacao": "Diferente do adulto, o RN com sepse pode apresentar hipotermia ou hipertermia; a instabilidade térmica é um sinal de alerta."
+    },
+    {
+      "pergunta": "São sinais de desconforto respiratório no recém-nascido:",
+      "opcoes": [
+        "Gemido, batimento de asa de nariz e tiragem",
+        "Choro forte e coloração rósea",
+        "Sucção vigorosa",
+        "Fontanela normotensa"
+      ],
+      "correta": 0,
+      "explicacao": "Gemido expiratório, batimento de asa de nariz e retrações (tiragens) indicam esforço respiratório aumentado."
+    },
+    {
+      "pergunta": "O recém-nascido de mãe com HBsAg positivo deve receber, além da vacina, também:",
+      "opcoes": [
+        "Imunoglobulina específica contra hepatite B",
+        "Corticoide",
+        "Antibiótico oral",
+        "Vitamina D em dose alta"
+      ],
+      "correta": 0,
+      "explicacao": "Além da vacina ao nascer, o RN de mãe HBsAg positivo recebe imunoglobulina específica contra hepatite B para reduzir a transmissão vertical."
+    },
+    {
+      "pergunta": "Na prevenção da transmissão vertical do HIV, o recém-nascido exposto deve receber:",
+      "opcoes": [
+        "Profilaxia antirretroviral",
+        "Apenas observação",
+        "Antibiótico de rotina",
+        "Corticoide"
+      ],
+      "correta": 0,
+      "explicacao": "O RN exposto ao HIV recebe profilaxia antirretroviral precoce; no Brasil, também se contraindica o aleitamento materno."
+    },
+    {
+      "pergunta": "A aspiração de vias aéreas na sala de parto deve ser realizada:",
+      "opcoes": [
+        "Apenas quando há obstrução ou necessidade",
+        "Sempre, de rotina, em todo RN",
+        "Somente no RN a termo",
+        "Antes de secar o RN, sempre"
+      ],
+      "correta": 0,
+      "explicacao": "A aspiração não é de rotina; é feita apenas quando há obstrução das vias aéreas ou necessidade clínica, evitando estímulo vagal desnecessário."
+    },
+    {
+      "pergunta": "Diante de líquido amniótico meconial, se o recém-nascido nasce vigoroso, a conduta é:",
+      "opcoes": [
+        "Não realizar aspiração traqueal de rotina",
+        "Aspirar a traqueia obrigatoriamente",
+        "Intubar sempre",
+        "Iniciar massagem cardíaca"
+      ],
+      "correta": 0,
+      "explicacao": "No RN vigoroso com líquido meconial, não se faz aspiração traqueal de rotina; segue-se com os passos habituais e observação."
+    },
+    {
+      "pergunta": "O conceito de \"minuto de ouro\" na reanimação neonatal refere-se a:",
+      "opcoes": [
+        "Estabelecer ventilação efetiva no primeiro minuto de vida, quando necessário",
+        "Aguardar um minuto antes de qualquer conduta",
+        "O tempo máximo de clampeamento do cordão",
+        "O intervalo entre as aferições do Apgar"
+      ],
+      "correta": 0,
+      "explicacao": "O \"minuto de ouro\" enfatiza a importância de completar os passos iniciais e iniciar a ventilação efetiva, se indicada, dentro do primeiro minuto de vida."
+    },
+    {
+      "pergunta": "São grupos de risco para hipoglicemia neonatal:",
+      "opcoes": [
+        "Prematuro, PIG, GIG e filho de mãe diabética",
+        "Apenas RN a termo saudável",
+        "Somente pós-termo",
+        "RN em aleitamento exclusivo, como regra"
+      ],
+      "correta": 0,
+      "explicacao": "Prematuros, RN pequenos ou grandes para a idade gestacional e filhos de mãe diabética têm maior risco de hipoglicemia e devem ser monitorados."
+    },
+    {
+      "pergunta": "Um sopro cardíaco isolado detectado no recém-nascido:",
+      "opcoes": [
+        "Nem sempre indica cardiopatia, podendo ser transitório",
+        "Confirma cardiopatia grave",
+        "Indica sempre cirurgia imediata",
+        "É sempre patológico"
+      ],
+      "correta": 0,
+      "explicacao": "Sopros no RN podem ser transitórios (por exemplo, pelo fechamento do canal arterial); a avaliação clínica define a necessidade de investigação."
+    }
+  ]
+}
+
+
+
+
+

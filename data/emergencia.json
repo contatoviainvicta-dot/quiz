@@ -2,32 +2,598 @@
   "categoria": "Emergência",
   "questoes": [
     {
-      "pergunta": "Qual o principal agente da bronquiolite viral aguda no lactente?",
-      "opcoes": [
-        "Influenza",
-        "Vírus sincicial respiratório (VSR)",
-        "Adenovírus",
-        "Rinovírus"
-      ],
-      "correta": 1,
-      "explicacao": "O vírus sincicial respiratório (VSR) é a causa mais comum de bronquiolite em lactentes."
-    },
-    {
-      "pergunta": "A crise febril típica ocorre caracteristicamente em qual faixa etária?",
-      "opcoes": [
-        "0 a 3 meses",
-        "6 meses a 5 anos",
-        "5 a 10 anos",
-        "Acima de 10 anos"
-      ],
-      "correta": 1,
-      "explicacao": "A crise febril típica ocorre entre 6 meses e 5 anos, com pico por volta dos 18 meses."
-    },
-    {
-      "pergunta": "Na diarreia aguda do lactente, qual a principal complicação a ser prevenida?",
-      "opcoes": ["Desidratação", "Anemia", "Hipertensão", "Obesidade"],
+      "pergunta": "Qual o agente mais comum da laringotraqueíte aguda (crupe viral)?",
+      "opcoes": ["Vírus parainfluenza", "Estreptococo do grupo A", "Haemophilus influenzae b", "Estafilococo"],
       "correta": 0,
-      "explicacao": "A desidratação é o maior risco. A hidratação oral com sais de reidratação é a base do tratamento."
+      "explicacao": "O crupe viral é causado com maior frequência pelo vírus parainfluenza."
+    },
+    {
+      "pergunta": "Qual achado é clássico do crupe viral?",
+      "opcoes": ["Tosse ladrante (metálica) e estridor inspiratório", "Tosse produtiva com escarro", "Sibilância expiratória difusa", "Tosse afebril crônica"],
+      "correta": 0,
+      "explicacao": "A tosse ladrante e o estridor inspiratório são marcas do crupe viral, por edema subglótico."
+    },
+    {
+      "pergunta": "Qual o tratamento do crupe viral moderado a grave?",
+      "opcoes": ["Corticoide, podendo associar adrenalina nebulizada", "Antibiótico venoso", "Broncodilatador isolado", "Apenas antitérmico"],
+      "correta": 0,
+      "explicacao": "Corticoide (como dexametasona) reduz o edema; nos casos moderados/graves associa-se adrenalina nebulizada."
+    },
+    {
+      "pergunta": "Qual agente é classicamente associado à epiglotite aguda?",
+      "opcoes": ["Haemophilus influenzae tipo b", "Rinovírus", "Vírus sincicial respiratório", "Rotavírus"],
+      "correta": 0,
+      "explicacao": "A epiglotite clássica é causada pelo Haemophilus influenzae tipo b, hoje mais rara pela vacinação."
+    },
+    {
+      "pergunta": "Qual quadro sugere epiglotite aguda?",
+      "opcoes": ["Início súbito, febre alta, sialorreia e posição do tripé", "Tosse ladrante afebril", "Sibilância recorrente", "Coriza e febre baixa"],
+      "correta": 0,
+      "explicacao": "A epiglotite cursa com início abrupto, febre alta, disfagia, sialorreia e postura em tripé, sendo emergência de via aérea."
+    },
+    {
+      "pergunta": "Diante de suspeita de epiglotite, o que NÃO deve ser feito de imediato?",
+      "opcoes": ["Examinar a orofaringe com abaixador de língua", "Manter a criança calma", "Garantir via aérea", "Chamar suporte especializado"],
+      "correta": 0,
+      "explicacao": "Examinar a orofaringe pode desencadear obstrução total; prioriza-se manter a criança calma e garantir a via aérea."
+    },
+    {
+      "pergunta": "A bronquiolite viral aguda acomete principalmente qual faixa etária?",
+      "opcoes": ["Lactentes menores de 2 anos, com pico abaixo de 6 meses", "Escolares", "Adolescentes", "Recém-nascidos exclusivamente"],
+      "correta": 0,
+      "explicacao": "A bronquiolite é típica de lactentes menores de 2 anos, com maior gravidade abaixo de 6 meses."
+    },
+    {
+      "pergunta": "O tratamento da bronquiolite viral aguda é essencialmente:",
+      "opcoes": ["De suporte (oxigênio e hidratação)", "Antibiótico de rotina", "Corticoide sistêmico de rotina", "Broncodilatador para todos"],
+      "correta": 0,
+      "explicacao": "O manejo é de suporte, com oxigênio e hidratação; antibióticos e corticoides não são indicados de rotina."
+    },
+    {
+      "pergunta": "Qual a medicação de resgate na crise asmática?",
+      "opcoes": ["Beta-2 agonista de curta ação inalado (salbutamol)", "Corticoide inalado isolado", "Antibiótico", "Anti-histamínico"],
+      "correta": 0,
+      "explicacao": "O broncodilatador beta-2 de curta ação inalado é o resgate imediato na crise asmática."
+    },
+    {
+      "pergunta": "Na crise asmática moderada a grave, além do broncodilatador, associa-se:",
+      "opcoes": ["Corticoide sistêmico", "Diurético", "Antitérmico apenas", "Sedativo"],
+      "correta": 0,
+      "explicacao": "O corticoide sistêmico precoce reduz a inflamação e é indicado nas crises moderadas a graves."
+    },
+    {
+      "pergunta": "Na crise asmática, o 'tórax silencioso' (ausência de sibilos) indica:",
+      "opcoes": ["Obstrução grave com pouca troca de ar", "Melhora do quadro", "Crise leve", "Ausência de broncoespasmo"],
+      "correta": 0,
+      "explicacao": "O tórax silencioso é sinal de gravidade: há tão pouca ventilação que os sibilos desaparecem."
+    },
+    {
+      "pergunta": "Qual o principal agente bacteriano da pneumonia comunitária na infância?",
+      "opcoes": ["Streptococcus pneumoniae", "Pseudomonas aeruginosa", "Klebsiella pneumoniae", "Legionella"],
+      "correta": 0,
+      "explicacao": "O pneumococo (Streptococcus pneumoniae) é o principal agente bacteriano da pneumonia comunitária pediátrica."
+    },
+    {
+      "pergunta": "Qual o agente etiológico da coqueluche?",
+      "opcoes": ["Bordetella pertussis", "Streptococcus pyogenes", "Vírus influenza", "Mycoplasma"],
+      "correta": 0,
+      "explicacao": "A coqueluche é causada pela Bordetella pertussis."
+    },
+    {
+      "pergunta": "A fase paroxística da coqueluche caracteriza-se por:",
+      "opcoes": ["Acessos de tosse seguidos de guincho inspiratório", "Tosse produtiva matinal", "Estridor contínuo", "Sibilância isolada"],
+      "correta": 0,
+      "explicacao": "A fase paroxística cursa com acessos de tosse seguidos do guincho inspiratório e, por vezes, vômitos."
+    },
+    {
+      "pergunta": "Em um lactente (menor de 1 ano) consciente e engasgado, a manobra correta é:",
+      "opcoes": ["Golpes nas costas alternados com compressões torácicas", "Manobra de Heimlich (compressões abdominais)", "Colocar o dedo às cegas na garganta", "Deitar e aguardar"],
+      "correta": 0,
+      "explicacao": "No lactente usa-se a sequência de golpes dorsais e compressões torácicas; o Heimlich abdominal não é indicado abaixo de 1 ano."
+    },
+    {
+      "pergunta": "Em uma criança maior de 1 ano consciente com engasgo, a manobra indicada é:",
+      "opcoes": ["Manobra de Heimlich (compressões abdominais)", "Golpes dorsais isolados", "Compressões torácicas apenas", "Aguardar a tosse cessar"],
+      "correta": 0,
+      "explicacao": "Acima de 1 ano, na obstrução por corpo estranho com a criança consciente, usa-se a manobra de Heimlich."
+    },
+    {
+      "pergunta": "A presença de estridor indica obstrução em qual nível?",
+      "opcoes": ["Via aérea alta (extratorácica)", "Via aérea baixa", "Alvéolos", "Pleura"],
+      "correta": 0,
+      "explicacao": "O estridor é sinal de obstrução da via aérea alta/extratorácica, como na laringe."
+    },
+    {
+      "pergunta": "A sibilância indica obstrução em qual nível?",
+      "opcoes": ["Via aérea baixa (intratorácica)", "Via aérea alta", "Faringe", "Cavidade oral"],
+      "correta": 0,
+      "explicacao": "A sibilância reflete obstrução das vias aéreas inferiores, como na asma e na bronquiolite."
+    },
+    {
+      "pergunta": "Qual a causa mais comum de parada cardiorrespiratória na criança?",
+      "opcoes": ["Respiratória (hipóxia)", "Arritmia primária", "Infarto do miocárdio", "Embolia pulmonar"],
+      "correta": 0,
+      "explicacao": "Diferente do adulto, a PCR pediátrica costuma ter origem respiratória/hipóxica, e não cardíaca primária."
+    },
+    {
+      "pergunta": "Na RCP pediátrica com 1 socorrista, qual a relação compressão:ventilação?",
+      "opcoes": ["30:2", "15:2", "5:1", "3:1"],
+      "correta": 0,
+      "explicacao": "Com um único socorrista, usa-se 30 compressões para 2 ventilações na criança."
+    },
+    {
+      "pergunta": "Na RCP pediátrica com 2 socorristas, qual a relação compressão:ventilação?",
+      "opcoes": ["15:2", "30:2", "10:1", "5:2"],
+      "correta": 0,
+      "explicacao": "Com dois socorristas na criança/lactente, a relação é 15 compressões para 2 ventilações."
+    },
+    {
+      "pergunta": "Qual a frequência recomendada das compressões torácicas na RCP?",
+      "opcoes": ["100 a 120 por minuto", "60 a 80 por minuto", "140 a 160 por minuto", "40 a 60 por minuto"],
+      "correta": 0,
+      "explicacao": "As compressões devem ser feitas a 100 a 120 por minuto, permitindo o retorno total do tórax."
+    },
+    {
+      "pergunta": "Qual a profundidade recomendada das compressões torácicas na criança?",
+      "opcoes": ["Cerca de 1/3 do diâmetro anteroposterior do tórax", "Menos de 1 cm", "Metade do tórax", "O máximo possível"],
+      "correta": 0,
+      "explicacao": "Comprime-se cerca de um terço do diâmetro anteroposterior do tórax na criança e no lactente."
+    },
+    {
+      "pergunta": "No lactente, o local das compressões torácicas é:",
+      "opcoes": ["Metade inferior do esterno", "Apêndice xifoide", "Terço superior do esterno", "Sobre as clavículas"],
+      "correta": 0,
+      "explicacao": "As compressões no lactente são feitas na metade inferior do esterno, logo abaixo da linha intermamilar."
+    },
+    {
+      "pergunta": "Quais são os ritmos chocáveis na PCR?",
+      "opcoes": ["Fibrilação ventricular e taquicardia ventricular sem pulso", "Assistolia e AESP", "Bradicardia sinusal", "Bloqueio de 1º grau"],
+      "correta": 0,
+      "explicacao": "Fibrilação ventricular e taquicardia ventricular sem pulso são os ritmos que respondem à desfibrilação."
+    },
+    {
+      "pergunta": "Quais são os ritmos NÃO chocáveis na PCR?",
+      "opcoes": ["Assistolia e atividade elétrica sem pulso (AESP)", "Fibrilação ventricular", "Taquicardia ventricular sem pulso", "Torsades de pointes"],
+      "correta": 0,
+      "explicacao": "Assistolia e AESP não respondem ao choque; o tratamento é RCP de qualidade e adrenalina."
+    },
+    {
+      "pergunta": "Qual a dose de adrenalina na PCR pediátrica (via IV/IO)?",
+      "opcoes": ["0,01 mg/kg", "0,1 mg/kg", "1 mg/kg", "Dose fixa de 1 mg"],
+      "correta": 0,
+      "explicacao": "A dose de adrenalina na PCR é de 0,01 mg/kg IV/IO, repetida a cada 3 a 5 minutos."
+    },
+    {
+      "pergunta": "Lactente com FC abaixo de 60 bpm e má perfusão, apesar de oxigenação e ventilação adequadas. A conduta é:",
+      "opcoes": ["Iniciar compressões torácicas", "Apenas observar", "Administrar antitérmico", "Aguardar 5 minutos"],
+      "correta": 0,
+      "explicacao": "Bradicardia abaixo de 60 bpm com má perfusão, apesar de suporte ventilatório, indica início das compressões torácicas."
+    },
+    {
+      "pergunta": "Ao usar o DEA em criança menor (abaixo de 25 kg / 8 anos), o ideal é:",
+      "opcoes": ["Usar pás pediátricas ou atenuador de carga, se disponíveis", "Nunca usar DEA", "Usar sempre carga máxima de adulto", "Aguardar suporte avançado obrigatoriamente"],
+      "correta": 0,
+      "explicacao": "Em crianças menores, preferem-se pás/atenuador pediátrico; na ausência, o DEA de adulto pode ser usado."
+    },
+    {
+      "pergunta": "A primeira medida diante de uma criança irresponsiva que não respira normalmente é:",
+      "opcoes": ["Checar pulso e iniciar RCP se ausente/duvidoso", "Oferecer água", "Aplicar antitérmico", "Colocar em posição sentada"],
+      "correta": 0,
+      "explicacao": "Reconhecida a irresponsividade e a ausência de respiração normal, checa-se o pulso e inicia-se a RCP conforme necessário."
+    },
+    {
+      "pergunta": "Qual o tipo de choque mais comum na criança?",
+      "opcoes": ["Hipovolêmico", "Cardiogênico", "Obstrutivo", "Neurogênico"],
+      "correta": 0,
+      "explicacao": "O choque hipovolêmico, frequentemente por desidratação ou perdas, é o mais comum em pediatria."
+    },
+    {
+      "pergunta": "Qual é um sinal PRECOCE de choque na criança?",
+      "opcoes": ["Taquicardia", "Hipotensão", "Bradicardia", "Anúria imediata"],
+      "correta": 0,
+      "explicacao": "A taquicardia é sinal precoce e compensatório; a hipotensão aparece tardiamente."
+    },
+    {
+      "pergunta": "Na criança, a hipotensão arterial é um sinal:",
+      "opcoes": ["Tardio (choque descompensado)", "Precoce", "Sempre ausente", "Sem valor clínico"],
+      "correta": 0,
+      "explicacao": "A criança compensa bem por muito tempo; a hipotensão indica choque descompensado e é sinal tardio."
+    },
+    {
+      "pergunta": "Qual o tempo de enchimento capilar considerado normal?",
+      "opcoes": ["Até 2 segundos", "Até 6 segundos", "Até 10 segundos", "Não tem valor de referência"],
+      "correta": 0,
+      "explicacao": "O enchimento capilar normal é de até 2 segundos; acima disso sugere má perfusão."
+    },
+    {
+      "pergunta": "Qual a reposição volêmica inicial no choque hipovolêmico/séptico pediátrico?",
+      "opcoes": ["Bolus de cristaloide 20 mL/kg", "Bolus de 5 mL/kg", "Soro glicosado a 5% lento", "Concentrado de hemácias de rotina"],
+      "correta": 0,
+      "explicacao": "O tratamento inicial é a expansão com cristaloide isotônico em bolus de 20 mL/kg, reavaliando a resposta."
+    },
+    {
+      "pergunta": "No choque séptico, além da expansão volêmica, é fundamental:",
+      "opcoes": ["Antibiótico precoce e, se refratário, drogas vasoativas", "Restrição hídrica", "Corticoide para todos", "Diurético imediato"],
+      "correta": 0,
+      "explicacao": "A antibioticoterapia precoce é essencial; no choque refratário a volume, iniciam-se drogas vasoativas."
+    },
+    {
+      "pergunta": "Qual o tratamento de primeira linha do choque anafilático?",
+      "opcoes": ["Adrenalina intramuscular", "Anti-histamínico oral", "Corticoide isolado", "Broncodilatador isolado"],
+      "correta": 0,
+      "explicacao": "A adrenalina IM é a primeira linha na anafilaxia; anti-histamínicos e corticoides são adjuvantes."
+    },
+    {
+      "pergunta": "Qual parâmetro simples reflete a perfusão de órgãos e ajuda a monitorar o choque?",
+      "opcoes": ["Débito urinário", "Peso corporal", "Temperatura axilar", "Perímetro cefálico"],
+      "correta": 0,
+      "explicacao": "A oligúria indica hipoperfusão renal; o débito urinário é bom marcador de perfusão."
+    },
+    {
+      "pergunta": "Qual achado sugere desidratação GRAVE na criança?",
+      "opcoes": ["Letargia, olhos muito fundos e enchimento capilar lento", "Sede leve isolada", "Mucosas úmidas", "Turgor normal"],
+      "correta": 0,
+      "explicacao": "Letargia, olhos fundos, turgor muito reduzido e enchimento capilar lento indicam desidratação grave."
+    },
+    {
+      "pergunta": "Qual costuma ser o sinal mais precoce de desidratação?",
+      "opcoes": ["Sede aumentada", "Choque", "Anúria", "Coma"],
+      "correta": 0,
+      "explicacao": "A sede aumentada é sinal precoce; sinais graves surgem com a progressão da perda hídrica."
+    },
+    {
+      "pergunta": "No Plano A de hidratação (sem desidratação), a conduta é:",
+      "opcoes": ["Aumentar a oferta de líquidos e orientar sinais de alerta em casa", "Hidratação venosa imediata", "Internação obrigatória", "Jejum absoluto"],
+      "correta": 0,
+      "explicacao": "O Plano A é domiciliar: aumento da oferta de líquidos, manutenção da alimentação e orientação de sinais de alarme."
+    },
+    {
+      "pergunta": "No Plano B (desidratação leve a moderada), a conduta é:",
+      "opcoes": ["Soro de reidratação oral supervisionado na unidade de saúde", "Hidratação venosa rápida sempre", "Apenas antitérmico", "Antibiótico empírico"],
+      "correta": 0,
+      "explicacao": "O Plano B usa soro de reidratação oral supervisionado na unidade, reavaliando o estado de hidratação."
+    },
+    {
+      "pergunta": "No Plano C (desidratação grave), a conduta é:",
+      "opcoes": ["Hidratação endovenosa", "Reidratação oral em casa", "Observação sem intervenção", "Somente sintomáticos"],
+      "correta": 0,
+      "explicacao": "A desidratação grave exige hidratação endovenosa rápida, pelo risco de choque."
+    },
+    {
+      "pergunta": "O soro de reidratação oral (SRO) contém essencialmente:",
+      "opcoes": ["Água, glicose e eletrólitos (sódio e potássio)", "Apenas água", "Somente açúcar", "Apenas sódio"],
+      "correta": 0,
+      "explicacao": "O SRO combina água, glicose e eletrólitos, aproveitando o cotransporte de sódio e glicose no intestino."
+    },
+    {
+      "pergunta": "Na desidratação leve a moderada, a via preferencial de reidratação é:",
+      "opcoes": ["Oral", "Endovenosa", "Intraóssea", "Subcutânea"],
+      "correta": 0,
+      "explicacao": "A via oral é preferencial na desidratação leve a moderada, sendo eficaz e menos invasiva."
+    },
+    {
+      "pergunta": "A estenose hipertrófica de piloro tipicamente se manifesta com:",
+      "opcoes": ["Vômitos em jato não biliosos por volta de 3 a 6 semanas de vida", "Vômitos biliosos ao nascer", "Diarreia crônica", "Icterícia isolada"],
+      "correta": 0,
+      "explicacao": "A estenose de piloro cursa com vômitos em jato, não biliosos, geralmente entre a 3ª e a 6ª semana de vida."
+    },
+    {
+      "pergunta": "Qual distúrbio metabólico é típico da estenose hipertrófica de piloro?",
+      "opcoes": ["Alcalose metabólica hipoclorêmica e hipocalêmica", "Acidose metabólica", "Alcalose respiratória", "Acidose respiratória"],
+      "correta": 0,
+      "explicacao": "A perda de ácido clorídrico pelos vômitos gera alcalose metabólica hipoclorêmica e hipocalêmica."
+    },
+    {
+      "pergunta": "Qual sinal palpável pode ser encontrado na estenose hipertrófica de piloro?",
+      "opcoes": ["Oliva pilórica", "Massa em fossa ilíaca direita", "Fígado aumentado", "Baço palpável"],
+      "correta": 0,
+      "explicacao": "A oliva pilórica é uma massa palpável no epigástrio/hipocôndrio direito, correspondente ao piloro hipertrofiado."
+    },
+    {
+      "pergunta": "A invaginação (intussuscepção) intestinal é mais comum em qual faixa etária?",
+      "opcoes": ["Lactentes (cerca de 3 meses a 3 anos)", "Recém-nascidos", "Adolescentes", "Escolares acima de 8 anos"],
+      "correta": 0,
+      "explicacao": "A invaginação intestinal é típica de lactentes, com pico entre 3 meses e 3 anos."
+    },
+    {
+      "pergunta": "Qual achado é sugestivo de invaginação intestinal?",
+      "opcoes": ["Dor em cólica, massa em salsicha e fezes em geleia de morango", "Vômitos em jato não biliosos", "Diarreia aquosa crônica", "Icterícia progressiva"],
+      "correta": 0,
+      "explicacao": "A invaginação cursa com crises de dor, massa palpável alongada e fezes com muco e sangue (geleia de morango)."
+    },
+    {
+      "pergunta": "Na apendicite aguda, a dor caracteristicamente:",
+      "opcoes": ["Migra para a fossa ilíaca direita (ponto de McBurney)", "Fica restrita ao hipocôndrio esquerdo", "É sempre suprapúbica", "Localiza-se no dorso"],
+      "correta": 0,
+      "explicacao": "A dor da apendicite costuma iniciar periumbilical e migrar para a fossa ilíaca direita."
+    },
+    {
+      "pergunta": "O vômito bilioso no recém-nascido ou lactente é sinal de alarme para:",
+      "opcoes": ["Obstrução intestinal (ex.: má rotação com volvo)", "Refluxo fisiológico", "Cólica do lactente", "Alergia leve"],
+      "correta": 0,
+      "explicacao": "Vômito bilioso sugere obstrução intestinal abaixo da papila; a má rotação com volvo é emergência cirúrgica."
+    },
+    {
+      "pergunta": "A ingestão de bateria tipo botão alojada no esôfago exige:",
+      "opcoes": ["Remoção endoscópica urgente", "Observação por 48 horas", "Indução de vômito", "Apenas antiácido"],
+      "correta": 0,
+      "explicacao": "A bateria no esôfago causa queimadura rápida e exige remoção endoscópica urgente."
+    },
+    {
+      "pergunta": "Qual característica define a crise febril SIMPLES?",
+      "opcoes": ["Generalizada, com menos de 15 minutos e sem recorrência em 24h", "Focal e prolongada", "Recorrente no mesmo dia", "Sempre com déficit residual"],
+      "correta": 0,
+      "explicacao": "A crise febril simples é generalizada, breve (menos de 15 min) e única em 24 horas, com bom prognóstico."
+    },
+    {
+      "pergunta": "Qual característica define a crise febril COMPLEXA?",
+      "opcoes": ["Focal, prolongada (mais de 15 min) ou recorrente em 24h", "Sempre generalizada e breve", "Ocorre apenas acima de 5 anos", "Nunca recorre"],
+      "correta": 0,
+      "explicacao": "A crise febril complexa é focal, prolongada ou recorre em 24 horas, exigindo maior atenção."
+    },
+    {
+      "pergunta": "Na crise febril simples, a conduta habitual é:",
+      "opcoes": ["Controle da febre e orientação, sem anticonvulsivante contínuo", "Iniciar anticonvulsivante de uso contínuo", "Internação prolongada de rotina", "Tomografia para todos"],
+      "correta": 0,
+      "explicacao": "A crise febril simples tem bom prognóstico: controla-se a febre e orienta-se a família, sem uso contínuo de anticonvulsivante."
+    },
+    {
+      "pergunta": "Qual a primeira linha medicamentosa no estado de mal epiléptico?",
+      "opcoes": ["Benzodiazepínico (diazepam ou midazolam)", "Fenobarbital em bolus como 1ª escolha", "Corticoide", "Antibiótico"],
+      "correta": 0,
+      "explicacao": "Os benzodiazepínicos são a primeira linha para abortar a crise no estado de mal epiléptico."
+    },
+    {
+      "pergunta": "Quais sinais meníngeos podem indicar meningite?",
+      "opcoes": ["Rigidez de nuca, sinais de Kernig e Brudzinski", "Sinal de Murphy", "Sinal de Blumberg", "Sinal de Homans"],
+      "correta": 0,
+      "explicacao": "Rigidez de nuca e os sinais de Kernig e Brudzinski sugerem irritação meníngea."
+    },
+    {
+      "pergunta": "No lactente com meningite, além de febre, pode-se observar:",
+      "opcoes": ["Irritabilidade, abaulamento de fontanela e recusa alimentar", "Sempre rigidez de nuca evidente", "Melhora com o toque", "Fontanela deprimida obrigatoriamente"],
+      "correta": 0,
+      "explicacao": "No lactente os sinais clássicos podem faltar; irritabilidade, abaulamento de fontanela e recusa alimentar são pistas importantes."
+    },
+    {
+      "pergunta": "Febre com petéquias/púrpura de progressão rápida em criança sugere:",
+      "opcoes": ["Meningococcemia", "Dermatite atópica", "Urticária comum", "Miliária"],
+      "correta": 0,
+      "explicacao": "Petéquias/púrpura com febre e rápida progressão sugerem meningococcemia, uma emergência."
+    },
+    {
+      "pergunta": "Diante de forte suspeita de meningite bacteriana, a conduta correta é:",
+      "opcoes": ["Iniciar antibiótico precocemente, sem atrasar por exames", "Aguardar todos os exames antes de tratar", "Tratar apenas se a punção confirmar", "Observar por 24 horas"],
+      "correta": 0,
+      "explicacao": "A antibioticoterapia deve ser precoce; não se deve atrasar o tratamento aguardando exames."
+    },
+    {
+      "pergunta": "Fora do período neonatal, entre crianças maiores e adolescentes, agentes comuns de meningite bacteriana são:",
+      "opcoes": ["Meningococo e pneumococo", "Escherichia coli e Listeria", "Pseudomonas e Serratia", "Apenas fungos"],
+      "correta": 0,
+      "explicacao": "Após a lactância e com a vacinação para Hib, meningococo e pneumococo são os principais agentes."
+    },
+    {
+      "pergunta": "Uma contraindicação relativa à punção lombar imediata na suspeita de meningite é:",
+      "opcoes": ["Sinais de hipertensão intracraniana ou instabilidade", "Febre alta", "Cefaleia", "Vômito isolado"],
+      "correta": 0,
+      "explicacao": "Sinais de hipertensão intracraniana ou instabilidade contraindicam a punção imediata, pelo risco de herniação; trata-se sem atrasar o antibiótico."
+    },
+    {
+      "pergunta": "Qual a sequência de avaliação inicial do trauma?",
+      "opcoes": ["ABCDE", "SAMPLE", "AVPU isolado", "OPQRST"],
+      "correta": 0,
+      "explicacao": "A abordagem inicial do trauma segue a sequência ABCDE (vias aéreas, respiração, circulação, disfunção neurológica, exposição)."
+    },
+    {
+      "pergunta": "No ABCDE do trauma, a letra 'A' corresponde a:",
+      "opcoes": ["Via aérea com controle da coluna cervical", "Analgesia", "Acesso venoso", "Avaliação abdominal"],
+      "correta": 0,
+      "explicacao": "O 'A' é a via aérea com proteção da coluna cervical, primeira prioridade no trauma."
+    },
+    {
+      "pergunta": "Qual achado levanta suspeita de trauma não acidental (maus-tratos)?",
+      "opcoes": ["Lesões incompatíveis com a história ou em estágios diferentes de cicatrização", "Escoriação única compatível com queda relatada", "Febre isolada", "Assadura de fralda"],
+      "correta": 0,
+      "explicacao": "Lesões incompatíveis com a história/idade e múltiplas lesões em fases diferentes são sinais de alerta para maus-tratos."
+    },
+    {
+      "pergunta": "Diante de suspeita de maus-tratos contra a criança, a notificação é:",
+      "opcoes": ["Compulsória, ao Conselho Tutelar", "Opcional", "Feita apenas com autorização dos pais", "Dispensável se leve"],
+      "correta": 0,
+      "explicacao": "No Brasil, a suspeita de maus-tratos deve ser notificada compulsoriamente ao Conselho Tutelar, conforme o ECA."
+    },
+    {
+      "pergunta": "Qual sinal, após traumatismo cranioencefálico, indica gravidade?",
+      "opcoes": ["Vômitos repetidos e alteração do nível de consciência", "Cefaleia leve isolada", "Choro breve que cessa", "Hematoma superficial pequeno"],
+      "correta": 0,
+      "explicacao": "Vômitos repetidos, alteração de consciência e convulsão após TCE são sinais de alarme que exigem investigação."
+    },
+    {
+      "pergunta": "Na criança, o cálculo da superfície corporal queimada difere do adulto porque:",
+      "opcoes": ["A cabeça representa proporção maior da superfície corporal", "As pernas são proporcionalmente maiores", "O tronco é insignificante", "Não há diferença"],
+      "correta": 0,
+      "explicacao": "Na criança a cabeça ocupa proporção maior; por isso a regra dos 9 é adaptada para a faixa etária."
+    },
+    {
+      "pergunta": "Qual a conduta inicial correta em queimadura?",
+      "opcoes": ["Resfriar com água (não gelo) e avaliar analgesia e via aérea", "Aplicar gelo diretamente", "Furar as bolhas de imediato", "Passar pomadas caseiras"],
+      "correta": 0,
+      "explicacao": "Resfria-se com água corrente (não gelo), controla-se a dor e avalia-se via aérea em caso de inalação."
+    },
+    {
+      "pergunta": "Na reanimação da vítima de afogamento, a prioridade é:",
+      "opcoes": ["Via aérea e ventilação (correção da hipóxia)", "Compressões antes de ventilar sempre", "Aquecimento antes de qualquer medida", "Manobra de Heimlich de rotina"],
+      "correta": 0,
+      "explicacao": "O afogamento causa hipóxia; por isso, a ventilação/oxigenação é prioridade na reanimação."
+    },
+    {
+      "pergunta": "Qual o antídoto da intoxicação por paracetamol?",
+      "opcoes": ["N-acetilcisteína", "Naloxona", "Flumazenil", "Atropina"],
+      "correta": 0,
+      "explicacao": "A N-acetilcisteína repõe glutationa e é o antídoto da intoxicação por paracetamol."
+    },
+    {
+      "pergunta": "Qual o antídoto da intoxicação por organofosforados?",
+      "opcoes": ["Atropina", "Naloxona", "N-acetilcisteína", "Vitamina K"],
+      "correta": 0,
+      "explicacao": "A atropina antagoniza os efeitos muscarínicos; a pralidoxima também é usada nos organofosforados."
+    },
+    {
+      "pergunta": "Qual o antídoto da intoxicação por opioides?",
+      "opcoes": ["Naloxona", "Flumazenil", "Atropina", "Deferoxamina"],
+      "correta": 0,
+      "explicacao": "A naloxona reverte a depressão respiratória e do SNC causada por opioides."
+    },
+    {
+      "pergunta": "Qual o antídoto da intoxicação por benzodiazepínicos?",
+      "opcoes": ["Flumazenil", "Naloxona", "Atropina", "N-acetilcisteína"],
+      "correta": 0,
+      "explicacao": "O flumazenil é o antagonista dos benzodiazepínicos, usado com cautela pelo risco de convulsão."
+    },
+    {
+      "pergunta": "Em qual situação o carvão ativado NÃO deve ser usado?",
+      "opcoes": ["Ingestão de cáusticos ou paciente sem via aérea protegida", "Ingestão recente de comprimidos com paciente alerta", "Intoxicação por certos medicamentos", "Logo após ingestão, se indicado"],
+      "correta": 0,
+      "explicacao": "O carvão ativado é contraindicado em cáusticos, hidrocarbonetos e rebaixamento sem via aérea protegida, pelo risco de aspiração."
+    },
+    {
+      "pergunta": "Diante da ingestão de substância cáustica, a conduta correta inclui:",
+      "opcoes": ["Não induzir vômito e não usar carvão ativado", "Provocar vômito imediatamente", "Neutralizar com ácido/base caseiros", "Administrar carvão ativado"],
+      "correta": 0,
+      "explicacao": "Não se induz vômito nem se usa carvão; avalia-se a lesão (por exemplo, endoscopia) e oferece-se suporte."
+    },
+    {
+      "pergunta": "Qual o quelante usado na intoxicação grave por ferro?",
+      "opcoes": ["Deferoxamina", "Naloxona", "Flumazenil", "Atropina"],
+      "correta": 0,
+      "explicacao": "A deferoxamina é o quelante indicado na intoxicação grave por ferro."
+    },
+    {
+      "pergunta": "Qual o tratamento da intoxicação por monóxido de carbono?",
+      "opcoes": ["Oxigênio a 100%", "Restrição de oxigênio", "Corticoide isolado", "Diurético"],
+      "correta": 0,
+      "explicacao": "O oxigênio a 100% acelera a eliminação da carboxi-hemoglobina; casos graves podem usar câmara hiperbárica."
+    },
+    {
+      "pergunta": "A lavagem gástrica na intoxicação aguda:",
+      "opcoes": ["Tem uso restrito e janela curta, não sendo rotina", "Deve ser feita sempre", "É indicada horas após a ingestão", "Substitui o carvão ativado sempre"],
+      "correta": 0,
+      "explicacao": "A lavagem gástrica tem indicações restritas e janela curta; não é conduta de rotina."
+    },
+    {
+      "pergunta": "Qual o tratamento do acidente escorpiônico grave em criança?",
+      "opcoes": ["Soro antiescorpiônico e suporte", "Apenas analgésico oral", "Antibiótico de rotina", "Observação domiciliar"],
+      "correta": 0,
+      "explicacao": "As crianças fazem quadros mais graves; no acidente grave indica-se soro antiescorpiônico e suporte."
+    },
+    {
+      "pergunta": "No acidente ofídico botrópico com manifestações sistêmicas, indica-se:",
+      "opcoes": ["Soro antibotrópico e suporte", "Torniquete apertado", "Corte no local da picada", "Sucção da peçonha"],
+      "correta": 0,
+      "explicacao": "O tratamento é a soroterapia antibotrópica específica e o suporte; medidas como torniquete e corte são contraindicadas."
+    },
+    {
+      "pergunta": "Quais achados laboratoriais caracterizam a cetoacidose diabética?",
+      "opcoes": ["Hiperglicemia, cetose e acidose metabólica", "Hipoglicemia e alcalose", "Glicemia normal e cetose", "Hiperglicemia sem acidose sempre"],
+      "correta": 0,
+      "explicacao": "A cetoacidose diabética reúne hiperglicemia, cetose/cetonúria e acidose metabólica."
+    },
+    {
+      "pergunta": "O tratamento da cetoacidose diabética baseia-se em:",
+      "opcoes": ["Hidratação, insulina e correção de eletrólitos", "Apenas insulina em bolus alto", "Restrição hídrica", "Corticoide"],
+      "correta": 0,
+      "explicacao": "O manejo envolve reposição volêmica cuidadosa, insulina e atenção aos eletrólitos, sobretudo o potássio."
+    },
+    {
+      "pergunta": "Qual a complicação temida no tratamento da cetoacidose diabética em crianças?",
+      "opcoes": ["Edema cerebral", "Hipertensão crônica", "Cálculo renal", "Anemia"],
+      "correta": 0,
+      "explicacao": "O edema cerebral é complicação grave, associada a correções rápidas; exige monitorização e cautela."
+    },
+    {
+      "pergunta": "Diante de hipoglicemia sintomática, a conduta é:",
+      "opcoes": ["Oferecer glicose (oral se consciente, EV se grave)", "Restringir alimentos", "Aguardar melhora espontânea", "Administrar insulina"],
+      "correta": 0,
+      "explicacao": "Corrige-se com glicose: via oral se a criança está consciente e capaz de deglutir, ou endovenosa nos casos graves."
+    },
+    {
+      "pergunta": "Quais são sinais comuns de hipoglicemia?",
+      "opcoes": ["Sudorese, tremor, irritabilidade e rebaixamento", "Poliúria e polidipsia isoladas", "Bradicardia isolada", "Icterícia"],
+      "correta": 0,
+      "explicacao": "A hipoglicemia cursa com sintomas adrenérgicos (sudorese, tremor) e neuroglicopênicos (irritabilidade, rebaixamento)."
+    },
+    {
+      "pergunta": "Na insuficiência adrenal aguda (crise adrenal), o tratamento inclui:",
+      "opcoes": ["Hidrocortisona, volume e glicose", "Apenas antitérmico", "Restrição de sal", "Insulina"],
+      "correta": 0,
+      "explicacao": "A crise adrenal é tratada com corticoide (hidrocortisona), reposição de volume e correção de glicose e eletrólitos."
+    },
+    {
+      "pergunta": "Lactente pequeno (abaixo de 3 meses) com febre sem sinais localizatórios exige:",
+      "opcoes": ["Investigação ampliada pelo risco de infecção bacteriana grave", "Alta com antitérmico apenas", "Observação sem exames", "Antibiótico oral empírico em casa"],
+      "correta": 0,
+      "explicacao": "Quanto menor o lactente, maior o risco de infecção bacteriana grave; a febre sem foco exige investigação mais cuidadosa."
+    },
+    {
+      "pergunta": "Qual o local recomendado para aplicar a adrenalina intramuscular na anafilaxia?",
+      "opcoes": ["Face anterolateral da coxa (músculo vasto lateral)", "Região glútea", "Deltoide sempre", "Antebraço"],
+      "correta": 0,
+      "explicacao": "A adrenalina IM na anafilaxia é aplicada na face anterolateral da coxa (vasto lateral), pela absorção rápida."
+    },
+    {
+      "pergunta": "Qual a dose de adrenalina intramuscular na anafilaxia?",
+      "opcoes": ["0,01 mg/kg (máximo de 0,3 a 0,5 mg)", "0,1 mg/kg", "1 mg fixo", "0,001 mg/kg"],
+      "correta": 0,
+      "explicacao": "A dose é 0,01 mg/kg IM, com máximo em torno de 0,3 a 0,5 mg, repetível conforme a resposta."
+    },
+    {
+      "pergunta": "O que caracteriza a anafilaxia?",
+      "opcoes": ["Reação sistêmica com comprometimento respiratório e/ou hipotensão após alérgeno", "Urticária isolada leve", "Coriza sazonal", "Prurido ocular isolado"],
+      "correta": 0,
+      "explicacao": "A anafilaxia é uma reação sistêmica grave, geralmente com sintomas cutâneos somados a acometimento respiratório e/ou cardiovascular."
+    },
+    {
+      "pergunta": "A celulite orbitária (pós-septal) diferencia-se da periorbitária por apresentar:",
+      "opcoes": ["Proptose e dor à movimentação ocular", "Apenas edema palpebral", "Febre baixa isolada", "Coriza"],
+      "correta": 0,
+      "explicacao": "A celulite orbitária é emergência e cursa com proptose, dor e limitação à movimentação ocular, diferente da periorbitária."
+    },
+    {
+      "pergunta": "A púrpura de Henoch-Schönlein caracteriza-se por:",
+      "opcoes": ["Púrpura palpável, dor abdominal, artrite e possível nefrite", "Púrpura apenas em mucosas", "Febre e tosse", "Icterícia progressiva"],
+      "correta": 0,
+      "explicacao": "É uma vasculite de pequenos vasos com púrpura palpável (membros inferiores), dor abdominal, artrite e acometimento renal."
+    },
+    {
+      "pergunta": "Qual situação indica internação na bronquiolite?",
+      "opcoes": ["Desconforto respiratório importante, hipoxemia ou apneia", "Coriza isolada", "Febre baixa sem outros sinais", "Boa aceitação alimentar"],
+      "correta": 0,
+      "explicacao": "Sinais de gravidade (desconforto, hipoxemia, apneia, dificuldade alimentar) indicam internação na bronquiolite."
+    },
+    {
+      "pergunta": "O Triângulo de Avaliação Pediátrica avalia rapidamente:",
+      "opcoes": ["Aparência, respiração e circulação (cor da pele)", "Pressão, pulso e temperatura", "Peso, altura e IMC", "Reflexos, força e sensibilidade"],
+      "correta": 0,
+      "explicacao": "O Triângulo de Avaliação Pediátrica é uma impressão inicial rápida, sem tocar na criança, avaliando aparência, respiração e circulação."
+    },
+    {
+      "pergunta": "A laringite estridulosa (crupe espasmódico) caracteriza-se por:",
+      "opcoes": ["Início súbito noturno, geralmente sem febre importante e autolimitado", "Febre alta e sialorreia", "Tosse produtiva crônica", "Estridor apenas ao esforço extremo"],
+      "correta": 0,
+      "explicacao": "O crupe espasmódico surge subitamente à noite, costuma ser afebril e autolimitado, com estridor e tosse ladrante."
+    },
+    {
+      "pergunta": "Durante uma crise convulsiva ativa, a conduta correta inclui:",
+      "opcoes": ["Proteger a criança e não introduzir objetos na boca", "Colocar um objeto entre os dentes", "Conter os movimentos com força", "Oferecer água imediatamente"],
+      "correta": 0,
+      "explicacao": "Deve-se proteger a criança de traumas, lateralizar a cabeça e nunca introduzir objetos na boca; a maioria das crises cede em poucos minutos."
+    },
+    {
+      "pergunta": "Na criança com anemia falciforme, a crise vaso-oclusiva (álgica) é tratada com:",
+      "opcoes": ["Analgesia e hidratação", "Apenas observação", "Restrição hídrica", "Corticoide isolado"],
+      "correta": 0,
+      "explicacao": "A crise vaso-oclusiva é manejada com analgesia adequada e hidratação; avalia-se oxigenação e fatores desencadeantes."
     }
   ]
 }

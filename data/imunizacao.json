@@ -2,21 +2,1093 @@
   "categoria": "Imunização",
   "questoes": [
     {
-      "pergunta": "Quais vacinas são aplicadas ao nascimento no calendário do PNI (Brasil)?",
+      "pergunta": "A vacina tríplice viral (sarampo, caxumba e rubéola) é do tipo:",
       "opcoes": [
-        "BCG e Hepatite B",
-        "Tríplice viral e VIP",
-        "Pentavalente e Rotavírus",
-        "Meningocócica C e Pneumocócica"
+        "Recombinante",
+        "Vírus vivo atenuado",
+        "Toxoide",
+        "Inativada"
       ],
-      "correta": 0,
-      "explicacao": "Ao nascer aplicam-se BCG (dose única) e a 1ª dose de Hepatite B, idealmente nas primeiras 12 a 24 horas de vida."
+      "correta": 1,
+      "explicacao": "A tríplice viral é composta por vírus vivos atenuados."
     },
     {
-      "pergunta": "A vacina BCG protege principalmente contra as formas graves de qual doença?",
-      "opcoes": ["Coqueluche", "Tuberculose", "Difteria", "Hepatite"],
+      "pergunta": "A vacina BCG é composta por:",
+      "opcoes": [
+        "Toxoide",
+        "Bacilo vivo atenuado",
+        "Bactéria inativada",
+        "Fragmento recombinante"
+      ],
       "correta": 1,
-      "explicacao": "A BCG protege contra as formas graves da tuberculose, como a tuberculose miliar e a meningite tuberculosa."
+      "explicacao": "A BCG contém o bacilo de Calmette-Guérin vivo atenuado."
+    },
+    {
+      "pergunta": "A vacina de febre amarela é do tipo:",
+      "opcoes": [
+        "Conjugada",
+        "Inativada",
+        "Toxoide",
+        "Vírus vivo atenuado"
+      ],
+      "correta": 3,
+      "explicacao": "A vacina de febre amarela é de vírus vivo atenuado."
+    },
+    {
+      "pergunta": "A vacina oral de rotavírus é do tipo:",
+      "opcoes": [
+        "Vírus vivo atenuado",
+        "Inativada",
+        "Polissacarídica",
+        "Toxoide"
+      ],
+      "correta": 0,
+      "explicacao": "A vacina de rotavírus é de vírus vivo atenuado, administrada por via oral."
+    },
+    {
+      "pergunta": "A vacina inativada da poliomielite (VIP) é do tipo:",
+      "opcoes": [
+        "Toxoide",
+        "Vírus vivo atenuado",
+        "Conjugada",
+        "Inativada"
+      ],
+      "correta": 3,
+      "explicacao": "A VIP é composta por vírus inativado (morto); já a VOP é de vírus vivo atenuado."
+    },
+    {
+      "pergunta": "A vacina contra hepatite B é obtida principalmente por:",
+      "opcoes": [
+        "Bactéria inteira inativada",
+        "Vírus vivo atenuado",
+        "Tecnologia recombinante (antígeno de superfície)",
+        "Toxoide"
+      ],
+      "correta": 2,
+      "explicacao": "A vacina de hepatite B é recombinante, produzida com o antígeno de superfície (HBsAg)."
+    },
+    {
+      "pergunta": "A proteção contra o tétano é obtida por meio de:",
+      "opcoes": [
+        "Bactéria viva",
+        "Vírus vivo atenuado",
+        "Polissacarídeo puro",
+        "Toxoide (anatoxina tetânica)"
+      ],
+      "correta": 3,
+      "explicacao": "A vacina antitetânica usa o toxoide (toxina inativada), que induz anticorpos antitoxina."
+    },
+    {
+      "pergunta": "São exemplos de vacinas conjugadas:",
+      "opcoes": [
+        "Tríplice viral e febre amarela",
+        "Pneumocócica, meningocócica C e Hib",
+        "BCG e rotavírus",
+        "VOP e varicela"
+      ],
+      "correta": 1,
+      "explicacao": "As vacinas conjugadas (polissacarídeo ligado a proteína) incluem a pneumocócica, a meningocócica C e a Hib."
+    },
+    {
+      "pergunta": "A vacina contra o HPV é do tipo:",
+      "opcoes": [
+        "Toxoide",
+        "Vírus vivo atenuado",
+        "Recombinante (partículas semelhantes ao vírus)",
+        "Bactéria inativada"
+      ],
+      "correta": 2,
+      "explicacao": "A vacina HPV é recombinante, feita de partículas semelhantes ao vírus (VLP), sem material genético viral."
+    },
+    {
+      "pergunta": "Comparadas às inativadas, as vacinas de vírus vivo atenuado geralmente:",
+      "opcoes": [
+        "Precisam sempre de muitas doses",
+        "Não geram memória imunológica",
+        "Induzem imunidade robusta e duradoura com poucas doses",
+        "São seguras em imunossuprimidos graves"
+      ],
+      "correta": 2,
+      "explicacao": "As vacinas de vírus vivo tendem a induzir resposta robusta e duradoura com poucas doses, mas são contraindicadas em imunossuprimidos graves."
+    },
+    {
+      "pergunta": "A vacina influenza injetável utilizada no calendário é do tipo:",
+      "opcoes": [
+        "Conjugada",
+        "Toxoide",
+        "Inativada",
+        "Vírus vivo atenuado"
+      ],
+      "correta": 2,
+      "explicacao": "A vacina influenza injetável é inativada."
+    },
+    {
+      "pergunta": "A vacina contra hepatite A é do tipo:",
+      "opcoes": [
+        "Vírus vivo atenuado",
+        "Inativada",
+        "Toxoide",
+        "Conjugada"
+      ],
+      "correta": 1,
+      "explicacao": "A vacina de hepatite A é inativada."
+    },
+    {
+      "pergunta": "As vacinas de vírus vivo atenuado são contraindicadas em:",
+      "opcoes": [
+        "Crianças acima de 1 ano",
+        "Imunossuprimidos graves",
+        "Idosos",
+        "Pessoas saudáveis"
+      ],
+      "correta": 1,
+      "explicacao": "Vacinas de vírus vivo são contraindicadas em imunossupressão grave, pelo risco de doença pela cepa vacinal."
+    },
+    {
+      "pergunta": "Em relação à gestação, as vacinas de vírus vivo atenuado são:",
+      "opcoes": [
+        "Obrigatórias",
+        "Preferidas às inativadas",
+        "Contraindicadas",
+        "Recomendadas de rotina"
+      ],
+      "correta": 2,
+      "explicacao": "Vacinas de vírus vivo são, em regra, contraindicadas na gestação."
+    },
+    {
+      "pergunta": "Qual é uma contraindicação verdadeira a uma vacina?",
+      "opcoes": [
+        "Anafilaxia a dose anterior ou a um componente da vacina",
+        "Resfriado leve",
+        "Prematuridade",
+        "Uso de antibiótico"
+      ],
+      "correta": 0,
+      "explicacao": "Reação anafilática a dose anterior ou a componente é contraindicação; quadros leves não contraindicam."
+    },
+    {
+      "pergunta": "Um resfriado leve, sem febre, diante da vacinação:",
+      "opcoes": [
+        "Contraindica todas as vacinas",
+        "Contraindica só vacinas orais",
+        "Exige adiar por 30 dias",
+        "Não contraindica a vacinação"
+      ],
+      "correta": 3,
+      "explicacao": "Doenças agudas leves, sem febre, não contraindicam nem adiam a vacinação."
+    },
+    {
+      "pergunta": "Diante de doença febril moderada a grave, a conduta em relação à vacina é:",
+      "opcoes": [
+        "Vacinar normalmente sempre",
+        "Reduzir a dose",
+        "Adiar a vacinação até a melhora",
+        "Contraindicar definitivamente"
+      ],
+      "correta": 2,
+      "explicacao": "Recomenda-se adiar a vacinação na vigência de doença febril moderada a grave, retomando após a melhora."
+    },
+    {
+      "pergunta": "O recém-nascido prematuro deve ser vacinado, em geral, de acordo com:",
+      "opcoes": [
+        "A alta hospitalar apenas",
+        "A idade cronológica (não corrigida)",
+        "O peso apenas",
+        "A idade corrigida"
+      ],
+      "correta": 1,
+      "explicacao": "O prematuro clinicamente estável é vacinado conforme a idade cronológica, respeitando particularidades como a BCG por peso."
+    },
+    {
+      "pergunta": "O uso de antibiótico para uma infecção comum, em relação à vacinação:",
+      "opcoes": [
+        "Não contraindica",
+        "Contraindica apenas orais",
+        "Adia por 60 dias",
+        "Contraindica todas as vacinas"
+      ],
+      "correta": 0,
+      "explicacao": "O uso de antibióticos não contraindica a vacinação."
+    },
+    {
+      "pergunta": "A amamentação, em relação à maioria das vacinas da criança e da mãe:",
+      "opcoes": [
+        "Exige suspender o leite",
+        "Contraindica todas",
+        "Impede vacinas inativadas",
+        "Não é contraindicação"
+      ],
+      "correta": 3,
+      "explicacao": "A amamentação não contraindica a maioria das vacinas; há apenas precauções pontuais."
+    },
+    {
+      "pergunta": "O uso de corticoide em dose imunossupressora representa:",
+      "opcoes": [
+        "Nenhuma implicação",
+        "Indicação de vírus vivo",
+        "Precaução para vacinas de vírus vivo",
+        "Contraindicação a inativadas"
+      ],
+      "correta": 2,
+      "explicacao": "Doses imunossupressoras de corticoide são precaução para vacinas de vírus vivo; costuma-se aguardar após a suspensão."
+    },
+    {
+      "pergunta": "A história prévia de invaginação intestinal:",
+      "opcoes": [
+        "Contraindica a vacina de rotavírus",
+        "Não tem relação com vacinas",
+        "Indica dose extra de rotavírus",
+        "Contraindica a BCG"
+      ],
+      "correta": 0,
+      "explicacao": "Antecedente de invaginação intestinal contraindica a vacina de rotavírus."
+    },
+    {
+      "pergunta": "A alergia grave (anafilaxia) ao ovo é uma precaução relevante para qual vacina?",
+      "opcoes": [
+        "Hepatite B",
+        "BCG",
+        "Pneumocócica",
+        "Febre amarela"
+      ],
+      "correta": 3,
+      "explicacao": "A vacina de febre amarela é cultivada em ovo, sendo a alergia grave ao ovo uma precaução importante."
+    },
+    {
+      "pergunta": "Durante a gestação, quais vacinas são recomendadas de rotina?",
+      "opcoes": [
+        "BCG e varicela",
+        "dTpa e influenza (inativadas)",
+        "Tríplice viral e febre amarela",
+        "VOP e rotavírus"
+      ],
+      "correta": 1,
+      "explicacao": "Na gestação recomendam-se vacinas inativadas como dTpa e influenza; as de vírus vivo são contraindicadas."
+    },
+    {
+      "pergunta": "Uma doença neurológica em atividade/evolutiva é precaução para qual componente vacinal?",
+      "opcoes": [
+        "Componente tetânico",
+        "Componente da hepatite B",
+        "Componente diftérico",
+        "Componente pertussis (coqueluche)"
+      ],
+      "correta": 3,
+      "explicacao": "Doenças neurológicas não estabilizadas são precaução para o componente pertussis; nesses casos pode-se preferir formulação acelular."
+    },
+    {
+      "pergunta": "A desnutrição leve, em relação à vacinação da criança:",
+      "opcoes": [
+        "Contraindica todas as vacinas",
+        "Não deve adiar a vacinação",
+        "Impede vacinas inativadas",
+        "Exige adiar por 6 meses"
+      ],
+      "correta": 1,
+      "explicacao": "A desnutrição não é motivo para adiar vacinas; a vacinação é ainda mais importante nesse contexto."
+    },
+    {
+      "pergunta": "Qual a faixa de temperatura recomendada para conservação das vacinas na rotina?",
+      "opcoes": [
+        "-20°C a -10°C",
+        "+20°C a +25°C",
+        "+2°C a +8°C",
+        "+10°C a +15°C"
+      ],
+      "correta": 2,
+      "explicacao": "As vacinas de rotina são conservadas entre +2°C e +8°C."
+    },
+    {
+      "pergunta": "Vacinas com adjuvante de alumínio (como a hepatite B e a DTP):",
+      "opcoes": [
+        "Não podem ser congeladas",
+        "Toleram qualquer temperatura",
+        "Devem ficar em temperatura ambiente",
+        "Devem ser congeladas"
+      ],
+      "correta": 0,
+      "explicacao": "O congelamento inativa vacinas com adjuvante de alumínio; elas nunca devem ser congeladas."
+    },
+    {
+      "pergunta": "Na sala de vacina, o controle diário da temperatura da geladeira é feito com:",
+      "opcoes": [
+        "Balança",
+        "Termômetro de máxima e mínima",
+        "Relógio",
+        "Glicosímetro"
+      ],
+      "correta": 1,
+      "explicacao": "O termômetro de máxima e mínima permite monitorar as variações de temperatura ao longo do dia."
+    },
+    {
+      "pergunta": "Onde NÃO se devem armazenar vacinas na geladeira?",
+      "opcoes": [
+        "Nas prateleiras centrais",
+        "Na porta",
+        "Em bandejas ventiladas",
+        "Longe do congelador"
+      ],
+      "correta": 1,
+      "explicacao": "A porta sofre grandes variações de temperatura; vacinas não devem ser guardadas nela."
+    },
+    {
+      "pergunta": "O objetivo da cadeia de frio é:",
+      "opcoes": [
+        "Reduzir o custo apenas",
+        "Manter a potência e a imunogenicidade das vacinas",
+        "Aumentar o volume das doses",
+        "Prolongar a validade indefinidamente"
+      ],
+      "correta": 1,
+      "explicacao": "A cadeia de frio preserva a potência e a capacidade imunogênica das vacinas do fabricante até a aplicação."
+    },
+    {
+      "pergunta": "Uma falha na cadeia de frio pode:",
+      "opcoes": [
+        "Não ter qualquer efeito",
+        "Inativar a vacina, tornando-a ineficaz",
+        "Aumentar a eficácia",
+        "Melhorar a conservação"
+      ],
+      "correta": 1,
+      "explicacao": "Temperaturas inadequadas podem inativar a vacina, comprometendo sua eficácia."
+    },
+    {
+      "pergunta": "Para o transporte de vacinas em caixa térmica, utilizam-se:",
+      "opcoes": [
+        "Bobinas de gelo reciclável ambientadas",
+        "Apenas isopor vazio",
+        "Água quente",
+        "Gelo seco diretamente sobre os frascos"
+      ],
+      "correta": 0,
+      "explicacao": "Usam-se bobinas de gelo reciclável previamente ambientadas para evitar congelamento e manter a faixa correta."
+    },
+    {
+      "pergunta": "Após aberto, um frasco multidose tem:",
+      "opcoes": [
+        "Prazo de validade de uso reduzido, conforme norma",
+        "Nenhuma restrição de tempo",
+        "Validade ilimitada",
+        "A mesma validade do frasco fechado"
+      ],
+      "correta": 0,
+      "explicacao": "Frascos multidose abertos têm prazo de uso reduzido, definido em norma, para evitar contaminação e perda de potência."
+    },
+    {
+      "pergunta": "Qual a via de administração da vacina BCG?",
+      "opcoes": [
+        "Oral",
+        "Intramuscular",
+        "Intradérmica",
+        "Endovenosa"
+      ],
+      "correta": 2,
+      "explicacao": "A BCG é aplicada por via intradérmica, geralmente no deltoide direito."
+    },
+    {
+      "pergunta": "Qual a via de administração das vacinas oral de rotavírus e VOP?",
+      "opcoes": [
+        "Subcutânea",
+        "Intramuscular",
+        "Intradérmica",
+        "Oral"
+      ],
+      "correta": 3,
+      "explicacao": "Tanto a vacina de rotavírus quanto a VOP são administradas por via oral."
+    },
+    {
+      "pergunta": "Vacinas com adjuvante de alumínio devem ser aplicadas preferencialmente por via:",
+      "opcoes": [
+        "Oral",
+        "Endovenosa",
+        "Intramuscular",
+        "Intradérmica"
+      ],
+      "correta": 2,
+      "explicacao": "O adjuvante de alumínio deve ser aplicado por via intramuscular; a via subcutânea/intradérmica aumenta reações locais."
+    },
+    {
+      "pergunta": "No lactente menor de 2 anos, o local preferencial para injeção intramuscular é:",
+      "opcoes": [
+        "Antebraço",
+        "Região glútea",
+        "Deltoide",
+        "Vasto lateral da coxa"
+      ],
+      "correta": 3,
+      "explicacao": "No lactente, o vasto lateral da coxa é o local IM preferencial, por massa muscular adequada."
+    },
+    {
+      "pergunta": "Em crianças maiores e adultos, o local habitual para injeção intramuscular é:",
+      "opcoes": [
+        "Deltoide",
+        "Vasto lateral",
+        "Antebraço",
+        "Região glútea sempre"
+      ],
+      "correta": 0,
+      "explicacao": "Em maiores, o deltoide é o local IM habitual para as vacinas."
+    },
+    {
+      "pergunta": "A tríplice viral costuma ser administrada por via:",
+      "opcoes": [
+        "Subcutânea",
+        "Intradérmica",
+        "Endovenosa",
+        "Oral"
+      ],
+      "correta": 0,
+      "explicacao": "A tríplice viral é aplicada por via subcutânea."
+    },
+    {
+      "pergunta": "A evolução local esperada após a BCG é:",
+      "opcoes": [
+        "Ausência de qualquer reação",
+        "Bolha imediata que some em horas",
+        "Nódulo, seguido de úlcera e depois cicatriz",
+        "Necrose extensa do braço"
+      ],
+      "correta": 2,
+      "explicacao": "A BCG evolui normalmente com nódulo, pústula/úlcera e, por fim, cicatriz, ao longo de semanas."
+    },
+    {
+      "pergunta": "Um evento adverso associado à BCG é:",
+      "opcoes": [
+        "Hipoglicemia",
+        "Convulsão febril",
+        "Icterícia",
+        "Linfadenite regional"
+      ],
+      "correta": 3,
+      "explicacao": "A linfadenite regional (axilar/supraclavicular) é um evento adverso descrito após a BCG."
+    },
+    {
+      "pergunta": "Após a tríplice viral, febre e exantema, quando ocorrem, surgem tipicamente:",
+      "opcoes": [
+        "Entre 5 e 12 dias após a vacina",
+        "Nunca ocorrem",
+        "Somente após 30 dias",
+        "Nas primeiras 2 horas"
+      ],
+      "correta": 0,
+      "explicacao": "Por ser de vírus vivo, a tríplice viral pode causar febre e exantema entre o 5º e o 12º dia após a aplicação."
+    },
+    {
+      "pergunta": "Na vacina DTP, o componente classicamente mais reatogênico é:",
+      "opcoes": [
+        "O pertussis (coqueluche) de célula inteira",
+        "O toxoide diftérico",
+        "O conservante",
+        "O toxoide tetânico"
+      ],
+      "correta": 0,
+      "explicacao": "O componente pertussis de célula inteira é o mais reatogênico; a formulação acelular (dTpa/DTPa) reduz reações."
+    },
+    {
+      "pergunta": "Diante de um evento adverso grave pós-vacinal, a conduta é:",
+      "opcoes": [
+        "Ignorar se raro",
+        "Notificar o evento",
+        "Aguardar sem registrar",
+        "Suspender todas as vacinas do país"
+      ],
+      "correta": 1,
+      "explicacao": "Eventos adversos graves pós-vacinação devem ser notificados para investigação e vigilância."
+    },
+    {
+      "pergunta": "O tratamento de uma reação anafilática após vacina é:",
+      "opcoes": [
+        "Observação sem intervenção",
+        "Anti-histamínico oral isolado",
+        "Corticoide isolado",
+        "Adrenalina intramuscular"
+      ],
+      "correta": 3,
+      "explicacao": "A anafilaxia pós-vacinal é tratada com adrenalina intramuscular, além de suporte."
+    },
+    {
+      "pergunta": "O episódio hipotônico-hiporresponsivo é um evento adverso associado principalmente a qual componente?",
+      "opcoes": [
+        "Pneumocócica",
+        "Hepatite B",
+        "Pertussis (DTP)",
+        "Toxoide tetânico"
+      ],
+      "correta": 2,
+      "explicacao": "O episódio hipotônico-hiporresponsivo é associado ao componente pertussis da DTP; costuma ser autolimitado."
+    },
+    {
+      "pergunta": "Dor, calor e edema no local da aplicação são eventos:",
+      "opcoes": [
+        "Comuns e geralmente benignos",
+        "Sinais de alergia grave",
+        "Indicações de suspender o calendário",
+        "Sempre graves"
+      ],
+      "correta": 0,
+      "explicacao": "Reações locais leves são comuns e benignas, resolvendo-se espontaneamente."
+    },
+    {
+      "pergunta": "Em relação à administração de várias vacinas, é correto afirmar que:",
+      "opcoes": [
+        "Nunca se aplicam duas no mesmo dia",
+        "Podem ser aplicadas simultaneamente no mesmo dia",
+        "Só uma vacina por semana é permitida",
+        "Exigem intervalo de 6 meses entre quaisquer vacinas"
+      ],
+      "correta": 1,
+      "explicacao": "Diferentes vacinas podem ser administradas no mesmo dia, em locais distintos, salvo exceções específicas."
+    },
+    {
+      "pergunta": "Se duas vacinas de vírus vivo injetáveis não forem aplicadas no mesmo dia, deve-se respeitar entre elas um intervalo de:",
+      "opcoes": [
+        "4 semanas (28 dias)",
+        "6 meses",
+        "24 horas",
+        "1 semana"
+      ],
+      "correta": 0,
+      "explicacao": "Vacinas de vírus vivo injetáveis, se não aplicadas no mesmo dia, devem ter intervalo mínimo de 4 semanas."
+    },
+    {
+      "pergunta": "Diante de um esquema vacinal atrasado, a conduta correta é:",
+      "opcoes": [
+        "Reiniciar todo o esquema",
+        "Completar as doses que faltam, sem reiniciar o esquema",
+        "Cancelar as doses restantes",
+        "Aplicar dose dobrada"
+      ],
+      "correta": 1,
+      "explicacao": "Não se reinicia o esquema: aplicam-se as doses faltantes, pois 'dose aplicada é dose válida'."
+    },
+    {
+      "pergunta": "A imunização ATIVA caracteriza-se por:",
+      "opcoes": [
+        "Não gerar memória",
+        "Proteção apenas imediata",
+        "Estimular o próprio organismo a produzir anticorpos (vacina)",
+        "Fornecer anticorpos prontos (soro)"
+      ],
+      "correta": 2,
+      "explicacao": "A imunização ativa (vacina) estimula a produção de anticorpos e memória imunológica pelo próprio indivíduo."
+    },
+    {
+      "pergunta": "A imunização PASSIVA caracteriza-se por:",
+      "opcoes": [
+        "Estimular a produção própria de anticorpos",
+        "Fornecer anticorpos prontos (soro/imunoglobulina)",
+        "Ser sempre uma vacina",
+        "Gerar memória duradoura"
+      ],
+      "correta": 1,
+      "explicacao": "A imunização passiva oferece anticorpos prontos (soro ou imunoglobulina), com proteção imediata e temporária."
+    },
+    {
+      "pergunta": "A imunidade de rebanho ocorre quando:",
+      "opcoes": [
+        "Não há relação com cobertura",
+        "Alta cobertura vacinal protege indiretamente os não vacinados",
+        "Todos precisam estar doentes",
+        "A vacina protege apenas quem a recebe"
+      ],
+      "correta": 1,
+      "explicacao": "Com alta cobertura vacinal, a circulação do agente diminui, protegendo indiretamente pessoas não vacinadas."
+    },
+    {
+      "pergunta": "A imunoglobulina utilizada em profilaxias corresponde a uma forma de:",
+      "opcoes": [
+        "Toxoide",
+        "Imunização passiva",
+        "Imunização ativa",
+        "Vacina de vírus vivo"
+      ],
+      "correta": 1,
+      "explicacao": "A imunoglobulina fornece anticorpos prontos, sendo uma forma de imunização passiva."
+    },
+    {
+      "pergunta": "Reduzir o intervalo entre doses para menos que o mínimo recomendado pode:",
+      "opcoes": [
+        "Não ter qualquer efeito",
+        "Substituir uma dose por duas",
+        "Tornar a dose inválida, exigindo repetição",
+        "Melhorar a resposta"
+      ],
+      "correta": 2,
+      "explicacao": "Doses aplicadas com intervalo inferior ao mínimo podem não ser válidas e precisar de repetição."
+    },
+    {
+      "pergunta": "Aumentar o intervalo entre doses (atraso), em geral:",
+      "opcoes": [
+        "Não invalida o esquema",
+        "Cancela as doses anteriores",
+        "Reduz a proteção final permanentemente",
+        "Obriga a reiniciar tudo"
+      ],
+      "correta": 0,
+      "explicacao": "Intervalos maiores que o recomendado não invalidam o esquema; basta completá-lo."
+    },
+    {
+      "pergunta": "A vacinação é uma medida de:",
+      "opcoes": [
+        "Reabilitação",
+        "Cuidado paliativo",
+        "Tratamento curativo",
+        "Prevenção primária"
+      ],
+      "correta": 3,
+      "explicacao": "A vacinação é medida de prevenção primária, evitando a ocorrência da doença."
+    },
+    {
+      "pergunta": "Em um surto de sarampo, a vacinação de bloqueio consiste em:",
+      "opcoes": [
+        "Vacinar rapidamente os suscetíveis expostos",
+        "Isolar somente os doentes",
+        "Vacinar apenas idosos",
+        "Aguardar o fim do surto"
+      ],
+      "correta": 0,
+      "explicacao": "O bloqueio vacinal busca vacinar prontamente os suscetíveis do entorno para conter a transmissão."
+    },
+    {
+      "pergunta": "A vacina BCG previne principalmente:",
+      "opcoes": [
+        "A hepatite",
+        "A coqueluche",
+        "As formas graves da tuberculose",
+        "A difteria"
+      ],
+      "correta": 2,
+      "explicacao": "A BCG protege contra as formas graves da tuberculose, como a miliar e a meníngea."
+    },
+    {
+      "pergunta": "A tríplice viral previne:",
+      "opcoes": [
+        "Poliomielite",
+        "Sarampo, caxumba e rubéola",
+        "Hepatites A e B",
+        "Difteria, tétano e coqueluche"
+      ],
+      "correta": 1,
+      "explicacao": "A tríplice viral protege contra sarampo, caxumba e rubéola."
+    },
+    {
+      "pergunta": "A vacina tetraviral protege contra:",
+      "opcoes": [
+        "Sarampo, caxumba, rubéola e varicela",
+        "Quatro sorotipos de dengue",
+        "Difteria, tétano, coqueluche e pólio",
+        "Hepatites A, B, C e D"
+      ],
+      "correta": 0,
+      "explicacao": "A tetraviral combina a tríplice viral (SCR) com a varicela."
+    },
+    {
+      "pergunta": "A vacina pentavalente protege contra:",
+      "opcoes": [
+        "Cinco tipos de pneumococo apenas",
+        "Difteria, tétano, coqueluche, Hib e hepatite B",
+        "Sarampo, caxumba, rubéola, varicela e pólio",
+        "Cinco sorogrupos de meningococo"
+      ],
+      "correta": 1,
+      "explicacao": "A pentavalente combina difteria, tétano, coqueluche (DTP), Haemophilus influenzae b (Hib) e hepatite B."
+    },
+    {
+      "pergunta": "As vacinas VIP e VOP previnem:",
+      "opcoes": [
+        "Poliomielite",
+        "Tétano",
+        "Sarampo",
+        "Hepatite B"
+      ],
+      "correta": 0,
+      "explicacao": "Tanto a VIP (inativada) quanto a VOP (atenuada) previnem a poliomielite."
+    },
+    {
+      "pergunta": "A vacina de rotavírus previne:",
+      "opcoes": [
+        "Meningite meningocócica",
+        "Poliomielite",
+        "Diarreia grave por rotavírus",
+        "Coqueluche"
+      ],
+      "correta": 2,
+      "explicacao": "A vacina de rotavírus reduz a diarreia grave e a desidratação causadas por esse vírus."
+    },
+    {
+      "pergunta": "A vacina pneumocócica conjugada previne:",
+      "opcoes": [
+        "Hepatite A",
+        "Tétano",
+        "Doença pneumocócica (pneumonia, meningite, otite)",
+        "Apenas gripe"
+      ],
+      "correta": 2,
+      "explicacao": "A pneumocócica conjugada previne doenças causadas pelo pneumococo, como pneumonia, meningite e otite."
+    },
+    {
+      "pergunta": "A vacina meningocócica C previne a doença causada por:",
+      "opcoes": [
+        "Haemophilus influenzae",
+        "Neisseria meningitidis do sorogrupo C",
+        "Streptococcus pneumoniae",
+        "Vírus influenza"
+      ],
+      "correta": 1,
+      "explicacao": "A meningocócica C protege contra a doença meningocócica do sorogrupo C."
+    },
+    {
+      "pergunta": "A vacina de febre amarela previne:",
+      "opcoes": [
+        "Febre amarela",
+        "Zika",
+        "Dengue",
+        "Malária"
+      ],
+      "correta": 0,
+      "explicacao": "A vacina de febre amarela previne especificamente essa arbovirose."
+    },
+    {
+      "pergunta": "A vacina contra o HPV tem como objetivo prevenir:",
+      "opcoes": [
+        "Infecções pelo HPV (câncer de colo do útero e verrugas)",
+        "Hepatite B",
+        "Tuberculose",
+        "Coqueluche"
+      ],
+      "correta": 0,
+      "explicacao": "A vacina HPV previne infecções por tipos do papilomavírus associados a cânceres (como o de colo do útero) e verrugas."
+    },
+    {
+      "pergunta": "A vacina varicela previne:",
+      "opcoes": [
+        "Caxumba",
+        "Sarampo",
+        "Rubéola",
+        "Catapora (varicela)"
+      ],
+      "correta": 3,
+      "explicacao": "A vacina varicela previne a catapora, causada pelo vírus varicela-zóster."
+    },
+    {
+      "pergunta": "A vacina dTpa (tríplice bacteriana acelular do adulto) protege contra:",
+      "opcoes": [
+        "Difteria, tétano e coqueluche",
+        "Hepatites A e B",
+        "Sarampo, caxumba e rubéola",
+        "Poliomielite"
+      ],
+      "correta": 0,
+      "explicacao": "A dTpa protege contra difteria, tétano e coqueluche, com componente pertussis acelular."
+    },
+    {
+      "pergunta": "A vacina influenza previne:",
+      "opcoes": [
+        "A tuberculose",
+        "A dengue",
+        "A gripe (influenza)",
+        "O resfriado comum"
+      ],
+      "correta": 2,
+      "explicacao": "A vacina influenza previne a gripe causada pelos vírus influenza, sendo atualizada anualmente."
+    },
+    {
+      "pergunta": "A vacina Hib previne doenças graves causadas por:",
+      "opcoes": [
+        "Haemophilus influenzae tipo b",
+        "Vírus influenza",
+        "Meningococo",
+        "Pneumococo"
+      ],
+      "correta": 0,
+      "explicacao": "A vacina Hib previne doenças invasivas (como meningite e epiglotite) por Haemophilus influenzae tipo b."
+    },
+    {
+      "pergunta": "Quais vacinas são aplicadas ao nascer no calendário do PNI?",
+      "opcoes": [
+        "BCG e hepatite B",
+        "Meningocócica C e pneumocócica",
+        "Pentavalente e rotavírus",
+        "Tríplice viral e febre amarela"
+      ],
+      "correta": 0,
+      "explicacao": "Ao nascer aplicam-se a BCG e a 1ª dose de hepatite B. (Confira sempre o calendário vigente do PNI.)"
+    },
+    {
+      "pergunta": "A 1ª dose de hepatite B ao nascer deve ser aplicada, idealmente:",
+      "opcoes": [
+        "Após a alta, em casa",
+        "Somente após 1 mês",
+        "Nas primeiras 12 a 24 horas de vida",
+        "Apenas aos 2 meses"
+      ],
+      "correta": 2,
+      "explicacao": "A hepatite B ao nascer é mais eficaz quando aplicada nas primeiras horas de vida (idealmente até 12–24h)."
+    },
+    {
+      "pergunta": "O esquema básico com pentavalente, VIP e pneumocócica costuma iniciar aos:",
+      "opcoes": [
+        "6 meses",
+        "12 meses",
+        "2 meses",
+        "Nascimento"
+      ],
+      "correta": 2,
+      "explicacao": "O esquema básico inicia por volta dos 2 meses. (Idades e doses devem ser conferidas no calendário vigente.)"
+    },
+    {
+      "pergunta": "A primeira dose da vacina de febre amarela, no calendário infantil, é feita por volta dos:",
+      "opcoes": [
+        "12 meses",
+        "4 anos",
+        "2 meses",
+        "9 meses"
+      ],
+      "correta": 3,
+      "explicacao": "A 1ª dose de febre amarela é aplicada por volta dos 9 meses. (Confira o calendário vigente e as áreas de recomendação.)"
+    },
+    {
+      "pergunta": "A primeira dose da tríplice viral, no calendário infantil, ocorre por volta dos:",
+      "opcoes": [
+        "6 meses",
+        "12 meses",
+        "2 meses",
+        "4 anos"
+      ],
+      "correta": 1,
+      "explicacao": "A 1ª dose da tríplice viral é aplicada por volta dos 12 meses. (Confira o calendário vigente.)"
+    },
+    {
+      "pergunta": "Um cuidado importante com a vacina de rotavírus é:",
+      "opcoes": [
+        "Aplicá-la por via intramuscular",
+        "Respeitar a idade máxima para a 1ª dose (janela de aplicação)",
+        "Repeti-la anualmente",
+        "Aplicá-la a qualquer idade"
+      ],
+      "correta": 1,
+      "explicacao": "A vacina de rotavírus tem limite de idade para início e continuidade do esquema, relacionado à segurança; respeite a janela do calendário vigente."
+    },
+    {
+      "pergunta": "A vacina dTpa aplicada na gestante tem como principal objetivo:",
+      "opcoes": [
+        "Tratar a gestante",
+        "Prevenir a icterícia neonatal",
+        "Substituir a vacina do bebê",
+        "Proteger o recém-nascido contra a coqueluche"
+      ],
+      "correta": 3,
+      "explicacao": "A dTpa na gestante gera anticorpos que passam ao feto, protegendo o RN contra a coqueluche nos primeiros meses. Recomenda-se a cada gestação."
+    },
+    {
+      "pergunta": "O reforço de difteria e tétano (dT/dTpa) no adulto é recomendado, de rotina, a cada:",
+      "opcoes": [
+        "10 anos",
+        "6 meses",
+        "20 anos",
+        "1 ano"
+      ],
+      "correta": 0,
+      "explicacao": "O reforço de dT/dTpa no adulto é feito a cada 10 anos (ou conforme ferimentos de risco)."
+    },
+    {
+      "pergunta": "A vacina influenza, no calendário, é caracteristicamente:",
+      "opcoes": [
+        "Contraindicada em idosos",
+        "Aplicada só ao nascer",
+        "Aplicada em campanhas anuais",
+        "Dose única para a vida toda"
+      ],
+      "correta": 2,
+      "explicacao": "Por causa das mudanças anuais dos vírus circulantes, a vacina influenza é oferecida em campanhas anuais."
+    },
+    {
+      "pergunta": "A vacinação contra o HPV no calendário do PNI tem como principal público-alvo:",
+      "opcoes": [
+        "Adolescentes na faixa de 9 a 14 anos (meninas e meninos)",
+        "Apenas recém-nascidos",
+        "Apenas idosos",
+        "Apenas gestantes"
+      ],
+      "correta": 0,
+      "explicacao": "O público-alvo principal do HPV são adolescentes de 9 a 14 anos, meninas e meninos. (Doses e faixas devem ser conferidas no calendário vigente.)"
+    },
+    {
+      "pergunta": "O recém-nascido de mãe HBsAg positivo deve receber, além da vacina de hepatite B:",
+      "opcoes": [
+        "Corticoide",
+        "Imunoglobulina específica contra hepatite B",
+        "Antibiótico",
+        "Vitamina K em dose alta"
+      ],
+      "correta": 1,
+      "explicacao": "Combina-se a vacina com a imunoglobulina específica (imunização ativa + passiva) para reduzir a transmissão vertical."
+    },
+    {
+      "pergunta": "Entre as vacinas recomendadas para profissionais de saúde estão:",
+      "opcoes": [
+        "Apenas rotavírus",
+        "Hepatite B, tríplice viral, influenza e dTpa",
+        "Nenhuma vacina",
+        "Apenas BCG"
+      ],
+      "correta": 1,
+      "explicacao": "Profissionais de saúde devem manter hepatite B, tríplice viral, influenza e dTpa em dia, entre outras."
+    },
+    {
+      "pergunta": "Em pessoas imunossuprimidas, a estratégia vacinal preferencial é:",
+      "opcoes": [
+        "Priorizar vacinas inativadas e evitar as de vírus vivo",
+        "Aplicar todas as vacinas de vírus vivo",
+        "Dobrar as doses de vírus vivo",
+        "Não vacinar de forma alguma"
+      ],
+      "correta": 0,
+      "explicacao": "No imunossuprimido preferem-se vacinas inativadas; as de vírus vivo são geralmente contraindicadas ou avaliadas caso a caso."
+    },
+    {
+      "pergunta": "Para o viajante que se dirige a área de risco de febre amarela, a vacina deve ser aplicada:",
+      "opcoes": [
+        "Somente após a chegada",
+        "Pelo menos 10 dias antes da viagem",
+        "Não é necessária",
+        "No dia da viagem"
+      ],
+      "correta": 1,
+      "explicacao": "A vacina de febre amarela deve ser aplicada com pelo menos 10 dias de antecedência para garantir a proteção."
+    },
+    {
+      "pergunta": "A puérpera não imune à rubéola pode receber a tríplice viral:",
+      "opcoes": [
+        "Durante a gestação",
+        "Somente após 1 ano",
+        "Nunca",
+        "Após o parto, no puerpério"
+      ],
+      "correta": 3,
+      "explicacao": "Como é vacina de vírus vivo, é contraindicada na gestação, mas pode ser aplicada no puerpério."
+    },
+    {
+      "pergunta": "O contato domiciliar de pessoa gravemente imunossuprimida requer atenção especial com:",
+      "opcoes": [
+        "Vacinas inativadas, sempre proibidas",
+        "Vacinas conjugadas",
+        "Vacinas de vírus vivo, avaliadas com cautela",
+        "Toxoides"
+      ],
+      "correta": 2,
+      "explicacao": "Vacinas de vírus vivo em contatos de imunossuprimidos exigem avaliação cuidadosa, pelo risco em algumas situações."
+    },
+    {
+      "pergunta": "Diante de acidente com material perfurocortante, entre as condutas está avaliar a proteção contra:",
+      "opcoes": [
+        "Rotavírus",
+        "Hepatite B (vacina e/ou imunoglobulina, conforme o caso)",
+        "Febre amarela",
+        "Sarampo apenas"
+      ],
+      "correta": 1,
+      "explicacao": "Após exposição ocupacional, avalia-se o estado vacinal para hepatite B e a necessidade de imunoglobulina, além de outras medidas."
+    },
+    {
+      "pergunta": "Na profilaxia antitetânica de ferimentos, a conduta depende de:",
+      "opcoes": [
+        "Apenas do peso do paciente",
+        "Do horário do acidente",
+        "Estado vacinal e características do ferimento",
+        "Somente da idade"
+      ],
+      "correta": 2,
+      "explicacao": "A conduta (vacina e/ou imunoglobulina/soro antitetânico) depende do histórico vacinal e do tipo/risco do ferimento."
+    },
+    {
+      "pergunta": "Em relação à revacinação com BCG quando não há formação de cicatriz, a conduta atual é:",
+      "opcoes": [
+        "Não revacinar de rotina",
+        "Revacinar imediatamente",
+        "Aplicar três doses adicionais",
+        "Trocar por vacina oral"
+      ],
+      "correta": 0,
+      "explicacao": "Atualmente não se recomenda a revacinação de rotina com BCG apenas pela ausência de cicatriz."
+    },
+    {
+      "pergunta": "A vacina de febre amarela, no calendário infantil, prevê um reforço por volta dos:",
+      "opcoes": [
+        "10 anos",
+        "4 anos",
+        "9 meses",
+        "2 meses"
+      ],
+      "correta": 1,
+      "explicacao": "O esquema infantil prevê 1ª dose aos 9 meses e reforço por volta dos 4 anos. (Confira o calendário vigente.)"
+    },
+    {
+      "pergunta": "Qual a função do adjuvante presente em algumas vacinas (ex.: sais de alumínio)?",
+      "opcoes": [
+        "Potencializar a resposta imune",
+        "Conservar a temperatura",
+        "Colorir a vacina",
+        "Substituir o antígeno"
+      ],
+      "correta": 0,
+      "explicacao": "O adjuvante potencializa e prolonga a resposta imune ao antígeno, permitindo melhor imunogenicidade."
+    },
+    {
+      "pergunta": "Qual a principal vantagem das vacinas conjugadas sobre as polissacarídicas puras?",
+      "opcoes": [
+        "Dispensam a cadeia de frio",
+        "São mais baratas apenas",
+        "Geram memória e são eficazes em menores de 2 anos",
+        "Não precisam de reforço nunca"
+      ],
+      "correta": 2,
+      "explicacao": "A conjugação a uma proteína torna a vacina imunogênica em lactentes (menores de 2 anos) e gera memória imunológica."
+    },
+    {
+      "pergunta": "Uma vantagem das vacinas combinadas (como a pentavalente) é:",
+      "opcoes": [
+        "Reduzir o número de injeções",
+        "Dispensar a cadeia de frio",
+        "Aumentar os eventos adversos",
+        "Eliminar a necessidade de reforços"
+      ],
+      "correta": 0,
+      "explicacao": "As vacinas combinadas protegem contra várias doenças em uma única aplicação, reduzindo o número de injeções."
+    },
+    {
+      "pergunta": "Em comparação com a imunoglobulina humana, o soro heterólogo (de origem animal):",
+      "opcoes": [
+        "Tem maior risco de reações (como a doença do soro)",
+        "Gera imunidade permanente",
+        "Nunca causa reações",
+        "É uma vacina de vírus vivo"
+      ],
+      "correta": 0,
+      "explicacao": "O soro heterólogo, por ser de origem animal, tem maior risco de reações de hipersensibilidade do que a imunoglobulina humana."
+    },
+    {
+      "pergunta": "Qual das situações a seguir é uma FALSA contraindicação à vacinação?",
+      "opcoes": [
+        "Anafilaxia a componente da vacina",
+        "Diarreia leve ou uso de antibiótico",
+        "Gestação para vacina de vírus vivo",
+        "Imunossupressão grave para vacina de vírus vivo"
+      ],
+      "correta": 1,
+      "explicacao": "Diarreia leve, resfriado e uso de antibiótico são falsas contraindicações; não impedem a vacinação."
+    },
+    {
+      "pergunta": "A caderneta (cartão) de vacinação tem como função:",
+      "opcoes": [
+        "Autorizar internações",
+        "Controlar a dieta",
+        "Substituir a receita médica",
+        "Registrar e acompanhar as doses aplicadas"
+      ],
+      "correta": 3,
+      "explicacao": "A caderneta de vacinação registra as doses aplicadas, permitindo acompanhar o esquema e identificar pendências."
     }
   ]
 }

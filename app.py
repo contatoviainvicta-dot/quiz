@@ -2,12 +2,13 @@
 Quiz de Pediatria — hub da aplicação (interface + fluxo).
 
 Toda a lógica de dados vive em quiz_engine.py e as questões em data/*.json.
-Este arquivo cuida só da tela e da navegação, então não cresce quando você
-adiciona questões.
+A gamificação (XP, níveis, sequência) vive em gamificacao.py.
+Este arquivo cuida só da tela e da navegação.
 """
 
 import streamlit as st
 
+import gamificacao as gam
 from quiz_engine import (
     QuestaoInvalida,
     carregar_questoes,
@@ -61,13 +62,20 @@ CATEGORIAS = listar_categorias(BANCO)
 # Estado da sessão
 # ---------------------------------------------------------------------------
 def reiniciar() -> None:
-    for chave in ["quiz", "indice", "acertos", "respondida", "escolha"]:
+    # Limpa só o estado do quiz atual. O PERFIL (XP, nível, sequência) é
+    # preservado de propósito — ele acompanha o usuário entre as partidas.
+    for chave in ["quiz", "indice", "acertos", "respondida", "escolha", "ultimo_resultado"]:
         st.session_state.pop(chave, None)
     st.session_state.iniciado = False
 
 
 if "iniciado" not in st.session_state:
     st.session_state.iniciado = False
+
+# O perfil nasce uma vez por sessão. (Na Fase 2 ele passará a ser carregado de
+# uma persistência real; hoje vive só na sessão e reseta ao atualizar a página.)
+if "perfil" not in st.session_state:
+    st.session_state.perfil = gam.perfil_novo()
 
 
 # ---------------------------------------------------------------------------
@@ -79,6 +87,31 @@ st.markdown(
     "neonatologia, emergência, desenvolvimento e mais.</p>",
     unsafe_allow_html=True,
 )
+
+
+# ---------------------------------------------------------------------------
+# Barra de XP / nível (sempre visível)
+# ---------------------------------------------------------------------------
+def barra_xp() -> None:
+    perfil = st.session_state.perfil
+    nivel, xp_no_nivel, xp_prox = gam.nivel_por_xp(perfil.xp_total)
+
+    col_a, col_b = st.columns([1, 3], vertical_alignment="center")
+    with col_a:
+        st.metric("Nível", nivel)
+    with col_b:
+        falta = xp_prox - xp_no_nivel
+        seq = perfil.sequencia_atual
+        fogo = f" · 🔥 {seq} seguidas" if seq >= 2 else ""
+        st.markdown(
+            f"**{perfil.xp_total} XP**  ·  faltam **{falta}** para o nível "
+            f"{nivel + 1}{fogo}"
+        )
+        st.progress(xp_no_nivel / xp_prox)
+
+
+barra_xp()
+st.divider()
 
 
 # ---------------------------------------------------------------------------
@@ -107,6 +140,7 @@ if not st.session_state.iniciado:
             st.session_state.acertos = 0
             st.session_state.respondida = False
             st.session_state.escolha = None
+            st.session_state.ultimo_resultado = None
             st.session_state.iniciado = True
             st.rerun()
 
@@ -174,8 +208,14 @@ else:
                     else:
                         st.session_state.escolha = escolha
                         st.session_state.respondida = True
-                        if escolha == questao["correta"]:
+                        acertou = escolha == questao["correta"]
+                        if acertou:
                             st.session_state.acertos += 1
+                        # Gamificação: registra a resposta e guarda o resultado
+                        # para exibir o XP ganho no feedback abaixo.
+                        st.session_state.ultimo_resultado = gam.registrar_resposta(
+                            st.session_state.perfil, questao["categoria"], acertou
+                        )
                         st.rerun()
             else:
                 correta = questao["correta"]
@@ -188,11 +228,27 @@ else:
                     )
                 st.info(questao["explicacao"])
 
+                # Feedback de XP
+                resultado = st.session_state.get("ultimo_resultado")
+                if resultado is not None:
+                    linha = f"**+{resultado.xp_ganho} XP**"
+                    if resultado.bonus_sequencia:
+                        linha += (
+                            f"  ·  🔥 bônus de sequência "
+                            f"+{resultado.bonus_sequencia}"
+                        )
+                    st.markdown(linha)
+                    if resultado.subiu_nivel:
+                        st.success(
+                            f"🎉 Você subiu para o nível {resultado.nivel_depois}!"
+                        )
+
                 rotulo = "Próxima questão" if indice + 1 < total else "Ver resultado"
                 if st.button(rotulo, type="primary", use_container_width=True):
                     st.session_state.indice += 1
                     st.session_state.respondida = False
                     st.session_state.escolha = None
+                    st.session_state.ultimo_resultado = None
                     st.rerun()
 
         st.caption(f"Placar: {st.session_state.acertos} acerto(s) até aqui.")

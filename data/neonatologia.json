@@ -2,254 +2,258 @@
   "categoria": "Neonatologia",
   "questoes": [
     {
-      "pergunta": "Qual a idade gestacional que define o recém-nascido a termo?",
+      "pergunta": "A encefalopatia bilirrubínica (kernicterus) resulta do depósito, em núcleos da base, de:",
       "opcoes": [
-        "Menos de 37 semanas",
-        "De 37 a 41 semanas e 6 dias",
-        "Exatamente 40 semanas",
-        "42 semanas ou mais"
-      ],
-      "correta": 1,
-      "explicacao": "A termo é de 37 a 41 semanas e 6 dias. Abaixo de 37 é pré-termo; 42 semanas ou mais é pós-termo."
-    },
-    {
-      "pergunta": "Baixo peso ao nascer é definido como peso inferior a:",
-      "opcoes": ["3000 g", "2500 g", "2000 g", "1500 g"],
-      "correta": 1,
-      "explicacao": "Baixo peso: menor que 2500 g. Muito baixo peso: menor que 1500 g. Extremo baixo peso: menor que 1000 g."
-    },
-    {
-      "pergunta": "Qual a frequência respiratória normal do recém-nascido?",
-      "opcoes": ["12 a 20 irpm", "20 a 40 irpm", "40 a 60 irpm", "60 a 80 irpm"],
-      "correta": 2,
-      "explicacao": "A frequência respiratória normal do RN é de 40 a 60 irpm. Acima de 60 caracteriza taquipneia."
-    },
-    {
-      "pergunta": "Qual a via de administração habitual da vitamina K profilática no recém-nascido?",
-      "opcoes": ["Intramuscular", "Endovenosa", "Subcutânea", "Inalatória"],
-      "correta": 0,
-      "explicacao": "A profilaxia é feita por via intramuscular ao nascer. Existe apresentação oral, mas a via IM é o padrão."
-    },
-    {
-      "pergunta": "O teste do pezinho (triagem neonatal biológica) é idealmente coletado em qual período?",
-      "opcoes": [
-        "Nas primeiras 24 horas de vida",
-        "Entre o 3º e o 5º dia de vida",
-        "Somente após 15 dias",
-        "No primeiro mês, sem período ideal"
-      ],
-      "correta": 1,
-      "explicacao": "O ideal é entre o 3º e o 5º dia de vida, após o início da alimentação, para não gerar resultados falsos."
-    },
-    {
-      "pergunta": "O teste do olhinho (reflexo vermelho) permite a detecção precoce de:",
-      "opcoes": [
-        "Surdez congênita",
-        "Catarata congênita e retinoblastoma",
-        "Cardiopatias congênitas",
-        "Luxação do quadril"
-      ],
-      "correta": 1,
-      "explicacao": "O reflexo vermelho avalia a transparência dos meios oculares e ajuda a detectar catarata congênita, retinoblastoma e glaucoma, entre outros."
-    },
-    {
-      "pergunta": "Por qual método é realizado o teste do coraçãozinho?",
-      "opcoes": [
-        "Ausculta cardíaca",
-        "Eletrocardiograma",
-        "Oximetria de pulso pré e pós-ductal",
-        "Radiografia de tórax"
-      ],
-      "correta": 2,
-      "explicacao": "É a oximetria de pulso medida no membro superior direito (pré-ductal) e em um membro inferior (pós-ductal), para rastrear cardiopatias congênitas críticas."
-    },
-    {
-      "pergunta": "O teste da orelhinha avalia principalmente:",
-      "opcoes": [
-        "A audição",
-        "O equilíbrio",
-        "A pressão intracraniana",
-        "A função vestibular motora"
+        "Bilirrubina indireta (não conjugada)",
+        "Bilirrubina direta (conjugada)",
+        "Ferro",
+        "Amônia"
       ],
       "correta": 0,
-      "explicacao": "O teste da orelhinha avalia a audição, geralmente por emissões otoacústicas evocadas."
+      "explicacao": "A bilirrubina indireta, lipossolúvel, atravessa a barreira hematoencefálica e se deposita nos núcleos da base, causando lesão neurológica."
     },
     {
-      "pergunta": "A perda de peso fisiológica nos primeiros dias de vida costuma ser de até:",
-      "opcoes": ["1 a 3%", "7 a 10%", "15 a 20%", "25%"],
-      "correta": 1,
-      "explicacao": "A perda fisiológica é de até cerca de 7 a 10% do peso, recuperada por volta do 10º ao 14º dia de vida."
-    },
-    {
-      "pergunta": "Uma tumefação no couro cabeludo do RN que ULTRAPASSA as linhas de sutura corresponde a:",
+      "pergunta": "Qual o mecanismo de ação da fototerapia na hiperbilirrubinemia?",
       "opcoes": [
-        "Céfalo-hematoma",
-        "Bossa serossanguínea (caput succedaneum)",
-        "Hematoma subgaleal exclusivamente",
-        "Craniossinostose"
+        "Aumenta a produção de bilirrubina",
+        "Converte a bilirrubina em isômeros hidrossolúveis, facilitando a excreção",
+        "Destrói as hemácias circulantes",
+        "Estimula a síntese de surfactante"
       ],
       "correta": 1,
-      "explicacao": "A bossa serossanguínea (caput) é edema que cruza as suturas. O céfalo-hematoma, por ser subperiosteal, respeita os limites das suturas."
+      "explicacao": "A luz promove a fotoisomerização da bilirrubina, tornando-a hidrossolúvel para ser eliminada sem necessidade de conjugação hepática."
     },
     {
-      "pergunta": "O céfalo-hematoma caracteristicamente:",
+      "pergunta": "A doença hemolítica perinatal por incompatibilidade Rh ocorre quando:",
       "opcoes": [
-        "Ultrapassa as linhas de sutura",
-        "Não ultrapassa as linhas de sutura",
-        "Regride em poucas horas",
-        "É sempre patológico e cirúrgico"
+        "A mãe é Rh positivo e o bebê Rh negativo",
+        "A mãe é Rh negativo e o bebê Rh positivo",
+        "Ambos são Rh negativo",
+        "Ambos são Rh positivo"
       ],
       "correta": 1,
-      "explicacao": "Por ser uma coleção subperiosteal, o céfalo-hematoma é delimitado pelas suturas e não as ultrapassa."
+      "explicacao": "A mãe Rh negativo sensibilizada produz anticorpos contra as hemácias Rh positivo do feto, causando hemólise."
     },
     {
-      "pergunta": "O cordão umbilical normal apresenta:",
+      "pergunta": "O teste de Coombs direto no recém-nascido serve para detectar:",
       "opcoes": [
-        "1 artéria e 1 veia",
-        "2 artérias e 1 veia",
-        "1 artéria e 2 veias",
-        "2 artérias e 2 veias"
-      ],
-      "correta": 1,
-      "explicacao": "O cordão normal tem 2 artérias e 1 veia. A artéria umbilical única pode se associar a malformações."
-    },
-    {
-      "pergunta": "Qual é o principal agente da sepse neonatal precoce (nas primeiras 72 horas)?",
-      "opcoes": [
-        "Staphylococcus aureus",
-        "Streptococcus agalactiae (estreptococo do grupo B)",
-        "Pseudomonas aeruginosa",
-        "Candida albicans"
-      ],
-      "correta": 1,
-      "explicacao": "O estreptococo do grupo B (S. agalactiae) é o principal agente da sepse precoce, seguido pela E. coli. A profilaxia intraparto reduz o risco."
-    },
-    {
-      "pergunta": "A síndrome do desconforto respiratório (doença da membrana hialina) do prematuro decorre da deficiência de:",
-      "opcoes": ["Surfactante", "Ferro", "Vitamina D", "Insulina"],
-      "correta": 0,
-      "explicacao": "A deficiência de surfactante aumenta a tensão superficial alveolar e leva a colapso alveolar, típico do prematuro."
-    },
-    {
-      "pergunta": "O surfactante pulmonar é produzido pelos:",
-      "opcoes": [
-        "Pneumócitos tipo I",
-        "Pneumócitos tipo II",
-        "Macrófagos alveolares",
-        "Cílios das vias aéreas"
-      ],
-      "correta": 1,
-      "explicacao": "Os pneumócitos tipo II produzem o surfactante, que reduz a tensão superficial e evita o colapso alveolar."
-    },
-    {
-      "pergunta": "A administração de corticoide antenatal à gestante em risco de parto prematuro visa principalmente:",
-      "opcoes": [
-        "Acelerar a maturidade pulmonar fetal",
-        "Aumentar o peso ao nascer",
-        "Prevenir icterícia",
-        "Reduzir a icterícia fisiológica"
-      ],
-      "correta": 0,
-      "explicacao": "O corticoide antenatal acelera a maturação pulmonar e reduz a incidência e a gravidade da síndrome do desconforto respiratório."
-    },
-    {
-      "pergunta": "A taquipneia transitória do recém-nascido está associada a:",
-      "opcoes": [
+        "Anticorpos ligados às hemácias do RN",
+        "Nível de glicose",
         "Deficiência de surfactante",
-        "Retardo na reabsorção do líquido pulmonar",
-        "Aspiração de mecônio",
-        "Hipertensão pulmonar persistente"
+        "Infecção bacteriana"
       ],
-      "correta": 1,
-      "explicacao": "Resulta do retardo na reabsorção do líquido pulmonar fetal; é mais comum após cesariana e costuma ser autolimitada."
+      "correta": 0,
+      "explicacao": "O Coombs direto identifica anticorpos aderidos às hemácias do RN, sendo útil no diagnóstico das doenças hemolíticas por isoimunização."
     },
     {
-      "pergunta": "A síndrome de aspiração meconial é mais frequente em qual recém-nascido?",
+      "pergunta": "A prevenção da sensibilização materna na incompatibilidade Rh é feita com:",
       "opcoes": [
-        "Pré-termo extremo",
-        "A termo precoce",
-        "Pós-termo",
-        "De baixo peso"
+        "Imunoglobulina anti-D",
+        "Corticoide",
+        "Sulfato ferroso",
+        "Vitamina K"
+      ],
+      "correta": 0,
+      "explicacao": "A imunoglobulina anti-D administrada à mãe Rh negativo evita que ela se sensibilize contra as hemácias Rh positivo do feto."
+    },
+    {
+      "pergunta": "Na incompatibilidade ABO, a mãe é tipicamente do grupo sanguíneo:",
+      "opcoes": ["A", "B", "O", "AB"],
+      "correta": 2,
+      "explicacao": "A incompatibilidade ABO ocorre em geral com mãe do grupo O (que possui anticorpos anti-A e anti-B) e bebê do grupo A ou B."
+    },
+    {
+      "pergunta": "O filho de mãe diabética tem risco aumentado de qual alteração metabólica logo após o nascimento?",
+      "opcoes": [
+        "Hipoglicemia",
+        "Hipercalcemia",
+        "Hipernatremia",
+        "Alcalose"
+      ],
+      "correta": 0,
+      "explicacao": "O hiperinsulinismo fetal, estimulado pela hiperglicemia materna, leva a hipoglicemia após o clampeamento do cordão."
+    },
+    {
+      "pergunta": "Qual alteração de crescimento é característica do filho de mãe diabética?",
+      "opcoes": [
+        "Macrossomia",
+        "Restrição de crescimento grave",
+        "Microcefalia",
+        "Baixo peso extremo"
+      ],
+      "correta": 0,
+      "explicacao": "O excesso de insulina fetal, que atua como fator de crescimento, favorece a macrossomia."
+    },
+    {
+      "pergunta": "Qual a principal causa de convulsão no período neonatal?",
+      "opcoes": [
+        "Encefalopatia hipóxico-isquêmica",
+        "Epilepsia idiopática",
+        "Traumatismo por queda",
+        "Tumor cerebral"
+      ],
+      "correta": 0,
+      "explicacao": "A encefalopatia hipóxico-isquêmica, decorrente de asfixia perinatal, é a causa mais comum de convulsão no recém-nascido."
+    },
+    {
+      "pergunta": "Qual o tratamento estabelecido para a encefalopatia hipóxico-isquêmica moderada a grave no RN a termo?",
+      "opcoes": [
+        "Hipotermia terapêutica",
+        "Fototerapia",
+        "Corticoide em altas doses",
+        "Restrição hídrica isolada"
+      ],
+      "correta": 0,
+      "explicacao": "A hipotermia terapêutica, iniciada precocemente, reduz a lesão neurológica na encefalopatia hipóxico-isquêmica moderada a grave."
+    },
+    {
+      "pergunta": "Qual o principal benefício do clampeamento tardio do cordão umbilical no RN a termo vigoroso?",
+      "opcoes": [
+        "Melhora das reservas de ferro e menor anemia",
+        "Redução da icterícia",
+        "Prevenção de infecções",
+        "Aceleração da maturidade pulmonar"
+      ],
+      "correta": 0,
+      "explicacao": "O clampeamento após 1 a 3 minutos (ou quando cessa a pulsação) aumenta a transfusão placentária, melhorando as reservas de ferro e reduzindo anemia."
+    },
+    {
+      "pergunta": "Na reanimação do RN a termo, a concentração de oxigênio inicial recomendada é:",
+      "opcoes": [
+        "Ar ambiente (21%)",
+        "40%",
+        "60%",
+        "100% sempre"
+      ],
+      "correta": 0,
+      "explicacao": "No RN a termo, inicia-se a reanimação com ar ambiente (21%), ajustando a oferta conforme a oximetria de pulso."
+    },
+    {
+      "pergunta": "Qual a relação entre compressões torácicas e ventilações na reanimação neonatal?",
+      "opcoes": ["1:1", "3:1", "15:2", "30:2"],
+      "correta": 1,
+      "explicacao": "Na reanimação neonatal usa-se a relação 3:1 — 3 compressões para 1 ventilação, totalizando 90 compressões e 30 ventilações por minuto."
+    },
+    {
+      "pergunta": "Onde devem ser aplicadas as compressões torácicas no recém-nascido?",
+      "opcoes": [
+        "No terço superior do esterno",
+        "No terço médio do esterno",
+        "No terço inferior do esterno",
+        "Sobre o apêndice xifoide"
       ],
       "correta": 2,
-      "explicacao": "É mais comum no pós-termo, situação com maior chance de líquido amniótico meconial."
+      "explicacao": "As compressões são feitas no terço inferior do esterno, evitando o apêndice xifoide, comprimindo cerca de um terço do diâmetro do tórax."
     },
     {
-      "pergunta": "O reflexo de Moro normalmente desaparece por volta de:",
+      "pergunta": "Quando a adrenalina está indicada na reanimação neonatal?",
       "opcoes": [
-        "2 meses",
-        "4 a 6 meses",
-        "12 meses",
-        "Não desaparece"
+        "Assim que o RN nasce deprimido",
+        "Se a FC permanece abaixo de 60 bpm apesar de ventilação e massagem adequadas",
+        "Sempre que houver cianose",
+        "Apenas se a FC for maior que 100 bpm"
       ],
       "correta": 1,
-      "explicacao": "O reflexo de Moro é um reflexo primitivo que costuma desaparecer entre 4 e 6 meses. Persistência prolongada pode indicar alteração neurológica."
+      "explicacao": "A adrenalina é indicada quando a FC persiste abaixo de 60 bpm mesmo após ventilação efetiva e massagem cardíaca coordenadas e adequadas."
     },
     {
-      "pergunta": "A primeira eliminação de mecônio geralmente ocorre em até:",
+      "pergunta": "Após os passos iniciais, qual achado indica início de ventilação com pressão positiva (VPP)?",
       "opcoes": [
-        "6 horas",
-        "24 a 48 horas",
-        "72 a 96 horas",
-        "1 semana"
+        "Choro vigoroso",
+        "Apneia/respiração em gasping ou FC abaixo de 100 bpm",
+        "FC de 140 bpm",
+        "Cianose apenas de extremidades"
       ],
       "correta": 1,
-      "explicacao": "Costuma ocorrer nas primeiras 24 a 48 horas. Atraso pode sugerir obstrução intestinal ou doença de Hirschsprung."
+      "explicacao": "A VPP é o passo mais importante e está indicada diante de apneia, respiração em gasping ou FC abaixo de 100 bpm."
     },
     {
-      "pergunta": "A profilaxia de Credé, aplicada nos olhos do RN ao nascer, previne principalmente:",
+      "pergunta": "A apneia da prematuridade caracteriza-se por pausa respiratória de pelo menos:",
       "opcoes": [
-        "Catarata congênita",
-        "Conjuntivite gonocócica (oftalmia neonatal)",
-        "Glaucoma congênito",
-        "Retinopatia da prematuridade"
+        "5 segundos",
+        "10 segundos",
+        "20 segundos (ou menor, se com bradicardia/dessaturação)",
+        "60 segundos"
       ],
-      "correta": 1,
-      "explicacao": "A profilaxia ocular ao nascimento previne a oftalmia neonatal, sobretudo a conjuntivite gonocócica adquirida no canal de parto."
+      "correta": 2,
+      "explicacao": "Define-se por pausa de 20 segundos ou mais, ou menor quando acompanhada de bradicardia ou dessaturação. A cafeína é usada no tratamento."
     },
     {
-      "pergunta": "A icterícia fisiológica do recém-nascido a termo tipicamente atinge o pico:",
+      "pergunta": "A persistência do canal arterial é mais frequente em qual recém-nascido?",
       "opcoes": [
-        "Nas primeiras 12 horas",
-        "Entre o 3º e o 5º dia",
-        "Somente após 2 semanas",
-        "No primeiro mês"
-      ],
-      "correta": 1,
-      "explicacao": "No RN a termo, a icterícia fisiológica costuma atingir o pico entre o 3º e o 5º dia e regredir em seguida."
-    },
-    {
-      "pergunta": "Recém-nascido pré-termo é aquele nascido com idade gestacional:",
-      "opcoes": [
-        "Menor que 37 semanas",
-        "Menor que 40 semanas",
-        "Entre 37 e 42 semanas",
-        "Maior que 42 semanas"
+        "Prematuro",
+        "A termo",
+        "Pós-termo",
+        "Grande para a idade gestacional"
       ],
       "correta": 0,
-      "explicacao": "Pré-termo é o nascido antes de 37 semanas completas de idade gestacional."
+      "explicacao": "A persistência do canal arterial é mais comum no prematuro, pela imaturidade dos mecanismos de fechamento do ducto."
     },
     {
-      "pergunta": "Quais são os principais fatores de risco para a retinopatia da prematuridade?",
+      "pergunta": "A hemorragia peri-intraventricular do recém-nascido acomete tipicamente:",
       "opcoes": [
-        "Prematuridade e uso de oxigênio",
-        "Icterícia e fototerapia",
-        "Aleitamento materno exclusivo",
-        "Parto vaginal"
-      ],
-      "correta": 0,
-      "explicacao": "A prematuridade e a exposição ao oxigênio suplementar são os principais fatores de risco; por isso o rastreio oftalmológico do prematuro."
-    },
-    {
-      "pergunta": "A enterocolite necrosante acomete mais frequentemente qual grupo?",
-      "opcoes": [
-        "Recém-nascidos a termo saudáveis",
-        "Recém-nascidos prematuros",
-        "Pós-termo exclusivamente",
-        "Lactentes maiores de 6 meses"
+        "Recém-nascidos a termo",
+        "Prematuros, a partir da matriz germinativa",
+        "Pós-termo",
+        "Filhos de mãe diabética"
       ],
       "correta": 1,
-      "explicacao": "É mais frequente em prematuros, especialmente de muito baixo peso, e se relaciona à imaturidade intestinal e à alimentação."
+      "explicacao": "É típica do prematuro, originando-se da frágil matriz germinativa, muito vascularizada e suscetível a sangramento."
+    },
+    {
+      "pergunta": "A displasia broncopulmonar está associada a:",
+      "opcoes": [
+        "Prematuridade com uso prolongado de oxigênio e ventilação",
+        "Parto a termo sem intercorrências",
+        "Aleitamento materno",
+        "Icterícia fisiológica"
+      ],
+      "correta": 0,
+      "explicacao": "A displasia broncopulmonar é uma doença pulmonar crônica do prematuro, associada ao uso prolongado de oxigênio e ventilação mecânica."
+    },
+    {
+      "pergunta": "Os métodos de Capurro e New Ballard são usados para avaliar:",
+      "opcoes": [
+        "A idade gestacional do recém-nascido",
+        "O grau de icterícia",
+        "A função renal",
+        "A maturidade cardíaca"
+      ],
+      "correta": 0,
+      "explicacao": "Capurro e New Ballard estimam a idade gestacional por meio de características físicas e neurológicas do RN."
+    },
+    {
+      "pergunta": "Um recém-nascido é classificado como pequeno para a idade gestacional (PIG) quando o peso está:",
+      "opcoes": [
+        "Abaixo do percentil 10 para a idade gestacional",
+        "Entre os percentis 10 e 90",
+        "Acima do percentil 90",
+        "Acima de 4000 g"
+      ],
+      "correta": 0,
+      "explicacao": "PIG é o peso abaixo do percentil 10 para a idade gestacional; entre 10 e 90 é adequado (AIG) e acima de 90 é grande (GIG)."
+    },
+    {
+      "pergunta": "O método canguru é especialmente indicado para:",
+      "opcoes": [
+        "Recém-nascidos prematuros e de baixo peso",
+        "Recém-nascidos a termo saudáveis apenas",
+        "Crianças acima de 1 ano",
+        "Gestantes de alto risco"
+      ],
+      "correta": 0,
+      "explicacao": "O método canguru favorece o contato pele a pele e beneficia especialmente prematuros e RN de baixo peso, auxiliando termorregulação e vínculo."
+    },
+    {
+      "pergunta": "Qual a principal função da vérnix caseosa presente no recém-nascido?",
+      "opcoes": [
+        "Proteção da pele e isolamento térmico",
+        "Produção de surfactante",
+        "Digestão do mecônio",
+        "Estímulo respiratório"
+      ],
+      "correta": 0,
+      "explicacao": "A vérnix caseosa protege a pele do RN e auxilia na termorregulação e na barreira contra infecções nos primeiros momentos de vida."
     }
   ]
 }

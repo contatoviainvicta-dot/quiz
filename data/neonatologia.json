@@ -2,71 +2,254 @@
   "categoria": "Neonatologia",
   "questoes": [
     {
-      "pergunta": "Quantos parâmetros o escore de Apgar avalia?",
-      "opcoes": ["3", "4", "5", "6"],
-      "correta": 2,
-      "explicacao": "São 5: frequência cardíaca, esforço respiratório, tônus muscular, irritabilidade reflexa e cor. Mnemônico em inglês: Appearance, Pulse, Grimace, Activity, Respiration."
+      "pergunta": "Qual a idade gestacional que define o recém-nascido a termo?",
+      "opcoes": [
+        "Menos de 37 semanas",
+        "De 37 a 41 semanas e 6 dias",
+        "Exatamente 40 semanas",
+        "42 semanas ou mais"
+      ],
+      "correta": 1,
+      "explicacao": "A termo é de 37 a 41 semanas e 6 dias. Abaixo de 37 é pré-termo; 42 semanas ou mais é pós-termo."
     },
     {
-      "pergunta": "Em quais momentos o Apgar é aferido de rotina?",
+      "pergunta": "Baixo peso ao nascer é definido como peso inferior a:",
+      "opcoes": ["3000 g", "2500 g", "2000 g", "1500 g"],
+      "correta": 1,
+      "explicacao": "Baixo peso: menor que 2500 g. Muito baixo peso: menor que 1500 g. Extremo baixo peso: menor que 1000 g."
+    },
+    {
+      "pergunta": "Qual a frequência respiratória normal do recém-nascido?",
+      "opcoes": ["12 a 20 irpm", "20 a 40 irpm", "40 a 60 irpm", "60 a 80 irpm"],
+      "correta": 2,
+      "explicacao": "A frequência respiratória normal do RN é de 40 a 60 irpm. Acima de 60 caracteriza taquipneia."
+    },
+    {
+      "pergunta": "Qual a via de administração habitual da vitamina K profilática no recém-nascido?",
+      "opcoes": ["Intramuscular", "Endovenosa", "Subcutânea", "Inalatória"],
+      "correta": 0,
+      "explicacao": "A profilaxia é feita por via intramuscular ao nascer. Existe apresentação oral, mas a via IM é o padrão."
+    },
+    {
+      "pergunta": "O teste do pezinho (triagem neonatal biológica) é idealmente coletado em qual período?",
       "opcoes": [
-        "No 1º e no 5º minuto de vida",
-        "Apenas ao nascer",
-        "No 5º e no 10º minuto",
-        "A cada minuto na 1ª hora"
+        "Nas primeiras 24 horas de vida",
+        "Entre o 3º e o 5º dia de vida",
+        "Somente após 15 dias",
+        "No primeiro mês, sem período ideal"
+      ],
+      "correta": 1,
+      "explicacao": "O ideal é entre o 3º e o 5º dia de vida, após o início da alimentação, para não gerar resultados falsos."
+    },
+    {
+      "pergunta": "O teste do olhinho (reflexo vermelho) permite a detecção precoce de:",
+      "opcoes": [
+        "Surdez congênita",
+        "Catarata congênita e retinoblastoma",
+        "Cardiopatias congênitas",
+        "Luxação do quadril"
+      ],
+      "correta": 1,
+      "explicacao": "O reflexo vermelho avalia a transparência dos meios oculares e ajuda a detectar catarata congênita, retinoblastoma e glaucoma, entre outros."
+    },
+    {
+      "pergunta": "Por qual método é realizado o teste do coraçãozinho?",
+      "opcoes": [
+        "Ausculta cardíaca",
+        "Eletrocardiograma",
+        "Oximetria de pulso pré e pós-ductal",
+        "Radiografia de tórax"
+      ],
+      "correta": 2,
+      "explicacao": "É a oximetria de pulso medida no membro superior direito (pré-ductal) e em um membro inferior (pós-ductal), para rastrear cardiopatias congênitas críticas."
+    },
+    {
+      "pergunta": "O teste da orelhinha avalia principalmente:",
+      "opcoes": [
+        "A audição",
+        "O equilíbrio",
+        "A pressão intracraniana",
+        "A função vestibular motora"
       ],
       "correta": 0,
-      "explicacao": "1º e 5º minuto. Se o escore for menor que 7 no 5º minuto, repete-se a cada 5 minutos até 20 minutos."
+      "explicacao": "O teste da orelhinha avalia a audição, geralmente por emissões otoacústicas evocadas."
     },
     {
-      "pergunta": "Um recém-nascido com FC de 90 bpm recebe quantos pontos no item frequência cardíaca do Apgar?",
-      "opcoes": ["0", "1", "2", "Não pontua"],
+      "pergunta": "A perda de peso fisiológica nos primeiros dias de vida costuma ser de até:",
+      "opcoes": ["1 a 3%", "7 a 10%", "15 a 20%", "25%"],
       "correta": 1,
-      "explicacao": "FC ausente = 0; FC abaixo de 100 bpm = 1; FC de 100 bpm ou mais = 2. Como 90 é menor que 100, o item recebe 1 ponto."
+      "explicacao": "A perda fisiológica é de até cerca de 7 a 10% do peso, recuperada por volta do 10º ao 14º dia de vida."
     },
     {
-      "pergunta": "Na reanimação neonatal, a FC permanece abaixo de 60 bpm apesar de ventilação com pressão positiva adequada. Qual a conduta?",
+      "pergunta": "Uma tumefação no couro cabeludo do RN que ULTRAPASSA as linhas de sutura corresponde a:",
       "opcoes": [
-        "Manter só a ventilação e reavaliar em 1 minuto",
-        "Iniciar massagem cardíaca coordenada com a ventilação",
-        "Administrar oxigênio livre",
-        "Aspirar vias aéreas novamente"
+        "Céfalo-hematoma",
+        "Bossa serossanguínea (caput succedaneum)",
+        "Hematoma subgaleal exclusivamente",
+        "Craniossinostose"
       ],
       "correta": 1,
-      "explicacao": "FC abaixo de 60 bpm após VPP efetiva indica massagem cardíaca, coordenada com a ventilação na relação 3:1."
+      "explicacao": "A bossa serossanguínea (caput) é edema que cruza as suturas. O céfalo-hematoma, por ser subperiosteal, respeita os limites das suturas."
     },
     {
-      "pergunta": "Qual a faixa considerada normal para a frequência cardíaca do recém-nascido?",
+      "pergunta": "O céfalo-hematoma caracteristicamente:",
       "opcoes": [
-        "60 a 100 bpm",
-        "80 a 120 bpm",
-        "120 a 160 bpm",
-        "160 a 200 bpm"
+        "Ultrapassa as linhas de sutura",
+        "Não ultrapassa as linhas de sutura",
+        "Regride em poucas horas",
+        "É sempre patológico e cirúrgico"
+      ],
+      "correta": 1,
+      "explicacao": "Por ser uma coleção subperiosteal, o céfalo-hematoma é delimitado pelas suturas e não as ultrapassa."
+    },
+    {
+      "pergunta": "O cordão umbilical normal apresenta:",
+      "opcoes": [
+        "1 artéria e 1 veia",
+        "2 artérias e 1 veia",
+        "1 artéria e 2 veias",
+        "2 artérias e 2 veias"
+      ],
+      "correta": 1,
+      "explicacao": "O cordão normal tem 2 artérias e 1 veia. A artéria umbilical única pode se associar a malformações."
+    },
+    {
+      "pergunta": "Qual é o principal agente da sepse neonatal precoce (nas primeiras 72 horas)?",
+      "opcoes": [
+        "Staphylococcus aureus",
+        "Streptococcus agalactiae (estreptococo do grupo B)",
+        "Pseudomonas aeruginosa",
+        "Candida albicans"
+      ],
+      "correta": 1,
+      "explicacao": "O estreptococo do grupo B (S. agalactiae) é o principal agente da sepse precoce, seguido pela E. coli. A profilaxia intraparto reduz o risco."
+    },
+    {
+      "pergunta": "A síndrome do desconforto respiratório (doença da membrana hialina) do prematuro decorre da deficiência de:",
+      "opcoes": ["Surfactante", "Ferro", "Vitamina D", "Insulina"],
+      "correta": 0,
+      "explicacao": "A deficiência de surfactante aumenta a tensão superficial alveolar e leva a colapso alveolar, típico do prematuro."
+    },
+    {
+      "pergunta": "O surfactante pulmonar é produzido pelos:",
+      "opcoes": [
+        "Pneumócitos tipo I",
+        "Pneumócitos tipo II",
+        "Macrófagos alveolares",
+        "Cílios das vias aéreas"
+      ],
+      "correta": 1,
+      "explicacao": "Os pneumócitos tipo II produzem o surfactante, que reduz a tensão superficial e evita o colapso alveolar."
+    },
+    {
+      "pergunta": "A administração de corticoide antenatal à gestante em risco de parto prematuro visa principalmente:",
+      "opcoes": [
+        "Acelerar a maturidade pulmonar fetal",
+        "Aumentar o peso ao nascer",
+        "Prevenir icterícia",
+        "Reduzir a icterícia fisiológica"
+      ],
+      "correta": 0,
+      "explicacao": "O corticoide antenatal acelera a maturação pulmonar e reduz a incidência e a gravidade da síndrome do desconforto respiratório."
+    },
+    {
+      "pergunta": "A taquipneia transitória do recém-nascido está associada a:",
+      "opcoes": [
+        "Deficiência de surfactante",
+        "Retardo na reabsorção do líquido pulmonar",
+        "Aspiração de mecônio",
+        "Hipertensão pulmonar persistente"
+      ],
+      "correta": 1,
+      "explicacao": "Resulta do retardo na reabsorção do líquido pulmonar fetal; é mais comum após cesariana e costuma ser autolimitada."
+    },
+    {
+      "pergunta": "A síndrome de aspiração meconial é mais frequente em qual recém-nascido?",
+      "opcoes": [
+        "Pré-termo extremo",
+        "A termo precoce",
+        "Pós-termo",
+        "De baixo peso"
       ],
       "correta": 2,
-      "explicacao": "A FC normal do recém-nascido fica em torno de 120 a 160 bpm. A frequência respiratória normal é de 40 a 60 irpm."
+      "explicacao": "É mais comum no pós-termo, situação com maior chance de líquido amniótico meconial."
     },
     {
-      "pergunta": "Icterícia que surge nas primeiras 24 horas de vida deve ser considerada:",
+      "pergunta": "O reflexo de Moro normalmente desaparece por volta de:",
       "opcoes": [
-        "Sempre fisiológica",
-        "Sempre patológica, exige investigação",
-        "Esperada no aleitamento materno",
-        "Sinal de boa adaptação"
+        "2 meses",
+        "4 a 6 meses",
+        "12 meses",
+        "Não desaparece"
       ],
       "correta": 1,
-      "explicacao": "Icterícia nas primeiras 24 horas é sempre patológica e precisa de investigação. A icterícia fisiológica surge após 24 horas."
+      "explicacao": "O reflexo de Moro é um reflexo primitivo que costuma desaparecer entre 4 e 6 meses. Persistência prolongada pode indicar alteração neurológica."
     },
     {
-      "pergunta": "A vitamina K aplicada ao nascimento previne qual condição?",
+      "pergunta": "A primeira eliminação de mecônio geralmente ocorre em até:",
       "opcoes": [
-        "Anemia ferropriva",
-        "Doença hemorrágica do recém-nascido",
-        "Hipoglicemia neonatal",
-        "Sepse precoce"
+        "6 horas",
+        "24 a 48 horas",
+        "72 a 96 horas",
+        "1 semana"
       ],
       "correta": 1,
-      "explicacao": "A vitamina K profilática previne a doença hemorrágica do recém-nascido (sangramento por deficiência de vitamina K)."
+      "explicacao": "Costuma ocorrer nas primeiras 24 a 48 horas. Atraso pode sugerir obstrução intestinal ou doença de Hirschsprung."
+    },
+    {
+      "pergunta": "A profilaxia de Credé, aplicada nos olhos do RN ao nascer, previne principalmente:",
+      "opcoes": [
+        "Catarata congênita",
+        "Conjuntivite gonocócica (oftalmia neonatal)",
+        "Glaucoma congênito",
+        "Retinopatia da prematuridade"
+      ],
+      "correta": 1,
+      "explicacao": "A profilaxia ocular ao nascimento previne a oftalmia neonatal, sobretudo a conjuntivite gonocócica adquirida no canal de parto."
+    },
+    {
+      "pergunta": "A icterícia fisiológica do recém-nascido a termo tipicamente atinge o pico:",
+      "opcoes": [
+        "Nas primeiras 12 horas",
+        "Entre o 3º e o 5º dia",
+        "Somente após 2 semanas",
+        "No primeiro mês"
+      ],
+      "correta": 1,
+      "explicacao": "No RN a termo, a icterícia fisiológica costuma atingir o pico entre o 3º e o 5º dia e regredir em seguida."
+    },
+    {
+      "pergunta": "Recém-nascido pré-termo é aquele nascido com idade gestacional:",
+      "opcoes": [
+        "Menor que 37 semanas",
+        "Menor que 40 semanas",
+        "Entre 37 e 42 semanas",
+        "Maior que 42 semanas"
+      ],
+      "correta": 0,
+      "explicacao": "Pré-termo é o nascido antes de 37 semanas completas de idade gestacional."
+    },
+    {
+      "pergunta": "Quais são os principais fatores de risco para a retinopatia da prematuridade?",
+      "opcoes": [
+        "Prematuridade e uso de oxigênio",
+        "Icterícia e fototerapia",
+        "Aleitamento materno exclusivo",
+        "Parto vaginal"
+      ],
+      "correta": 0,
+      "explicacao": "A prematuridade e a exposição ao oxigênio suplementar são os principais fatores de risco; por isso o rastreio oftalmológico do prematuro."
+    },
+    {
+      "pergunta": "A enterocolite necrosante acomete mais frequentemente qual grupo?",
+      "opcoes": [
+        "Recém-nascidos a termo saudáveis",
+        "Recém-nascidos prematuros",
+        "Pós-termo exclusivamente",
+        "Lactentes maiores de 6 meses"
+      ],
+      "correta": 1,
+      "explicacao": "É mais frequente em prematuros, especialmente de muito baixo peso, e se relaciona à imaturidade intestinal e à alimentação."
     }
   ]
 }

@@ -2,22 +2,1093 @@
   "categoria": "Desenvolvimento",
   "questoes": [
     {
-      "pergunta": "Por volta de que idade surge o sorriso social?",
-      "opcoes": ["Ao nascer", "2 meses", "6 meses", "12 meses"],
-      "correta": 1,
-      "explicacao": "O sorriso social costuma aparecer por volta de 2 meses (entre 6 e 8 semanas)."
+      "pergunta": "Por volta de que idade a criança adquire o sustento cefálico (firma a cabeça)?",
+      "opcoes": [
+        "9 meses",
+        "12 meses",
+        "3 meses",
+        "6 meses"
+      ],
+      "correta": 2,
+      "explicacao": "O sustento cefálico firme costuma ser adquirido por volta dos 3 meses."
     },
     {
-      "pergunta": "Qual a idade média em que a criança senta sem apoio?",
-      "opcoes": ["3 meses", "6 meses", "9 meses", "12 meses"],
-      "correta": 1,
-      "explicacao": "Sentar sem apoio ocorre em média aos 6 meses."
+      "pergunta": "Com que idade, em média, a criança começa a rolar (virar de um lado para o outro)?",
+      "opcoes": [
+        "1 a 2 meses",
+        "9 a 10 meses",
+        "12 a 14 meses",
+        "4 a 6 meses"
+      ],
+      "correta": 3,
+      "explicacao": "A criança costuma rolar entre 4 e 6 meses."
     },
     {
-      "pergunta": "Qual a idade média para a marcha sem apoio?",
-      "opcoes": ["9 meses", "12 meses", "18 meses", "24 meses"],
+      "pergunta": "Por volta de que idade a criança senta com apoio?",
+      "opcoes": [
+        "1 mês",
+        "12 meses",
+        "4 a 5 meses",
+        "9 meses"
+      ],
+      "correta": 2,
+      "explicacao": "Sentar com apoio ocorre por volta de 4 a 5 meses; sem apoio, aos 6 meses."
+    },
+    {
+      "pergunta": "Com que idade, em média, a criança engatinha?",
+      "opcoes": [
+        "4 meses",
+        "18 meses",
+        "15 meses",
+        "9 meses"
+      ],
+      "correta": 3,
+      "explicacao": "O engatinhar surge por volta dos 9 meses, embora algumas crianças pulem essa etapa."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança fica em pé com apoio?",
+      "opcoes": [
+        "3 a 4 meses",
+        "15 a 16 meses",
+        "9 a 10 meses",
+        "20 a 24 meses"
+      ],
+      "correta": 2,
+      "explicacao": "Ficar em pé com apoio ocorre por volta de 9 a 10 meses."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma andar com apoio (apoiando-se em móveis)?",
+      "opcoes": [
+        "18 a 20 meses",
+        "4 a 6 meses",
+        "24 meses",
+        "10 a 12 meses"
+      ],
+      "correta": 3,
+      "explicacao": "Andar com apoio, deslocando-se junto aos móveis, ocorre por volta de 10 a 12 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança começa a correr?",
+      "opcoes": [
+        "12 meses",
+        "9 meses",
+        "18 meses",
+        "36 meses"
+      ],
+      "correta": 2,
+      "explicacao": "A corrida surge por volta dos 18 meses."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma chutar uma bola?",
+      "opcoes": [
+        "36 a 48 meses",
+        "9 a 12 meses",
+        "6 a 9 meses",
+        "18 a 24 meses"
+      ],
+      "correta": 3,
+      "explicacao": "Chutar uma bola ocorre por volta de 18 a 24 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança sobe escadas com ajuda, colocando os dois pés em cada degrau?",
+      "opcoes": [
+        "5 anos",
+        "2 anos",
+        "12 meses",
+        "9 meses"
+      ],
       "correta": 1,
-      "explicacao": "A marcha independente surge em média aos 12 meses, com faixa de normalidade entre 9 e 15 meses."
+      "explicacao": "Subir escadas com apoio, dois pés por degrau, ocorre por volta dos 2 anos."
+    },
+    {
+      "pergunta": "Com que idade, em média, a criança consegue pular com os dois pés juntos?",
+      "opcoes": [
+        "2 a 2 anos e meio",
+        "5 anos",
+        "9 meses",
+        "12 meses"
+      ],
+      "correta": 0,
+      "explicacao": "Pular com os dois pés ocorre por volta de 2 a 2 anos e meio."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança pedala um triciclo?",
+      "opcoes": [
+        "18 meses",
+        "3 anos",
+        "6 anos",
+        "12 meses"
+      ],
+      "correta": 1,
+      "explicacao": "Pedalar triciclo é um marco esperado por volta dos 3 anos."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma subir escadas alternando os pés?",
+      "opcoes": [
+        "12 meses",
+        "18 meses",
+        "6 a 7 anos",
+        "3 a 4 anos"
+      ],
+      "correta": 3,
+      "explicacao": "Subir escadas alternando os pés ocorre por volta de 3 a 4 anos."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança consegue pular em um pé só?",
+      "opcoes": [
+        "6 anos",
+        "2 anos",
+        "4 anos",
+        "18 meses"
+      ],
+      "correta": 2,
+      "explicacao": "Pular em um pé só é esperado por volta dos 4 anos."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança segue um objeto com o olhar até a linha média?",
+      "opcoes": [
+        "9 meses",
+        "6 meses",
+        "2 a 3 meses",
+        "12 meses"
+      ],
+      "correta": 2,
+      "explicacao": "O acompanhamento visual até a linha média ocorre por volta de 2 a 3 meses."
+    },
+    {
+      "pergunta": "Com que idade as mãos da criança passam a ficar predominantemente abertas?",
+      "opcoes": [
+        "9 meses",
+        "12 meses",
+        "3 a 4 meses",
+        "18 meses"
+      ],
+      "correta": 2,
+      "explicacao": "As mãos, antes fechadas, ficam predominantemente abertas por volta de 3 a 4 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança alcança e pega objetos voluntariamente?",
+      "opcoes": [
+        "12 meses",
+        "1 mês",
+        "9 meses",
+        "4 a 5 meses"
+      ],
+      "correta": 3,
+      "explicacao": "Alcançar e pegar objetos de forma voluntária ocorre por volta de 4 a 5 meses."
+    },
+    {
+      "pergunta": "Com que idade a criança transfere um objeto de uma mão para a outra?",
+      "opcoes": [
+        "18 meses",
+        "12 meses",
+        "2 meses",
+        "6 meses"
+      ],
+      "correta": 3,
+      "explicacao": "A transferência de objetos entre as mãos ocorre por volta dos 6 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade surge a preensão em pinça (polegar e indicador)?",
+      "opcoes": [
+        "3 meses",
+        "9 a 10 meses",
+        "18 meses",
+        "5 meses"
+      ],
+      "correta": 1,
+      "explicacao": "A pinça fina (polegar-indicador) surge por volta de 9 a 10 meses."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma empilhar uma torre de 2 cubos?",
+      "opcoes": [
+        "6 meses",
+        "36 meses",
+        "9 meses",
+        "15 meses"
+      ],
+      "correta": 3,
+      "explicacao": "Empilhar 2 cubos ocorre por volta dos 15 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança empilha uma torre de cerca de 6 cubos?",
+      "opcoes": [
+        "48 meses",
+        "9 meses",
+        "12 meses",
+        "24 meses"
+      ],
+      "correta": 3,
+      "explicacao": "Empilhar cerca de 6 cubos ocorre por volta dos 24 meses."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma rabiscar espontaneamente?",
+      "opcoes": [
+        "6 meses",
+        "9 meses",
+        "48 meses",
+        "15 a 18 meses"
+      ],
+      "correta": 3,
+      "explicacao": "Os primeiros rabiscos espontâneos surgem por volta de 15 a 18 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança copia um círculo?",
+      "opcoes": [
+        "12 meses",
+        "3 anos",
+        "6 anos",
+        "18 meses"
+      ],
+      "correta": 1,
+      "explicacao": "Copiar um círculo é esperado por volta dos 3 anos."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma copiar uma cruz?",
+      "opcoes": [
+        "4 anos",
+        "6 anos",
+        "18 meses",
+        "2 anos"
+      ],
+      "correta": 0,
+      "explicacao": "Copiar uma cruz é esperado por volta dos 4 anos."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança copia um quadrado?",
+      "opcoes": [
+        "7 anos",
+        "4 a 5 anos",
+        "18 meses",
+        "2 anos"
+      ],
+      "correta": 1,
+      "explicacao": "Copiar um quadrado ocorre por volta de 4 a 5 anos."
+    },
+    {
+      "pergunta": "Por volta de que idade o bebê emite sons guturais e arrulhos (vocalização)?",
+      "opcoes": [
+        "6 a 7 meses",
+        "9 a 10 meses",
+        "2 a 3 meses",
+        "12 meses"
+      ],
+      "correta": 2,
+      "explicacao": "As primeiras vocalizações (arrulhos) surgem por volta de 2 a 3 meses."
+    },
+    {
+      "pergunta": "Com que idade o bebê balbucia (lalação: 'dadada', 'bababa')?",
+      "opcoes": [
+        "6 meses",
+        "2 meses",
+        "12 meses",
+        "18 meses"
+      ],
+      "correta": 0,
+      "explicacao": "O balbucio com repetição de sílabas ocorre por volta dos 6 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança fala 'mama' ou 'papa' de forma inespecífica?",
+      "opcoes": [
+        "24 meses",
+        "2 a 3 meses",
+        "15 a 18 meses",
+        "7 a 9 meses"
+      ],
+      "correta": 3,
+      "explicacao": "O uso inespecífico de 'mama/papa' ocorre por volta de 7 a 9 meses."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma falar a primeira palavra com significado?",
+      "opcoes": [
+        "24 meses",
+        "4 meses",
+        "12 meses",
+        "6 meses"
+      ],
+      "correta": 2,
+      "explicacao": "A primeira palavra com significado costuma surgir por volta dos 12 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança aponta para o que deseja?",
+      "opcoes": [
+        "12 meses",
+        "6 meses",
+        "3 meses",
+        "30 meses"
+      ],
+      "correta": 0,
+      "explicacao": "Apontar para pedir/mostrar interesse ocorre por volta dos 12 meses."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma juntar duas palavras (frases simples)?",
+      "opcoes": [
+        "12 meses",
+        "24 meses",
+        "9 meses",
+        "48 meses"
+      ],
+      "correta": 1,
+      "explicacao": "As frases de duas palavras surgem por volta dos 24 meses."
+    },
+    {
+      "pergunta": "Aos 3 anos, espera-se que a fala da criança seja compreensível por estranhos em torno de:",
+      "opcoes": [
+        "25%",
+        "100% desde 1 ano",
+        "75%",
+        "10%"
+      ],
+      "correta": 2,
+      "explicacao": "Aos 3 anos, cerca de 75% da fala já é compreensível por pessoas que não convivem com a criança."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança costuma nomear cores e contar pequenas quantidades?",
+      "opcoes": [
+        "2 anos",
+        "12 meses",
+        "4 a 5 anos",
+        "18 meses"
+      ],
+      "correta": 2,
+      "explicacao": "Nomear cores e contar pequenas quantidades é esperado por volta de 4 a 5 anos."
+    },
+    {
+      "pergunta": "A ausência de palavras com significado aos 18 meses:",
+      "opcoes": [
+        "É totalmente esperada",
+        "Indica autismo com certeza",
+        "Deve ser ignorada até os 5 anos",
+        "Merece atenção e avaliação do desenvolvimento"
+      ],
+      "correta": 3,
+      "explicacao": "A ausência de palavras aos 18 meses é sinal de alerta e merece avaliação, incluindo da audição."
+    },
+    {
+      "pergunta": "Por volta de que idade o bebê começa a estranhar pessoas desconhecidas?",
+      "opcoes": [
+        "2 meses",
+        "1 mês",
+        "6 a 8 meses",
+        "24 meses"
+      ],
+      "correta": 2,
+      "explicacao": "O estranhamento a desconhecidos surge por volta de 6 a 8 meses."
+    },
+    {
+      "pergunta": "A ansiedade de separação costuma ter seu pico entre:",
+      "opcoes": [
+        "4 e 5 anos",
+        "6 e 7 anos",
+        "1 e 2 meses",
+        "10 e 18 meses"
+      ],
+      "correta": 3,
+      "explicacao": "A ansiedade de separação é intensa entre cerca de 10 e 18 meses, sendo esperada nessa fase."
+    },
+    {
+      "pergunta": "Com que idade a criança brinca de 'esconde-achou' (procura objeto que sumiu)?",
+      "opcoes": [
+        "24 meses",
+        "2 meses",
+        "9 meses",
+        "4 meses"
+      ],
+      "correta": 2,
+      "explicacao": "Por volta dos 9 meses a criança já busca objetos que saem de vista, refletindo a permanência do objeto."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança acena 'tchau' e bate palmas?",
+      "opcoes": [
+        "18 a 24 meses",
+        "9 a 12 meses",
+        "36 meses",
+        "2 a 3 meses"
+      ],
+      "correta": 1,
+      "explicacao": "Gestos sociais como dar tchau e bater palmas surgem por volta de 9 a 12 meses."
+    },
+    {
+      "pergunta": "Com que idade surge a brincadeira simbólica (faz de conta)?",
+      "opcoes": [
+        "5 a 6 anos",
+        "3 meses",
+        "6 meses",
+        "18 a 24 meses"
+      ],
+      "correta": 3,
+      "explicacao": "O brincar simbólico (faz de conta) surge por volta de 18 a 24 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança come sozinha usando a colher?",
+      "opcoes": [
+        "9 meses",
+        "36 meses",
+        "6 meses",
+        "15 a 18 meses"
+      ],
+      "correta": 3,
+      "explicacao": "Comer sozinha com a colher, ainda que com respingos, ocorre por volta de 15 a 18 meses."
+    },
+    {
+      "pergunta": "Com que idade, em média, se inicia o controle esfincteriano diurno?",
+      "opcoes": [
+        "2 a 3 anos",
+        "6 anos",
+        "12 meses",
+        "6 meses"
+      ],
+      "correta": 0,
+      "explicacao": "O controle esfincteriano diurno costuma ser adquirido por volta de 2 a 3 anos, respeitando a prontidão da criança."
+    },
+    {
+      "pergunta": "O tipo de brincadeira predominante por volta dos 2 anos é:",
+      "opcoes": [
+        "Ausência de brincadeira",
+        "Jogos com regras",
+        "Brincadeira cooperativa complexa",
+        "Brincadeira paralela (ao lado de outras crianças)"
+      ],
+      "correta": 3,
+      "explicacao": "Aos 2 anos predomina a brincadeira paralela; a brincadeira cooperativa surge mais tarde, por volta de 3 a 4 anos."
+    },
+    {
+      "pergunta": "O peso de nascimento costuma dobrar por volta de:",
+      "opcoes": [
+        "4 a 5 meses",
+        "1 mês",
+        "24 meses",
+        "12 meses"
+      ],
+      "correta": 0,
+      "explicacao": "O peso de nascimento dobra por volta de 4 a 5 meses."
+    },
+    {
+      "pergunta": "O peso de nascimento costuma triplicar por volta de:",
+      "opcoes": [
+        "6 meses",
+        "12 meses",
+        "4 meses",
+        "24 meses"
+      ],
+      "correta": 1,
+      "explicacao": "O peso de nascimento triplica por volta dos 12 meses."
+    },
+    {
+      "pergunta": "O peso de nascimento costuma quadruplicar por volta de:",
+      "opcoes": [
+        "12 meses",
+        "24 meses",
+        "48 meses",
+        "6 meses"
+      ],
+      "correta": 1,
+      "explicacao": "O peso de nascimento quadruplica por volta dos 24 meses."
+    },
+    {
+      "pergunta": "O comprimento ao nascer tende a dobrar por volta de:",
+      "opcoes": [
+        "4 anos",
+        "8 anos",
+        "12 meses",
+        "2 anos"
+      ],
+      "correta": 0,
+      "explicacao": "O comprimento de nascimento dobra por volta dos 4 anos de idade."
+    },
+    {
+      "pergunta": "Quanto cresce, em média, o perímetro cefálico no primeiro ano de vida?",
+      "opcoes": [
+        "Cerca de 12 cm",
+        "Cerca de 25 cm",
+        "Cerca de 40 cm",
+        "Cerca de 2 cm"
+      ],
+      "correta": 0,
+      "explicacao": "O perímetro cefálico aumenta cerca de 12 cm no primeiro ano de vida."
+    },
+    {
+      "pergunta": "Quanto a criança cresce, em média, em estatura no primeiro ano de vida?",
+      "opcoes": [
+        "Cerca de 50 cm",
+        "Cerca de 2 cm",
+        "Cerca de 5 cm",
+        "Cerca de 25 cm"
+      ],
+      "correta": 3,
+      "explicacao": "No primeiro ano a criança cresce cerca de 25 cm (aumento de aproximadamente 50%)."
+    },
+    {
+      "pergunta": "Por volta de que idade costuma nascer o primeiro dente decíduo?",
+      "opcoes": [
+        "6 a 8 meses",
+        "36 meses",
+        "1 a 2 meses",
+        "18 a 24 meses"
+      ],
+      "correta": 0,
+      "explicacao": "O primeiro dente decíduo costuma irromper entre 6 e 8 meses."
+    },
+    {
+      "pergunta": "A dentição decídua completa (20 dentes) costuma estar presente por volta de:",
+      "opcoes": [
+        "8 anos",
+        "2 anos e meio a 3 anos",
+        "12 meses",
+        "6 anos"
+      ],
+      "correta": 1,
+      "explicacao": "Os 20 dentes decíduos costumam estar completos por volta de 2 anos e meio a 3 anos."
+    },
+    {
+      "pergunta": "A idade óssea, avaliada por radiografia de mão e punho, reflete:",
+      "opcoes": [
+        "O nível de glicose",
+        "A idade dentária apenas",
+        "A maturação esquelética",
+        "A função renal"
+      ],
+      "correta": 2,
+      "explicacao": "A idade óssea reflete a maturação esquelética e ajuda a avaliar o crescimento e a puberdade."
+    },
+    {
+      "pergunta": "A menor velocidade de crescimento estatural, fora o período fetal, costuma ocorrer:",
+      "opcoes": [
+        "No primeiro ano de vida",
+        "Nos anos pré-escolares/escolares, antes do estirão puberal",
+        "Durante o estirão puberal",
+        "Ao nascer"
+      ],
+      "correta": 1,
+      "explicacao": "A velocidade de crescimento é alta no 1º ano, desacelera na infância e volta a acelerar no estirão puberal."
+    },
+    {
+      "pergunta": "Qual é o primeiro sinal de puberdade na menina?",
+      "opcoes": [
+        "Estirão de crescimento",
+        "Pelos axilares",
+        "Telarca (broto mamário)",
+        "Menarca"
+      ],
+      "correta": 2,
+      "explicacao": "O primeiro sinal puberal na menina é a telarca (surgimento do broto mamário)."
+    },
+    {
+      "pergunta": "Qual é o primeiro sinal de puberdade no menino?",
+      "opcoes": [
+        "Mudança da voz",
+        "Pelos faciais",
+        "Estirão de crescimento",
+        "Aumento do volume testicular (4 mL ou mais)"
+      ],
+      "correta": 3,
+      "explicacao": "O primeiro sinal puberal no menino é o aumento do volume testicular (a partir de cerca de 4 mL)."
+    },
+    {
+      "pergunta": "Os estágios de Tanner classificam a maturação sexual em quantos estágios?",
+      "opcoes": [
+        "7",
+        "10",
+        "5",
+        "3"
+      ],
+      "correta": 2,
+      "explicacao": "Os estágios de Tanner vão de 1 (pré-puberal) a 5 (adulto)."
+    },
+    {
+      "pergunta": "A menarca ocorre, geralmente, em qual estágio de Tanner?",
+      "opcoes": [
+        "Estágio 2",
+        "Estágio 4",
+        "Estágio 5, sempre",
+        "Estágio 1"
+      ],
+      "correta": 1,
+      "explicacao": "A menarca costuma ocorrer no estágio de Tanner 4, cerca de 2 a 2 anos e meio após a telarca."
+    },
+    {
+      "pergunta": "Considera-se puberdade precoce na menina o surgimento de caracteres sexuais antes dos:",
+      "opcoes": [
+        "6 meses",
+        "10 anos",
+        "12 anos",
+        "8 anos"
+      ],
+      "correta": 3,
+      "explicacao": "Na menina, o surgimento de caracteres sexuais antes dos 8 anos caracteriza puberdade precoce."
+    },
+    {
+      "pergunta": "Considera-se puberdade precoce no menino o surgimento de caracteres sexuais antes dos:",
+      "opcoes": [
+        "12 anos",
+        "14 anos",
+        "6 anos",
+        "9 anos"
+      ],
+      "correta": 3,
+      "explicacao": "No menino, considera-se precoce o surgimento de caracteres sexuais antes dos 9 anos."
+    },
+    {
+      "pergunta": "Comparando os sexos, o estirão de crescimento puberal ocorre:",
+      "opcoes": [
+        "Na mesma idade em ambos",
+        "Mais cedo nas meninas",
+        "Mais cedo nos meninos",
+        "Nunca ocorre em meninas"
+      ],
+      "correta": 1,
+      "explicacao": "O estirão puberal ocorre, em média, mais cedo nas meninas do que nos meninos."
+    },
+    {
+      "pergunta": "A sequência habitual dos eventos puberais na menina é:",
+      "opcoes": [
+        "Telarca, pubarca, estirão e menarca",
+        "Menarca, telarca e pubarca",
+        "Pubarca, menarca e telarca",
+        "Estirão, menarca e telarca"
+      ],
+      "correta": 0,
+      "explicacao": "Na menina, a sequência típica é telarca, seguida de pubarca, estirão de crescimento e, por fim, menarca."
+    },
+    {
+      "pergunta": "A ausência de qualquer caractere sexual secundário na menina aos 13 anos sugere:",
+      "opcoes": [
+        "Situação totalmente normal até 18 anos",
+        "Puberdade precoce",
+        "Menarca iminente",
+        "Atraso puberal, que merece investigação"
+      ],
+      "correta": 3,
+      "explicacao": "A ausência de caracteres sexuais aos 13 anos (meninas) ou 14 anos (meninos) caracteriza atraso puberal e deve ser investigada."
+    },
+    {
+      "pergunta": "O reflexo de preensão palmar normalmente desaparece por volta de:",
+      "opcoes": [
+        "4 a 6 meses",
+        "12 meses",
+        "Não desaparece",
+        "18 meses"
+      ],
+      "correta": 0,
+      "explicacao": "A preensão palmar reflexa costuma desaparecer entre 4 e 6 meses, dando lugar à preensão voluntária."
+    },
+    {
+      "pergunta": "O reflexo de preensão plantar tende a desaparecer por volta de:",
+      "opcoes": [
+        "1 mês",
+        "9 a 12 meses",
+        "3 anos",
+        "2 meses"
+      ],
+      "correta": 1,
+      "explicacao": "A preensão plantar costuma desaparecer por volta de 9 a 12 meses, quando a criança começa a andar."
+    },
+    {
+      "pergunta": "O reflexo tônico-cervical assimétrico (postura do 'esgrimista') desaparece por volta de:",
+      "opcoes": [
+        "4 a 6 meses",
+        "12 meses",
+        "18 meses",
+        "24 meses"
+      ],
+      "correta": 0,
+      "explicacao": "O reflexo tônico-cervical assimétrico costuma desaparecer entre 4 e 6 meses."
+    },
+    {
+      "pergunta": "O reflexo de marcha automática do recém-nascido costuma desaparecer por volta de:",
+      "opcoes": [
+        "12 meses",
+        "18 meses",
+        "9 meses",
+        "2 meses"
+      ],
+      "correta": 3,
+      "explicacao": "A marcha automática é um reflexo neonatal que costuma desaparecer por volta dos 2 meses."
+    },
+    {
+      "pergunta": "O sinal de Babinski (resposta plantar em extensão) é considerado:",
+      "opcoes": [
+        "Sinal de fratura",
+        "Ausente no recém-nascido",
+        "Normal no lactente, até cerca de 1 a 2 anos",
+        "Sempre patológico em qualquer idade"
+      ],
+      "correta": 2,
+      "explicacao": "A resposta plantar em extensão é fisiológica no lactente e pode persistir normalmente até cerca de 1 a 2 anos."
+    },
+    {
+      "pergunta": "A persistência de reflexos primitivos além da idade esperada:",
+      "opcoes": [
+        "Indica bom desenvolvimento",
+        "É totalmente normal",
+        "Deve ser ignorada",
+        "É um sinal de alerta neurológico"
+      ],
+      "correta": 3,
+      "explicacao": "A persistência de reflexos primitivos além do período esperado pode indicar alteração neurológica e merece avaliação."
+    },
+    {
+      "pergunta": "Qual instrumento é classicamente usado na triagem do desenvolvimento infantil?",
+      "opcoes": [
+        "Escore de Glasgow",
+        "Teste de Denver (Denver II)",
+        "Índice de Kt/V",
+        "Escala de Apgar"
+      ],
+      "correta": 1,
+      "explicacao": "O Teste de Denver (Denver II) é um instrumento clássico de triagem do desenvolvimento infantil."
+    },
+    {
+      "pergunta": "O Teste de Denver II avalia quais áreas do desenvolvimento?",
+      "opcoes": [
+        "Motor grosso, motor fino-adaptativo, linguagem e pessoal-social",
+        "Apenas linguagem",
+        "Apenas motor",
+        "Peso, altura e PC"
+      ],
+      "correta": 0,
+      "explicacao": "O Denver II avalia quatro áreas: motor grosso, motor fino-adaptativo, linguagem e pessoal-social."
+    },
+    {
+      "pergunta": "Qual documento acompanha o crescimento e o desenvolvimento da criança no SUS?",
+      "opcoes": [
+        "Prontuário de emergência",
+        "Caderneta de Saúde da Criança",
+        "Cartão de vacina apenas",
+        "Termo de consentimento"
+      ],
+      "correta": 1,
+      "explicacao": "A Caderneta de Saúde da Criança registra crescimento, desenvolvimento, vacinas e orientações."
+    },
+    {
+      "pergunta": "As curvas de crescimento adotadas como referência no Brasil são as da:",
+      "opcoes": [
+        "Sociedade Americana de Pediatria isolada",
+        "Tabela do IBGE",
+        "Curva de Apgar",
+        "Organização Mundial da Saúde (OMS)"
+      ],
+      "correta": 3,
+      "explicacao": "O Brasil adota as curvas de crescimento da OMS para acompanhamento infantil."
+    },
+    {
+      "pergunta": "Para a classificação nutricional de crianças e adolescentes, um índice muito utilizado é:",
+      "opcoes": [
+        "Apenas o peso isolado",
+        "O perímetro braquial apenas",
+        "A idade óssea isolada",
+        "IMC para a idade"
+      ],
+      "correta": 3,
+      "explicacao": "O IMC para a idade é amplamente usado; em menores de 5 anos também se avalia peso para estatura."
+    },
+    {
+      "pergunta": "Não sustentar a cabeça aos 4 meses é considerado:",
+      "opcoes": [
+        "Indicativo de puberdade",
+        "Sinal de bom desenvolvimento",
+        "Um sinal de alerta do desenvolvimento",
+        "Totalmente esperado"
+      ],
+      "correta": 2,
+      "explicacao": "A ausência de sustento cefálico aos 4 meses é sinal de alerta e merece avaliação."
+    },
+    {
+      "pergunta": "Não sentar sem apoio aos 9 meses é considerado:",
+      "opcoes": [
+        "Sinal de precocidade",
+        "Um sinal de alerta do desenvolvimento",
+        "Esperado para a idade",
+        "Irrelevante"
+      ],
+      "correta": 1,
+      "explicacao": "Não sentar sem apoio aos 9 meses é sinal de alerta motor e deve ser investigado."
+    },
+    {
+      "pergunta": "Não andar de forma independente aos 18 meses é considerado:",
+      "opcoes": [
+        "Um sinal de alerta do desenvolvimento",
+        "Sem importância",
+        "Esperado para a maioria",
+        "Sinal de precocidade"
+      ],
+      "correta": 0,
+      "explicacao": "A ausência de marcha independente aos 18 meses é sinal de alerta e requer avaliação."
+    },
+    {
+      "pergunta": "A perda de habilidades já adquiridas (regressão de marcos) é:",
+      "opcoes": [
+        "Um sinal de alerta importante, que exige investigação",
+        "Uma variação normal do desenvolvimento",
+        "Esperada em toda criança",
+        "Sinal de bom prognóstico"
+      ],
+      "correta": 0,
+      "explicacao": "A regressão de marcos previamente adquiridos é sinal de alerta grave e exige investigação neurológica."
+    },
+    {
+      "pergunta": "São sinais precoces de transtorno do espectro autista:",
+      "opcoes": [
+        "Marcha precoce",
+        "Boa interação social",
+        "Não responder ao nome, pouco contato visual e não apontar para compartilhar interesse",
+        "Sorriso social presente e linguagem adequada"
+      ],
+      "correta": 2,
+      "explicacao": "Não responder ao nome, contato visual reduzido e ausência de apontar para compartilhar interesse são sinais de alerta para autismo."
+    },
+    {
+      "pergunta": "A regressão da linguagem ou da interação social na criança pequena pode indicar:",
+      "opcoes": [
+        "Boa evolução",
+        "Puberdade precoce",
+        "Transtorno do espectro autista, entre outras condições",
+        "Desenvolvimento típico"
+      ],
+      "correta": 2,
+      "explicacao": "A regressão de linguagem/interação é sinal de alerta e pode estar associada ao transtorno do espectro autista, exigindo avaliação."
+    },
+    {
+      "pergunta": "Diante de atraso de linguagem, qual avaliação é prioritária excluir primeiro?",
+      "opcoes": [
+        "Avaliação da glicemia",
+        "Avaliação da idade óssea",
+        "Avaliação da audição",
+        "Avaliação renal"
+      ],
+      "correta": 2,
+      "explicacao": "No atraso de linguagem, deve-se avaliar a audição precocemente, pois a perda auditiva é causa importante e tratável."
+    },
+    {
+      "pergunta": "O atraso global do desenvolvimento caracteriza-se por comprometimento em:",
+      "opcoes": [
+        "Apenas uma área isolada",
+        "Apenas o crescimento",
+        "Apenas a dentição",
+        "Duas ou mais áreas do desenvolvimento"
+      ],
+      "correta": 3,
+      "explicacao": "O atraso global do desenvolvimento envolve comprometimento significativo em duas ou mais áreas do desenvolvimento."
+    },
+    {
+      "pergunta": "O estrabismo persistente após cerca de 4 meses de idade:",
+      "opcoes": [
+        "É sempre fisiológico",
+        "Indica bom desenvolvimento visual",
+        "Deve ser encaminhado para avaliação oftalmológica",
+        "Regride sozinho sem avaliação"
+      ],
+      "correta": 2,
+      "explicacao": "Um leve estrabismo intermitente pode ser normal nos primeiros meses, mas a persistência após 4 meses exige avaliação oftalmológica."
+    },
+    {
+      "pergunta": "A preferência manual (destro ou canhoto) bem definida antes de 1 ano de idade:",
+      "opcoes": [
+        "Indica genialidade",
+        "É totalmente normal e esperada",
+        "Deve ser estimulada precocemente",
+        "Pode ser sinal de alerta (assimetria) e merece avaliação"
+      ],
+      "correta": 3,
+      "explicacao": "A dominância manual definida antes de 1 ano pode indicar fraqueza do lado oposto (assimetria) e merece avaliação neurológica."
+    },
+    {
+      "pergunta": "Por volta de que idade o bebê fixa e segue o rosto humano e sorri em resposta?",
+      "opcoes": [
+        "Somente após 1 ano",
+        "Por volta de 2 meses",
+        "Ao nascer, plenamente",
+        "Apenas aos 6 meses"
+      ],
+      "correta": 1,
+      "explicacao": "O bebê passa a fixar e seguir o rosto humano e a sorrir em resposta por volta dos 2 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança costuma dar gargalhadas?",
+      "opcoes": [
+        "9 meses",
+        "1 mês",
+        "3 a 4 meses",
+        "18 meses"
+      ],
+      "correta": 2,
+      "explicacao": "As gargalhadas costumam surgir por volta de 3 a 4 meses."
+    },
+    {
+      "pergunta": "A introdução alimentar complementar é recomendada, em geral, a partir de:",
+      "opcoes": [
+        "12 meses",
+        "6 meses",
+        "3 meses",
+        "2 meses"
+      ],
+      "correta": 1,
+      "explicacao": "A alimentação complementar é recomendada a partir dos 6 meses, mantendo-se o aleitamento materno."
+    },
+    {
+      "pergunta": "O andar persistente na ponta dos pés na criança:",
+      "opcoes": [
+        "É sempre patológico e cirúrgico",
+        "Pode merecer avaliação se persistente",
+        "É sinal de boa coordenação apenas",
+        "Indica puberdade"
+      ],
+      "correta": 1,
+      "explicacao": "O andar na ponta dos pés pode ser transitório, mas quando persistente merece avaliação (por exemplo, para descartar causas neuromusculares)."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança obedece a um comando simples sem gesto (ex.: 'me dá a bola')?",
+      "opcoes": [
+        "3 meses",
+        "6 meses",
+        "36 meses",
+        "12 a 15 meses"
+      ],
+      "correta": 3,
+      "explicacao": "Obedecer a comandos simples sem apoio de gestos ocorre por volta de 12 a 15 meses."
+    },
+    {
+      "pergunta": "Com que idade a criança aponta partes do corpo quando nomeadas?",
+      "opcoes": [
+        "48 meses",
+        "6 meses",
+        "18 meses",
+        "9 meses"
+      ],
+      "correta": 2,
+      "explicacao": "Apontar partes do corpo quando solicitadas ocorre por volta dos 18 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança se reconhece no espelho?",
+      "opcoes": [
+        "6 meses",
+        "48 meses",
+        "18 meses",
+        "2 meses"
+      ],
+      "correta": 2,
+      "explicacao": "O autorreconhecimento no espelho surge por volta de 18 meses."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma virar as páginas de um livro?",
+      "opcoes": [
+        "6 meses",
+        "12 a 18 meses",
+        "3 meses",
+        "48 meses"
+      ],
+      "correta": 1,
+      "explicacao": "Virar páginas (ainda que várias de uma vez) ocorre por volta de 12 a 18 meses."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança fala o próprio nome completo?",
+      "opcoes": [
+        "12 meses",
+        "3 anos",
+        "6 anos",
+        "18 meses"
+      ],
+      "correta": 1,
+      "explicacao": "Falar o nome completo é esperado por volta dos 3 anos."
+    },
+    {
+      "pergunta": "Com que idade a criança desenha uma figura humana com pelo menos 3 partes?",
+      "opcoes": [
+        "18 meses",
+        "2 anos",
+        "7 anos",
+        "4 anos"
+      ],
+      "correta": 3,
+      "explicacao": "Desenhar uma figura humana com cerca de 3 partes é esperado por volta dos 4 anos."
+    },
+    {
+      "pergunta": "Por volta de que idade a criança copia um triângulo?",
+      "opcoes": [
+        "3 anos",
+        "2 anos",
+        "5 anos",
+        "8 anos"
+      ],
+      "correta": 2,
+      "explicacao": "Copiar um triângulo é esperado por volta dos 5 anos."
+    },
+    {
+      "pergunta": "Com que idade a criança costuma amarrar os próprios sapatos?",
+      "opcoes": [
+        "3 anos",
+        "2 anos",
+        "9 anos",
+        "5 a 6 anos"
+      ],
+      "correta": 3,
+      "explicacao": "Amarrar os sapatos é uma habilidade esperada por volta de 5 a 6 anos."
+    },
+    {
+      "pergunta": "A ginecomastia que surge no menino durante a puberdade é, na maioria das vezes:",
+      "opcoes": [
+        "Sinal de tumor sempre",
+        "Indicação de cirurgia imediata",
+        "Comum e transitória",
+        "Sinal de puberdade precoce"
+      ],
+      "correta": 2,
+      "explicacao": "A ginecomastia puberal é comum, geralmente benigna e transitória, regredindo em meses a poucos anos."
+    },
+    {
+      "pergunta": "A velocidade de crescimento estatural normal na fase pré-puberal é de aproximadamente:",
+      "opcoes": [
+        "5 a 7 cm por ano",
+        "1 cm por ano",
+        "15 cm por ano",
+        "25 cm por ano"
+      ],
+      "correta": 0,
+      "explicacao": "Na fase pré-puberal, a criança cresce em torno de 5 a 7 cm por ano."
+    },
+    {
+      "pergunta": "A baixa estatura costuma ser definida como estatura abaixo de:",
+      "opcoes": [
+        "Percentil 85",
+        "Percentil 97",
+        "Percentil 50",
+        "Percentil 3 (ou escore-z menor que -2)"
+      ],
+      "correta": 3,
+      "explicacao": "Considera-se baixa estatura quando a altura está abaixo do percentil 3 ou com escore-z menor que -2 para idade e sexo."
+    },
+    {
+      "pergunta": "A estatura-alvo (alvo genético) de uma criança é estimada a partir de:",
+      "opcoes": [
+        "Da idade da menarca da mãe apenas",
+        "Do perímetro cefálico",
+        "Da estatura dos pais",
+        "Do peso ao nascer"
+      ],
+      "correta": 2,
+      "explicacao": "A estatura-alvo é calculada com base na estatura dos pais, estimando o potencial genético de crescimento."
+    },
+    {
+      "pergunta": "No Teste de Denver, um resultado 'suspeito' ou 'anormal' indica que a criança deve:",
+      "opcoes": [
+        "Ser reavaliada e, se necessário, encaminhada",
+        "Receber alta sem retorno",
+        "Iniciar medicação imediatamente",
+        "Ser considerada normal"
+      ],
+      "correta": 0,
+      "explicacao": "Resultados suspeitos/anormais no Denver indicam necessidade de reavaliação e, conforme o caso, encaminhamento para avaliação especializada."
+    },
+    {
+      "pergunta": "A adrenarca corresponde ao surgimento de pelos pubianos/axilares por ação de androgênios produzidos:",
+      "opcoes": [
+        "Pela tireoide",
+        "Pelas glândulas adrenais",
+        "Pelos testículos apenas",
+        "Pela hipófise"
+      ],
+      "correta": 1,
+      "explicacao": "A adrenarca é o aparecimento de pelos por androgênios de origem adrenal, podendo ocorrer de forma independente da ativação gonadal."
     }
   ]
 }

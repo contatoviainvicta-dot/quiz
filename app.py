@@ -1,14 +1,16 @@
 """
 Quiz de Pediatria — hub da aplicação (interface + fluxo).
 
-Toda a lógica de dados vive em quiz_engine.py e as questões em data/*.json.
-A gamificação (XP, níveis, sequência) vive em gamificacao.py.
+Dados das questões: quiz_engine.py + data/*.json.
+Gamificação (XP, níveis, sequência): gamificacao.py.
+Persistência do progresso (Supabase): persistencia.py.
 Este arquivo cuida só da tela e da navegação.
 """
 
 import streamlit as st
 
 import gamificacao as gam
+import persistencia
 from quiz_engine import (
     QuestaoInvalida,
     carregar_questoes,
@@ -59,12 +61,76 @@ CATEGORIAS = listar_categorias(BANCO)
 
 
 # ---------------------------------------------------------------------------
-# Estado da sessão
+# Identificação do usuário (apelido) + carga do perfil
+# O apelido fica na URL (?u=...) para sobreviver a refresh no mesmo dispositivo.
+# ---------------------------------------------------------------------------
+def _entrar(apelido: str) -> None:
+    apelido = apelido.strip().lower()
+    if not apelido:
+        st.warning("Digite um apelido para continuar.")
+        return
+    st.session_state.identificador = apelido
+    st.query_params["u"] = apelido
+    st.session_state.perfil = persistencia.carregar_perfil(apelido)
+    st.rerun()
+
+
+# recupera da URL, se já entrou antes neste dispositivo
+if "identificador" not in st.session_state:
+    u = st.query_params.get("u")
+    if u:
+        st.session_state.identificador = u
+        st.session_state.perfil = persistencia.carregar_perfil(u)
+
+# tela de entrada (se ainda não identificado)
+if "identificador" not in st.session_state:
+    st.markdown(
+        '<div class="cabecalho">🩺 Quiz de Pediatria</div>', unsafe_allow_html=True
+    )
+    st.markdown(
+        '<p class="subtitulo">Entre com um apelido para o seu progresso ser '
+        "salvo e acompanhar você entre os dispositivos.</p>",
+        unsafe_allow_html=True,
+    )
+    with st.container(border=True):
+        apelido = st.text_input(
+            "Apelido de estudo", max_chars=40, placeholder="ex.: rodrigo"
+        )
+        if st.button("Entrar", type="primary", use_container_width=True):
+            _entrar(apelido)
+        if not persistencia.disponivel():
+            st.caption(
+                "⚠️ Persistência não configurada: você pode entrar, mas o "
+                "progresso não será salvo ainda (falta configurar o Supabase)."
+            )
+    st.stop()
+
+IDENTIFICADOR = st.session_state.identificador
+
+# garante um perfil na sessão (fallback se algo limpou)
+if "perfil" not in st.session_state:
+    st.session_state.perfil = persistencia.carregar_perfil(IDENTIFICADOR)
+
+
+def salvar() -> None:
+    """Grava o perfil atual na persistência (no-op se não configurada)."""
+    persistencia.salvar_perfil(IDENTIFICADOR, st.session_state.perfil)
+
+
+# ---------------------------------------------------------------------------
+# Estado da sessão do quiz
 # ---------------------------------------------------------------------------
 def reiniciar() -> None:
-    # Limpa só o estado do quiz atual. O PERFIL (XP, nível, sequência) é
-    # preservado de propósito — ele acompanha o usuário entre as partidas.
-    for chave in ["quiz", "indice", "acertos", "respondida", "escolha", "ultimo_resultado"]:
+    # Limpa só o estado do quiz atual. O PERFIL (XP, nível, sequência) e o
+    # IDENTIFICADOR são preservados de propósito.
+    for chave in [
+        "quiz",
+        "indice",
+        "acertos",
+        "respondida",
+        "escolha",
+        "ultimo_resultado",
+    ]:
         st.session_state.pop(chave, None)
     st.session_state.iniciado = False
 
@@ -72,10 +138,31 @@ def reiniciar() -> None:
 if "iniciado" not in st.session_state:
     st.session_state.iniciado = False
 
-# O perfil nasce uma vez por sessão. (Na Fase 2 ele passará a ser carregado de
-# uma persistência real; hoje vive só na sessão e reseta ao atualizar a página.)
-if "perfil" not in st.session_state:
-    st.session_state.perfil = gam.perfil_novo()
+
+# ---------------------------------------------------------------------------
+# Barra lateral: quem está estudando + trocar de usuário
+# ---------------------------------------------------------------------------
+with st.sidebar:
+    st.caption(f"Estudando como **{IDENTIFICADOR}**")
+    if persistencia.disponivel():
+        st.caption("✅ Progresso salvo na nuvem.")
+    else:
+        st.warning("Sem persistência: o progresso não está sendo salvo.")
+    if st.button("Trocar de usuário", use_container_width=True):
+        for chave in [
+            "identificador",
+            "perfil",
+            "iniciado",
+            "quiz",
+            "indice",
+            "acertos",
+            "respondida",
+            "escolha",
+            "ultimo_resultado",
+        ]:
+            st.session_state.pop(chave, None)
+        st.query_params.clear()
+        st.rerun()
 
 
 # ---------------------------------------------------------------------------
@@ -211,11 +298,11 @@ else:
                         acertou = escolha == questao["correta"]
                         if acertou:
                             st.session_state.acertos += 1
-                        # Gamificação: registra a resposta e guarda o resultado
-                        # para exibir o XP ganho no feedback abaixo.
+                        # Gamificação + persistência: registra e salva.
                         st.session_state.ultimo_resultado = gam.registrar_resposta(
                             st.session_state.perfil, questao["categoria"], acertou
                         )
+                        salvar()
                         st.rerun()
             else:
                 correta = questao["correta"]

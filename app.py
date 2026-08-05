@@ -49,6 +49,24 @@ st.markdown(
     .cal .apagado { color:#C2CFCF; }
     .cal .estudou { color:#0E8388; font-weight:700; background:#EAF3F3; }
     .cal .hoje { outline:2px solid #0E8388; outline-offset:-2px; }
+    .kpis { display:flex; flex-wrap:wrap; gap:12px; margin:.2rem 0 1rem; }
+    .kpi { flex:1 1 130px; background:#fff; border:1px solid #E6EEEE;
+           border-radius:14px; padding:12px 14px;
+           box-shadow:0 1px 3px rgba(14,131,136,.06); }
+    .kpi .rotulo { color:#4A6363; font-size:.7rem; font-weight:700;
+                   text-transform:uppercase; letter-spacing:.4px; }
+    .kpi .valor { color:#0E8388; font-size:1.6rem; font-weight:800;
+                  line-height:1.15; margin-top:2px; }
+    .kpi .sub { color:#7A8C8C; font-size:.72rem; margin-top:2px; }
+    .tema { margin-bottom:11px; }
+    .tema .cab { display:flex; justify-content:space-between; font-size:.9rem; }
+    .tema .nome { font-weight:600; color:#1B2A2A; }
+    .tema .pct { color:#0E8388; font-weight:700; }
+    .barra { background:#EAF3F3; border-radius:999px; height:8px;
+             overflow:hidden; margin-top:3px; }
+    .barra > span { display:block; height:100%; background:#0E8388;
+                    border-radius:999px; }
+    .tema .meta { color:#7A8C8C; font-size:.72rem; margin-top:2px; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -296,6 +314,82 @@ def _render_calendario(perfil) -> None:
     st.caption(f"🔥 {no_mes} dia(s) estudado(s) em {meses[hoje.month - 1]}.")
 
 
+def _cards_html(cards) -> str:
+    itens = "".join(
+        f'<div class="kpi"><div class="rotulo">{r}</div>'
+        f'<div class="valor">{v}</div><div class="sub">{s}</div></div>'
+        for r, v, s in cards
+    )
+    return f'<div class="kpis">{itens}</div>'
+
+
+def render_dashboard(perfil) -> None:
+    if perfil.respondidas == 0:
+        st.info("Responda algumas questões para ver suas estatísticas aqui.")
+        return
+
+    nivel, _, _ = gam.nivel_por_xp(perfil.xp_total)
+    prec = gam.precisao(perfil.acertos, perfil.respondidas)
+    ofensiva = gam.ofensiva_atual(perfil, HOJE)
+
+    st.markdown(
+        _cards_html(
+            [
+                ("Nível", str(nivel), f"{perfil.xp_total} XP"),
+                ("Precisão", f"{prec}%", f"{perfil.acertos}/{perfil.respondidas}"),
+                ("Ofensiva", f"🔥 {ofensiva}", f"melhor: {perfil.melhor_ofensiva}"),
+                (
+                    "Respondidas",
+                    str(perfil.respondidas),
+                    f"melhor seq.: {perfil.melhor_sequencia}",
+                ),
+            ]
+        ),
+        unsafe_allow_html=True,
+    )
+
+    st.markdown("**Repetição espaçada**")
+    cont = revisao.contagens(perfil.revisao, len(BANCO), HOJE)
+    st.markdown(
+        _cards_html(
+            [
+                ("Revisar hoje", str(cont["revisar_hoje"]), "pendentes"),
+                ("Aprendendo", str(cont["aprendendo"]), "em progresso"),
+                ("Dominadas", str(cont["dominadas"]), "nível máximo"),
+                ("Novas", str(cont["novas"]), "não vistas"),
+            ]
+        ),
+        unsafe_allow_html=True,
+    )
+
+    st.markdown("**Desempenho por tema**")
+    linhas = [l for l in gam.desempenho_por_categoria(perfil) if l["respondidas"] > 0]
+    if not linhas:
+        st.caption("Responda algumas questões para ver o desempenho por tema.")
+        return
+
+    forte, fraca = gam.destaques(perfil)
+    blocos = []
+    for l in linhas:
+        marca = ""
+        if forte and l["tema"] == forte["tema"]:
+            marca = " 💪"
+        elif fraca and l["tema"] == fraca["tema"]:
+            marca = " 📌"
+        pct = l["precisao"]
+        blocos.append(
+            f'<div class="tema"><div class="cab">'
+            f'<span class="nome">{l["tema"]}{marca}</span>'
+            f'<span class="pct">{pct}%</span></div>'
+            f'<div class="barra"><span style="width:{pct}%"></span></div>'
+            f'<div class="meta">{l["acertos"]}/{l["respondidas"]} acertos · '
+            f'{l["xp"]} XP</div></div>'
+        )
+    st.markdown("".join(blocos), unsafe_allow_html=True)
+    if forte or fraca:
+        st.caption("💪 tema mais forte · 📌 tema a reforçar")
+
+
 barra_xp()
 bloco_ofensiva()
 st.divider()
@@ -306,78 +400,84 @@ st.divider()
 # ---------------------------------------------------------------------------
 if not st.session_state.iniciado:
     perfil = st.session_state.perfil
+    aba_estudar, aba_dash = st.tabs(["📚 Estudar", "📊 Dashboard"])
 
-    # --- Revisão espaçada ---
-    with st.container(border=True):
-        st.markdown("**📚 Revisão espaçada**")
-        cont = revisao.contagens(perfil.revisao, len(BANCO), HOJE)
-        m1, m2, m3, m4 = st.columns(4)
-        m1.metric("Revisar hoje", cont["revisar_hoje"])
-        m2.metric("Aprendendo", cont["aprendendo"])
-        m3.metric("Dominadas", cont["dominadas"])
-        m4.metric("Novas", cont["novas"])
+    with aba_estudar:
+        # --- Revisão espaçada ---
+        with st.container(border=True):
+            st.markdown("**📚 Revisão espaçada**")
+            cont = revisao.contagens(perfil.revisao, len(BANCO), HOJE)
+            m1, m2, m3, m4 = st.columns(4)
+            m1.metric("Revisar hoje", cont["revisar_hoje"])
+            m2.metric("Aprendendo", cont["aprendendo"])
+            m3.metric("Dominadas", cont["dominadas"])
+            m4.metric("Novas", cont["novas"])
 
-        pendentes = cont["revisar_hoje"]
-        if pendentes > 0:
-            n = min(pendentes, 20)  # sessão de revisão até 20 questões
-            if st.button(
-                f"Revisar agora ({n})", type="primary", use_container_width=True
-            ):
-                por_id = {revisao.qid(q["pergunta"]): q for q in BANCO}
-                ids = revisao.devidas(perfil.revisao, HOJE)
-                selecionadas = [por_id[i] for i in ids if i in por_id][:n]
-                st.session_state.quiz = preparar_quiz(
-                    selecionadas, "Todas", len(selecionadas)
+            pendentes = cont["revisar_hoje"]
+            if pendentes > 0:
+                n = min(pendentes, 20)  # sessão de revisão até 20 questões
+                if st.button(
+                    f"Revisar agora ({n})", type="primary", use_container_width=True
+                ):
+                    por_id = {revisao.qid(q["pergunta"]): q for q in BANCO}
+                    ids = revisao.devidas(perfil.revisao, HOJE)
+                    selecionadas = [por_id[i] for i in ids if i in por_id][:n]
+                    st.session_state.quiz = preparar_quiz(
+                        selecionadas, "Todas", len(selecionadas)
+                    )
+                    st.session_state.indice = 0
+                    st.session_state.acertos = 0
+                    st.session_state.respondida = False
+                    st.session_state.escolha = None
+                    st.session_state.ultimo_resultado = None
+                    st.session_state.ultimo_sr = None
+                    st.session_state.modo = "revisao"
+                    st.session_state.iniciado = True
+                    st.rerun()
+            else:
+                st.caption(
+                    "Nada para revisar hoje 🎉 Responda questões novas para "
+                    "alimentar a revisão — o que você errar volta amanhã, e o que "
+                    "acertar volta em intervalos cada vez maiores."
                 )
+
+        # --- Novo quiz por tema ---
+        with st.container(border=True):
+            st.write("Ou faça um quiz novo por tema.")
+            categoria = st.selectbox("Tema", CATEGORIAS, index=0)
+
+            disponiveis = len(filtrar(BANCO, categoria))
+            if disponiveis <= 1:
+                quantidade = disponiveis
+                st.caption(f"Este tema tem {disponiveis} questão disponível.")
+            else:
+                quantidade = st.slider(
+                    "Número de questões",
+                    min_value=1,
+                    max_value=disponiveis,
+                    value=min(5, disponiveis),
+                )
+
+            if st.button("Começar", type="primary", use_container_width=True):
+                st.session_state.quiz = preparar_quiz(BANCO, categoria, quantidade)
                 st.session_state.indice = 0
                 st.session_state.acertos = 0
                 st.session_state.respondida = False
                 st.session_state.escolha = None
                 st.session_state.ultimo_resultado = None
                 st.session_state.ultimo_sr = None
-                st.session_state.modo = "revisao"
+                st.session_state.modo = "tema"
                 st.session_state.iniciado = True
                 st.rerun()
-        else:
-            st.caption(
-                "Nada para revisar hoje 🎉 Responda questões novas para alimentar "
-                "a revisão — o que você errar volta amanhã, e o que acertar volta "
-                "em intervalos cada vez maiores."
-            )
 
-    # --- Novo quiz por tema ---
-    with st.container(border=True):
-        st.write("Ou faça um quiz novo por tema.")
-        categoria = st.selectbox("Tema", CATEGORIAS, index=0)
+        st.caption(
+            f"{len(BANCO)} questões no banco. "
+            "Uso educacional — não substitui protocolos oficiais nem julgamento "
+            "clínico."
+        )
 
-        disponiveis = len(filtrar(BANCO, categoria))
-        if disponiveis <= 1:
-            quantidade = disponiveis
-            st.caption(f"Este tema tem {disponiveis} questão disponível.")
-        else:
-            quantidade = st.slider(
-                "Número de questões",
-                min_value=1,
-                max_value=disponiveis,
-                value=min(5, disponiveis),
-            )
-
-        if st.button("Começar", type="primary", use_container_width=True):
-            st.session_state.quiz = preparar_quiz(BANCO, categoria, quantidade)
-            st.session_state.indice = 0
-            st.session_state.acertos = 0
-            st.session_state.respondida = False
-            st.session_state.escolha = None
-            st.session_state.ultimo_resultado = None
-            st.session_state.ultimo_sr = None
-            st.session_state.modo = "tema"
-            st.session_state.iniciado = True
-            st.rerun()
-
-    st.caption(
-        f"{len(BANCO)} questões no banco. "
-        "Uso educacional — não substitui protocolos oficiais nem julgamento clínico."
-    )
+    with aba_dash:
+        render_dashboard(perfil)
 
 # ---------------------------------------------------------------------------
 # Tela de questões / resultado

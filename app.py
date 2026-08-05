@@ -38,10 +38,14 @@ st.markdown(
            font-weight:600; margin-bottom:0.6rem; }
     .cal { border-collapse: collapse; width: 100%; max-width: 360px; }
     .cal th { color:#4A6363; font-weight:600; font-size:.72rem; padding:4px 0; }
-    .cal td { text-align:center; padding:3px 0; }
-    .cal .pill { display:inline-block; width:30px; height:30px; line-height:30px;
-                 border-radius:999px; font-size:.85rem; color:#1B2A2A; }
-    .cal .estudou { background:#0E8388; color:#fff; font-weight:700; }
+    .cal td { text-align:center; padding:2px 0; }
+    .cal .cel { display:inline-flex; flex-direction:column; align-items:center;
+                justify-content:center; width:36px; height:40px; border-radius:10px;
+                font-size:.85rem; line-height:1.05; }
+    .cal .num { }
+    .cal .fogo { font-size:.72rem; margin-top:1px; }
+    .cal .apagado { color:#C2CFCF; }
+    .cal .estudou { color:#0E8388; font-weight:700; background:#EAF3F3; }
     .cal .hoje { outline:2px solid #0E8388; outline-offset:-2px; }
     </style>
     """,
@@ -262,16 +266,22 @@ def _render_calendario(perfil) -> None:
                 html.append("<td></td>")
                 continue
             iso = date(hoje.year, hoje.month, dia).isoformat()
-            classes = "pill"
-            if iso in estudados:
-                classes += " estudou"
+            estudou = iso in estudados
+            classes = "cel " + ("estudou" if estudou else "apagado")
             if iso == HOJE:
                 classes += " hoje"
-            html.append(f'<td><span class="{classes}">{dia}</span></td>')
+            fogo = '<span class="fogo">🔥</span>' if estudou else ""
+            html.append(
+                f'<td><span class="{classes}">'
+                f'<span class="num">{dia}</span>{fogo}</span></td>'
+            )
         html.append("</tr>")
     html.append("</tbody></table>")
     st.markdown("".join(html), unsafe_allow_html=True)
-    st.caption("Dias preenchidos = meta cumprida. Contorno = hoje.")
+
+    prefixo = f"{hoje.year:04d}-{hoje.month:02d}"
+    no_mes = sum(1 for d in perfil.dias_estudados if d.startswith(prefixo))
+    st.caption(f"🔥 {no_mes} dia(s) estudado(s) em {meses[hoje.month - 1]}.")
 
 
 barra_xp()

@@ -101,6 +101,46 @@ def precisao(acertos: int, respondidas: int) -> int:
     return round(100 * acertos / respondidas) if respondidas else 0
 
 
+def desempenho_por_categoria(perfil: Perfil) -> list[dict]:
+    """Lista por tema com respondidas, acertos, precisão e XP.
+
+    Ordenada da maior para a menor precisão (desempate: mais respondidas).
+    """
+    linhas = []
+    for tema, d in perfil.por_categoria.items():
+        resp = d.get("respondidas", 0)
+        ac = d.get("acertos", 0)
+        linhas.append(
+            {
+                "tema": tema,
+                "respondidas": resp,
+                "acertos": ac,
+                "precisao": precisao(ac, resp),
+                "xp": d.get("xp", 0),
+            }
+        )
+    linhas.sort(key=lambda x: (-x["precisao"], -x["respondidas"], x["tema"]))
+    return linhas
+
+
+def destaques(perfil: Perfil, minimo: int = 3) -> tuple[dict | None, dict | None]:
+    """Tema mais forte e o a reforçar, entre os com pelo menos 'minimo' respostas.
+
+    Devolve (mais_forte, mais_fraca). Se só há um tema elegível, a segunda vem
+    None. Se nenhum atinge o mínimo, devolve (None, None).
+    """
+    elegiveis = [
+        l for l in desempenho_por_categoria(perfil) if l["respondidas"] >= minimo
+    ]
+    if not elegiveis:
+        return None, None
+    forte = max(elegiveis, key=lambda x: (x["precisao"], x["respondidas"]))
+    fraca = min(elegiveis, key=lambda x: (x["precisao"], -x["respondidas"]))
+    if forte["tema"] == fraca["tema"]:
+        return forte, None
+    return forte, fraca
+
+
 def ofensiva_atual(perfil: Perfil, hoje: str | None = None) -> int:
     """Dias consecutivos com meta cumprida, terminando em hoje ou ontem.
 

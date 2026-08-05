@@ -117,8 +117,17 @@ if "identificador" not in st.session_state:
 
 IDENTIFICADOR = st.session_state.identificador
 
-if "perfil" not in st.session_state:
+# Garante que o perfil na sessão tem todos os campos da versão ATUAL.
+# Protege contra um objeto de uma versão anterior preso no session_state depois
+# de um deploy (senão campos novos, como a ofensiva, quebram com AttributeError).
+_p = st.session_state.get("perfil")
+if _p is None:
     st.session_state.perfil = persistencia.carregar_perfil(IDENTIFICADOR)
+elif not hasattr(_p, "dias_estudados"):
+    try:
+        st.session_state.perfil = gam.perfil_de_dict(gam.perfil_para_dict(_p))
+    except Exception:
+        st.session_state.perfil = persistencia.carregar_perfil(IDENTIFICADOR)
 
 
 def salvar() -> None:

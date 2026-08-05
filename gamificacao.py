@@ -56,6 +56,10 @@ class Perfil:
     melhor_ofensiva: int = 0
     # repetição espaçada: estado por questão (ver revisao.py)
     revisao: dict = field(default_factory=dict)
+    # histórico diário para gráficos: historico[dia] = {xp, respondidas, acertos}
+    historico: dict = field(default_factory=dict)
+    # conquistas desbloqueadas: {id: "YYYY-MM-DD"}
+    conquistas: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -220,6 +224,15 @@ def registrar_resposta(
     perfil.xp_total += total
     bucket["xp"] += total
 
+    # histórico diário (para os gráficos de tendência)
+    h = perfil.historico.setdefault(
+        hoje, {"xp": 0, "respondidas": 0, "acertos": 0}
+    )
+    h["xp"] += total
+    h["respondidas"] += 1
+    if acertou:
+        h["acertos"] += 1
+
     dia_completado = _registrar_dia(perfil, hoje)
 
     nivel_depois, _, _ = nivel_por_xp(perfil.xp_total)
@@ -256,4 +269,6 @@ def perfil_de_dict(dados: dict) -> Perfil:
     p.respondidas_no_dia = dados.get("respondidas_no_dia", 0)
     p.melhor_ofensiva = dados.get("melhor_ofensiva", 0)
     p.revisao = dados.get("revisao", {}) or {}
+    p.historico = dados.get("historico", {}) or {}
+    p.conquistas = dados.get("conquistas", {}) or {}
     return p

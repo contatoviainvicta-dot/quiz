@@ -2,10 +2,13 @@
 Quiz de Pediatria — hub da aplicação (interface + fluxo).
 
 Dados das questões: quiz_engine.py + data/*.json.
-Gamificação (XP, níveis, sequência): gamificacao.py.
+Gamificação (XP, níveis, sequência, ofensiva diária): gamificacao.py.
 Persistência do progresso (Supabase): persistencia.py.
 Este arquivo cuida só da tela e da navegação.
 """
+
+import calendar as _cal
+from datetime import date, datetime, timezone
 
 import streamlit as st
 
@@ -33,6 +36,13 @@ st.markdown(
     .tag { display:inline-block; background:#EAF3F3; color:#0E8388;
            padding:2px 10px; border-radius:999px; font-size:0.8rem;
            font-weight:600; margin-bottom:0.6rem; }
+    .cal { border-collapse: collapse; width: 100%; max-width: 360px; }
+    .cal th { color:#4A6363; font-weight:600; font-size:.72rem; padding:4px 0; }
+    .cal td { text-align:center; padding:3px 0; }
+    .cal .pill { display:inline-block; width:30px; height:30px; line-height:30px;
+                 border-radius:999px; font-size:.85rem; color:#1B2A2A; }
+    .cal .estudou { background:#0E8388; color:#fff; font-weight:700; }
+    .cal .hoje { outline:2px solid #0E8388; outline-offset:-2px; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -59,10 +69,12 @@ if not BANCO:
 
 CATEGORIAS = listar_categorias(BANCO)
 
+# Data de hoje (UTC) — usada pela ofensiva diária.
+HOJE = datetime.now(timezone.utc).date().isoformat()
+
 
 # ---------------------------------------------------------------------------
 # Identificação do usuário (apelido) + carga do perfil
-# O apelido fica na URL (?u=...) para sobreviver a refresh no mesmo dispositivo.
 # ---------------------------------------------------------------------------
 def _entrar(apelido: str) -> None:
     apelido = apelido.strip().lower()
@@ -75,14 +87,12 @@ def _entrar(apelido: str) -> None:
     st.rerun()
 
 
-# recupera da URL, se já entrou antes neste dispositivo
 if "identificador" not in st.session_state:
     u = st.query_params.get("u")
     if u:
         st.session_state.identificador = u
         st.session_state.perfil = persistencia.carregar_perfil(u)
 
-# tela de entrada (se ainda não identificado)
 if "identificador" not in st.session_state:
     st.markdown(
         '<div class="cabecalho">🩺 Quiz de Pediatria</div>', unsafe_allow_html=True
@@ -107,13 +117,11 @@ if "identificador" not in st.session_state:
 
 IDENTIFICADOR = st.session_state.identificador
 
-# garante um perfil na sessão (fallback se algo limpou)
 if "perfil" not in st.session_state:
     st.session_state.perfil = persistencia.carregar_perfil(IDENTIFICADOR)
 
 
 def salvar() -> None:
-    """Grava o perfil atual na persistência (no-op se não configurada)."""
     persistencia.salvar_perfil(IDENTIFICADOR, st.session_state.perfil)
 
 
@@ -121,8 +129,6 @@ def salvar() -> None:
 # Estado da sessão do quiz
 # ---------------------------------------------------------------------------
 def reiniciar() -> None:
-    # Limpa só o estado do quiz atual. O PERFIL (XP, nível, sequência) e o
-    # IDENTIFICADOR são preservados de propósito.
     for chave in [
         "quiz",
         "indice",
@@ -177,7 +183,7 @@ st.markdown(
 
 
 # ---------------------------------------------------------------------------
-# Barra de XP / nível (sempre visível)
+# Barra de XP / nível + ofensiva (sempre visível)
 # ---------------------------------------------------------------------------
 def barra_xp() -> None:
     perfil = st.session_state.perfil
@@ -189,15 +195,78 @@ def barra_xp() -> None:
     with col_b:
         falta = xp_prox - xp_no_nivel
         seq = perfil.sequencia_atual
-        fogo = f" · 🔥 {seq} seguidas" if seq >= 2 else ""
+        extra = f" · {seq} acertos seguidos" if seq >= 2 else ""
         st.markdown(
             f"**{perfil.xp_total} XP**  ·  faltam **{falta}** para o nível "
-            f"{nivel + 1}{fogo}"
+            f"{nivel + 1}{extra}"
         )
         st.progress(xp_no_nivel / xp_prox)
 
 
+def bloco_ofensiva() -> None:
+    perfil = st.session_state.perfil
+    ofensiva = gam.ofensiva_atual(perfil, HOJE)
+
+    concluiu_hoje = HOJE in perfil.dias_estudados
+    feito = perfil.respondidas_no_dia if perfil.data_corrente == HOJE else 0
+
+    linha = f"🔥 **{ofensiva}** dia(s) de ofensiva"
+    if perfil.melhor_ofensiva:
+        linha += f"  ·  melhor: {perfil.melhor_ofensiva}"
+    st.markdown(linha)
+
+    if concluiu_hoje:
+        st.caption(f"✅ Meta de hoje concluída ({gam.META_DIARIA}/{gam.META_DIARIA}).")
+    else:
+        faltam = max(0, gam.META_DIARIA - feito)
+        st.progress(min(feito, gam.META_DIARIA) / gam.META_DIARIA)
+        st.caption(
+            f"Meta de hoje: {feito}/{gam.META_DIARIA} questões — "
+            f"faltam {faltam} para manter a ofensiva."
+        )
+
+    with st.expander("📅 Calendário do mês"):
+        _render_calendario(perfil)
+
+
+def _render_calendario(perfil) -> None:
+    hoje = date.fromisoformat(HOJE)
+    estudados = set(perfil.dias_estudados)
+
+    meses = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro",
+    ]
+    st.markdown(f"**{meses[hoje.month - 1]} de {hoje.year}**")
+
+    cal = _cal.Calendar(firstweekday=6)  # domingo primeiro
+    semanas = cal.monthdayscalendar(hoje.year, hoje.month)
+
+    html = ['<table class="cal"><thead><tr>']
+    for h in ["D", "S", "T", "Q", "Q", "S", "S"]:
+        html.append(f"<th>{h}</th>")
+    html.append("</tr></thead><tbody>")
+    for semana in semanas:
+        html.append("<tr>")
+        for dia in semana:
+            if dia == 0:
+                html.append("<td></td>")
+                continue
+            iso = date(hoje.year, hoje.month, dia).isoformat()
+            classes = "pill"
+            if iso in estudados:
+                classes += " estudou"
+            if iso == HOJE:
+                classes += " hoje"
+            html.append(f'<td><span class="{classes}">{dia}</span></td>')
+        html.append("</tr>")
+    html.append("</tbody></table>")
+    st.markdown("".join(html), unsafe_allow_html=True)
+    st.caption("Dias preenchidos = meta cumprida. Contorno = hoje.")
+
+
 barra_xp()
+bloco_ofensiva()
 st.divider()
 
 
@@ -298,9 +367,11 @@ else:
                         acertou = escolha == questao["correta"]
                         if acertou:
                             st.session_state.acertos += 1
-                        # Gamificação + persistência: registra e salva.
                         st.session_state.ultimo_resultado = gam.registrar_resposta(
-                            st.session_state.perfil, questao["categoria"], acertou
+                            st.session_state.perfil,
+                            questao["categoria"],
+                            acertou,
+                            hoje=HOJE,
                         )
                         salvar()
                         st.rerun()
@@ -315,19 +386,23 @@ else:
                     )
                 st.info(questao["explicacao"])
 
-                # Feedback de XP
                 resultado = st.session_state.get("ultimo_resultado")
                 if resultado is not None:
                     linha = f"**+{resultado.xp_ganho} XP**"
                     if resultado.bonus_sequencia:
                         linha += (
-                            f"  ·  🔥 bônus de sequência "
+                            f"  ·  ⭐ bônus de sequência "
                             f"+{resultado.bonus_sequencia}"
                         )
                     st.markdown(linha)
                     if resultado.subiu_nivel:
                         st.success(
                             f"🎉 Você subiu para o nível {resultado.nivel_depois}!"
+                        )
+                    if resultado.dia_completado:
+                        st.success(
+                            f"🔥 Meta diária concluída! Ofensiva de "
+                            f"{resultado.ofensiva} dia(s)."
                         )
 
                 rotulo = "Próxima questão" if indice + 1 < total else "Ver resultado"

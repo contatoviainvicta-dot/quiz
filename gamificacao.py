@@ -54,6 +54,8 @@ class Perfil:
     data_corrente: str = ""       # dia ao qual 'respondidas_no_dia' se refere
     respondidas_no_dia: int = 0
     melhor_ofensiva: int = 0
+    # repetição espaçada: estado por questão (ver revisao.py)
+    revisao: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -213,4 +215,5 @@ def perfil_de_dict(dados: dict) -> Perfil:
     p.data_corrente = dados.get("data_corrente", "")
     p.respondidas_no_dia = dados.get("respondidas_no_dia", 0)
     p.melhor_ofensiva = dados.get("melhor_ofensiva", 0)
+    p.revisao = dados.get("revisao", {}) or {}
     return p

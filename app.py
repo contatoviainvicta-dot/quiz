@@ -8,12 +8,14 @@ Este arquivo cuida só da tela e da navegação.
 """
 
 import calendar as _cal
+import dataclasses
 from datetime import date, datetime, timezone
 
 import streamlit as st
 
 import gamificacao as gam
 import persistencia
+import revisao
 from quiz_engine import (
     QuestaoInvalida,
     carregar_questoes,
@@ -123,11 +125,19 @@ IDENTIFICADOR = st.session_state.identificador
 
 # Garante que o perfil na sessão tem todos os campos da versão ATUAL.
 # Protege contra um objeto de uma versão anterior preso no session_state depois
-# de um deploy (senão campos novos, como a ofensiva, quebram com AttributeError).
+# de um deploy (senão campos novos quebram com AttributeError). Compara os
+# campos do objeto com os do Perfil atual — funciona para qualquer fase futura.
+def _perfil_atual(obj) -> bool:
+    if not dataclasses.is_dataclass(obj):
+        return False
+    campos = {f.name for f in dataclasses.fields(gam.Perfil)}
+    return campos.issubset(set(vars(obj)))
+
+
 _p = st.session_state.get("perfil")
 if _p is None:
     st.session_state.perfil = persistencia.carregar_perfil(IDENTIFICADOR)
-elif not hasattr(_p, "dias_estudados"):
+elif not _perfil_atual(_p):
     try:
         st.session_state.perfil = gam.perfil_de_dict(gam.perfil_para_dict(_p))
     except Exception:
@@ -149,6 +159,8 @@ def reiniciar() -> None:
         "respondida",
         "escolha",
         "ultimo_resultado",
+        "ultimo_sr",
+        "modo",
     ]:
         st.session_state.pop(chave, None)
     st.session_state.iniciado = False
@@ -293,8 +305,49 @@ st.divider()
 # Tela inicial
 # ---------------------------------------------------------------------------
 if not st.session_state.iniciado:
+    perfil = st.session_state.perfil
+
+    # --- Revisão espaçada ---
     with st.container(border=True):
-        st.write("Escolha o tema e o número de questões para começar.")
+        st.markdown("**📚 Revisão espaçada**")
+        cont = revisao.contagens(perfil.revisao, len(BANCO), HOJE)
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("Revisar hoje", cont["revisar_hoje"])
+        m2.metric("Aprendendo", cont["aprendendo"])
+        m3.metric("Dominadas", cont["dominadas"])
+        m4.metric("Novas", cont["novas"])
+
+        pendentes = cont["revisar_hoje"]
+        if pendentes > 0:
+            n = min(pendentes, 20)  # sessão de revisão até 20 questões
+            if st.button(
+                f"Revisar agora ({n})", type="primary", use_container_width=True
+            ):
+                por_id = {revisao.qid(q["pergunta"]): q for q in BANCO}
+                ids = revisao.devidas(perfil.revisao, HOJE)
+                selecionadas = [por_id[i] for i in ids if i in por_id][:n]
+                st.session_state.quiz = preparar_quiz(
+                    selecionadas, "Todas", len(selecionadas)
+                )
+                st.session_state.indice = 0
+                st.session_state.acertos = 0
+                st.session_state.respondida = False
+                st.session_state.escolha = None
+                st.session_state.ultimo_resultado = None
+                st.session_state.ultimo_sr = None
+                st.session_state.modo = "revisao"
+                st.session_state.iniciado = True
+                st.rerun()
+        else:
+            st.caption(
+                "Nada para revisar hoje 🎉 Responda questões novas para alimentar "
+                "a revisão — o que você errar volta amanhã, e o que acertar volta "
+                "em intervalos cada vez maiores."
+            )
+
+    # --- Novo quiz por tema ---
+    with st.container(border=True):
+        st.write("Ou faça um quiz novo por tema.")
         categoria = st.selectbox("Tema", CATEGORIAS, index=0)
 
         disponiveis = len(filtrar(BANCO, categoria))
@@ -316,6 +369,8 @@ if not st.session_state.iniciado:
             st.session_state.respondida = False
             st.session_state.escolha = None
             st.session_state.ultimo_resultado = None
+            st.session_state.ultimo_sr = None
+            st.session_state.modo = "tema"
             st.session_state.iniciado = True
             st.rerun()
 
@@ -359,7 +414,10 @@ else:
         questao = quiz[indice]
 
         st.progress(indice / total)
-        st.caption(f"Questão {indice + 1} de {total}")
+        if st.session_state.get("modo") == "revisao":
+            st.caption(f"🔁 Revisão · questão {indice + 1} de {total}")
+        else:
+            st.caption(f"Questão {indice + 1} de {total}")
         st.markdown(
             f'<span class="tag">{questao["categoria"]}</span>', unsafe_allow_html=True
         )
@@ -391,6 +449,13 @@ else:
                             questao["categoria"],
                             acertou,
                             hoje=HOJE,
+                        )
+                        # Repetição espaçada: reagenda esta questão.
+                        st.session_state.ultimo_sr = revisao.registrar(
+                            st.session_state.perfil.revisao,
+                            revisao.qid(questao["pergunta"]),
+                            acertou,
+                            HOJE,
                         )
                         salvar()
                         st.rerun()
@@ -424,12 +489,19 @@ else:
                             f"{resultado.ofensiva} dia(s)."
                         )
 
+                sr = st.session_state.get("ultimo_sr")
+                if sr is not None:
+                    dias = revisao.intervalo_do_nivel(sr["nivel"])
+                    quando = "amanhã" if dias == 1 else f"em {dias} dias"
+                    st.caption(f"🔁 Esta questão volta para revisão {quando}.")
+
                 rotulo = "Próxima questão" if indice + 1 < total else "Ver resultado"
                 if st.button(rotulo, type="primary", use_container_width=True):
                     st.session_state.indice += 1
                     st.session_state.respondida = False
                     st.session_state.escolha = None
                     st.session_state.ultimo_resultado = None
+                    st.session_state.ultimo_sr = None
                     st.rerun()
 
         st.caption(f"Placar: {st.session_state.acertos} acerto(s) até aqui.")

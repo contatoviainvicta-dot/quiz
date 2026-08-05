@@ -9,10 +9,12 @@ Este arquivo cuida só da tela e da navegação.
 
 import calendar as _cal
 import dataclasses
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
+import pandas as pd
 import streamlit as st
 
+import conquistas
 import gamificacao as gam
 import persistencia
 import revisao
@@ -67,6 +69,16 @@ st.markdown(
     .barra > span { display:block; height:100%; background:#0E8388;
                     border-radius:999px; }
     .tema .meta { color:#7A8C8C; font-size:.72rem; margin-top:2px; }
+    .medalhas { display:flex; flex-wrap:wrap; gap:10px; margin-top:.3rem; }
+    .medalha { flex:1 1 150px; border:1px solid #E6EEEE; border-radius:12px;
+               padding:10px 12px; background:#fff; }
+    .medalha.bloq { opacity:.45; filter:grayscale(1); }
+    .medalha .emoji { font-size:1.5rem; line-height:1; }
+    .medalha .nome { font-weight:700; font-size:.85rem; color:#1B2A2A;
+                     margin-top:3px; }
+    .medalha .desc { font-size:.72rem; color:#7A8C8C; }
+    .medalha .data { font-size:.68rem; color:#0E8388; font-weight:600;
+                     margin-top:2px; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -179,6 +191,7 @@ def reiniciar() -> None:
         "ultimo_resultado",
         "ultimo_sr",
         "modo",
+        "novas_conquistas",
     ]:
         st.session_state.pop(chave, None)
     st.session_state.iniciado = False
@@ -208,6 +221,9 @@ with st.sidebar:
             "respondida",
             "escolha",
             "ultimo_resultado",
+            "ultimo_sr",
+            "modo",
+            "novas_conquistas",
         ]:
             st.session_state.pop(chave, None)
         st.query_params.clear()
@@ -323,10 +339,86 @@ def _cards_html(cards) -> str:
     return f'<div class="kpis">{itens}</div>'
 
 
+def _contexto_conquistas(perfil) -> dict:
+    """Estatísticas do perfil no formato que as conquistas avaliam."""
+    nivel, _, _ = gam.nivel_por_xp(perfil.xp_total)
+    dominadas = revisao.contagens(perfil.revisao, len(BANCO), HOJE)["dominadas"]
+    max_tema = max(
+        (d.get("respondidas", 0) for d in perfil.por_categoria.values()),
+        default=0,
+    )
+    return {
+        "respondidas": perfil.respondidas,
+        "acertos": perfil.acertos,
+        "precisao": gam.precisao(perfil.acertos, perfil.respondidas),
+        "nivel": nivel,
+        "melhor_sequencia": perfil.melhor_sequencia,
+        "melhor_ofensiva": perfil.melhor_ofensiva,
+        "dias_estudados": len(perfil.dias_estudados),
+        "dominadas": dominadas,
+        "max_tema": max_tema,
+    }
+
+
+def _verificar_conquistas(perfil) -> list:
+    """Desbloqueia conquistas novas, grava a data e devolve os ids novos."""
+    desbloqueadas = conquistas.avaliar(_contexto_conquistas(perfil))
+    novas = [i for i in desbloqueadas if i not in perfil.conquistas]
+    for i in novas:
+        perfil.conquistas[i] = HOJE
+    return novas
+
+
+def _grafico_tendencia(perfil) -> None:
+    hoje = date.fromisoformat(HOJE)
+    dias = [hoje - timedelta(days=i) for i in range(13, -1, -1)]
+    rotulos = [d.strftime("%d/%m") for d in dias]
+    xp = [perfil.historico.get(d.isoformat(), {}).get("xp", 0) for d in dias]
+    qs = [perfil.historico.get(d.isoformat(), {}).get("respondidas", 0) for d in dias]
+
+    st.markdown("**Tendência — últimos 14 dias**")
+    st.caption("XP por dia")
+    st.bar_chart(pd.DataFrame({"XP": xp}, index=rotulos), height=170, color="#0E8388")
+    st.caption("Questões por dia")
+    st.bar_chart(
+        pd.DataFrame({"Questões": qs}, index=rotulos), height=150, color="#7FC5C8"
+    )
+
+
+def _render_medalhas(perfil) -> None:
+    st.markdown("**Conquistas**")
+    ganhas = sum(1 for c in conquistas.CONQUISTAS if c["id"] in perfil.conquistas)
+    st.caption(f"{ganhas} de {len(conquistas.CONQUISTAS)} desbloqueadas")
+
+    blocos = []
+    for c in conquistas.CONQUISTAS:
+        data = perfil.conquistas.get(c["id"])
+        if data:
+            try:
+                data_fmt = date.fromisoformat(data).strftime("%d/%m/%Y")
+            except Exception:
+                data_fmt = data
+            rodape = f'<div class="data">conquistada em {data_fmt}</div>'
+            classe = "medalha"
+        else:
+            rodape = '<div class="data">bloqueada</div>'
+            classe = "medalha bloq"
+        blocos.append(
+            f'<div class="{classe}"><div class="emoji">{c["emoji"]}</div>'
+            f'<div class="nome">{c["nome"]}</div>'
+            f'<div class="desc">{c["desc"]}</div>{rodape}</div>'
+        )
+    st.markdown(f'<div class="medalhas">{"".join(blocos)}</div>', unsafe_allow_html=True)
+
+
 def render_dashboard(perfil) -> None:
     if perfil.respondidas == 0:
         st.info("Responda algumas questões para ver suas estatísticas aqui.")
         return
+
+    # Desbloqueia conquistas que já foram atingidas (idempotente) e salva se novas.
+    if _verificar_conquistas(perfil):
+        salvar()
 
     nivel, _, _ = gam.nivel_por_xp(perfil.xp_total)
     prec = gam.precisao(perfil.acertos, perfil.respondidas)
@@ -389,6 +481,12 @@ def render_dashboard(perfil) -> None:
     if forte or fraca:
         st.caption("💪 tema mais forte · 📌 tema a reforçar")
 
+    st.divider()
+    _grafico_tendencia(perfil)
+
+    st.divider()
+    _render_medalhas(perfil)
+
 
 barra_xp()
 bloco_ofensiva()
@@ -431,6 +529,7 @@ if not st.session_state.iniciado:
                     st.session_state.escolha = None
                     st.session_state.ultimo_resultado = None
                     st.session_state.ultimo_sr = None
+                    st.session_state.novas_conquistas = []
                     st.session_state.modo = "revisao"
                     st.session_state.iniciado = True
                     st.rerun()
@@ -466,6 +565,7 @@ if not st.session_state.iniciado:
                 st.session_state.escolha = None
                 st.session_state.ultimo_resultado = None
                 st.session_state.ultimo_sr = None
+                st.session_state.novas_conquistas = []
                 st.session_state.modo = "tema"
                 st.session_state.iniciado = True
                 st.rerun()
@@ -557,6 +657,9 @@ else:
                             acertou,
                             HOJE,
                         )
+                        st.session_state.novas_conquistas = _verificar_conquistas(
+                            st.session_state.perfil
+                        )
                         salvar()
                         st.rerun()
             else:
@@ -595,6 +698,13 @@ else:
                     quando = "amanhã" if dias == 1 else f"em {dias} dias"
                     st.caption(f"🔁 Esta questão volta para revisão {quando}.")
 
+                for cid in st.session_state.get("novas_conquistas") or []:
+                    d = conquistas.definicao(cid)
+                    if d:
+                        st.success(
+                            f"{d['emoji']} Conquista desbloqueada: **{d['nome']}**!"
+                        )
+
                 rotulo = "Próxima questão" if indice + 1 < total else "Ver resultado"
                 if st.button(rotulo, type="primary", use_container_width=True):
                     st.session_state.indice += 1
@@ -602,6 +712,7 @@ else:
                     st.session_state.escolha = None
                     st.session_state.ultimo_resultado = None
                     st.session_state.ultimo_sr = None
+                    st.session_state.novas_conquistas = []
                     st.rerun()
 
         st.caption(f"Placar: {st.session_state.acertos} acerto(s) até aqui.")

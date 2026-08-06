@@ -19,6 +19,7 @@ import streamlit as st
 import conquistas
 import gamificacao as gam
 import cartas
+import casos as casos_mod
 import persistencia
 import plantao
 import revisao
@@ -139,6 +140,17 @@ if not BANCO:
 
 CATEGORIAS = listar_categorias(BANCO)
 
+
+@st.cache_data(show_spinner=False)
+def obter_casos() -> list[dict]:
+    try:
+        return casos_mod.carregar_casos("casos")
+    except Exception:
+        return []
+
+
+CASOS = obter_casos()
+
 # Data de hoje (UTC) — usada pela ofensiva diária.
 HOJE = datetime.now(timezone.utc).date().isoformat()
 
@@ -235,7 +247,7 @@ def reiniciar() -> None:
     ]:
         st.session_state.pop(chave, None)
     for chave in list(st.session_state.keys()):
-        if chave.startswith("plantao_"):
+        if chave.startswith("plantao_") or chave.startswith("caso"):
             st.session_state.pop(chave, None)
     st.session_state.iniciado = False
 
@@ -273,7 +285,7 @@ with st.sidebar:
         ]:
             st.session_state.pop(chave, None)
         for chave in list(st.session_state.keys()):
-            if chave.startswith("plantao_"):
+            if chave.startswith("plantao_") or chave.startswith("caso"):
                 st.session_state.pop(chave, None)
         st.query_params.clear()
         st.rerun()
@@ -807,6 +819,103 @@ def render_plantao() -> None:
                 st.rerun()
 
 
+def render_caso() -> None:
+    caso = st.session_state.caso
+    etapas = caso["etapas"]
+    total = len(etapas)
+    i = st.session_state.caso_etapa
+    perfil = st.session_state.perfil
+
+    st.markdown(f"### 🩺 {caso['titulo']}")
+    st.progress(min(i, total) / total)
+
+    # ---- Fim do caso ----
+    if i >= total:
+        score = st.session_state.caso_score
+        maxp = st.session_state.caso_maxpontos
+        prev = perfil.casos_completos.get(caso["id"], -1)
+        melhorou = score > prev
+        if melhorou:
+            perfil.casos_completos[caso["id"]] = score
+            # Recompensa: os pontos do caso viram XP + moedas (uma vez por melhora).
+            perfil.xp_total += score
+            perfil.moedas += 5
+            h = perfil.historico.setdefault(
+                HOJE, {"xp": 0, "respondidas": 0, "acertos": 0}
+            )
+            h["xp"] += score
+            _verificar_conquistas(perfil)
+            salvar()
+
+        st.metric("Pontuação do caso", f"{score} / {maxp}")
+        if melhorou and score > 0:
+            st.success(f"🏆 Melhor resultado neste caso!  +{score} XP · +5 🪙")
+        st.caption(
+            "Uso educacional — confira sempre as condutas nos protocolos vigentes "
+            "(SBP / Ministério da Saúde / seu serviço)."
+        )
+        if st.button("Voltar", type="primary", use_container_width=True):
+            reiniciar()
+            st.rerun()
+        return
+
+    etapa = etapas[i]
+    st.caption(f"Etapa {i + 1} de {total}  ·  Pontos: {st.session_state.caso_score}")
+
+    with st.container(border=True):
+        st.markdown(f"**{etapa['titulo']}**")
+        st.write(etapa["texto"])
+
+        if etapa["tipo"] != "decisao":
+            rotulo = "Continuar" if i + 1 < total else "Concluir caso"
+            if st.button(rotulo, type="primary", use_container_width=True):
+                st.session_state.caso_etapa += 1
+                st.rerun()
+            return
+
+        respondida = st.session_state.caso_respondida
+        escolha = st.radio(
+            etapa["pergunta"],
+            options=list(range(len(etapa["opcoes"]))),
+            format_func=lambda j: etapa["opcoes"][j],
+            index=None,
+            key=f"caso_radio_{i}",
+            disabled=respondida,
+        )
+
+        if not respondida:
+            if st.button("Confirmar decisão", type="primary", use_container_width=True):
+                if escolha is None:
+                    st.warning("Escolha uma alternativa antes de confirmar.")
+                else:
+                    acertou = escolha == etapa["correta"]
+                    if acertou:
+                        st.session_state.caso_score += casos_mod.PONTOS_DECISAO
+                    st.session_state.caso_escolha = escolha
+                    st.session_state.caso_respondida = True
+                    st.session_state.caso_ultimo = {"acertou": acertou}
+                    st.rerun()
+        else:
+            correta = etapa["correta"]
+            if st.session_state.caso_ultimo["acertou"]:
+                st.success(
+                    f"Boa decisão! +{casos_mod.PONTOS_DECISAO} pontos"
+                )
+            else:
+                st.error(
+                    f"Reveja: a melhor conduta seria **{etapa['opcoes'][correta]}**"
+                )
+            st.info(etapa["explicacao"])
+
+            rotulo = "Continuar" if i + 1 < total else "Concluir caso"
+            if st.button(rotulo, type="primary", use_container_width=True):
+                st.session_state.caso_etapa += 1
+                st.session_state.caso_respondida = False
+                st.session_state.caso_escolha = None
+                st.session_state.caso_ultimo = None
+                st.rerun()
+
+
 barra_xp()
 bloco_ofensiva()
 st.divider()
@@ -919,6 +1028,42 @@ if not st.session_state.iniciado:
                 st.session_state.iniciado = True
                 st.rerun()
 
+        # --- Casos clínicos progressivos ---
+        if CASOS:
+            with st.container(border=True):
+                st.markdown("**🩺 Casos clínicos** — decida etapa por etapa.")
+                lista = casos_mod.listar_casos(CASOS)
+
+                def _rotulo_caso(cid: str) -> str:
+                    c = next(x for x in lista if x["id"] == cid)
+                    feito = "✅ " if cid in perfil.casos_completos else ""
+                    return f"{feito}{c['titulo']}"
+
+                escolhido = st.selectbox(
+                    "Escolha um caso",
+                    options=[c["id"] for c in lista],
+                    format_func=_rotulo_caso,
+                )
+                info = casos_mod.caso_por_id(CASOS, escolhido)
+                if info.get("resumo"):
+                    st.caption(info["resumo"])
+                if escolhido in perfil.casos_completos:
+                    maxp = casos_mod.pontuacao_maxima(info)
+                    st.caption(
+                        f"Melhor: {perfil.casos_completos[escolhido]} / {maxp} pontos"
+                    )
+                if st.button("Iniciar caso", use_container_width=True):
+                    st.session_state.caso = info
+                    st.session_state.caso_etapa = 0
+                    st.session_state.caso_score = 0
+                    st.session_state.caso_maxpontos = casos_mod.pontuacao_maxima(info)
+                    st.session_state.caso_respondida = False
+                    st.session_state.caso_escolha = None
+                    st.session_state.caso_ultimo = None
+                    st.session_state.modo = "caso"
+                    st.session_state.iniciado = True
+                    st.rerun()
+
         st.caption(
             f"{len(BANCO)} questões no banco. "
             "Uso educacional — não substitui protocolos oficiais nem julgamento "
@@ -937,6 +1082,10 @@ if not st.session_state.iniciado:
 else:
     if st.session_state.get("modo") == "plantao":
         render_plantao()
+        st.stop()
+
+    if st.session_state.get("modo") == "caso":
+        render_caso()
         st.stop()
 
     quiz = st.session_state.quiz

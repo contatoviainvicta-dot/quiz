@@ -1,0 +1,172 @@
+{
+  "casos": [
+    {
+      "id": "bronquiolite-01",
+      "titulo": "Lactente com dificuldade para respirar",
+      "resumo": "Lactente de 3 meses com tosse e chiado há 2 dias.",
+      "nivel": "básico",
+      "etapas": [
+        {
+          "tipo": "info",
+          "titulo": "Queixa principal",
+          "texto": "Lactente de 3 meses, sexo masculino, levado pela mãe por tosse e \"chiado no peito\" há 2 dias. Começou com coriza e espirros e evoluiu com tosse e cansaço para respirar. Febre baixa (37,9 °C)."
+        },
+        {
+          "tipo": "info",
+          "titulo": "História clínica",
+          "texto": "Nascido a termo, sem intercorrências. Aleitamento materno exclusivo. Calendário vacinal em dia. Irmão de 4 anos com \"resfriado\" na semana. Sem comorbidades. Hoje aceita menos o peito."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Exame físico",
+          "texto": "FR 62 irpm, tiragem subcostal, batimento de asa nasal leve. Ausculta com sibilos difusos e estertores finos. SatO₂ 93% em ar ambiente. Hidratado, ativo.",
+          "pergunta": "Qual a principal hipótese diagnóstica?",
+          "opcoes": [
+            "Bronquiolite viral aguda",
+            "Crise de asma",
+            "Pneumonia bacteriana lobar",
+            "Coqueluche"
+          ],
+          "correta": 0,
+          "explicacao": "Primeiro episódio de sibilância em lactente < 2 anos, precedido de pródromo de vias aéreas superiores e com sibilos difusos — quadro típico de bronquiolite viral aguda (VSR é o agente mais comum). Asma é incomum nessa idade e diagnóstico de exclusão; pneumonia lobar cursa com achados focais; coqueluche tem tosse paroxística/guincho."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Exames complementares",
+          "texto": "A mãe pergunta se \"vai precisar de raio-X e exames de sangue\".",
+          "pergunta": "Qual a conduta em relação a exames?",
+          "opcoes": [
+            "O diagnóstico é clínico; exames não são de rotina",
+            "Radiografia de tórax e hemograma para todos",
+            "Painel viral obrigatório para liberar tratamento",
+            "Iniciar antibiótico e coletar culturas"
+          ],
+          "correta": 0,
+          "explicacao": "Bronquiolite é diagnóstico clínico. Radiografia e exames laboratoriais não são recomendados de rotina — reservam-se à dúvida diagnóstica, gravidade atípica ou piora. Antibiótico não é indicado na etiologia viral."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Conduta",
+          "texto": "Definido o quadro de bronquiolite, com SatO₂ 93% e desconforto leve a moderado.",
+          "pergunta": "Qual a conduta inicial mais apropriada?",
+          "opcoes": [
+            "Suporte: higiene nasal, hidratação e oxigênio se hipoxemia",
+            "Broncodilatador inalatório de rotina",
+            "Corticoide sistêmico de rotina",
+            "Antibiótico + fisioterapia respiratória vigorosa"
+          ],
+          "correta": 0,
+          "explicacao": "O manejo é de suporte: desobstrução nasal, hidratação e oxigênio suplementar quando há hipoxemia. Broncodilatadores e corticoides NÃO são recomendados de rotina; antibióticos só se houver infecção bacteriana. (Limiares de SatO₂ e detalhes variam por protocolo — confira o do seu serviço.)"
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Sinais de alarme",
+          "texto": "Você orienta a mãe sobre quando procurar atendimento.",
+          "pergunta": "Qual achado indica maior necessidade de internação/observação?",
+          "opcoes": [
+            "Apneia, hipoxemia persistente ou incapacidade de se alimentar",
+            "Coriza clara abundante",
+            "Febre de 37,9 °C isolada",
+            "Espirros frequentes"
+          ],
+          "correta": 0,
+          "explicacao": "Sinais de gravidade que indicam internação: apneia, hipoxemia persistente, desconforto respiratório importante, aceitação alimentar ruim/desidratação e idade muito baixa. Os demais achados são inespecíficos."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Evolução e desfecho",
+          "texto": "Mantido em observação com suporte e higiene nasal. A SatO₂ estabiliza acima de 94% e a criança mantém boa aceitação. Recebe alta com orientações de sinais de alarme e retorno."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Discussão do caso",
+          "texto": "A bronquiolite viral aguda é a infecção de vias aéreas inferiores mais comum no lactente, em geral autolimitada. Pilares: reconhecer o quadro clínico, evitar exames e medicações desnecessárias, oferecer suporte e orientar sinais de alarme. Confira sempre o protocolo vigente (SBP / Ministério da Saúde / seu serviço), pois limiares e detalhes podem mudar."
+        }
+      ]
+    },
+    {
+      "id": "diarreia-01",
+      "titulo": "Criança com diarreia e vômitos",
+      "resumo": "Menina de 18 meses com diarreia aquosa há 2 dias.",
+      "nivel": "básico",
+      "etapas": [
+        {
+          "tipo": "info",
+          "titulo": "Queixa principal",
+          "texto": "Menina de 18 meses com diarreia aquosa há 2 dias, cerca de 6 a 8 evacuações por dia, e alguns episódios de vômito. Sem sangue nas fezes."
+        },
+        {
+          "tipo": "info",
+          "titulo": "História clínica",
+          "texto": "Frequenta creche (há surto de diarreia). Nas últimas horas aceita pouco líquido, está mais irritada e com diurese diminuída. Calendário vacinal em dia (incluindo rotavírus). Sem doenças prévias."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Exame físico e classificação",
+          "texto": "Irritada, mas consolável. Olhos um pouco fundos, mucosas secas, bebe avidamente quando oferecido, sinal da prega com retorno lento. Pulsos normais, sem sinais de choque.",
+          "pergunta": "Como classificar o estado de hidratação?",
+          "opcoes": [
+            "Desidratação (algum grau) — Plano B",
+            "Sem desidratação — Plano A",
+            "Desidratação grave com choque — Plano C",
+            "Hidratada, sem risco"
+          ],
+          "correta": 0,
+          "explicacao": "Olhos fundos, mucosas secas, sede ávida e prega lenta caracterizam desidratação de algum grau (não grave) — Plano B (reidratação oral supervisionada). Desidratação grave/choque cursaria com alteração de consciência/pulsos e exigiria via intravenosa (Plano C)."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Conduta / hidratação",
+          "texto": "Definida a desidratação de algum grau.",
+          "pergunta": "Qual a conduta de reidratação inicial?",
+          "opcoes": [
+            "Reidratação oral com SRO (Plano B), reavaliando periodicamente",
+            "Hidratação venosa imediata para todos",
+            "Suspender toda ingestão por 24h para \"repousar o intestino\"",
+            "Antidiarreico para cessar as evacuações"
+          ],
+          "correta": 0,
+          "explicacao": "Na desidratação de algum grau, o tratamento de escolha é a reidratação oral com solução de reidratação oral (SRO), sob supervisão e com reavaliação. A via intravenosa fica para falha da terapia oral ou desidratação grave. Jejum prolongado e antidiarreicos não são recomendados."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Antibióticos e exames",
+          "texto": "A mãe pergunta se a criança \"não vai precisar de antibiótico e exames\".",
+          "pergunta": "Sobre antibióticos e exames de rotina?",
+          "opcoes": [
+            "Não são de rotina — a maioria é viral e autolimitada",
+            "Antibiótico empírico para todos os casos",
+            "Coprocultura obrigatória antes de hidratar",
+            "Antibiótico + antiparasitário para todos"
+          ],
+          "correta": 0,
+          "explicacao": "A diarreia aguda na infância é majoritariamente viral e autolimitada; antibióticos e exames não são rotineiros. Reservam-se a situações específicas (fezes com sangue/disenteria, suspeita de cólera, imunossupressão, gravidade)."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Alimentação",
+          "texto": "Você orienta a família sobre a alimentação durante o quadro.",
+          "pergunta": "O que orientar sobre a alimentação?",
+          "opcoes": [
+            "Manter o aleitamento materno e realimentar precocemente",
+            "Suspender leite e alimentos até parar a diarreia",
+            "Oferecer apenas água e chás",
+            "Diluir bastante todas as refeições por uma semana"
+          ],
+          "correta": 0,
+          "explicacao": "Manter o aleitamento materno e realimentar precocemente (dieta habitual) reduz a duração do quadro e protege o estado nutricional. Restrição alimentar prolongada é prejudicial."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Sinais de alarme",
+          "texto": "Oriente retorno imediato se houver piora: vômitos incoercíveis, recusa de líquidos, sangue nas fezes, sinais de desidratação grave (letargia, olhos muito fundos, prega muito lenta) ou queda importante da diurese — situações que podem exigir hidratação intravenosa (Plano C)."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Discussão do caso",
+          "texto": "O manejo da diarreia aguda apoia-se em classificar a hidratação, reidratar (preferencialmente por via oral), manter a alimentação, suplementar zinco quando indicado e orientar sinais de alarme — evitando medicações desnecessárias. Ajuste ao protocolo AIDPI / SBP / serviço vigente."
+        }
+      ]
+    }
+  ]
+}

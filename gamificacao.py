@@ -75,6 +75,8 @@ class Perfil:
     dica_gratis_usada_em: str = ""
     # melhor pontuação no modo plantão
     recorde_plantao: int = 0
+    # casos clínicos concluídos: {caso_id: melhor_pontuacao}
+    casos_completos: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -309,4 +311,5 @@ def perfil_de_dict(dados: dict) -> Perfil:
     p.cartas = dados.get("cartas", {}) or {}
     p.dica_gratis_usada_em = dados.get("dica_gratis_usada_em", "")
     p.recorde_plantao = dados.get("recorde_plantao", 0)
+    p.casos_completos = dados.get("casos_completos", {}) or {}
     return p

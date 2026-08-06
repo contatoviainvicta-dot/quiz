@@ -109,6 +109,8 @@ st.markdown(
                   letter-spacing:.4px; margin-top:2px; }
     .carta .qtd { position:absolute; top:5px; right:8px; font-size:.66rem;
                   color:#7A8C8C; font-weight:700; }
+    .carta .ef { font-size:.62rem; color:#0E8388; font-weight:700;
+                 margin-top:3px; line-height:1.1; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -206,6 +208,10 @@ elif not _perfil_atual(_p):
 
 def salvar() -> None:
     persistencia.salvar_perfil(IDENTIFICADOR, st.session_state.perfil)
+
+
+# Efeitos passivos das cartas possuídas (XP / moedas / dica grátis diária).
+EFEITOS = cartas.efeitos_ativos(st.session_state.perfil.cartas)
 
 
 # ---------------------------------------------------------------------------
@@ -543,6 +549,10 @@ def render_cartas(perfil) -> None:
         )
     )
 
+    efeitos_txt = cartas.efeitos_texto(perfil.cartas)
+    if efeitos_txt:
+        st.success("🎁 Efeitos ativos: " + "  ·  ".join(efeitos_txt))
+
     # --- Loja de pacotes ---
     custo = cartas.PACOTE_CUSTO
     col_a, col_b = st.columns([1, 1.4], vertical_alignment="center")
@@ -586,13 +596,19 @@ def render_cartas(perfil) -> None:
             if uc["nova"]
             else f"Repetida · +{uc['reembolso']} 🪙 de volta"
         )
+        efeito_html = (
+            f'<div class="estado" style="color:{r["cor"]}">🎁 {d["efeito"]["texto"]}'
+            f"</div>"
+            if d.get("efeito")
+            else ""
+        )
         st.markdown(
             f'<div class="carta-reveal" style="border-color:{r["cor"]}">'
             f'<div class="rar" style="color:{r["cor"]}">{r["rotulo"]}</div>'
             f'<div class="emoji">{d["emoji"]}</div>'
             f'<div class="nome">{d["nome"]}</div>'
             f'<div class="desc">{d["desc"]}</div>'
-            f'<div class="estado">{estado}</div></div>',
+            f'<div class="estado">{estado}</div>{efeito_html}</div>',
             unsafe_allow_html=True,
         )
 
@@ -606,12 +622,17 @@ def render_cartas(perfil) -> None:
         qtd = perfil.cartas.get(c["id"], 0)
         if qtd > 0:
             badge = f'<div class="qtd">x{qtd}</div>' if qtd > 1 else ""
+            efeito = (
+                f'<div class="ef">🎁 {c["efeito"]["texto"]}</div>'
+                if c.get("efeito")
+                else ""
+            )
             blocos.append(
                 f'<div class="carta" style="border-color:{r["cor"]}">{badge}'
                 f'<div class="emoji">{c["emoji"]}</div>'
                 f'<div class="nome">{c["nome"]}</div>'
                 f'<div class="rar" style="color:{r["cor"]}">{r["rotulo"]}</div>'
-                f"</div>"
+                f"{efeito}</div>"
             )
         else:
             blocos.append(
@@ -788,22 +809,39 @@ else:
                 usou_dica = st.session_state.get("dica_usada", False)
                 custo = gam.DICA_CUSTO
                 perfil = st.session_state.perfil
+                dica_gratis_disp = (
+                    EFEITOS["dica_gratis"]
+                    and perfil.dica_gratis_usada_em != HOJE
+                )
+
+                def _aplicar_dica():
+                    erradas = [
+                        i
+                        for i in range(len(questao["opcoes"]))
+                        if i != questao["correta"]
+                    ]
+                    st.session_state.dica_eliminada = random.choice(erradas)
+                    st.session_state.dica_usada = True
+
                 if usou_dica:
                     st.caption("💡 Dica usada: uma alternativa errada foi removida.")
                 elif len(questao["opcoes"]) > 2:
-                    if perfil.moedas >= custo:
+                    if dica_gratis_disp:
+                        if st.button(
+                            "💡 Usar dica grátis (carta) — remove uma alternativa errada",
+                            use_container_width=True,
+                        ):
+                            perfil.dica_gratis_usada_em = HOJE
+                            _aplicar_dica()
+                            salvar()
+                            st.rerun()
+                    elif perfil.moedas >= custo:
                         if st.button(
                             f"💡 Usar dica ({custo} 🪙) — remove uma alternativa errada",
                             use_container_width=True,
                         ):
                             perfil.moedas -= custo
-                            erradas = [
-                                i
-                                for i in range(len(questao["opcoes"]))
-                                if i != questao["correta"]
-                            ]
-                            st.session_state.dica_eliminada = random.choice(erradas)
-                            st.session_state.dica_usada = True
+                            _aplicar_dica()
                             salvar()
                             st.rerun()
                     else:
@@ -826,6 +864,8 @@ else:
                             acertou,
                             hoje=HOJE,
                             com_dica=st.session_state.get("dica_usada", False),
+                            bonus_xp_pct=EFEITOS["xp_pct"],
+                            bonus_moedas=EFEITOS["moeda_flat"],
                         )
                         # Repetição espaçada: reagenda esta questão.
                         st.session_state.ultimo_sr = revisao.registrar(

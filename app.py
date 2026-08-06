@@ -17,6 +17,7 @@ import streamlit as st
 
 import conquistas
 import gamificacao as gam
+import cartas
 import persistencia
 import revisao
 from quiz_engine import (
@@ -86,6 +87,28 @@ st.markdown(
                    padding:7px 15px; border-radius:999px; font-size:1.1rem;
                    box-shadow:0 1px 3px rgba(230,200,100,.35); white-space:nowrap; }
     .moedas-pill .ico { font-size:1.3rem; }
+    .carta-reveal { max-width:230px; margin:.4rem auto; border:3px solid #ccc;
+                    border-radius:16px; padding:16px; text-align:center;
+                    box-shadow:0 3px 12px rgba(0,0,0,.10); }
+    .carta-reveal .rar { font-weight:800; font-size:.72rem; text-transform:uppercase;
+                         letter-spacing:1px; }
+    .carta-reveal .emoji { font-size:3rem; line-height:1.1; }
+    .carta-reveal .nome { font-weight:800; font-size:1.05rem; margin-top:2px; }
+    .carta-reveal .desc { font-size:.78rem; color:#7A8C8C; margin-top:4px; }
+    .carta-reveal .estado { margin-top:10px; font-weight:700; font-size:.9rem;
+                            color:#0E8388; }
+    .cartas-grid { display:flex; flex-wrap:wrap; gap:10px; margin-top:.4rem; }
+    .carta { flex:1 1 120px; max-width:155px; border:2px solid #E6EEEE;
+             border-radius:12px; padding:10px 8px; text-align:center;
+             background:#fff; position:relative; }
+    .carta.bloq { opacity:.5; filter:grayscale(1); }
+    .carta .emoji { font-size:1.9rem; line-height:1.1; }
+    .carta .nome { font-weight:700; font-size:.76rem; margin-top:3px;
+                   line-height:1.1; }
+    .carta .rar { font-size:.62rem; font-weight:700; text-transform:uppercase;
+                  letter-spacing:.4px; margin-top:2px; }
+    .carta .qtd { position:absolute; top:5px; right:8px; font-size:.66rem;
+                  color:#7A8C8C; font-weight:700; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -235,6 +258,7 @@ with st.sidebar:
             "novas_conquistas",
             "dica_usada",
             "dica_eliminada",
+            "ultima_carta",
         ]:
             st.session_state.pop(chave, None)
         st.query_params.clear()
@@ -508,6 +532,99 @@ def render_dashboard(perfil) -> None:
     _render_medalhas(perfil)
 
 
+def render_cartas(perfil) -> None:
+    st.markdown("**🃏 Cartas colecionáveis**")
+    resumo = cartas.colecao_resumo(perfil.cartas)
+    st.caption(
+        f"Coleção: {resumo['possuidas']} de {resumo['total']} cartas · "
+        + " · ".join(
+            f"{cartas.RARIDADES[r]['rotulo']} {v['tem']}/{v['total']}"
+            for r, v in resumo["por_raridade"].items()
+        )
+    )
+
+    # --- Loja de pacotes ---
+    custo = cartas.PACOTE_CUSTO
+    col_a, col_b = st.columns([1, 1.4], vertical_alignment="center")
+    with col_a:
+        st.markdown(
+            f'<div class="moedas-pill"><span class="ico">🪙</span>'
+            f"{perfil.moedas}</div>",
+            unsafe_allow_html=True,
+        )
+    with col_b:
+        if perfil.moedas >= custo:
+            if st.button(
+                f"Abrir pacote ({custo} 🪙)", type="primary", use_container_width=True
+            ):
+                perfil.moedas -= custo
+                cid = cartas.abrir_pacote()
+                nova = cid not in perfil.cartas
+                perfil.cartas[cid] = perfil.cartas.get(cid, 0) + 1
+                reembolso = 0 if nova else cartas.REEMBOLSO_DUPLICATA
+                perfil.moedas += reembolso
+                st.session_state.ultima_carta = {
+                    "id": cid, "nova": nova, "reembolso": reembolso
+                }
+                salvar()
+                d = cartas.definicao(cid)
+                if nova and d["raridade"] == "lendaria":
+                    st.balloons()
+                st.rerun()
+        else:
+            st.caption(
+                f"Junte {custo} 🪙 para abrir um pacote (você tem {perfil.moedas})."
+            )
+
+    # --- Carta revelada ---
+    uc = st.session_state.get("ultima_carta")
+    if uc:
+        d = cartas.definicao(uc["id"])
+        r = cartas.RARIDADES[d["raridade"]]
+        estado = (
+            "✨ Nova carta!"
+            if uc["nova"]
+            else f"Repetida · +{uc['reembolso']} 🪙 de volta"
+        )
+        st.markdown(
+            f'<div class="carta-reveal" style="border-color:{r["cor"]}">'
+            f'<div class="rar" style="color:{r["cor"]}">{r["rotulo"]}</div>'
+            f'<div class="emoji">{d["emoji"]}</div>'
+            f'<div class="nome">{d["nome"]}</div>'
+            f'<div class="desc">{d["desc"]}</div>'
+            f'<div class="estado">{estado}</div></div>',
+            unsafe_allow_html=True,
+        )
+
+    # --- Galeria da coleção ---
+    st.markdown("**Coleção**")
+    ordem = {"lendaria": 0, "epica": 1, "rara": 2, "comum": 3}
+    catalogo = sorted(cartas.CARTAS, key=lambda c: ordem[c["raridade"]])
+    blocos = []
+    for c in catalogo:
+        r = cartas.RARIDADES[c["raridade"]]
+        qtd = perfil.cartas.get(c["id"], 0)
+        if qtd > 0:
+            badge = f'<div class="qtd">x{qtd}</div>' if qtd > 1 else ""
+            blocos.append(
+                f'<div class="carta" style="border-color:{r["cor"]}">{badge}'
+                f'<div class="emoji">{c["emoji"]}</div>'
+                f'<div class="nome">{c["nome"]}</div>'
+                f'<div class="rar" style="color:{r["cor"]}">{r["rotulo"]}</div>'
+                f"</div>"
+            )
+        else:
+            blocos.append(
+                '<div class="carta bloq">'
+                '<div class="emoji">❓</div>'
+                '<div class="nome">???</div>'
+                f'<div class="rar">{r["rotulo"]}</div></div>'
+            )
+    st.markdown(
+        f'<div class="cartas-grid">{"".join(blocos)}</div>', unsafe_allow_html=True
+    )
+
+
 barra_xp()
 bloco_ofensiva()
 st.divider()
@@ -518,7 +635,9 @@ st.divider()
 # ---------------------------------------------------------------------------
 if not st.session_state.iniciado:
     perfil = st.session_state.perfil
-    aba_estudar, aba_dash = st.tabs(["📚 Estudar", "📊 Dashboard"])
+    aba_estudar, aba_dash, aba_cartas = st.tabs(
+        ["📚 Estudar", "📊 Dashboard", "🃏 Cartas"]
+    )
 
     with aba_estudar:
         # --- Revisão espaçada ---
@@ -602,6 +721,9 @@ if not st.session_state.iniciado:
 
     with aba_dash:
         render_dashboard(perfil)
+
+    with aba_cartas:
+        render_cartas(perfil)
 
 # ---------------------------------------------------------------------------
 # Tela de questões / resultado

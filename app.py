@@ -1360,31 +1360,21 @@ if not st.session_state.iniciado:
                 st.session_state.iniciado = True
                 st.rerun()
 
-        # --- Casos clínicos progressivos ---
+        # --- Casos clínicos progressivos (caso surpresa) ---
         if CASOS:
             with st.container(border=True):
-                st.markdown("**🩺 Casos clínicos** — decida etapa por etapa.")
-                lista = casos_mod.listar_casos(CASOS)
-
-                def _rotulo_caso(cid: str) -> str:
-                    c = next(x for x in lista if x["id"] == cid)
-                    feito = "✅ " if cid in perfil.casos_completos else ""
-                    return f"{feito}{c['titulo']}"
-
-                escolhido = st.selectbox(
-                    "Escolha um caso",
-                    options=[c["id"] for c in lista],
-                    format_func=_rotulo_caso,
+                st.markdown(
+                    "**🩺 Casos clínicos** — um caso surpresa para você conduzir "
+                    "etapa por etapa."
                 )
-                info = casos_mod.caso_por_id(CASOS, escolhido)
-                if info.get("resumo"):
-                    st.caption(info["resumo"])
-                if escolhido in perfil.casos_completos:
-                    maxp = casos_mod.pontuacao_maxima(info)
-                    st.caption(
-                        f"Melhor: {perfil.casos_completos[escolhido]} / {maxp} pontos"
-                    )
-                if st.button("Iniciar caso", use_container_width=True):
+                n_feitos = sum(
+                    1 for c in CASOS if c["id"] in perfil.casos_completos
+                )
+                st.caption(f"{n_feitos} de {len(CASOS)} casos já concluídos.")
+                if st.button(
+                    "🎲 Caso clínico surpresa", use_container_width=True
+                ):
+                    info = random.choice(CASOS)
                     st.session_state.caso = info
                     st.session_state.caso_etapa = 0
                     st.session_state.caso_score = 0

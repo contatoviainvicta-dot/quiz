@@ -69,6 +69,8 @@ class Perfil:
     conquistas: dict = field(default_factory=dict)
     # moedas 🪙 acumuladas
     moedas: int = 0
+    # cartas colecionáveis: {id_da_carta: quantidade}
+    cartas: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -293,4 +295,5 @@ def perfil_de_dict(dados: dict) -> Perfil:
     p.historico = dados.get("historico", {}) or {}
     p.conquistas = dados.get("conquistas", {}) or {}
     p.moedas = dados.get("moedas", 0)
+    p.cartas = dados.get("cartas", {}) or {}
     return p

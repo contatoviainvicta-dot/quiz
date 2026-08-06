@@ -9,6 +9,7 @@ Este arquivo cuida só da tela e da navegação.
 
 import calendar as _cal
 import dataclasses
+import random
 from datetime import date, datetime, timedelta, timezone
 
 import pandas as pd
@@ -192,6 +193,8 @@ def reiniciar() -> None:
         "ultimo_sr",
         "modo",
         "novas_conquistas",
+        "dica_usada",
+        "dica_eliminada",
     ]:
         st.session_state.pop(chave, None)
     st.session_state.iniciado = False
@@ -206,6 +209,7 @@ if "iniciado" not in st.session_state:
 # ---------------------------------------------------------------------------
 with st.sidebar:
     st.caption(f"Estudando como **{IDENTIFICADOR}**")
+    st.caption(f"🪙 {st.session_state.perfil.moedas} moedas")
     if persistencia.disponivel():
         st.caption("✅ Progresso salvo na nuvem.")
     else:
@@ -224,6 +228,8 @@ with st.sidebar:
             "ultimo_sr",
             "modo",
             "novas_conquistas",
+            "dica_usada",
+            "dica_eliminada",
         ]:
             st.session_state.pop(chave, None)
         st.query_params.clear()
@@ -366,6 +372,8 @@ def _verificar_conquistas(perfil) -> list:
     novas = [i for i in desbloqueadas if i not in perfil.conquistas]
     for i in novas:
         perfil.conquistas[i] = HOJE
+    if novas:
+        perfil.moedas += gam.MOEDAS_CONQUISTA * len(novas)
     return novas
 
 
@@ -435,6 +443,7 @@ def render_dashboard(perfil) -> None:
                     str(perfil.respondidas),
                     f"melhor seq.: {perfil.melhor_sequencia}",
                 ),
+                ("Moedas", f"🪙 {perfil.moedas}", "para dicas"),
             ]
         ),
         unsafe_allow_html=True,
@@ -530,6 +539,8 @@ if not st.session_state.iniciado:
                     st.session_state.ultimo_resultado = None
                     st.session_state.ultimo_sr = None
                     st.session_state.novas_conquistas = []
+                    st.session_state.dica_usada = False
+                    st.session_state.dica_eliminada = None
                     st.session_state.modo = "revisao"
                     st.session_state.iniciado = True
                     st.rerun()
@@ -566,6 +577,8 @@ if not st.session_state.iniciado:
                 st.session_state.ultimo_resultado = None
                 st.session_state.ultimo_sr = None
                 st.session_state.novas_conquistas = []
+                st.session_state.dica_usada = False
+                st.session_state.dica_eliminada = None
                 st.session_state.modo = "tema"
                 st.session_state.iniciado = True
                 st.rerun()
@@ -625,9 +638,13 @@ else:
         with st.container(border=True):
             st.markdown(f"**{questao['pergunta']}**")
 
+            eliminada = st.session_state.get("dica_eliminada")
+            opcoes_visiveis = [
+                i for i in range(len(questao["opcoes"])) if i != eliminada
+            ]
             escolha = st.radio(
                 "Selecione uma alternativa:",
-                options=list(range(len(questao["opcoes"]))),
+                options=opcoes_visiveis,
                 format_func=lambda i: questao["opcoes"][i],
                 index=None,
                 key=f"radio_{indice}",
@@ -635,6 +652,32 @@ else:
             )
 
             if not st.session_state.respondida:
+                usou_dica = st.session_state.get("dica_usada", False)
+                custo = gam.DICA_CUSTO
+                perfil = st.session_state.perfil
+                if usou_dica:
+                    st.caption("💡 Dica usada: uma alternativa errada foi removida.")
+                elif len(questao["opcoes"]) > 2:
+                    if perfil.moedas >= custo:
+                        if st.button(
+                            f"💡 Usar dica ({custo} 🪙) — remove uma alternativa errada",
+                            use_container_width=True,
+                        ):
+                            perfil.moedas -= custo
+                            erradas = [
+                                i
+                                for i in range(len(questao["opcoes"]))
+                                if i != questao["correta"]
+                            ]
+                            st.session_state.dica_eliminada = random.choice(erradas)
+                            st.session_state.dica_usada = True
+                            salvar()
+                            st.rerun()
+                    else:
+                        st.caption(
+                            f"💡 Dica custa {custo} 🪙 — você tem {perfil.moedas}."
+                        )
+
                 if st.button("Responder", type="primary", use_container_width=True):
                     if escolha is None:
                         st.warning("Escolha uma alternativa antes de responder.")
@@ -649,6 +692,7 @@ else:
                             questao["categoria"],
                             acertou,
                             hoje=HOJE,
+                            com_dica=st.session_state.get("dica_usada", False),
                         )
                         # Repetição espaçada: reagenda esta questão.
                         st.session_state.ultimo_sr = revisao.registrar(
@@ -681,6 +725,8 @@ else:
                             f"  ·  ⭐ bônus de sequência "
                             f"+{resultado.bonus_sequencia}"
                         )
+                    if resultado.moedas_ganhas:
+                        linha += f"  ·  +{resultado.moedas_ganhas} 🪙"
                     st.markdown(linha)
                     if resultado.subiu_nivel:
                         st.success(
@@ -713,6 +759,8 @@ else:
                     st.session_state.ultimo_resultado = None
                     st.session_state.ultimo_sr = None
                     st.session_state.novas_conquistas = []
+                    st.session_state.dica_usada = False
+                    st.session_state.dica_eliminada = None
                     st.rerun()
 
         st.caption(f"Placar: {st.session_state.acertos} acerto(s) até aqui.")

@@ -586,6 +586,21 @@ def render_dashboard(perfil) -> None:
     st.divider()
     _render_medalhas(perfil)
 
+    if perfil.historico_pacientes:
+        st.divider()
+        st.markdown("**📁 Histórico de pacientes**")
+        for r in perfil.historico_pacientes[:20]:
+            with st.container(border=True):
+                st.markdown(f"**{r['nome']}** · {r['idade']}  —  {r['data']}")
+                st.caption(
+                    f"Condutas: {r.get('condutas', 0)}/{r.get('total_condutas', 0)} · "
+                    f"Pontos: {r.get('score', 0)}/{r.get('maxp', 0)} · "
+                    f"Questões do tema: {r.get('quiz_acertos', 0)}/"
+                    f"{r.get('quiz_total', 0)}"
+                )
+                if r.get("desfecho"):
+                    st.caption(r["desfecho"])
+
 
 def render_cartas(perfil) -> None:
     st.markdown("**🃏 Cartas colecionáveis**")
@@ -1027,112 +1042,221 @@ def render_diagnostico() -> None:
             st.rerun()
 
 
-def render_paciente() -> None:
-    pac = st.session_state.pac
-    momentos = pac["momentos"]
-    total = len(momentos)
-    i = st.session_state.pac_momento
+def _render_pac_questao(pac) -> None:
+    """Questão-surpresa do tema, dentro do prontuário aberto."""
     perfil = st.session_state.perfil
-
-    st.markdown(f"### 🧑‍⚕️ Paciente: {pac['nome']}")
-
-    # Ficha persistente (sempre visível).
+    q = st.session_state.pac_q
+    respondida = st.session_state.pac_q_respondida
+    st.markdown("**🎓 Questão do tema**")
     with st.container(border=True):
         st.markdown(
-            f"**{pac['nome']}** · {pac['idade']} · {pac['sexo']}"
+            f'<span class="tag">{q["categoria"]}</span>', unsafe_allow_html=True
         )
-        if pac.get("comorbidades"):
-            st.caption(f"Comorbidades: {pac['comorbidades']}")
-        st.caption(pac["historia"])
+        st.markdown(f"**{q['pergunta']}**")
+        escolha = st.radio(
+            "Selecione uma alternativa:",
+            options=list(range(len(q["opcoes"]))),
+            format_func=lambda j: q["opcoes"][j],
+            index=None,
+            key="pac_q_radio",
+            disabled=respondida,
+        )
+        if not respondida:
+            if st.button("Responder", type="primary", use_container_width=True):
+                if escolha is None:
+                    st.warning("Escolha uma alternativa antes de responder.")
+                else:
+                    acertou = escolha == q["correta"]
+                    gam.registrar_resposta(
+                        perfil, q["categoria"], acertou, hoje=HOJE,
+                        bonus_xp_pct=EFEITOS["xp_pct"],
+                        bonus_moedas=EFEITOS["moeda_flat"],
+                    )
+                    revisao.registrar(
+                        perfil.revisao, revisao.qid(q["pergunta"]), acertou, HOJE
+                    )
+                    _verificar_conquistas(perfil)
+                    st.session_state.pac_quiz_total += 1
+                    if acertou:
+                        st.session_state.pac_quiz_acertos += 1
+                    st.session_state.pac_q_escolha = escolha
+                    st.session_state.pac_q_respondida = True
+                    salvar()
+                    st.rerun()
+        else:
+            correta = q["correta"]
+            if st.session_state.pac_q_escolha == correta:
+                st.success("Correto!")
+            else:
+                st.error(f"Resposta certa: **{q['opcoes'][correta]}**")
+            st.info(q["explicacao"])
+            if st.button(
+                "Voltar ao prontuário", type="primary", use_container_width=True
+            ):
+                st.session_state.pac_q = None
+                st.session_state.pac_q_respondida = False
+                st.session_state.pac_q_escolha = None
+                st.rerun()
 
-    st.progress(min(i, total) / total)
 
-    # ---- Desfecho ----
-    if i >= total:
-        score = st.session_state.pac_score
-        maxp = st.session_state.pac_maxpontos
-        prev = perfil.pacientes_completos.get(pac["id"], -1)
-        melhorou = score > prev
-        if melhorou:
-            perfil.pacientes_completos[pac["id"]] = score
-            perfil.xp_total += score
-            perfil.moedas += 5
-            h = perfil.historico.setdefault(
-                HOJE, {"xp": 0, "respondidas": 0, "acertos": 0}
+def _fechar_prontuario(pac) -> None:
+    """Encerra o atendimento: recompensa, arquiva no histórico e marca fechado."""
+    perfil = st.session_state.perfil
+    score = st.session_state.pac_score
+    maxp = st.session_state.pac_maxpontos
+    momentos_feitos = min(st.session_state.pac_momento, len(pac["momentos"]))
+
+    # Recompensa (uma vez, se melhorou a pontuação de condutas deste paciente).
+    prev = perfil.pacientes_completos.get(pac["id"], -1)
+    if score > prev:
+        perfil.pacientes_completos[pac["id"]] = score
+        perfil.xp_total += score
+        perfil.moedas += 5
+        h = perfil.historico.setdefault(
+            HOJE, {"xp": 0, "respondidas": 0, "acertos": 0}
+        )
+        h["xp"] += score
+
+    resumo = {
+        "id": pac["id"], "nome": pac["nome"], "idade": pac["idade"],
+        "data": HOJE, "score": score, "maxp": maxp,
+        "condutas": momentos_feitos, "total_condutas": len(pac["momentos"]),
+        "quiz_acertos": st.session_state.pac_quiz_acertos,
+        "quiz_total": st.session_state.pac_quiz_total,
+        "desfecho": pac.get("desfecho", ""),
+    }
+    perfil.historico_pacientes.insert(0, resumo)
+    perfil.historico_pacientes = perfil.historico_pacientes[:50]
+    _verificar_conquistas(perfil)
+    salvar()
+    st.session_state.pac_resumo = resumo
+    st.session_state.pac_fechado = True
+
+
+def render_paciente() -> None:
+    pac = st.session_state.pac
+    perfil = st.session_state.perfil
+    momentos = pac["momentos"]
+    total = len(momentos)
+
+    # ---- Resumo de fechamento ----
+    if st.session_state.get("pac_fechado"):
+        r = st.session_state.pac_resumo
+        st.markdown(f"### 📁 Prontuário encerrado: {r['nome']}")
+        with st.container(border=True):
+            st.markdown(f"**{r['nome']}** · {r['idade']}")
+            st.write(
+                f"Condutas conduzidas: {r['condutas']}/{r['total_condutas']}  ·  "
+                f"Pontos: {r['score']}/{r['maxp']}  ·  "
+                f"Questões do tema: {r['quiz_acertos']}/{r['quiz_total']}"
             )
-            h["xp"] += score
-            _verificar_conquistas(perfil)
-            salvar()
-
-        if pac.get("desfecho"):
-            with st.container(border=True):
-                st.markdown("**Desfecho**")
-                st.write(pac["desfecho"])
-        st.metric("Pontuação", f"{score} / {maxp}")
-        if melhorou and score > 0:
-            st.success(f"🏆 Melhor acompanhamento!  +{score} XP · +5 🪙")
-        st.caption(
-            "Uso educacional — confira sempre as condutas nos protocolos vigentes "
-            "(SBP / Ministério da Saúde / seu serviço)."
-        )
+            if r.get("desfecho"):
+                st.caption(r["desfecho"])
+        st.success("Prontuário arquivado no histórico (aba 📊 Dashboard).")
         if st.button("Voltar", type="primary", use_container_width=True):
             reiniciar()
             st.rerun()
         return
 
-    m = momentos[i]
-    st.caption(
-        f"Momento {i + 1} de {total}  ·  {m['titulo']}  ·  "
-        f"Pontos: {st.session_state.pac_score}"
-    )
-    with st.container(border=True):
-        if m.get("estado"):
-            st.markdown(f"🩺 **Estado atual:** {m['estado']}")
-        st.write(m["texto"])
+    st.markdown(f"### 🧑‍⚕️ Prontuário aberto: {pac['nome']}")
 
-        respondida = st.session_state.pac_respondida
-        escolha = st.radio(
-            m["pergunta"],
-            options=list(range(len(m["opcoes"]))),
-            format_func=lambda j: m["opcoes"][j],
-            index=None,
-            key=f"pac_radio_{i}",
-            disabled=respondida,
+    # Ficha persistente.
+    with st.container(border=True):
+        st.markdown(f"**{pac['nome']}** · {pac['idade']} · {pac['sexo']}")
+        if pac.get("comorbidades"):
+            st.caption(f"Comorbidades: {pac['comorbidades']}")
+        st.caption(pac["historia"])
+
+    i = st.session_state.pac_momento
+    st.caption(
+        f"Condutas: {min(i, total)}/{total}  ·  Pontos: "
+        f"{st.session_state.pac_score}  ·  Questões do tema: "
+        f"{st.session_state.pac_quiz_acertos}/{st.session_state.pac_quiz_total}"
+    )
+
+    # Se há uma questão-surpresa ativa, ela toma a tela.
+    if st.session_state.get("pac_q") is not None:
+        _render_pac_questao(pac)
+        return
+
+    # ---- Conduta atual do atendimento (se ainda houver) ----
+    if i < total:
+        m = momentos[i]
+        with st.container(border=True):
+            if m.get("estado"):
+                st.markdown(f"🩺 **Estado atual:** {m['estado']}")
+            st.write(m["texto"])
+
+            respondida = st.session_state.pac_respondida
+            escolha = st.radio(
+                m["pergunta"],
+                options=list(range(len(m["opcoes"]))),
+                format_func=lambda j: m["opcoes"][j],
+                index=None,
+                key=f"pac_radio_{i}",
+                disabled=respondida,
+            )
+            if not respondida:
+                if st.button(
+                    "Decidir conduta", type="primary", use_container_width=True
+                ):
+                    if escolha is None:
+                        st.warning("Escolha uma conduta antes de decidir.")
+                    else:
+                        acertou = escolha == m["correta"]
+                        if acertou:
+                            st.session_state.pac_score += pac_mod.PONTOS_MOMENTO
+                        st.session_state.pac_escolha = escolha
+                        st.session_state.pac_respondida = True
+                        st.session_state.pac_ultimo = {"acertou": acertou}
+                        st.rerun()
+            else:
+                correta = m["correta"]
+                acertou = st.session_state.pac_ultimo["acertou"]
+                if acertou:
+                    st.success(f"Boa conduta! +{pac_mod.PONTOS_MOMENTO} pontos")
+                else:
+                    st.error(
+                        f"Reveja: a melhor conduta seria **{m['opcoes'][correta]}**"
+                    )
+                st.info(m["explicacao"])
+                evo = m.get("evolucao_boa") if acertou else m.get("evolucao_ruim")
+                if evo:
+                    st.markdown(f"➡️ *{evo}*")
+                if st.button(
+                    "Avançar no atendimento", type="primary",
+                    use_container_width=True,
+                ):
+                    st.session_state.pac_momento += 1
+                    st.session_state.pac_respondida = False
+                    st.session_state.pac_escolha = None
+                    st.session_state.pac_ultimo = None
+                    st.rerun()
+    else:
+        st.success(
+            "✅ Sem novas condutas pendentes. O prontuário segue aberto — "
+            "revise com questões do tema ou feche quando quiser."
         )
 
-        if not respondida:
-            if st.button("Decidir", type="primary", use_container_width=True):
-                if escolha is None:
-                    st.warning("Escolha uma conduta antes de decidir.")
-                else:
-                    acertou = escolha == m["correta"]
-                    if acertou:
-                        st.session_state.pac_score += pac_mod.PONTOS_MOMENTO
-                    st.session_state.pac_escolha = escolha
-                    st.session_state.pac_respondida = True
-                    st.session_state.pac_ultimo = {"acertou": acertou}
-                    st.rerun()
-        else:
-            correta = m["correta"]
-            acertou = st.session_state.pac_ultimo["acertou"]
-            if acertou:
-                st.success(f"Boa conduta! +{pac_mod.PONTOS_MOMENTO} pontos")
-            else:
-                st.error(
-                    f"Reveja: a melhor conduta seria **{m['opcoes'][correta]}**"
-                )
-            st.info(m["explicacao"])
-            evo = m.get("evolucao_boa") if acertou else m.get("evolucao_ruim")
-            if evo:
-                st.markdown(f"➡️ *{evo}*")
-
-            rotulo = "Próximo momento" if i + 1 < total else "Ver desfecho"
-            if st.button(rotulo, type="primary", use_container_width=True):
-                st.session_state.pac_momento += 1
-                st.session_state.pac_respondida = False
-                st.session_state.pac_escolha = None
-                st.session_state.pac_ultimo = None
-                st.rerun()
+    # ---- Ações sempre disponíveis ----
+    st.divider()
+    col_q, col_f = st.columns(2)
+    with col_q:
+        if st.button("🎓 Questão surpresa do tema", use_container_width=True):
+            tema = pac.get("tema", "Todas")
+            fonte = filtrar(BANCO, tema)
+            if not fonte:
+                fonte = BANCO
+            st.session_state.pac_q = preparar_quiz(fonte, "Todas", 1)[0]
+            st.session_state.pac_q_respondida = False
+            st.session_state.pac_q_escolha = None
+            st.rerun()
+    with col_f:
+        if st.button(
+            "📁 Fechar prontuário", type="primary", use_container_width=True
+        ):
+            _fechar_prontuario(pac)
+            st.rerun()
 
 
 def render_boss() -> None:
@@ -1386,33 +1510,21 @@ if not st.session_state.iniciado:
                     st.session_state.iniciado = True
                     st.rerun()
 
-        # --- Diagnóstico progressivo ---
+        # --- Diagnóstico progressivo (surpresa) ---
         if DIAGS:
             with st.container(border=True):
                 st.markdown(
-                    "**🔎 Diagnóstico progressivo** — peça exames e feche o "
-                    "diagnóstico. Menos exames = mais pontos."
+                    "**🔎 Diagnóstico progressivo** — um caso surpresa: peça "
+                    "exames e feche o diagnóstico. Menos exames = mais pontos."
                 )
-                lista_d = diag_mod.listar(DIAGS)
-
-                def _rotulo_diag(did: str) -> str:
-                    t = next(x for x in lista_d if x["id"] == did)["titulo"]
-                    feito = "✅ " if did in perfil.diagnosticos_completos else ""
-                    return f"{feito}{t}"
-
-                did = st.selectbox(
-                    "Escolha um caso",
-                    options=[c["id"] for c in lista_d],
-                    format_func=_rotulo_diag,
-                    key="sel_diag",
+                n_diag = sum(
+                    1 for c in DIAGS if c["id"] in perfil.diagnosticos_completos
                 )
-                if did in perfil.diagnosticos_completos:
-                    st.caption(
-                        f"Melhor: {perfil.diagnosticos_completos[did]} / "
-                        f"{diag_mod.PONTOS_ACERTO} pontos"
-                    )
-                if st.button("Iniciar diagnóstico", use_container_width=True):
-                    st.session_state.diag = diag_mod.por_id(DIAGS, did)
+                st.caption(f"{n_diag} de {len(DIAGS)} casos já resolvidos.")
+                if st.button(
+                    "🎲 Diagnóstico surpresa", use_container_width=True
+                ):
+                    st.session_state.diag = random.choice(DIAGS)
                     st.session_state.diag_solicitados = []
                     st.session_state.diag_fechado = False
                     st.session_state.diag_escolha = None
@@ -1422,33 +1534,21 @@ if not st.session_state.iniciado:
                     st.session_state.iniciado = True
                     st.rerun()
 
-        # --- Pacientes virtuais ---
+        # --- Pacientes virtuais (prontuário surpresa) ---
         if PACIENTES:
             with st.container(border=True):
                 st.markdown(
-                    "**🧑‍⚕️ Pacientes virtuais** — acompanhe o mesmo paciente "
-                    "por vários momentos, decidindo a conduta."
+                    "**🧑‍⚕️ Paciente virtual** — receba um paciente surpresa, "
+                    "conduza o atendimento com questões do tema e feche o "
+                    "prontuário quando quiser."
                 )
-                lista_p = pac_mod.listar(PACIENTES)
-
-                def _rotulo_pac(pid: str) -> str:
-                    x = next(y for y in lista_p if y["id"] == pid)
-                    feito = "✅ " if pid in perfil.pacientes_completos else ""
-                    return f"{feito}{x['nome']} ({x['idade']})"
-
-                pid = st.selectbox(
-                    "Escolha um paciente",
-                    options=[c["id"] for c in lista_p],
-                    format_func=_rotulo_pac,
-                    key="sel_pac",
+                st.caption(
+                    f"{len(perfil.historico_pacientes)} prontuário(s) no histórico."
                 )
-                info_p = pac_mod.por_id(PACIENTES, pid)
-                if pid in perfil.pacientes_completos:
-                    st.caption(
-                        f"Melhor: {perfil.pacientes_completos[pid]} / "
-                        f"{pac_mod.pontuacao_maxima(info_p)} pontos"
-                    )
-                if st.button("Iniciar acompanhamento", use_container_width=True):
+                if st.button(
+                    "🎲 Paciente surpresa", use_container_width=True
+                ):
+                    info_p = random.choice(PACIENTES)
                     st.session_state.pac = info_p
                     st.session_state.pac_momento = 0
                     st.session_state.pac_score = 0
@@ -1456,6 +1556,12 @@ if not st.session_state.iniciado:
                     st.session_state.pac_respondida = False
                     st.session_state.pac_escolha = None
                     st.session_state.pac_ultimo = None
+                    st.session_state.pac_quiz_total = 0
+                    st.session_state.pac_quiz_acertos = 0
+                    st.session_state.pac_q = None
+                    st.session_state.pac_q_respondida = False
+                    st.session_state.pac_q_escolha = None
+                    st.session_state.pac_fechado = False
                     st.session_state.modo = "paciente"
                     st.session_state.iniciado = True
                     st.rerun()

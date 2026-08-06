@@ -20,6 +20,7 @@ import conquistas
 import gamificacao as gam
 import cartas
 import casos as casos_mod
+import diagnostico as diag_mod
 import persistencia
 import plantao
 import revisao
@@ -151,6 +152,17 @@ def obter_casos() -> list[dict]:
 
 CASOS = obter_casos()
 
+
+@st.cache_data(show_spinner=False)
+def obter_diagnosticos() -> list[dict]:
+    try:
+        return diag_mod.carregar("diagnosticos")
+    except Exception:
+        return []
+
+
+DIAGS = obter_diagnosticos()
+
 # Data de hoje (UTC) — usada pela ofensiva diária.
 HOJE = datetime.now(timezone.utc).date().isoformat()
 
@@ -247,7 +259,8 @@ def reiniciar() -> None:
     ]:
         st.session_state.pop(chave, None)
     for chave in list(st.session_state.keys()):
-        if chave.startswith("plantao_") or chave.startswith("caso"):
+        if (chave.startswith("plantao_") or chave.startswith("caso")
+                or chave.startswith("diag")):
             st.session_state.pop(chave, None)
     st.session_state.iniciado = False
 
@@ -285,7 +298,8 @@ with st.sidebar:
         ]:
             st.session_state.pop(chave, None)
         for chave in list(st.session_state.keys()):
-            if chave.startswith("plantao_") or chave.startswith("caso"):
+            if (chave.startswith("plantao_") or chave.startswith("caso")
+                    or chave.startswith("diag")):
                 st.session_state.pop(chave, None)
         st.query_params.clear()
         st.rerun()
@@ -916,6 +930,88 @@ def render_caso() -> None:
                 st.rerun()
 
 
+def render_diagnostico() -> None:
+    caso = st.session_state.diag
+    perfil = st.session_state.perfil
+    solicitados = st.session_state.diag_solicitados
+    fechado = st.session_state.diag_fechado
+
+    st.markdown(f"### 🔎 {caso['titulo']}")
+    with st.container(border=True):
+        st.write(caso["apresentacao"])
+
+    if not fechado:
+        st.markdown(f"**Exames** — cada um custa {diag_mod.CUSTO_EXAME} pontos:")
+        for idx, ex in enumerate(caso["exames"]):
+            if idx in solicitados:
+                st.success(f"🔬 **{ex['nome']}** — {ex['resultado']}")
+            else:
+                if st.button(
+                    f"Solicitar: {ex['nome']}  (−{diag_mod.CUSTO_EXAME} pts)",
+                    key=f"diag_ex_{idx}",
+                    use_container_width=True,
+                ):
+                    st.session_state.diag_solicitados.append(idx)
+                    st.rerun()
+
+        st.divider()
+        possiveis = diag_mod.pontuar(True, len(solicitados))
+        st.caption(
+            f"Exames solicitados: {len(solicitados)} · "
+            f"se acertar agora, vale {possiveis} pontos."
+        )
+        escolha = st.radio(
+            "Seu diagnóstico:",
+            options=list(range(len(caso["diagnosticos"]))),
+            format_func=lambda j: caso["diagnosticos"][j],
+            index=None,
+            key="diag_radio",
+        )
+        if st.button("Fechar diagnóstico", type="primary", use_container_width=True):
+            if escolha is None:
+                st.warning("Escolha um diagnóstico antes de fechar.")
+            else:
+                acertou = escolha == caso["correta"]
+                pontos = diag_mod.pontuar(acertou, len(solicitados))
+                st.session_state.diag_escolha = escolha
+                st.session_state.diag_acertou = acertou
+                st.session_state.diag_pontos = pontos
+                st.session_state.diag_fechado = True
+                prev = perfil.diagnosticos_completos.get(caso["id"], -1)
+                if pontos > prev:
+                    perfil.diagnosticos_completos[caso["id"]] = pontos
+                    perfil.xp_total += pontos
+                    perfil.moedas += 5
+                    h = perfil.historico.setdefault(
+                        HOJE, {"xp": 0, "respondidas": 0, "acertos": 0}
+                    )
+                    h["xp"] += pontos
+                    _verificar_conquistas(perfil)
+                salvar()
+                st.rerun()
+    else:
+        correta = caso["correta"]
+        n = len(solicitados)
+        if st.session_state.diag_acertou:
+            st.success(
+                f"✅ Correto: **{caso['diagnosticos'][correta]}**  ·  "
+                f"**{st.session_state.diag_pontos} pontos** ({n} exame(s))"
+            )
+        else:
+            st.error(
+                f"O diagnóstico correto era **{caso['diagnosticos'][correta]}**  ·  "
+                f"0 pontos"
+            )
+        st.info(caso["explicacao"])
+        st.caption(
+            "Uso educacional — confira sempre as condutas nos protocolos vigentes "
+            "(SBP / Ministério da Saúde / seu serviço)."
+        )
+        if st.button("Voltar", type="primary", use_container_width=True):
+            reiniciar()
+            st.rerun()
+
+
 barra_xp()
 bloco_ofensiva()
 st.divider()
@@ -1064,6 +1160,42 @@ if not st.session_state.iniciado:
                     st.session_state.iniciado = True
                     st.rerun()
 
+        # --- Diagnóstico progressivo ---
+        if DIAGS:
+            with st.container(border=True):
+                st.markdown(
+                    "**🔎 Diagnóstico progressivo** — peça exames e feche o "
+                    "diagnóstico. Menos exames = mais pontos."
+                )
+                lista_d = diag_mod.listar(DIAGS)
+
+                def _rotulo_diag(did: str) -> str:
+                    t = next(x for x in lista_d if x["id"] == did)["titulo"]
+                    feito = "✅ " if did in perfil.diagnosticos_completos else ""
+                    return f"{feito}{t}"
+
+                did = st.selectbox(
+                    "Escolha um caso",
+                    options=[c["id"] for c in lista_d],
+                    format_func=_rotulo_diag,
+                    key="sel_diag",
+                )
+                if did in perfil.diagnosticos_completos:
+                    st.caption(
+                        f"Melhor: {perfil.diagnosticos_completos[did]} / "
+                        f"{diag_mod.PONTOS_ACERTO} pontos"
+                    )
+                if st.button("Iniciar diagnóstico", use_container_width=True):
+                    st.session_state.diag = diag_mod.por_id(DIAGS, did)
+                    st.session_state.diag_solicitados = []
+                    st.session_state.diag_fechado = False
+                    st.session_state.diag_escolha = None
+                    st.session_state.diag_acertou = False
+                    st.session_state.diag_pontos = 0
+                    st.session_state.modo = "diagnostico"
+                    st.session_state.iniciado = True
+                    st.rerun()
+
         st.caption(
             f"{len(BANCO)} questões no banco. "
             "Uso educacional — não substitui protocolos oficiais nem julgamento "
@@ -1086,6 +1218,10 @@ else:
 
     if st.session_state.get("modo") == "caso":
         render_caso()
+        st.stop()
+
+    if st.session_state.get("modo") == "diagnostico":
+        render_diagnostico()
         st.stop()
 
     quiz = st.session_state.quiz

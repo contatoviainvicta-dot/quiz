@@ -73,6 +73,8 @@ class Perfil:
     cartas: dict = field(default_factory=dict)
     # dia (ISO) em que a dica grátis da carta foi usada pela última vez
     dica_gratis_usada_em: str = ""
+    # melhor pontuação no modo plantão
+    recorde_plantao: int = 0
 
 
 @dataclass
@@ -306,4 +308,5 @@ def perfil_de_dict(dados: dict) -> Perfil:
     p.moedas = dados.get("moedas", 0)
     p.cartas = dados.get("cartas", {}) or {}
     p.dica_gratis_usada_em = dados.get("dica_gratis_usada_em", "")
+    p.recorde_plantao = dados.get("recorde_plantao", 0)
     return p

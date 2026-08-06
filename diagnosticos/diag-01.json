@@ -1,0 +1,70 @@
+{
+  "casos": [
+    {
+      "id": "dor-abdominal-01",
+      "titulo": "Dor abdominal em criança",
+      "apresentacao": "Menino de 9 anos com dor abdominal há cerca de 12 horas. A dor começou ao redor do umbigo e depois migrou para o quadrante inferior direito. Tem náusea, febre baixa e perdeu o apetite. Sem diarreia.",
+      "exames": [
+        {
+          "nome": "Exame físico abdominal",
+          "resultado": "Dor à palpação no quadrante inferior direito, com dor à descompressão (Blumberg positivo). Sem massas."
+        },
+        {
+          "nome": "Hemograma",
+          "resultado": "Leucocitose com desvio à esquerda."
+        },
+        {
+          "nome": "Exame de urina (EAS)",
+          "resultado": "Sem alterações (afasta infecção urinária)."
+        },
+        {
+          "nome": "Proteína C reativa (PCR)",
+          "resultado": "Elevada."
+        },
+        {
+          "nome": "Ultrassonografia de abdome",
+          "resultado": "Apêndice espessado, não compressível, com líquido ao redor."
+        }
+      ],
+      "diagnosticos": [
+        "Apendicite aguda",
+        "Gastroenterite aguda",
+        "Infecção do trato urinário",
+        "Constipação intestinal"
+      ],
+      "correta": 0,
+      "explicacao": "Dor periumbilical que migra para a fossa ilíaca direita, com anorexia, febre e sinais de irritação peritoneal, é o quadro clássico de apendicite aguda. O diagnóstico é primariamente CLÍNICO — exames (hemograma, PCR, ultrassom) ajudam nos casos duvidosos, mas nem sempre são necessários. Gastroenterite costuma ter diarreia e dor difusa; ITU teria alterações na urina; constipação não dá irritação peritoneal."
+    },
+    {
+      "id": "icter-neonatal-01",
+      "titulo": "Recém-nascido amarelado",
+      "apresentacao": "Recém-nascido de 4 dias de vida, a termo, trazido por icterícia percebida a partir do 2º dia. Mama bem, ativo, sem febre ou outros sinais. Boa diurese e evacuações.",
+      "exames": [
+        {
+          "nome": "Avaliação clínica (zonas de Kramer)",
+          "resultado": "Icterícia de face e tronco; recém-nascido em bom estado geral."
+        },
+        {
+          "nome": "Bilirrubinas total e frações",
+          "resultado": "Bilirrubina total moderadamente elevada, com predomínio da fração indireta."
+        },
+        {
+          "nome": "Tipagem sanguínea (mãe/RN) e Coombs direto",
+          "resultado": "Sem incompatibilidade; Coombs direto negativo."
+        },
+        {
+          "nome": "Hemograma e reticulócitos",
+          "resultado": "Sem anemia; reticulócitos normais (sem sinais de hemólise)."
+        }
+      ],
+      "diagnosticos": [
+        "Icterícia fisiológica",
+        "Doença hemolítica (incompatibilidade ABO/Rh)",
+        "Sepse neonatal",
+        "Atresia de vias biliares"
+      ],
+      "correta": 0,
+      "explicacao": "Início após as primeiras 24h de vida, bilirrubina de predomínio INDIRETO, ausência de sinais de hemólise (Coombs negativo, sem anemia) e recém-nascido em bom estado apontam para icterícia fisiológica. Doença hemolítica cursa com Coombs positivo/anemia e costuma iniciar mais cedo; sepse teria um RN doente; atresia de vias biliares cursa com colestase (bilirrubina DIRETA elevada) e icterícia mais tardia/persistente. IMPORTANTE: sempre avaliar o nível de bilirrubina e os fatores de risco frente às curvas/protocolo para indicar fototerapia — confira o protocolo vigente."
+    }
+  ]
+}

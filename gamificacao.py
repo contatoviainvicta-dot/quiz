@@ -23,9 +23,16 @@ from datetime import date, datetime, timedelta, timezone
 # Regras de XP
 # ---------------------------------------------------------------------------
 XP_ACERTO = 15
+XP_ACERTO_COM_DICA = 8   # acertou depois de usar dica
 XP_ERRO = 2
 XP_BONUS_SEQUENCIA = 30
 PASSO_SEQUENCIA = 10
+
+# Moedas 🪙 — economia simples de ganhar/gastar
+MOEDAS_ACERTO = 1         # por acerto
+MOEDAS_META_DIARIA = 5    # bônus ao cumprir a meta do dia
+MOEDAS_CONQUISTA = 10     # por conquista desbloqueada (creditada no app)
+DICA_CUSTO = 5            # preço de uma dica no quiz
 
 # Curva de níveis: nível 1 exige 100 XP; cada nível seguinte exige +50.
 XP_NIVEL_BASE = 100
@@ -60,6 +67,8 @@ class Perfil:
     historico: dict = field(default_factory=dict)
     # conquistas desbloqueadas: {id: "YYYY-MM-DD"}
     conquistas: dict = field(default_factory=dict)
+    # moedas 🪙 acumuladas
+    moedas: int = 0
 
 
 @dataclass
@@ -73,6 +82,7 @@ class Resultado:
     subiu_nivel: bool
     dia_completado: bool  # acabou de bater a meta diária nesta resposta
     ofensiva: int         # ofensiva atual (dias) após esta resposta
+    moedas_ganhas: int    # moedas 🪙 ganhas nesta resposta
 
 
 def perfil_novo() -> Perfil:
@@ -192,16 +202,20 @@ def registrar_resposta(
     categoria: str,
     acertou: bool,
     hoje: str | None = None,
+    com_dica: bool = False,
 ) -> Resultado:
     """Atualiza o perfil com uma resposta e devolve o que mudou.
 
     'hoje' é a data (ISO, UTC) usada para a ofensiva diária; se None, usa a
-    data UTC atual. Passe explicitamente nos testes.
+    data UTC atual. 'com_dica' reduz o XP do acerto (usou dica para acertar).
     """
     hoje = hoje or _hoje_utc()
     nivel_antes, _, _ = nivel_por_xp(perfil.xp_total)
 
-    ganho = XP_ACERTO if acertou else XP_ERRO
+    if acertou:
+        ganho = XP_ACERTO_COM_DICA if com_dica else XP_ACERTO
+    else:
+        ganho = XP_ERRO
     perfil.respondidas += 1
     bucket = _bucket_categoria(perfil, categoria)
     bucket["respondidas"] += 1
@@ -235,6 +249,12 @@ def registrar_resposta(
 
     dia_completado = _registrar_dia(perfil, hoje)
 
+    # Moedas: por acerto + bônus ao fechar a meta do dia.
+    moedas_ganhas = MOEDAS_ACERTO if acertou else 0
+    if dia_completado:
+        moedas_ganhas += MOEDAS_META_DIARIA
+    perfil.moedas += moedas_ganhas
+
     nivel_depois, _, _ = nivel_por_xp(perfil.xp_total)
     return Resultado(
         xp_ganho=total,
@@ -244,6 +264,7 @@ def registrar_resposta(
         subiu_nivel=nivel_depois > nivel_antes,
         dia_completado=dia_completado,
         ofensiva=ofensiva_atual(perfil, hoje),
+        moedas_ganhas=moedas_ganhas,
     )
 
 
@@ -271,4 +292,5 @@ def perfil_de_dict(dados: dict) -> Perfil:
     p.revisao = dados.get("revisao", {}) or {}
     p.historico = dados.get("historico", {}) or {}
     p.conquistas = dados.get("conquistas", {}) or {}
+    p.moedas = dados.get("moedas", 0)
     return p

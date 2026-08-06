@@ -71,6 +71,8 @@ class Perfil:
     moedas: int = 0
     # cartas colecionáveis: {id_da_carta: quantidade}
     cartas: dict = field(default_factory=dict)
+    # dia (ISO) em que a dica grátis da carta foi usada pela última vez
+    dica_gratis_usada_em: str = ""
 
 
 @dataclass
@@ -205,11 +207,14 @@ def registrar_resposta(
     acertou: bool,
     hoje: str | None = None,
     com_dica: bool = False,
+    bonus_xp_pct: float = 0.0,
+    bonus_moedas: int = 0,
 ) -> Resultado:
     """Atualiza o perfil com uma resposta e devolve o que mudou.
 
     'hoje' é a data (ISO, UTC) usada para a ofensiva diária; se None, usa a
-    data UTC atual. 'com_dica' reduz o XP do acerto (usou dica para acertar).
+    data UTC atual. 'com_dica' reduz o XP do acerto. 'bonus_xp_pct' e
+    'bonus_moedas' vêm dos efeitos das cartas (calculados no app).
     """
     hoje = hoje or _hoje_utc()
     nivel_antes, _, _ = nivel_por_xp(perfil.xp_total)
@@ -237,6 +242,8 @@ def registrar_resposta(
         bonus = XP_BONUS_SEQUENCIA
 
     total = ganho + bonus
+    if bonus_xp_pct:
+        total = round(total * (1 + bonus_xp_pct))
     perfil.xp_total += total
     bucket["xp"] += total
 
@@ -251,8 +258,10 @@ def registrar_resposta(
 
     dia_completado = _registrar_dia(perfil, hoje)
 
-    # Moedas: por acerto + bônus ao fechar a meta do dia.
-    moedas_ganhas = MOEDAS_ACERTO if acertou else 0
+    # Moedas: por acerto (+ bônus de cartas) + bônus ao fechar a meta do dia.
+    moedas_ganhas = 0
+    if acertou:
+        moedas_ganhas += MOEDAS_ACERTO + bonus_moedas
     if dia_completado:
         moedas_ganhas += MOEDAS_META_DIARIA
     perfil.moedas += moedas_ganhas
@@ -296,4 +305,5 @@ def perfil_de_dict(dados: dict) -> Perfil:
     p.conquistas = dados.get("conquistas", {}) or {}
     p.moedas = dados.get("moedas", 0)
     p.cartas = dados.get("cartas", {}) or {}
+    p.dica_gratis_usada_em = dados.get("dica_gratis_usada_em", "")
     return p

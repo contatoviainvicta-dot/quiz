@@ -1,0 +1,122 @@
+{
+  "pacientes": [
+    {
+      "id": "asma-joao-01",
+      "nome": "João",
+      "idade": "6 anos",
+      "sexo": "masculino",
+      "comorbidades": "Asma leve persistente (em uso irregular de profilaxia)",
+      "historia": "Trazido ao pronto-socorro pela mãe com falta de ar e chiado que pioraram nas últimas horas, após um resfriado. Já teve episódios semelhantes.",
+      "momentos": [
+        {
+          "titulo": "Admissão",
+          "estado": "FR 40 irpm, SatO₂ 92% em ar ambiente, tiragem intercostal, sibilos difusos, fala frases curtas.",
+          "texto": "João chega desconfortável, mas consciente e orientado.",
+          "pergunta": "Qual a conduta inicial na crise?",
+          "opcoes": [
+            "Broncodilatador inalatório (beta-2 de curta), oxigênio se hipoxemia e corticoide sistêmico",
+            "Apenas observação, sem medicação",
+            "Antibiótico intravenoso imediato",
+            "Sedação para reduzir o esforço respiratório"
+          ],
+          "correta": 0,
+          "explicacao": "O tratamento da crise de asma baseia-se em beta-2 agonista de curta duração inalatório, oxigênio se houver hipoxemia e corticoide sistêmico nas crises moderadas/graves. Antibiótico não é rotina (gatilho costuma ser viral); sedação é contraindicada na crise (risco de depressão respiratória).",
+          "evolucao_boa": "Após as inalações e o corticoide, João melhora: reduz a tiragem e a SatO₂ sobe.",
+          "evolucao_ruim": "Sem broncodilatador e corticoide, o desconforto persiste e João segue hipoxêmico — perde-se tempo precioso."
+        },
+        {
+          "titulo": "Reavaliação",
+          "estado": "Após o tratamento inicial: FR 28, SatO₂ 96%, sibilos menos intensos, mais confortável.",
+          "texto": "Você reavalia João para decidir os próximos passos.",
+          "pergunta": "Diante da boa resposta, qual a conduta mais adequada?",
+          "opcoes": [
+            "Manter observação, repetir broncodilatador conforme necessidade e planejar alta com plano de ação",
+            "Internar em UTI independentemente da melhora",
+            "Suspender toda a medicação imediatamente",
+            "Iniciar antibiótico para prevenir pneumonia"
+          ],
+          "correta": 0,
+          "explicacao": "Com boa resposta clínica, mantém-se observação, broncodilatador conforme necessidade e prepara-se a alta com corticoide oral por alguns dias, revisão da técnica inalatória e um plano de ação. UTI é para crises graves/refratárias; antibiótico profilático não é indicado.",
+          "evolucao_boa": "João permanece estável e confortável durante a observação.",
+          "evolucao_ruim": "Condutas desnecessárias expõem João a riscos e prolongam a internação sem benefício."
+        },
+        {
+          "titulo": "Alta e orientações",
+          "estado": "Estável, SatO₂ 97%, sem desconforto, aceitando líquidos.",
+          "texto": "João terá alta. A mãe pergunta como evitar novas crises.",
+          "pergunta": "O que é essencial orientar na alta?",
+          "opcoes": [
+            "Técnica inalatória correta, adesão à profilaxia, evitar gatilhos e plano de ação escrito",
+            "Interromper toda medicação de manutenção",
+            "Repouso absoluto no leito por 30 dias",
+            "Evitar qualquer atividade física para sempre"
+          ],
+          "correta": 0,
+          "explicacao": "O controle da asma depende de adesão e técnica inalatória correta, controle ambiental (gatilhos), profilaxia quando indicada e um plano de ação. Atividade física deve ser estimulada (com controle adequado), não proibida.",
+          "evolucao_boa": "A mãe entende o plano e se sente segura para manejar em casa.",
+          "evolucao_ruim": "Orientações inadequadas aumentam o risco de recaída e novas idas ao PS."
+        }
+      ],
+      "desfecho": "João recebe alta estável, com corticoide oral por alguns dias, revisão da técnica inalatória, plano de ação escrito e encaminhamento para acompanhamento. Boa recuperação."
+    },
+    {
+      "id": "convulsao-sofia-01",
+      "nome": "Sofia",
+      "idade": "18 meses",
+      "sexo": "feminino",
+      "comorbidades": "Nenhuma. Desenvolvimento normal, vacinas em dia.",
+      "historia": "Levada ao PS após um episódio de 'tremores no corpo todo' com olhos revirados, durando cerca de 2 minutos, no contexto de febre alta. Depois ficou sonolenta e agora está acordada e interagindo.",
+      "momentos": [
+        {
+          "titulo": "Admissão / estabilização",
+          "estado": "Pós-ictal já recuperada: reativa e chorosa, temperatura 39 °C, sem sinais meníngeos, sem déficit focal.",
+          "texto": "A crise já cessou espontaneamente antes da chegada.",
+          "pergunta": "Qual a conduta imediata?",
+          "opcoes": [
+            "Garantir vias aéreas/ABC, antitérmico e observação — a maioria das convulsões febris simples é autolimitada",
+            "Iniciar anticonvulsante de manutenção para todos os casos",
+            "Solicitar tomografia de crânio de urgência para todos",
+            "Realizar punção lombar obrigatória em todos os casos"
+          ],
+          "correta": 0,
+          "explicacao": "Na convulsão febril simples, a crise costuma ser breve e autolimitada. A conduta é suporte (ABC), controle da febre e observação. Anticonvulsante de manutenção não é indicado de rotina; benzodiazepínico é reservado à crise prolongada (> 5 min). Exames de imagem/punção lombar não são rotineiros.",
+          "evolucao_boa": "Sofia permanece estável, sem novas crises, e vai se acalmando.",
+          "evolucao_ruim": "Intervenções desnecessárias expõem Sofia a riscos e não trazem benefício."
+        },
+        {
+          "titulo": "Investigação",
+          "estado": "Ativa, interagindo, febril. Exame neurológico normal.",
+          "texto": "Você define a investigação de uma convulsão febril SIMPLES típica.",
+          "pergunta": "O que é apropriado nesse cenário típico?",
+          "opcoes": [
+            "Investigar o foco da febre clinicamente; EEG, neuroimagem e punção lombar não são de rotina",
+            "EEG e ressonância para todos os casos",
+            "Punção lombar em todos, independentemente do quadro",
+            "Internação prolongada para observação de 7 dias"
+          ],
+          "correta": 0,
+          "explicacao": "Na convulsão febril simples típica, a prioridade é identificar e tratar o foco da febre. EEG, neuroimagem e punção lombar não são recomendados de rotina — reservam-se a sinais de alarme, crise complexa ou suspeita de infecção do SNC.",
+          "evolucao_boa": "Identifica-se um quadro viral autolimitado como foco da febre.",
+          "evolucao_ruim": "Exames desnecessários geram custo, desconforto e ansiedade sem mudar a conduta."
+        },
+        {
+          "titulo": "Orientação aos pais",
+          "estado": "Estável, afebril após antitérmico, pronta para alta.",
+          "texto": "Os pais estão assustados e querem saber quando se preocupar.",
+          "pergunta": "Quais sinais indicam a necessidade de reavaliação (fugindo do padrão simples)?",
+          "opcoes": [
+            "Crise focal, prolongada (> 15 min), repetida em 24h, sinais meníngeos ou sonolência persistente",
+            "Qualquer febre, sempre",
+            "Choro ao mamar",
+            "Espirros ocasionais"
+          ],
+          "correta": 0,
+          "explicacao": "Sinais de alarme que fogem da convulsão febril simples e exigem reavaliação: crise focal, prolongada (> 15 min), recorrente em 24 horas, sinais meníngeos, rebaixamento persistente do sensório ou déficit neurológico. Convulsão febril simples é benigna e não costuma deixar sequelas.",
+          "evolucao_boa": "Os pais entendem a benignidade do quadro e os sinais de alarme.",
+          "evolucao_ruim": "Sem orientação clara, a família fica insegura e pode não reconhecer sinais de gravidade."
+        }
+      ],
+      "desfecho": "Sofia recebe alta bem, com o foco da febre tratado e os pais orientados sobre a natureza benigna da convulsão febril simples e sobre os sinais de alarme para retorno."
+    }
+  ]
+}

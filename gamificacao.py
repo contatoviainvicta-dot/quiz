@@ -83,6 +83,8 @@ class Perfil:
     pacientes_completos: dict = field(default_factory=dict)
     # bosses derrotados (ids)
     bosses_vencidos: list = field(default_factory=list)
+    # histórico de prontuários fechados (resumos)
+    historico_pacientes: list = field(default_factory=list)
 
 
 @dataclass
@@ -321,4 +323,5 @@ def perfil_de_dict(dados: dict) -> Perfil:
     p.diagnosticos_completos = dados.get("diagnosticos_completos", {}) or {}
     p.pacientes_completos = dados.get("pacientes_completos", {}) or {}
     p.bosses_vencidos = dados.get("bosses_vencidos", []) or []
+    p.historico_pacientes = dados.get("historico_pacientes", []) or []
     return p

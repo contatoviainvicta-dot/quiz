@@ -57,7 +57,8 @@
           "evolucao_ruim": "Orientações inadequadas aumentam o risco de recaída e novas idas ao PS."
         }
       ],
-      "desfecho": "João recebe alta estável, com corticoide oral por alguns dias, revisão da técnica inalatória, plano de ação escrito e encaminhamento para acompanhamento. Boa recuperação."
+      "desfecho": "João recebe alta estável, com corticoide oral por alguns dias, revisão da técnica inalatória, plano de ação escrito e encaminhamento para acompanhamento. Boa recuperação.",
+      "tema": "Emergência"
     },
     {
       "id": "convulsao-sofia-01",
@@ -116,7 +117,8 @@
           "evolucao_ruim": "Sem orientação clara, a família fica insegura e pode não reconhecer sinais de gravidade."
         }
       ],
-      "desfecho": "Sofia recebe alta bem, com o foco da febre tratado e os pais orientados sobre a natureza benigna da convulsão febril simples e sobre os sinais de alarme para retorno."
+      "desfecho": "Sofia recebe alta bem, com o foco da febre tratado e os pais orientados sobre a natureza benigna da convulsão febril simples e sobre os sinais de alarme para retorno.",
+      "tema": "Emergência"
     }
   ]
 }

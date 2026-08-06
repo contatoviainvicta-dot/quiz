@@ -77,6 +77,8 @@ class Perfil:
     recorde_plantao: int = 0
     # casos clínicos concluídos: {caso_id: melhor_pontuacao}
     casos_completos: dict = field(default_factory=dict)
+    # diagnósticos progressivos concluídos: {caso_id: melhor_pontuacao}
+    diagnosticos_completos: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -312,4 +314,5 @@ def perfil_de_dict(dados: dict) -> Perfil:
     p.dica_gratis_usada_em = dados.get("dica_gratis_usada_em", "")
     p.recorde_plantao = dados.get("recorde_plantao", 0)
     p.casos_completos = dados.get("casos_completos", {}) or {}
+    p.diagnosticos_completos = dados.get("diagnosticos_completos", {}) or {}
     return p

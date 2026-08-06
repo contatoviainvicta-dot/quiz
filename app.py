@@ -20,6 +20,7 @@ import conquistas
 import gamificacao as gam
 import cartas
 import casos as casos_mod
+import bosses as boss_mod
 import diagnostico as diag_mod
 import pacientes as pac_mod
 import persistencia
@@ -272,7 +273,8 @@ def reiniciar() -> None:
         st.session_state.pop(chave, None)
     for chave in list(st.session_state.keys()):
         if (chave.startswith("plantao_") or chave.startswith("caso")
-                or chave.startswith("diag") or chave.startswith("pac")):
+                or chave.startswith("diag") or chave.startswith("pac")
+                or chave.startswith("boss")):
             st.session_state.pop(chave, None)
     st.session_state.iniciado = False
 
@@ -311,7 +313,8 @@ with st.sidebar:
             st.session_state.pop(chave, None)
         for chave in list(st.session_state.keys()):
             if (chave.startswith("plantao_") or chave.startswith("caso")
-                    or chave.startswith("diag") or chave.startswith("pac")):
+                    or chave.startswith("diag") or chave.startswith("pac")
+                    or chave.startswith("boss")):
                 st.session_state.pop(chave, None)
         st.query_params.clear()
         st.rerun()
@@ -1132,6 +1135,119 @@ def render_paciente() -> None:
                 st.rerun()
 
 
+def render_boss() -> None:
+    boss = st.session_state.boss
+    perfil = st.session_state.perfil
+    st.markdown(f"### {boss['emoji']} {boss['nome']}")
+
+    fim = st.session_state.boss_fim
+    if fim == "win":
+        primeira = boss["id"] not in perfil.bosses_vencidos
+        if primeira:
+            perfil.bosses_vencidos.append(boss["id"])
+            perfil.xp_total += boss["xp"]
+            perfil.moedas += 20
+            h = perfil.historico.setdefault(
+                HOJE, {"xp": 0, "respondidas": 0, "acertos": 0}
+            )
+            h["xp"] += boss["xp"]
+            _verificar_conquistas(perfil)
+            salvar()
+            st.balloons()
+        st.success(f"🏆 Você derrotou o {boss['nome']}!")
+        if primeira:
+            st.success(f"Recompensa: +{boss['xp']} XP · +20 🪙")
+        else:
+            st.caption("Você já havia derrotado este chefão (prêmio só na 1ª vez).")
+        if st.button("Voltar", type="primary", use_container_width=True):
+            reiniciar()
+            st.rerun()
+        return
+
+    if fim == "lose":
+        st.error(f"💀 O {boss['nome']} venceu desta vez.")
+        st.caption("Estude mais um pouco e volte para a revanche!")
+        if st.button("Voltar", type="primary", use_container_width=True):
+            reiniciar()
+            st.rerun()
+        return
+
+    hp = st.session_state.boss_hp
+    vidas = st.session_state.boss_vidas
+    st.markdown(f"**HP do chefão** — {hp}/{boss['hp']}")
+    st.progress(hp / boss["hp"])
+    st.markdown(
+        "**Suas vidas:** " + "❤️" * vidas + "🤍" * (boss["vidas"] - vidas)
+    )
+
+    idx = st.session_state.boss_idx
+    pool = st.session_state.boss_pool
+    if idx >= len(pool):  # segurança: acabou o pool sem decidir
+        st.session_state.boss_fim = "lose"
+        st.rerun()
+
+    questao = pool[idx]
+    respondida = st.session_state.boss_respondida
+    with st.container(border=True):
+        st.markdown(
+            f'<span class="tag">{questao["categoria"]}</span>', unsafe_allow_html=True
+        )
+        st.markdown(f"**{questao['pergunta']}**")
+
+        escolha = st.radio(
+            "Selecione uma alternativa:",
+            options=list(range(len(questao["opcoes"]))),
+            format_func=lambda j: questao["opcoes"][j],
+            index=None,
+            key=f"boss_radio_{idx}",
+            disabled=respondida,
+        )
+
+        if not respondida:
+            if st.button("Atacar", type="primary", use_container_width=True):
+                if escolha is None:
+                    st.warning("Escolha uma alternativa antes de atacar.")
+                else:
+                    acertou = escolha == questao["correta"]
+                    gam.registrar_resposta(
+                        perfil, questao["categoria"], acertou, hoje=HOJE,
+                        bonus_xp_pct=EFEITOS["xp_pct"],
+                        bonus_moedas=EFEITOS["moeda_flat"],
+                    )
+                    revisao.registrar(
+                        perfil.revisao, revisao.qid(questao["pergunta"]), acertou, HOJE
+                    )
+                    _verificar_conquistas(perfil)
+                    if acertou:
+                        st.session_state.boss_hp -= 1
+                    else:
+                        st.session_state.boss_vidas -= 1
+                    st.session_state.boss_respondida = True
+                    st.session_state.boss_ultimo = {"acertou": acertou}
+                    if st.session_state.boss_hp <= 0:
+                        st.session_state.boss_fim = "win"
+                    elif st.session_state.boss_vidas <= 0:
+                        st.session_state.boss_fim = "lose"
+                    salvar()
+                    st.rerun()
+        else:
+            correta = questao["correta"]
+            if st.session_state.boss_ultimo["acertou"]:
+                st.success("💥 Acertou! Dano no chefão.")
+            else:
+                st.error(
+                    f"Errou — você perdeu uma vida. Resposta certa: "
+                    f"**{questao['opcoes'][correta]}**"
+                )
+            st.info(questao["explicacao"])
+            if st.button("Continuar", type="primary", use_container_width=True):
+                st.session_state.boss_idx += 1
+                st.session_state.boss_respondida = False
+                st.session_state.boss_escolha = None
+                st.session_state.boss_ultimo = None
+                st.rerun()
+
+
 barra_xp()
 bloco_ofensiva()
 st.divider()
@@ -1354,6 +1470,42 @@ if not st.session_state.iniciado:
                     st.session_state.iniciado = True
                     st.rerun()
 
+        # --- Bosses (chefões) ---
+        with st.container(border=True):
+            st.markdown("**👾 Bosses** — chefões que valem muito XP.")
+            for b in boss_mod.BOSSES:
+                if b["id"] in perfil.bosses_vencidos:
+                    st.markdown(f"✅ {b['emoji']} **{b['nome']}** — derrotado")
+                elif boss_mod.desbloqueado(b, perfil.respondidas):
+                    if st.button(
+                        f"Enfrentar {b['emoji']} {b['nome']}  (+{b['xp']} XP)",
+                        key=f"btn_boss_{b['id']}",
+                        use_container_width=True,
+                    ):
+                        tema = b["tema"]
+                        fonte = filtrar(BANCO, tema) if tema != "Todas" else BANCO
+                        if not fonte:
+                            fonte = BANCO
+                        n = min(boss_mod.tamanho_pool(b), len(fonte))
+                        st.session_state.boss = b
+                        st.session_state.boss_pool = preparar_quiz(fonte, "Todas", n)
+                        st.session_state.boss_idx = 0
+                        st.session_state.boss_hp = b["hp"]
+                        st.session_state.boss_vidas = b["vidas"]
+                        st.session_state.boss_respondida = False
+                        st.session_state.boss_escolha = None
+                        st.session_state.boss_ultimo = None
+                        st.session_state.boss_fim = None
+                        st.session_state.modo = "boss"
+                        st.session_state.iniciado = True
+                        st.rerun()
+                else:
+                    faltam = b["desbloqueio"] - perfil.respondidas
+                    st.caption(
+                        f"🔒 {b['emoji']} {b['nome']} — desbloqueia com "
+                        f"{b['desbloqueio']} questões (faltam {faltam})."
+                    )
+
         st.caption(
             f"{len(BANCO)} questões no banco. "
             "Uso educacional — não substitui protocolos oficiais nem julgamento "
@@ -1384,6 +1536,10 @@ else:
 
     if st.session_state.get("modo") == "paciente":
         render_paciente()
+        st.stop()
+
+    if st.session_state.get("modo") == "boss":
+        render_boss()
         st.stop()
 
     quiz = st.session_state.quiz

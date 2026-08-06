@@ -85,41 +85,6 @@
       ]
     },
     {
-      "id": "meningococcemia-01",
-      "titulo": "Febre, petéquias e choque em escolar",
-      "apresentacao": "Menino de 6 anos previamente hígido é levado ao pronto-socorro por febre alta há 12 horas, vômitos e intensa prostração. Nas últimas 2 horas surgiram manchas arroxeadas em membros inferiores e tronco. Na admissão encontra-se sonolento, extremidades frias, tempo de enchimento capilar de 5 segundos, PA 74/42 mmHg, FC 168 bpm, FR 38 irpm, SatO₂ 95% em ar ambiente.",
-      "exames": [
-        {
-          "nome": "Exame físico",
-          "resultado": "Petéquias e púrpuras disseminadas, rigidez de nuca discreta, pulsos finos, perfusão periférica muito reduzida."
-        },
-        {
-          "nome": "Hemograma",
-          "resultado": "Leucocitose de 24.800/mm³ com neutrofilia importante; plaquetas 68.000/mm³."
-        },
-        {
-          "nome": "PCR e Procalcitonina",
-          "resultado": "Marcadamente elevadas."
-        },
-        {
-          "nome": "Coagulograma",
-          "resultado": "TP e TTPa prolongados; fibrinogênio reduzido; dímero-D elevado."
-        },
-        {
-          "nome": "Hemoculturas",
-          "resultado": "Coletadas antes da antibioticoterapia."
-        }
-      ],
-      "diagnosticos": [
-        "Meningococcemia",
-        "Púrpura trombocitopênica imune",
-        "Vasculite por IgA (Púrpura de Henoch-Schönlein)",
-        "Leucemia aguda"
-      ],
-      "correta": 0,
-      "explicacao": "O quadro de febre alta, choque séptico, petéquias/púrpuras rapidamente progressivas e sinais laboratoriais de coagulação intravascular disseminada é altamente sugestivo de meningococcemia. O tratamento deve ser iniciado imediatamente, sem aguardar confirmação laboratorial, com suporte hemodinâmico, antibioticoterapia intravenosa e manejo intensivo. PTI cursa com púrpura, porém sem sepse ou choque; vasculite por IgA geralmente apresenta púrpura palpável, dor abdominal e artralgia; leucemia possui evolução mais arrastada e raramente causa choque séptico na apresentação inicial."
-    },
-    {
       "id": "diarreia-01",
       "titulo": "Criança com diarreia e vômitos",
       "resumo": "Menina de 18 meses com diarreia aquosa há 2 dias.",

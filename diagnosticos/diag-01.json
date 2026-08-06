@@ -36,6 +36,177 @@
       "explicacao": "Dor periumbilical que migra para a fossa ilíaca direita, com anorexia, febre e sinais de irritação peritoneal, é o quadro clássico de apendicite aguda. O diagnóstico é primariamente CLÍNICO — exames (hemograma, PCR, ultrassom) ajudam nos casos duvidosos, mas nem sempre são necessários. Gastroenterite costuma ter diarreia e dor difusa; ITU teria alterações na urina; constipação não dá irritação peritoneal."
     },
     {
+      "id": "cetoacidose-diabetica-01",
+      "titulo": "Poliúria, emagrecimento e rebaixamento do sensório",
+      "apresentacao": "Menina de 11 anos apresenta poliúria, polidipsia e perda de aproximadamente 6 kg nas últimas quatro semanas. Nas últimas 24 horas iniciou vômitos, dor abdominal e respiração rápida. Ao exame encontra-se desidratada, sonolenta, FR 36 irpm com respiração profunda, hálito cetônico, FC 142 bpm e PA 94/60 mmHg.",
+      "exames": [
+        {
+          "nome": "Glicemia capilar",
+          "resultado": "486 mg/dL."
+        },
+        {
+          "nome": "Gasometria venosa",
+          "resultado": "pH 7,08; bicarbonato 8 mEq/L; excesso de bases -18."
+        },
+        {
+          "nome": "Cetonemia",
+          "resultado": "Positiva."
+        },
+        {
+          "nome": "Urina tipo I",
+          "resultado": "Glicosúria intensa e cetonúria +++."
+        },
+        {
+          "nome": "Eletrólitos",
+          "resultado": "Sódio corrigido discretamente reduzido; potássio sérico 5,6 mEq/L."
+        }
+      ],
+      "diagnosticos": [
+        "Cetoacidose diabética",
+        "Gastroenterite aguda com desidratação",
+        "Insuficiência adrenal aguda",
+        "Intoxicação por salicilatos"
+      ],
+      "correta": 0,
+      "explicacao": "A associação de poliúria, polidipsia, perda ponderal, hiperglicemia, acidose metabólica com aumento do ânion gap e cetose confirma o diagnóstico de cetoacidose diabética, principal emergência do diabetes mellitus tipo 1 na infância. O tratamento baseia-se em reposição cuidadosa de fluidos, correção eletrolítica, insulinoterapia intravenosa e monitorização rigorosa para prevenção de edema cerebral. Gastroenterite não explica hiperglicemia e cetose importante; insuficiência adrenal costuma cursar com hipoglicemia; intoxicação por salicilatos produz distúrbios ácido-base diferentes e não causa cetose diabética."
+    },
+    {
+      "id": "kawasaki-01",
+      "titulo": "Febre prolongada e exantema em pré-escolar",
+      "apresentacao": "Menino de 3 anos apresenta febre alta diária há 6 dias, pouco responsiva a antitérmicos. Evoluiu com olhos avermelhados sem secreção, lábios fissurados, língua em framboesa, exantema polimorfo difuso e edema de mãos e pés. Está irritado e recusa alimentação.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "Conjuntivite bilateral não purulenta, lábios hiperemiados e fissurados, língua em framboesa, linfonodo cervical único de aproximadamente 2 cm, edema de mãos e pés."
+        },
+        {
+          "nome": "Hemograma",
+          "resultado": "Leucocitose com neutrofilia; anemia normocítica discreta; plaquetas 620.000/mm³."
+        },
+        {
+          "nome": "PCR e VHS",
+          "resultado": "Importante elevação de ambos."
+        },
+        {
+          "nome": "EAS",
+          "resultado": "Piúria estéril."
+        },
+        {
+          "nome": "Ecocardiograma",
+          "resultado": "Dilatação discreta da artéria coronária direita, sem aneurismas."
+        }
+      ],
+      "diagnosticos": [
+        "Doença de Kawasaki",
+        "Escarlatina",
+        "Sarampo",
+        "Artrite idiopática juvenil sistêmica"
+      ],
+      "correta": 0,
+      "explicacao": "Febre por cinco ou mais dias associada a conjuntivite não purulenta, alterações de mucosa oral, alterações de extremidades, exantema e linfadenopatia cervical caracteriza Doença de Kawasaki. O tratamento precoce com imunoglobulina intravenosa (idealmente até o 10º dia) e ácido acetilsalicílico reduz significativamente o risco de aneurismas coronarianos. Escarlatina cursa com faringoamigdalite estreptocócica e exantema típico; sarampo apresenta tosse, coriza e manchas de Koplik; artrite idiopática juvenil sistêmica costuma apresentar artrite e exantema evanescente."
+    },
+    {
+      "id": "gnpe-01",
+      "titulo": "Edema e urina escura após amigdalite",
+      "apresentacao": "Menino de 8 anos é levado ao ambulatório por edema palpebral matinal e diminuição do volume urinário há dois dias. A mãe relata episódio de amigdalite purulenta tratado apenas com analgésicos há cerca de duas semanas. Refere urina escurecida e cefaleia.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "PA 142/92 mmHg, edema palpebral bilateral e discreto edema em membros inferiores."
+        },
+        {
+          "nome": "Urina tipo I",
+          "resultado": "Hematúria intensa com cilindros hemáticos; proteinúria discreta."
+        },
+        {
+          "nome": "Complemento C3",
+          "resultado": "Reduzido."
+        },
+        {
+          "nome": "ASLO",
+          "resultado": "Elevado."
+        },
+        {
+          "nome": "Função renal",
+          "resultado": "Creatinina discretamente elevada."
+        }
+      ],
+      "diagnosticos": [
+        "Glomerulonefrite pós-estreptocócica",
+        "Síndrome nefrótica",
+        "Nefropatia por IgA",
+        "Infecção urinária"
+      ],
+      "correta": 0,
+      "explicacao": "O quadro clássico é composto por hematúria macroscópica (urina cor de coca-cola), edema, hipertensão arterial e redução transitória do complemento C3 após infecção estreptocócica. A proteinúria costuma ser leve ou moderada. Síndrome nefrótica apresenta proteinúria maciça, hipoalbuminemia e edema importante; nefropatia por IgA geralmente ocorre simultaneamente à infecção respiratória; infecção urinária não provoca redução do complemento nem síndrome nefrítica."
+    },
+    {
+      "id": "bronquiolite-01",
+      "titulo": "Lactente com desconforto respiratório progressivo",
+      "apresentacao": "Lactente de 4 meses apresenta coriza e tosse há três dias, evoluindo nas últimas 24 horas com dificuldade para mamar, taquipneia e chiado. Nasceu a termo, previamente saudável. Ao exame apresenta FR 68 irpm, SatO₂ 89% em ar ambiente, retrações subcostais e batimento de asas do nariz.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "Sibilos difusos bilaterais, estertores finos, esforço respiratório moderado."
+        },
+        {
+          "nome": "Radiografia de tórax",
+          "resultado": "Hiperinsuflação pulmonar e espessamento peribrônquico, sem consolidação focal."
+        },
+        {
+          "nome": "Hemograma",
+          "resultado": "Sem alterações significativas."
+        },
+        {
+          "nome": "Gasometria capilar",
+          "resultado": "Hipoxemia leve, sem retenção importante de CO₂."
+        }
+      ],
+      "diagnosticos": [
+        "Bronquiolite viral aguda",
+        "Pneumonia bacteriana",
+        "Primeira crise de asma",
+        "Aspiração de corpo estranho"
+      ],
+      "correta": 0,
+      "explicacao": "Lactente menor de um ano com pródromo viral, seguido de sibilância, hipoxemia e desconforto respiratório caracteriza bronquiolite viral aguda, geralmente causada pelo vírus sincicial respiratório (VSR). O tratamento é predominantemente de suporte, incluindo oxigenoterapia quando indicada e hidratação. Broncodilatadores e corticoides não são recomendados rotineiramente. Pneumonia costuma apresentar consolidação focal; asma é menos provável nessa faixa etária e na primeira crise; corpo estranho possui início súbito, geralmente sem pródromo viral."
+    },
+    {
+      "id": "sindrome-nefrotica-01",
+      "titulo": "Edema generalizado em criança",
+      "apresentacao": "Menino de 5 anos apresenta edema inicialmente palpebral que evoluiu para membros inferiores e ascite discreta ao longo de uma semana. Não apresenta febre nem hematúria. A mãe relata ganho de peso de 3 kg no período.",
+      "exames": [
+        {
+          "nome": "Urina tipo I",
+          "resultado": "Proteinúria 4+ sem hematúria."
+        },
+        {
+          "nome": "Proteinúria de 24 horas",
+          "resultado": "Proteinúria maciça."
+        },
+        {
+          "nome": "Albumina sérica",
+          "resultado": "1,8 g/dL."
+        },
+        {
+          "nome": "Perfil lipídico",
+          "resultado": "Hipercolesterolemia importante."
+        },
+        {
+          "nome": "Complemento C3",
+          "resultado": "Normal."
+        }
+      ],
+      "diagnosticos": [
+        "Síndrome nefrótica por doença de lesões mínimas",
+        "Glomerulonefrite pós-estreptocócica",
+        "Insuficiência cardíaca congestiva",
+        "Síndrome hemolítico-urêmica"
+      ],
+      "correta": 0,
+      "explicacao": "Edema, proteinúria maciça, hipoalbuminemia e hiperlipidemia constituem a síndrome nefrótica clássica. Em crianças entre 2 e 8 anos, a doença de lesões mínimas é a etiologia mais frequente e responde bem à corticoterapia. A ausência de hematúria importante, hipertensão e redução do complemento favorece esse diagnóstico em relação às síndromes nefríticas."
+    },
+    {
       "id": "meningococcemia-01",
       "titulo": "Febre, petéquias e choque em escolar",
       "apresentacao": "Menino de 6 anos previamente hígido é levado ao pronto-socorro por febre alta há 12 horas, vômitos e intensa prostração. Nas últimas 2 horas surgiram manchas arroxeadas em membros inferiores e tronco. Na admissão encontra-se sonolento, extremidades frias, tempo de enchimento capilar de 5 segundos, PA 74/42 mmHg, FC 168 bpm, FR 38 irpm, SatO₂ 95% em ar ambiente.",

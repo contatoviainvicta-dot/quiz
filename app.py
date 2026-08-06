@@ -80,6 +80,12 @@ st.markdown(
     .medalha .desc { font-size:.72rem; color:#7A8C8C; }
     .medalha .data { font-size:.68rem; color:#0E8388; font-weight:600;
                      margin-top:2px; }
+    .moedas-pill { display:inline-flex; align-items:center; gap:6px;
+                   background:linear-gradient(135deg,#FFF3CE,#FFE39B);
+                   border:1px solid #E6C864; color:#7A5B12; font-weight:800;
+                   padding:7px 15px; border-radius:999px; font-size:1.1rem;
+                   box-shadow:0 1px 3px rgba(230,200,100,.35); white-space:nowrap; }
+    .moedas-pill .ico { font-size:1.3rem; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -209,7 +215,6 @@ if "iniciado" not in st.session_state:
 # ---------------------------------------------------------------------------
 with st.sidebar:
     st.caption(f"Estudando como **{IDENTIFICADOR}**")
-    st.caption(f"🪙 {st.session_state.perfil.moedas} moedas")
     if persistencia.disponivel():
         st.caption("✅ Progresso salvo na nuvem.")
     else:
@@ -254,7 +259,7 @@ def barra_xp() -> None:
     perfil = st.session_state.perfil
     nivel, xp_no_nivel, xp_prox = gam.nivel_por_xp(perfil.xp_total)
 
-    col_a, col_b = st.columns([1, 3], vertical_alignment="center")
+    col_a, col_b, col_c = st.columns([1.1, 3, 1.3], vertical_alignment="center")
     with col_a:
         st.metric("Nível", nivel)
     with col_b:
@@ -266,6 +271,12 @@ def barra_xp() -> None:
             f"{nivel + 1}{extra}"
         )
         st.progress(xp_no_nivel / xp_prox)
+    with col_c:
+        st.markdown(
+            f'<div class="moedas-pill"><span class="ico">🪙</span>'
+            f"{perfil.moedas}</div>",
+            unsafe_allow_html=True,
+        )
 
 
 def bloco_ofensiva() -> None:

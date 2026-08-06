@@ -92,6 +92,165 @@
           "resultado": "Piúria estéril."
         },
         {
+      "id": "coqueluche-01",
+      "titulo": "Lactente com tosse paroxística e cianose",
+      "apresentacao": "Lactente de 2 meses é levado ao pronto-socorro por episódios de tosse intensa há 10 dias. Inicialmente apresentava apenas coriza e espirros. Evoluiu com crises de tosse em salvas, seguidas de cianose e dificuldade para respirar. A mãe refere episódios de vômitos após a tosse e relata que o bebê ainda não iniciou o esquema vacinal.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "Afebril, taquipneico, sem sibilos ou estertores. Durante a observação apresentou crise de tosse paroxística com cianose transitória."
+        },
+        {
+          "nome": "Hemograma",
+          "resultado": "Leucocitose de 42.500/mm³ com linfocitose importante."
+        },
+        {
+          "nome": "Radiografia de tórax",
+          "resultado": "Hiperinsuflação discreta, sem consolidações."
+        },
+        {
+          "nome": "PCR para Bordetella pertussis",
+          "resultado": "Positivo."
+        }
+      ],
+      "diagnosticos": [
+        "Coqueluche",
+        "Bronquiolite viral aguda",
+        "Pneumonia bacteriana",
+        "Refluxo gastroesofágico"
+      ],
+      "correta": 0,
+      "explicacao": "A evolução em fases (catarral seguida da fase paroxística), tosse em salvas, vômitos pós-tosse, episódios de cianose e linfocitose importante são altamente sugestivos de coqueluche. Lactentes pequenos apresentam elevado risco de apneia, insuficiência respiratória e óbito, devendo ser hospitalizados. O tratamento é realizado com macrolídeos e deve incluir quimioprofilaxia dos contatos."
+    },
+    {
+      "id": "pneumonia-derrame-01",
+      "titulo": "Pneumonia com piora clínica apesar do antibiótico",
+      "apresentacao": "Menina de 6 anos iniciou febre alta, tosse produtiva e dor torácica há cinco dias. Recebeu amoxicilina por suspeita de pneumonia, porém evoluiu com piora da dispneia e persistência da febre.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "FR 42 irpm, SatO₂ 91% em ar ambiente, diminuição importante do murmúrio vesicular na base pulmonar direita e macicez à percussão."
+        },
+        {
+          "nome": "Hemograma",
+          "resultado": "Leucocitose de 23.000/mm³ com neutrofilia."
+        },
+        {
+          "nome": "PCR",
+          "resultado": "278 mg/L."
+        },
+        {
+          "nome": "Radiografia de tórax",
+          "resultado": "Consolidação extensa em lobo inferior direito associada a derrame pleural moderado."
+        },
+        {
+          "nome": "Ultrassonografia de tórax",
+          "resultado": "Derrame pleural septado com sinais de empiema."
+        }
+      ],
+      "diagnosticos": [
+        "Pneumonia bacteriana complicada por empiema",
+        "Bronquiolite viral",
+        "Tuberculose pulmonar",
+        "Asma grave"
+      ],
+      "correta": 0,
+      "explicacao": "A persistência da febre após antibioticoterapia, associada ao derrame pleural septado, sugere empiema pleural. O manejo inclui antibioticoterapia intravenosa, drenagem pleural quando indicada e acompanhamento por imagem. Pneumococo e Staphylococcus aureus são causas frequentes."
+    },
+    {
+      "id": "lla-01",
+      "titulo": "Febre, palidez e dor óssea",
+      "apresentacao": "Menino de 5 anos apresenta fadiga progressiva, febre intermitente, dor em membros inferiores e aparecimento de hematomas espontâneos há cerca de três semanas. Os pais perceberam diminuição importante da disposição para brincar.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "Palidez cutânea importante, petéquias em membros inferiores, hepatoesplenomegalia discreta e linfonodos cervicais aumentados."
+        },
+        {
+          "nome": "Hemograma",
+          "resultado": "Hemoglobina 7,8 g/dL, plaquetas 32.000/mm³, leucócitos 38.000/mm³ com presença de blastos."
+        },
+        {
+          "nome": "LDH",
+          "resultado": "Marcadamente elevada."
+        },
+        {
+          "nome": "Mielograma",
+          "resultado": "Infiltração medular por linfoblastos."
+        }
+      ],
+      "diagnosticos": [
+        "Leucemia linfoblástica aguda",
+        "Púrpura trombocitopênica imune",
+        "Artrite idiopática juvenil",
+        "Mononucleose infecciosa"
+      ],
+      "correta": 0,
+      "explicacao": "A combinação de anemia, trombocitopenia, blastos circulantes, dor óssea e hepatoesplenomegalia é típica da leucemia linfoblástica aguda, a neoplasia maligna mais frequente da infância. O diagnóstico definitivo é realizado pelo estudo da medula óssea, complementado por imunofenotipagem e citogenética."
+    },
+    {
+      "id": "anafilaxia-01",
+      "titulo": "Reação grave após ingestão de alimento",
+      "apresentacao": "Menino de 8 anos com história de alergia conhecida a amendoim ingeriu acidentalmente um doce contendo o alimento. Dez minutos depois iniciou prurido generalizado, urticária, rouquidão, dificuldade para respirar e tontura.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "Edema labial, estridor leve, sibilância difusa, PA 78/46 mmHg, FC 156 bpm."
+        },
+        {
+          "nome": "Oximetria",
+          "resultado": "SatO₂ 89% em ar ambiente."
+        },
+        {
+          "nome": "Monitorização",
+          "resultado": "Taquicardia sinusal."
+        }
+      ],
+      "diagnosticos": [
+        "Anafilaxia",
+        "Crise asmática grave",
+        "Angioedema hereditário",
+        "Ataque de pânico"
+      ],
+      "correta": 0,
+      "explicacao": "O envolvimento simultâneo de pele, sistema respiratório e hipotensão após exposição a alérgeno caracteriza anafilaxia. A adrenalina intramuscular na face ântero-lateral da coxa deve ser administrada imediatamente, sendo o tratamento de primeira linha. Anti-histamínicos e corticosteroides são apenas terapias adjuvantes e nunca substituem a adrenalina."
+    },
+    {
+      "id": "shu-01",
+      "titulo": "Diarreia sanguinolenta seguida de anemia e oligúria",
+      "apresentacao": "Menina de 3 anos apresentou diarreia sanguinolenta durante quatro dias após consumir hambúrguer mal passado. Evoluiu com redução importante da diurese, palidez intensa e irritabilidade.",
+      "exames": [
+        {
+          "nome": "Hemograma",
+          "resultado": "Hemoglobina 6,9 g/dL, plaquetas 48.000/mm³."
+        },
+        {
+          "nome": "Esfregaço periférico",
+          "resultado": "Esquizócitos abundantes."
+        },
+        {
+          "nome": "Função renal",
+          "resultado": "Creatinina 2,8 mg/dL; ureia elevada."
+        },
+        {
+          "nome": "Coombs direto",
+          "resultado": "Negativo."
+        },
+        {
+          "nome": "Coprocultura",
+          "resultado": "Escherichia coli produtora de toxina Shiga."
+        }
+      ],
+      "diagnosticos": [
+        "Síndrome hemolítico-urêmica",
+        "Púrpura trombocitopênica trombótica",
+        "Glomerulonefrite pós-estreptocócica",
+        "Sepse bacteriana"
+      ],
+      "correta": 0,
+      "explicacao": "A tríade de anemia hemolítica microangiopática, trombocitopenia e lesão renal aguda após diarreia por E. coli produtora de toxina Shiga caracteriza síndrome hemolítico-urêmica típica. O tratamento é predominantemente de suporte, incluindo controle hidroeletrolítico, transfusões quando indicadas e diálise nos casos graves. Antibióticos geralmente não são recomendados na fase diarreica, pois podem aumentar a liberação da toxina."
+    },
+        {
           "nome": "Ecocardiograma",
           "resultado": "Dilatação discreta da artéria coronária direita, sem aneurismas."
         }

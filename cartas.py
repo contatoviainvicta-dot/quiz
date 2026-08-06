@@ -43,27 +43,33 @@ CARTAS = [
      "raridade": "comum", "desc": "Contra a perda de calor."},
     # --- Raras ---
     {"id": "apgar", "emoji": "💯", "nome": "APGAR 10",
-     "raridade": "rara", "desc": "Nota cheia no primeiro minuto."},
+     "raridade": "rara", "desc": "Nota cheia no primeiro minuto.",
+     "efeito": {"tipo": "xp_pct", "valor": 0.05, "texto": "+5% XP"}},
     {"id": "vacina", "emoji": "💉", "nome": "Vacina em Dia",
      "raridade": "rara", "desc": "Calendário impecável."},
     {"id": "aleitamento", "emoji": "🤱", "nome": "Aleitamento de Ouro",
-     "raridade": "rara", "desc": "Livre demanda, sempre."},
+     "raridade": "rara", "desc": "Livre demanda, sempre.",
+     "efeito": {"tipo": "moeda_flat", "valor": 1, "texto": "+1 🪙 por acerto"}},
     {"id": "reanimacao", "emoji": "🫁", "nome": "Reanimação Neonatal",
      "raridade": "rara", "desc": "Minuto de ouro dominado."},
     {"id": "curva", "emoji": "📈", "nome": "Curva de Crescimento",
      "raridade": "rara", "desc": "Sempre no percentil certo."},
     # --- Épicas ---
     {"id": "raciocinio", "emoji": "🧠", "nome": "Raciocínio Clínico",
-     "raridade": "epica", "desc": "O diagnóstico salta aos olhos."},
+     "raridade": "epica", "desc": "O diagnóstico salta aos olhos.",
+     "efeito": {"tipo": "xp_pct", "valor": 0.10, "texto": "+10% XP"}},
     {"id": "plantonista", "emoji": "⚡", "nome": "Plantonista Incansável",
-     "raridade": "epica", "desc": "24 horas e segue firme."},
+     "raridade": "epica", "desc": "24 horas e segue firme.",
+     "efeito": {"tipo": "moeda_flat", "valor": 2, "texto": "+2 🪙 por acerto"}},
     {"id": "guardiao", "emoji": "🛡️", "nome": "Guardião do RN",
      "raridade": "epica", "desc": "Vigília constante no berçário."},
     # --- Lendárias ---
     {"id": "pediatra_lenda", "emoji": "👑", "nome": "Pediatra Lendário",
-     "raridade": "lendaria", "desc": "Referência de uma geração."},
+     "raridade": "lendaria", "desc": "Referência de uma geração.",
+     "efeito": {"tipo": "xp_pct", "valor": 0.15, "texto": "+15% XP"}},
     {"id": "maos_salvam", "emoji": "✨", "nome": "Mãos que Salvam",
-     "raridade": "lendaria", "desc": "Onde há cuidado, há esperança."},
+     "raridade": "lendaria", "desc": "Onde há cuidado, há esperança.",
+     "efeito": {"tipo": "dica_gratis", "valor": 1, "texto": "1 dica grátis por dia"}},
 ]
 
 _POR_ID = {c["id"]: c for c in CARTAS}
@@ -104,3 +110,39 @@ def colecao_resumo(cartas_usuario: dict) -> dict:
         "possuidas": possuidas,
         "por_raridade": por_raridade,
     }
+
+
+def efeitos_ativos(cartas_usuario: dict) -> dict:
+    """Soma os efeitos das cartas POSSUÍDAS (duplicatas não empilham).
+
+    Devolve {xp_pct, moeda_flat, dica_gratis} — o app repassa esses valores
+    para o cálculo de XP/moedas/dica.
+    """
+    xp_pct = 0.0
+    moeda_flat = 0
+    dica_gratis = False
+    for cid in cartas_usuario:
+        c = _POR_ID.get(cid)
+        ef = c.get("efeito") if c else None
+        if not ef:
+            continue
+        if ef["tipo"] == "xp_pct":
+            xp_pct += ef["valor"]
+        elif ef["tipo"] == "moeda_flat":
+            moeda_flat += int(ef["valor"])
+        elif ef["tipo"] == "dica_gratis":
+            dica_gratis = True
+    return {"xp_pct": xp_pct, "moeda_flat": moeda_flat, "dica_gratis": dica_gratis}
+
+
+def efeitos_texto(cartas_usuario: dict) -> list:
+    """Lista de textos dos efeitos ativos, para exibir na interface."""
+    ef = efeitos_ativos(cartas_usuario)
+    partes = []
+    if ef["xp_pct"]:
+        partes.append(f"+{round(ef['xp_pct'] * 100)}% XP")
+    if ef["moeda_flat"]:
+        partes.append(f"+{ef['moeda_flat']} 🪙 por acerto")
+    if ef["dica_gratis"]:
+        partes.append("1 dica grátis por dia")
+    return partes

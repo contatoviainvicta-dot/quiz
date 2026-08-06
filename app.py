@@ -10,6 +10,7 @@ Este arquivo cuida só da tela e da navegação.
 import calendar as _cal
 import dataclasses
 import random
+import time
 from datetime import date, datetime, timedelta, timezone
 
 import pandas as pd
@@ -19,6 +20,7 @@ import conquistas
 import gamificacao as gam
 import cartas
 import persistencia
+import plantao
 import revisao
 from quiz_engine import (
     QuestaoInvalida,
@@ -232,6 +234,9 @@ def reiniciar() -> None:
         "dica_eliminada",
     ]:
         st.session_state.pop(chave, None)
+    for chave in list(st.session_state.keys()):
+        if chave.startswith("plantao_"):
+            st.session_state.pop(chave, None)
     st.session_state.iniciado = False
 
 
@@ -267,6 +272,9 @@ with st.sidebar:
             "ultima_carta",
         ]:
             st.session_state.pop(chave, None)
+        for chave in list(st.session_state.keys()):
+            if chave.startswith("plantao_"):
+                st.session_state.pop(chave, None)
         st.query_params.clear()
         st.rerun()
 
@@ -646,6 +654,159 @@ def render_cartas(perfil) -> None:
     )
 
 
+def _timer_visual(segundos: int) -> None:
+    """Cronômetro visual (JS no navegador). Só visual — o placar usa o tempo
+    medido no servidor ao responder."""
+    html = f"""
+        <div style="font-family:system-ui,-apple-system,sans-serif;text-align:center">
+          <div id="t" style="font-size:2rem;font-weight:800;color:#0E8388">
+            {segundos}</div>
+          <div style="background:#EAF3F3;border-radius:999px;height:10px;
+                      overflow:hidden;margin-top:6px">
+            <div id="bar" style="height:100%;background:#0E8388;width:100%"></div>
+          </div>
+        </div>
+        <script>
+          var total={segundos}, restante={segundos};
+          var el=document.getElementById('t'), bar=document.getElementById('bar');
+          var iv=setInterval(function(){{
+            restante-=0.1;
+            if(restante<=0){{
+              restante=0; clearInterval(iv);
+              el.textContent='Tempo esgotado'; el.style.color='#C0392B';
+            }} else {{ el.textContent=Math.ceil(restante); }}
+            bar.style.width=(100*restante/total)+'%';
+            if(restante<=total*0.3){{
+              bar.style.background='#C0392B'; el.style.color='#C0392B';
+            }}
+          }},100);
+        </script>
+        """
+    # st.iframe é a API atual (Streamlit recente); cai para components.html
+    # em versões antigas.
+    if hasattr(st, "iframe"):
+        st.iframe(html, height=95)
+    else:  # pragma: no cover
+        import streamlit.components.v1 as components
+
+        components.html(html, height=95)
+
+
+def render_plantao() -> None:
+    quiz = st.session_state.plantao_quiz
+    total = len(quiz)
+    idx = st.session_state.plantao_indice
+    perfil = st.session_state.perfil
+
+    st.markdown("### 🚨 Modo Plantão")
+
+    # ---- Fim da sessão ----
+    if idx >= total:
+        score = st.session_state.plantao_score
+        acertos = st.session_state.plantao_acertos
+        novo_recorde = score > perfil.recorde_plantao
+        if novo_recorde:
+            perfil.recorde_plantao = score
+            salvar()
+
+        st.metric("Pontuação", score)
+        st.caption(
+            f"{acertos} de {total} acertos · recorde: {perfil.recorde_plantao}"
+        )
+        if novo_recorde and score > 0:
+            st.success("🏆 Novo recorde!")
+            st.balloons()
+        if st.button("Sair do plantão", type="primary", use_container_width=True):
+            reiniciar()
+            st.rerun()
+        return
+
+    questao = quiz[idx]
+
+    # Marca o início do cronômetro na primeira exibição desta questão.
+    if st.session_state.get("plantao_inicio_idx") != idx:
+        st.session_state.plantao_inicio = time.time()
+        st.session_state.plantao_inicio_idx = idx
+
+    respondida = st.session_state.plantao_respondida
+    st.caption(
+        f"Questão {idx + 1} de {total}  ·  Pontos: {st.session_state.plantao_score}"
+    )
+    if not respondida:
+        _timer_visual(plantao.LIMITE_SEG)
+
+    with st.container(border=True):
+        st.markdown(
+            f'<span class="tag">{questao["categoria"]}</span>', unsafe_allow_html=True
+        )
+        st.markdown(f"**{questao['pergunta']}**")
+
+        escolha = st.radio(
+            "Selecione uma alternativa:",
+            options=list(range(len(questao["opcoes"]))),
+            format_func=lambda i: questao["opcoes"][i],
+            index=None,
+            key=f"plradio_{idx}",
+            disabled=respondida,
+        )
+
+        if not respondida:
+            if st.button("Responder", type="primary", use_container_width=True):
+                if escolha is None:
+                    st.warning("Escolha uma alternativa antes de responder.")
+                else:
+                    elapsed = time.time() - st.session_state.plantao_inicio
+                    acertou = escolha == questao["correta"]
+                    expirou = plantao.expirou(elapsed)
+                    pontos = plantao.pontuar(acertou, elapsed)
+
+                    st.session_state.plantao_escolha = escolha
+                    st.session_state.plantao_respondida = True
+                    st.session_state.plantao_score += pontos
+                    if acertou:
+                        st.session_state.plantao_acertos += 1
+                    st.session_state.plantao_ultimo = {
+                        "acertou": acertou, "expirou": expirou,
+                        "pontos": pontos, "elapsed": elapsed,
+                    }
+                    # Conta como estudo normal (XP / moedas / revisão / conquistas).
+                    gam.registrar_resposta(
+                        perfil, questao["categoria"], acertou, hoje=HOJE,
+                        bonus_xp_pct=EFEITOS["xp_pct"],
+                        bonus_moedas=EFEITOS["moeda_flat"],
+                    )
+                    revisao.registrar(
+                        perfil.revisao, revisao.qid(questao["pergunta"]), acertou, HOJE
+                    )
+                    _verificar_conquistas(perfil)
+                    salvar()
+                    st.rerun()
+        else:
+            correta = questao["correta"]
+            u = st.session_state.plantao_ultimo
+            if u["expirou"]:
+                st.error(
+                    f"⏱️ Tempo esgotado! +0 pontos. Resposta certa: "
+                    f"**{questao['opcoes'][correta]}**"
+                )
+            elif u["acertou"]:
+                st.success(
+                    f"Correto! **+{u['pontos']} pontos** · {u['elapsed']:.1f}s"
+                )
+            else:
+                st.error(
+                    f"Incorreto. Resposta certa: **{questao['opcoes'][correta]}**"
+                )
+
+            rotulo = "Próxima" if idx + 1 < total else "Ver resultado"
+            if st.button(rotulo, type="primary", use_container_width=True):
+                st.session_state.plantao_indice += 1
+                st.session_state.plantao_respondida = False
+                st.session_state.plantao_escolha = None
+                st.session_state.plantao_ultimo = None
+                st.rerun()
+
+
 barra_xp()
 bloco_ofensiva()
 st.divider()
@@ -734,6 +895,30 @@ if not st.session_state.iniciado:
                 st.session_state.iniciado = True
                 st.rerun()
 
+        # --- Modo Plantão (cronometrado) ---
+        with st.container(border=True):
+            st.markdown(
+                f"**🚨 Modo Plantão** — {plantao.QUESTOES} questões, "
+                f"{plantao.LIMITE_SEG}s cada, pontos por velocidade."
+            )
+            st.caption(f"🏆 Recorde: {perfil.recorde_plantao} pontos")
+            if st.button("Começar plantão", use_container_width=True):
+                emerg = filtrar(BANCO, "Emergência")
+                fonte = emerg if len(emerg) >= plantao.QUESTOES else BANCO
+                st.session_state.plantao_quiz = preparar_quiz(
+                    fonte, "Todas", plantao.QUESTOES
+                )
+                st.session_state.plantao_indice = 0
+                st.session_state.plantao_score = 0
+                st.session_state.plantao_acertos = 0
+                st.session_state.plantao_respondida = False
+                st.session_state.plantao_escolha = None
+                st.session_state.plantao_ultimo = None
+                st.session_state.plantao_inicio_idx = -1
+                st.session_state.modo = "plantao"
+                st.session_state.iniciado = True
+                st.rerun()
+
         st.caption(
             f"{len(BANCO)} questões no banco. "
             "Uso educacional — não substitui protocolos oficiais nem julgamento "
@@ -750,6 +935,10 @@ if not st.session_state.iniciado:
 # Tela de questões / resultado
 # ---------------------------------------------------------------------------
 else:
+    if st.session_state.get("modo") == "plantao":
+        render_plantao()
+        st.stop()
+
     quiz = st.session_state.quiz
     total = len(quiz)
     indice = st.session_state.indice

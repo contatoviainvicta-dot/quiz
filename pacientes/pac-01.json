@@ -61,6 +61,98 @@
       "tema": "Emergência"
     },
     {
+  "id": "cetoacidose-maria-01",
+  "nome": "Maria Eduarda",
+  "idade": "11 anos",
+  "sexo": "feminino",
+  "comorbidades": "Sem doenças conhecidas",
+  "historia": "Trazida ao pronto-socorro pela mãe devido a vômitos repetidos, dor abdominal intensa e sonolência. Nas últimas quatro semanas apresentou poliúria, polidipsia, emagrecimento de aproximadamente 5 kg e aumento do apetite. Nunca recebeu diagnóstico de diabetes.",
+  "momentos": [
+    {
+      "titulo": "Admissão",
+      "estado": "FR 38 irpm (respiração profunda), FC 145 bpm, PA 92x58 mmHg, SatO₂ 98% em ar ambiente, Glasgow 14.",
+      "texto": "A paciente encontra-se desidratada (+++/4+), com mucosas secas, enchimento capilar de 4 segundos e hálito cetônico evidente.",
+      "pergunta": "Qual deve ser a primeira conduta?",
+      "opcoes": [
+        "Iniciar reposição volêmica com SF 0,9%, monitorização e solicitar exames laboratoriais urgentes",
+        "Iniciar imediatamente insulina intravenosa antes da hidratação",
+        "Administrar bicarbonato de sódio imediatamente",
+        "Solicitar tomografia de abdome devido à dor abdominal"
+      ],
+      "correta": 0,
+      "explicacao": "Na cetoacidose diabética pediátrica a primeira etapa é estabilização hemodinâmica e reposição volêmica. A insulinoterapia deve ser iniciada após a expansão inicial e avaliação do potássio sérico. O bicarbonato raramente é indicado.",
+      "evolucao_boa": "Após expansão inicial, a perfusão periférica melhora e a frequência cardíaca reduz para 128 bpm.",
+      "evolucao_ruim": "A ausência de reposição volêmica mantém a hipoperfusão e aumenta o risco de choque."
+    },
+    {
+      "titulo": "Resultados laboratoriais",
+      "estado": "Glicemia 548 mg/dL, pH 7,08, HCO₃ 7 mEq/L, cetonemia positiva, Na corrigido 134 mEq/L, K 5,5 mEq/L.",
+      "texto": "Os exames confirmam o diagnóstico de cetoacidose diabética grave.",
+      "pergunta": "Qual a próxima conduta?",
+      "opcoes": [
+        "Iniciar infusão contínua de insulina regular 0,05-0,1 U/kg/h sem bolus",
+        "Aplicar bolus intravenoso de insulina regular",
+        "Administrar glicose hipertônica",
+        "Suspender hidratação e aguardar novos exames"
+      ],
+      "correta": 0,
+      "explicacao": "Em Pediatria não se utiliza bolus de insulina na cetoacidose diabética devido ao maior risco de edema cerebral. A infusão contínua é iniciada após a expansão inicial.",
+      "evolucao_boa": "A glicemia inicia queda gradual, mantendo redução inferior a 100 mg/dL por hora.",
+      "evolucao_ruim": "O bolus de insulina aumenta significativamente o risco de edema cerebral."
+    },
+    {
+      "titulo": "Quatro horas depois",
+      "estado": "Glicemia 265 mg/dL, pH 7,18, bicarbonato 12 mEq/L, FC 118 bpm.",
+      "texto": "A paciente apresenta melhora clínica importante. A glicemia aproxima-se de 250 mg/dL.",
+      "pergunta": "Qual deve ser a conduta neste momento?",
+      "opcoes": [
+        "Adicionar glicose à hidratação mantendo a infusão de insulina",
+        "Suspender imediatamente a insulina",
+        "Retirar toda hidratação venosa",
+        "Administrar bicarbonato porque o pH ainda está baixo"
+      ],
+      "correta": 0,
+      "explicacao": "Quando a glicemia aproxima-se de 250 mg/dL deve-se adicionar glicose ao soro para permitir a continuidade da insulinoterapia até resolução da cetose.",
+      "evolucao_boa": "A acidose continua melhorando enquanto ocorre correção gradual do distúrbio metabólico.",
+      "evolucao_ruim": "Suspender precocemente a insulina impede a resolução da cetose e favorece recorrência da acidose."
+    },
+    {
+      "titulo": "Complicação inesperada",
+      "estado": "Duas horas depois, Maria apresenta cefaleia intensa, irritabilidade, queda da frequência cardíaca para 68 bpm e elevação da pressão arterial.",
+      "texto": "A equipe suspeita de uma complicação potencialmente fatal.",
+      "pergunta": "Qual é a melhor conduta?",
+      "opcoes": [
+        "Suspeitar de edema cerebral, elevar a cabeceira e administrar manitol ou solução salina hipertônica imediatamente",
+        "Aumentar a velocidade da insulina",
+        "Administrar sedativos e observar",
+        "Suspender todo tratamento e solicitar ressonância magnética antes de qualquer medida"
+      ],
+      "correta": 0,
+      "explicacao": "Edema cerebral é a complicação mais grave da cetoacidose diabética em crianças. O tratamento deve ser imediato, sem aguardar exames de imagem.",
+      "evolucao_boa": "Após tratamento, a paciente estabiliza neurologicamente e é encaminhada para UTI pediátrica.",
+      "evolucao_ruim": "O atraso no tratamento aumenta significativamente a mortalidade e o risco de sequelas neurológicas."
+    },
+    {
+      "titulo": "Alta hospitalar",
+      "estado": "Após quatro dias de internação, encontra-se lúcida, hidratada e com glicemias controladas.",
+      "texto": "A família pergunta quais orientações são fundamentais para evitar nova internação.",
+      "pergunta": "Qual orientação é a mais importante?",
+      "opcoes": [
+        "Educação em diabetes, técnica correta de aplicação de insulina, monitorização glicêmica e reconhecimento precoce de sinais de descompensação",
+        "Suspender a insulina quando a glicemia estiver normal",
+        "Retirar carboidratos completamente da alimentação",
+        "Utilizar apenas hipoglicemiantes orais"
+      ],
+      "correta": 0,
+      "explicacao": "A educação em diabetes é parte essencial do tratamento e reduz significativamente novas internações por cetoacidose.",
+      "evolucao_boa": "A família demonstra segurança para realizar o tratamento domiciliar e agenda acompanhamento com endocrinologia pediátrica.",
+      "evolucao_ruim": "Orientações inadequadas aumentam o risco de nova cetoacidose e complicações futuras."
+    }
+  ],
+  "desfecho": "Maria recebeu diagnóstico de Diabetes Mellitus tipo 1. Após tratamento da cetoacidose, iniciou esquema basal-bolus com insulina, recebeu educação diabetológica completa e recebeu alta para acompanhamento ambulatorial especializado.",
+  "tema": "Endocrinologia / Emergência"
+},
+    {
       "id": "convulsao-sofia-01",
       "nome": "Sofia",
       "idade": "18 meses",

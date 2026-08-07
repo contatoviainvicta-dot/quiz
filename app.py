@@ -25,6 +25,7 @@ import diagnostico as diag_mod
 import pacientes as pac_mod
 import persistencia
 import plantao
+import progressao
 import revisao
 from quiz_engine import (
     QuestaoInvalida,
@@ -117,6 +118,16 @@ st.markdown(
                   color:#7A8C8C; font-weight:700; }
     .carta .ef { font-size:.62rem; color:#0E8388; font-weight:700;
                  margin-top:3px; line-height:1.1; }
+    .trilha { display:flex; flex-direction:column; gap:6px; margin-top:.4rem; }
+    .patente { display:flex; align-items:center; gap:12px; padding:10px 12px;
+               border-radius:12px; border:1px solid #E6EEEE; background:#fff; }
+    .patente .ico { font-size:1.6rem; width:2.1rem; text-align:center; }
+    .patente .nome { font-weight:700; color:#1B2A2A; }
+    .patente .req { font-size:.72rem; color:#7A8C8C; }
+    .patente.feita { border-color:#BFE0DF; }
+    .patente.feita .nome { color:#0E8388; }
+    .patente.atual { background:#EAF3F3; border:2px solid #0E8388; }
+    .patente.bloq { opacity:.5; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -1372,6 +1383,68 @@ def render_boss() -> None:
                 st.rerun()
 
 
+def render_carreira(perfil) -> None:
+    xp = perfil.xp_total
+    prog = progressao.progresso(xp)
+    atual = prog["atual"]
+    prox = prog["proxima"]
+    idx_atual = progressao.indice_atual(xp)
+
+    st.markdown("**🗺️ Mapa de progressão** — de Interno(a) a Professor(a).")
+    st.markdown(f"### {atual['emoji']} {atual['nome']}")
+    if prox is not None:
+        st.progress(prog["pct"])
+        st.caption(
+            f"{xp} XP · faltam **{prog['faltam']} XP** para "
+            f"{prox['emoji']} {prox['nome']}"
+        )
+    else:
+        st.success("🏆 Título máximo alcançado: Professor(a)!")
+
+    # Trilha de patentes.
+    blocos = []
+    for i, n in enumerate(progressao.NIVEIS):
+        if i < idx_atual:
+            classe, status = "patente feita", "✓ alcançado"
+        elif i == idx_atual:
+            classe, status = "patente atual", "você está aqui"
+        else:
+            classe, status = "patente bloq", f"faltam {n['xp'] - xp} XP"
+        blocos.append(
+            f'<div class="{classe}"><div class="ico">{n["emoji"]}</div>'
+            f'<div><div class="nome">{n["nome"]}</div>'
+            f'<div class="req">{n["xp"]} XP · {status}</div></div></div>'
+        )
+    st.markdown(f'<div class="trilha">{"".join(blocos)}</div>', unsafe_allow_html=True)
+
+    # Panorama — amarra todos os modos.
+    st.divider()
+    st.markdown("**Panorama da carreira**")
+    nivel, _, _ = gam.nivel_por_xp(xp)
+    casos_f = len(perfil.casos_completos)
+    diag_f = len(perfil.diagnosticos_completos)
+    boss_f = len(perfil.bosses_vencidos)
+    med_f = len(perfil.conquistas)
+    st.markdown(
+        _cards_html(
+            [
+                ("Nível", str(nivel), f"{xp} XP"),
+                ("Casos", f"{casos_f}/{len(CASOS)}", "clínicos"),
+                ("Diagnósticos", f"{diag_f}/{len(DIAGS)}", "resolvidos"),
+                ("Pacientes", str(len(perfil.historico_pacientes)), "atendidos"),
+                ("Bosses", f"{boss_f}/{len(boss_mod.BOSSES)}", "derrotados"),
+                ("Plantão", str(perfil.recorde_plantao), "recorde"),
+                ("Medalhas", f"{med_f}/{len(conquistas.CONQUISTAS)}", "conquistas"),
+            ]
+        ),
+        unsafe_allow_html=True,
+    )
+    st.caption(
+        "Cada modo — quiz, plantão, casos, diagnósticos, pacientes e bosses — "
+        "soma XP e faz você subir na carreira."
+    )
+
+
 barra_xp()
 bloco_ofensiva()
 st.divider()
@@ -1382,8 +1455,8 @@ st.divider()
 # ---------------------------------------------------------------------------
 if not st.session_state.iniciado:
     perfil = st.session_state.perfil
-    aba_estudar, aba_dash, aba_cartas = st.tabs(
-        ["📚 Estudar", "📊 Dashboard", "🃏 Cartas"]
+    aba_estudar, aba_dash, aba_carreira, aba_cartas = st.tabs(
+        ["📚 Estudar", "📊 Dashboard", "🗺️ Carreira", "🃏 Cartas"]
     )
 
     with aba_estudar:
@@ -1610,6 +1683,9 @@ if not st.session_state.iniciado:
 
     with aba_dash:
         render_dashboard(perfil)
+
+    with aba_carreira:
+        render_carreira(perfil)
 
     with aba_cartas:
         render_cartas(perfil)

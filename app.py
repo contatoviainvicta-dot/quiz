@@ -43,9 +43,66 @@ st.set_page_config(page_title="Quiz de Pediatria", page_icon="🩺", layout="cen
 st.markdown(
     """
     <style>
-    .cabecalho { font-size: 2.0rem; font-weight: 800; letter-spacing: -0.5px;
-                 margin-bottom: 0.1rem; }
-    .subtitulo { color: #4A6363; margin-top: 0; margin-bottom: 1.2rem; }
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap');
+
+    :root {
+      --tinta:#153A35; --teal:#0E8388; --teal-2:#0A6A6E;
+      --menta:#EAF3F3; --menta-borda:#D6E8E7; --papel:#F6FBFA;
+      --ouro:#E6A700; --cinza:#6E8582;
+    }
+
+    /* Tipografia global */
+    .stApp, .stApp p, .stApp li, .stApp label, .stApp span,
+    .stApp div, .stMarkdown {
+      font-family:'Nunito Sans', system-ui, sans-serif;
+    }
+    .stApp h1, .stApp h2, .stApp h3, .cabecalho, .kpi .valor,
+    .patente .nome, .carta-reveal .nome {
+      font-family:'Baloo 2', system-ui, sans-serif; letter-spacing:.2px;
+    }
+    .stApp code, .stApp pre { font-family:ui-monospace, monospace; }
+
+    /* Botões */
+    .stButton > button {
+      border-radius:12px; font-weight:800; padding:.5rem 1rem;
+      border:1px solid var(--menta-borda);
+      transition:transform .06s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .stButton > button:hover { transform:translateY(-1px);
+      box-shadow:0 4px 14px rgba(14,131,136,.18); border-color:var(--teal); }
+    .stButton > button:active { transform:translateY(0); }
+    .stButton > button[kind="primary"],
+    .stButton button[data-testid="stBaseButton-primary"],
+    .stButton button[data-testid="baseButton-primary"] {
+      background:linear-gradient(135deg,var(--teal),var(--teal-2));
+      border:none; color:#fff; box-shadow:0 2px 8px rgba(14,131,136,.28); }
+    .stButton > button[kind="primary"]:hover,
+    .stButton button[data-testid="stBaseButton-primary"]:hover,
+    .stButton button[data-testid="baseButton-primary"]:hover {
+      box-shadow:0 7px 20px rgba(14,131,136,.34); }
+
+    /* Container com borda */
+    [data-testid="stVerticalBlockBorderWrapper"] {
+      border-radius:16px !important; border-color:var(--menta-borda) !important;
+      box-shadow:0 1px 3px rgba(20,60,55,.05); }
+
+    /* Abas */
+    .stTabs [data-baseweb="tab-list"] { gap:4px; }
+    .stTabs [data-baseweb="tab"] { border-radius:10px 10px 0 0;
+      font-weight:800; padding:6px 14px; }
+    .stTabs [aria-selected="true"] { color:var(--teal); }
+
+    /* Barra de progresso arredondada */
+    .stProgress > div > div > div > div { border-radius:999px; }
+
+    /* Hero */
+    .cabecalho { font-size:2.35rem; font-weight:800; letter-spacing:-.5px;
+                 line-height:1.08; margin-bottom:.1rem;
+                 background:linear-gradient(90deg,var(--teal),#13A6AC);
+                 -webkit-background-clip:text; background-clip:text;
+                 -webkit-text-fill-color:transparent; }
+    .subtitulo { color:var(--cinza); margin-top:0; margin-bottom:1.1rem;
+                 font-size:.95rem; }
     .tag { display:inline-block; background:#EAF3F3; color:#0E8388;
            padding:2px 10px; border-radius:999px; font-size:0.8rem;
            font-weight:600; margin-bottom:0.6rem; }
@@ -128,6 +185,17 @@ st.markdown(
     .patente.feita .nome { color:#0E8388; }
     .patente.atual { background:#EAF3F3; border:2px solid #0E8388; }
     .patente.bloq { opacity:.5; }
+
+    /* Micro-interações e refinos */
+    .kpi, .medalha, .carta, .patente {
+      transition:transform .08s ease, box-shadow .15s ease; }
+    .kpi:hover, .medalha:hover, .patente:hover, .carta:hover {
+      transform:translateY(-1px); box-shadow:0 5px 16px rgba(14,131,136,.12); }
+    .barra > span { background:linear-gradient(90deg,#0E8388,#13A6AC); }
+    .kpi .valor { background:linear-gradient(90deg,#0E8388,#13A6AC);
+      -webkit-background-clip:text; background-clip:text;
+      -webkit-text-fill-color:transparent; }
+    .patente.atual { box-shadow:0 4px 16px rgba(14,131,136,.16); }
     </style>
     """,
     unsafe_allow_html=True,

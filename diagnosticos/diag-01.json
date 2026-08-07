@@ -36,6 +36,157 @@
       "explicacao": "Dor periumbilical que migra para a fossa ilíaca direita, com anorexia, febre e sinais de irritação peritoneal, é o quadro clássico de apendicite aguda. O diagnóstico é primariamente CLÍNICO — exames (hemograma, PCR, ultrassom) ajudam nos casos duvidosos, mas nem sempre são necessários. Gastroenterite costuma ter diarreia e dor difusa; ITU teria alterações na urina; constipação não dá irritação peritoneal."
     },
     {
+      "id": "miocardite-viral-02",
+      "titulo": "Taquicardia persistente após infecção viral",
+      "apresentacao": "Menino de 8 anos procura atendimento por fadiga intensa, dor abdominal, náuseas e dificuldade para acompanhar os colegas durante brincadeiras. Há cerca de oito dias apresentou quadro compatível com infecção viral de vias aéreas superiores. A mãe percebe que o coração permanece acelerado mesmo quando ele está em repouso.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "FC 162 bpm, PA 84/50 mmHg, extremidades frias, hepatomegalia de 3 cm e bulhas hipofonéticas."
+        },
+        {
+          "nome": "Radiografia de tórax",
+          "resultado": "Cardiomegalia discreta e congestão pulmonar."
+        },
+        {
+          "nome": "ECG",
+          "resultado": "Taquicardia sinusal com alterações inespecíficas da repolarização ventricular."
+        },
+        {
+          "nome": "Troponina",
+          "resultado": "Elevada."
+        },
+        {
+          "nome": "Ecocardiograma",
+          "resultado": "Hipocontratilidade difusa com fração de ejeção de 32%."
+        }
+      ],
+      "diagnosticos": [
+        "Pericardite aguda",
+        "Sepse bacteriana",
+        "Miocardite aguda",
+        "Cardiomiopatia hipertrófica"
+      ],
+      "correta": 2,
+      "explicacao": "A associação de infecção viral recente, insuficiência cardíaca aguda, taquicardia desproporcional, troponina elevada e disfunção sistólica difusa caracteriza miocardite aguda. Pericardite costuma apresentar dor torácica típica e derrame pericárdico; sepse geralmente cursa com foco infeccioso evidente; cardiomiopatia hipertrófica apresenta hipertrofia ventricular e não disfunção sistólica difusa."
+    },
+    {
+      "id": "pti-02",
+      "titulo": "Petéquias em criança previamente saudável",
+      "apresentacao": "Menina de 5 anos apresenta aparecimento súbito de petéquias e equimoses após quadro viral ocorrido há duas semanas. Está ativa, sem febre, sem perda ponderal e sem dor óssea.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "Petéquias difusas e equimoses em membros inferiores, sem linfonodomegalias ou hepatoesplenomegalia."
+        },
+        {
+          "nome": "Hemograma",
+          "resultado": "Plaquetas 11.000/mm³, hemoglobina e leucócitos normais."
+        },
+        {
+          "nome": "Coagulograma",
+          "resultado": "Normal."
+        },
+        {
+          "nome": "Reticulócitos",
+          "resultado": "Normais."
+        }
+      ],
+      "diagnosticos": [
+        "Vasculite por IgA",
+        "Leucemia linfoblástica aguda",
+        "Púrpura trombocitopênica imune",
+        "Meningococcemia"
+      ],
+      "correta": 2,
+      "explicacao": "A trombocitopenia isolada após infecção viral, sem anemia, sem leucopenia, sem blastos e sem organomegalias favorece púrpura trombocitopênica imune. Leucemia costuma apresentar outras alterações hematológicas; vasculite por IgA não cursa com trombocitopenia; meningococcemia apresenta toxemia importante."
+    },
+    {
+      "id": "torsao-testicular-01",
+      "titulo": "Dor escrotal súbita em adolescente",
+      "apresentacao": "Adolescente de 13 anos acorda durante a madrugada com dor intensa em bolsa escrotal esquerda associada a náuseas e um episódio de vômito. Nega trauma e febre.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "Testículo esquerdo elevado, horizontalizado, extremamente doloroso e ausência do reflexo cremastérico."
+        },
+        {
+          "nome": "Urina tipo I",
+          "resultado": "Sem alterações."
+        },
+        {
+          "nome": "Ultrassonografia Doppler",
+          "resultado": "Fluxo sanguíneo ausente no testículo esquerdo."
+        }
+      ],
+      "diagnosticos": [
+        "Orquite viral",
+        "Epididimite",
+        "Hérnia inguinal encarcerada",
+        "Torção testicular"
+      ],
+      "correta": 3,
+      "explicacao": "Dor súbita intensa, ausência do reflexo cremastérico e Doppler sem fluxo confirmam torção testicular. Trata-se de emergência cirúrgica, idealmente corrigida nas primeiras 6 horas para maximizar a viabilidade testicular."
+    },
+    {
+      "id": "osteomielite-01",
+      "titulo": "Febre e dor intensa em membro inferior",
+      "apresentacao": "Menino de 9 anos apresenta febre alta há quatro dias e dor intensa na região proximal da tíbia esquerda, recusando apoiar o membro. Não há história de trauma significativo.",
+      "exames": [
+        {
+          "nome": "Exame físico",
+          "resultado": "Dor localizada importante, aumento de temperatura e edema discreto."
+        },
+        {
+          "nome": "Hemograma",
+          "resultado": "Leucocitose de 22.400/mm³."
+        },
+        {
+          "nome": "PCR",
+          "resultado": "256 mg/L."
+        },
+        {
+          "nome": "Ressonância Magnética",
+          "resultado": "Edema medular compatível com osteomielite aguda."
+        }
+      ],
+      "diagnosticos": [
+        "Osteomielite aguda hematogênica",
+        "Artrite idiopática juvenil",
+        "Sarcoma de Ewing",
+        "Sinovite transitória"
+      ],
+      "correta": 0,
+      "explicacao": "A combinação de febre, marcadores inflamatórios elevados e edema medular na ressonância é característica de osteomielite aguda hematogênica. Sarcoma de Ewing pode simular o quadro, porém costuma ter evolução mais arrastada e alterações radiográficas características."
+    },
+    {
+      "id": "hipertensao-endocraniana-01",
+      "titulo": "Cefaleia progressiva e vômitos matinais",
+      "apresentacao": "Menino de 10 anos apresenta cefaleia progressiva há dois meses, predominando ao despertar, associada a vômitos matinais e dificuldade escolar recente. A mãe percebe alterações na marcha nas últimas semanas.",
+      "exames": [
+        {
+          "nome": "Exame neurológico",
+          "resultado": "Papiledema bilateral, discreta ataxia e marcha alargada."
+        },
+        {
+          "nome": "Tomografia de crânio",
+          "resultado": "Hidrocefalia supratentorial."
+        },
+        {
+          "nome": "Ressonância Magnética",
+          "resultado": "Massa expansiva em fossa posterior comprimindo o quarto ventrículo."
+        }
+      ],
+      "diagnosticos": [
+        "Enxaqueca",
+        "Meduloblastoma",
+        "Abscesso cerebral",
+        "Meningite bacteriana"
+      ],
+      "correta": 1,
+      "explicacao": "Cefaleia matinal progressiva, vômitos em jato, papiledema, ataxia e hidrocefalia secundária a lesão de fossa posterior sugerem meduloblastoma, o tumor maligno de fossa posterior mais frequente na infância. Enxaqueca e meningite não explicam a evolução crônica com hipertensão intracraniana."
+    },
+    {
       "id": "icter-neonatal-01",
       "titulo": "Recém-nascido amarelado",
       "apresentacao": "Recém-nascido de 4 dias de vida, a termo, trazido por icterícia percebida a partir do 2º dia. Mama bem, ativo, sem febre ou outros sinais. Boa diurese e evacuações.",

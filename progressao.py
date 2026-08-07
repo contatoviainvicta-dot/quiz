@@ -14,7 +14,7 @@ NIVEIS = [
     {"id": "r1", "emoji": "📋", "nome": "Residente R1", "xp": 1500},
     {"id": "r2", "emoji": "📈", "nome": "Residente R2", "xp": 3500},
     {"id": "especialista", "emoji": "🎓", "nome": "Especialista", "xp": 7000},
-    {"id": "preceptor", "emoji": "🧑‍🏫", "nome": "Preceptor(a)", "xp": 12000},
+    {"id": "preceptor", "emoji": "🏦", "nome": "Preceptor(a)", "xp": 12000},
     {"id": "professor", "emoji": "👑", "nome": "Professor(a)", "xp": 18000},
 ]
 

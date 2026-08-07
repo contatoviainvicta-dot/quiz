@@ -85,6 +85,602 @@
       ]
     },
     {
+  "id": "meningococcemia-01",
+  "titulo": "Escolar com febre alta e manchas na pele",
+  "resumo": "Menino de 7 anos com febre alta e lesões cutâneas de rápida progressão.",
+  "nivel": "difícil",
+  "etapas": [
+    {
+      "tipo": "info",
+      "titulo": "Queixa principal",
+      "texto": "Menino de 7 anos chega ao pronto-socorro com febre alta iniciada há cerca de 10 horas, cefaleia intensa e vômitos. A mãe refere que ficou muito sonolento nas últimas duas horas."
+    },
+    {
+      "tipo": "info",
+      "titulo": "História clínica",
+      "texto": "Previamente saudável. Vacinação incompleta. Frequenta escola. Nega doenças prévias. Sem uso de medicamentos."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Primeira avaliação",
+      "texto": "PA 78x42 mmHg, FC 165 bpm, FR 38 irpm, TEC 5 segundos, extremidades frias, temperatura 39,8°C. Surgiram petéquias em membros inferiores.",
+      "pergunta": "Qual deve ser sua principal hipótese diagnóstica?",
+      "opcoes": [
+        "Dengue grave",
+        "Púrpura trombocitopênica imune",
+        "Meningococcemia",
+        "Leptospirose"
+      ],
+      "correta": 2,
+      "explicacao": "Choque associado a petéquias de rápida evolução deve ser considerado meningococcemia até prova em contrário."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Conduta inicial",
+      "texto": "Enquanto a equipe prepara acesso venoso, o paciente torna-se mais sonolento.",
+      "pergunta": "Qual a melhor conduta imediata?",
+      "opcoes": [
+        "Coletar culturas, iniciar ceftriaxona imediatamente e expansão volêmica",
+        "Solicitar tomografia antes do tratamento",
+        "Aguardar exames laboratoriais",
+        "Realizar apenas antitérmico"
+      ],
+      "correta": 0,
+      "explicacao": "Na suspeita de meningococcemia, antibiótico e tratamento do choque não devem ser retardados."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Resultados laboratoriais",
+      "texto": "Hemograma: leucócitos 23.000/mm³; plaquetas 58.000/mm³. PCR 312 mg/L. Lactato 5,8 mmol/L. Coagulograma compatível com CIVD."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Evolução",
+      "texto": "Mesmo após expansão inicial, a pressão permanece baixa.",
+      "pergunta": "Qual medida deve ser considerada?",
+      "opcoes": [
+        "Alta hospitalar",
+        "Reposição de ferro",
+        "Iniciar droga vasoativa em UTI",
+        "Suspender antibiótico"
+      ],
+      "correta": 2,
+      "explicacao": "Choque refratário após expansão exige terapia vasoativa e cuidados intensivos."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Profilaxia",
+      "texto": "Após estabilização, a família pergunta sobre os irmãos.",
+      "pergunta": "Qual orientação é correta?",
+      "opcoes": [
+        "Não é necessária nenhuma medida",
+        "Quimioprofilaxia dos contatos próximos",
+        "Vacinar apenas o paciente",
+        "Solicitar hemograma dos familiares"
+      ],
+      "correta": 1,
+      "explicacao": "Contatos íntimos devem receber quimioprofilaxia conforme protocolos vigentes."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Discussão",
+      "texto": "A meningococcemia é emergência pediátrica. O reconhecimento precoce do choque, o início imediato da antibioticoterapia e o suporte hemodinâmico reduzem significativamente a mortalidade."
+    },
+    {
+  "id": "kawasaki-01",
+  "titulo": "Pré-escolar com febre persistente",
+  "resumo": "Menino de 3 anos com febre há vários dias e exantema.",
+  "nivel": "intermediário",
+  "etapas": [
+    {
+      "tipo": "info",
+      "titulo": "Queixa principal",
+      "texto": "Menino de 3 anos é levado ao pronto-socorro por febre diária há 6 dias, chegando a 39,8°C. Os pais referem irritabilidade importante e pouca resposta aos antitérmicos."
+    },
+    {
+      "tipo": "info",
+      "titulo": "História clínica",
+      "texto": "Sem doenças prévias. Vacinação em dia. Há três dias surgiram olhos avermelhados, vermelhidão nos lábios e manchas pelo corpo. Nega tosse importante ou coriza."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Exame físico",
+      "texto": "Temperatura 39,4°C. Conjuntivite bilateral não purulenta. Lábios hiperemiados e fissurados. Língua em framboesa. Exantema polimorfo difuso. Linfonodo cervical direito de aproximadamente 2 cm. Edema de mãos e pés.",
+      "pergunta": "Qual a principal hipótese diagnóstica?",
+      "opcoes": [
+        "Escarlatina",
+        "Doença de Kawasaki",
+        "Sarampo",
+        "Mononucleose infecciosa"
+      ],
+      "correta": 1,
+      "explicacao": "Febre ≥5 dias associada a conjuntivite não purulenta, alterações orais, exantema, alterações de extremidades e linfonodomegalia cervical caracteriza Doença de Kawasaki clássica."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Avaliação complementar",
+      "texto": "O residente pergunta qual exame é mais importante para pesquisar a principal complicação da doença.",
+      "pergunta": "Qual exame deve ser solicitado?",
+      "opcoes": [
+        "Tomografia de crânio",
+        "Radiografia de tórax",
+        "Ecocardiograma",
+        "Ultrassonografia abdominal"
+      ],
+      "correta": 2,
+      "explicacao": "O ecocardiograma é indispensável para avaliar ectasias e aneurismas das artérias coronárias."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Resultados",
+      "texto": "Hemograma mostra leucocitose de 18.900/mm³ e plaquetas de 685.000/mm³. PCR 184 mg/L e VHS 92 mm/h. Ecocardiograma demonstra discreta ectasia da coronária direita."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Tratamento",
+      "texto": "O diagnóstico foi confirmado.",
+      "pergunta": "Qual é o tratamento recomendado na fase aguda?",
+      "opcoes": [
+        "Penicilina benzatina e prednisona",
+        "Ceftriaxona intravenosa por 10 dias",
+        "Imunoglobulina intravenosa associada ao ácido acetilsalicílico",
+        "Ibuprofeno em dose anti-inflamatória"
+      ],
+      "correta": 2,
+      "explicacao": "A imunoglobulina intravenosa (2 g/kg) administrada preferencialmente até o 10º dia de doença reduz significativamente o risco de aneurismas coronarianos. O AAS é utilizado conforme a fase da doença."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Evolução",
+      "texto": "Após 36 horas do tratamento, a criança permanece febril.",
+      "pergunta": "Como esse quadro é classificado?",
+      "opcoes": [
+        "Falha terapêutica com Doença de Kawasaki resistente à imunoglobulina",
+        "Tratamento concluído com sucesso",
+        "Complicação obrigatória da doença",
+        "Sepse bacteriana confirmada"
+      ],
+      "correta": 0,
+      "explicacao": "Persistência ou recorrência da febre após 36 horas da infusão de imunoglobulina caracteriza Doença de Kawasaki resistente, podendo exigir nova dose de imunoglobulina ou outras terapias imunomoduladoras."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Seguimento",
+      "texto": "A criança apresenta melhora clínica e os pais perguntam sobre o acompanhamento.",
+      "pergunta": "Qual acompanhamento é indispensável?",
+      "opcoes": [
+        "Apenas consulta com pediatra geral",
+        "Ecocardiogramas seriados e seguimento cardiológico",
+        "Hemograma semanal por seis meses",
+        "Tomografia cardíaca anual para todos os pacientes"
+      ],
+      "correta": 1,
+      "explicacao": "Todos os pacientes devem realizar acompanhamento cardiológico com ecocardiogramas seriados, especialmente aqueles com alterações coronarianas."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Discussão do caso",
+      "texto": "A Doença de Kawasaki é a principal causa de cardiopatia adquirida na infância em países desenvolvidos. O reconhecimento precoce e a administração de imunoglobulina intravenosa reduzem drasticamente o risco de aneurismas coronarianos."
+    },
+    {
+  "id": "purpura-henoch-01",
+  "titulo": "Escolar com dor abdominal e manchas nas pernas",
+  "resumo": "Menino de 8 anos apresenta dor abdominal e lesões cutâneas progressivas.",
+  "nivel": "difícil",
+  "etapas": [
+    {
+      "tipo": "info",
+      "titulo": "Queixa principal",
+      "texto": "Menino de 8 anos procura o pronto-socorro por dor abdominal intensa há aproximadamente 18 horas. A mãe refere que ontem surgiram pequenas manchas avermelhadas nas pernas."
+    },
+    {
+      "tipo": "info",
+      "titulo": "História clínica",
+      "texto": "Há cerca de dez dias apresentou infecção de vias aéreas superiores, tratada apenas com sintomáticos. Hoje refere dor em ambos os tornozelos e dificuldade para caminhar. Nega vômitos ou diarreia."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Exame físico",
+      "texto": "Temperatura 37,2°C. PA 108x68 mmHg. Lesões purpúricas palpáveis em membros inferiores e nádegas. Edema discreto em tornozelos. Abdome doloroso difusamente, sem sinais de irritação peritoneal.",
+      "pergunta": "Qual a principal hipótese diagnóstica neste momento?",
+      "opcoes": [
+        "Púrpura trombocitopênica imune",
+        "Meningococcemia",
+        "Vasculite por IgA (Púrpura de Henoch-Schönlein)",
+        "Leucemia aguda"
+      ],
+      "correta": 2,
+      "explicacao": "A associação entre púrpura palpável, artralgia e dor abdominal após infecção respiratória é altamente sugestiva de vasculite por IgA."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Investigação inicial",
+      "texto": "Você deseja avaliar possível acometimento renal.",
+      "pergunta": "Qual exame NÃO pode faltar na avaliação inicial?",
+      "opcoes": [
+        "Urina tipo I",
+        "Radiografia de tórax",
+        "Tomografia abdominal",
+        "Amilase sérica"
+      ],
+      "correta": 0,
+      "explicacao": "Todo paciente com suspeita de vasculite por IgA deve realizar avaliação urinária, pois hematúria e proteinúria podem indicar acometimento renal."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Resultados",
+      "texto": "Hemograma: Hb 12,6 g/dL; leucócitos 10.900/mm³; plaquetas 392.000/mm³. Coagulograma normal. Urina tipo I mostra hematúria microscópica e proteinúria discreta."
+    },
+    {
+      "tipo": "evento",
+      "titulo": "Nova evolução",
+      "texto": "Durante a observação, a dor abdominal torna-se intensa e contínua. A criança apresenta dois episódios de vômitos biliosos e passa a proteger o abdome durante a palpação."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Mudança do quadro",
+      "texto": "Você suspeita de uma complicação da doença.",
+      "pergunta": "Qual complicação deve ser investigada imediatamente?",
+      "opcoes": [
+        "Pancreatite aguda",
+        "Invaginação intestinal",
+        "Colecistite aguda",
+        "Perfuração gástrica"
+      ],
+      "correta": 1,
+      "explicacao": "A vasculite por IgA aumenta o risco de invaginação intestinal, principalmente ileoileal, sendo uma importante causa de abdome agudo nessa doença."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Exame complementar",
+      "texto": "A equipe solicita exame de imagem.",
+      "pergunta": "Qual exame é mais indicado?",
+      "opcoes": [
+        "Ultrassonografia abdominal",
+        "Colonoscopia",
+        "Tomografia de tórax",
+        "Endoscopia digestiva alta"
+      ],
+      "correta": 0,
+      "explicacao": "A ultrassonografia é o método de escolha para investigar invaginação intestinal e outras complicações abdominais da vasculite por IgA."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Resultado da ultrassonografia",
+      "texto": "Não há sinais de invaginação intestinal. Observa-se espessamento segmentar de alças intestinais compatível com vasculite intestinal."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Tratamento",
+      "texto": "A dor abdominal permanece importante, sem sinais de perfuração ou obstrução.",
+      "pergunta": "Qual a melhor conduta neste momento?",
+      "opcoes": [
+        "Alta imediata",
+        "Antibioticoterapia intravenosa",
+        "Corticoterapia devido ao acometimento gastrointestinal importante",
+        "Laparotomia exploradora"
+      ],
+      "correta": 2,
+      "explicacao": "Embora muitos casos sejam autolimitados, manifestações gastrointestinais intensas podem se beneficiar de corticoterapia, após exclusão de complicações cirúrgicas."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Discussão do caso",
+      "texto": "A vasculite por IgA é a vasculite mais frequente da infância. Além da púrpura palpável, artralgia e dor abdominal, o acompanhamento renal é obrigatório por vários meses, pois alterações urinárias podem surgir tardiamente."
+    },
+    {
+  "id": "kawasaki-01",
+  "titulo": "Pré-escolar com febre persistente",
+  "resumo": "Menino de 3 anos com febre há vários dias e exantema.",
+  "nivel": "intermediário",
+  "etapas": [
+    {
+      "tipo": "info",
+      "titulo": "Queixa principal",
+      "texto": "Menino de 3 anos é levado ao pronto-socorro por febre diária há 6 dias, chegando a 39,8°C. Os pais referem irritabilidade importante e pouca resposta aos antitérmicos."
+    },
+    {
+      "tipo": "info",
+      "titulo": "História clínica",
+      "texto": "Sem doenças prévias. Vacinação em dia. Há três dias surgiram olhos avermelhados, vermelhidão nos lábios e manchas pelo corpo. Nega tosse importante ou coriza."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Exame físico",
+      "texto": "Temperatura 39,4°C. Conjuntivite bilateral não purulenta. Lábios hiperemiados e fissurados. Língua em framboesa. Exantema polimorfo difuso. Linfonodo cervical direito de aproximadamente 2 cm. Edema de mãos e pés.",
+      "pergunta": "Qual a principal hipótese diagnóstica?",
+      "opcoes": [
+        "Escarlatina",
+        "Doença de Kawasaki",
+        "Sarampo",
+        "Mononucleose infecciosa"
+      ],
+      "correta": 1,
+      "explicacao": "Febre ≥5 dias associada a conjuntivite não purulenta, alterações orais, exantema, alterações de extremidades e linfonodomegalia cervical caracteriza Doença de Kawasaki clássica."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Avaliação complementar",
+      "texto": "O residente pergunta qual exame é mais importante para pesquisar a principal complicação da doença.",
+      "pergunta": "Qual exame deve ser solicitado?",
+      "opcoes": [
+        "Tomografia de crânio",
+        "Radiografia de tórax",
+        "Ecocardiograma",
+        "Ultrassonografia abdominal"
+      ],
+      "correta": 2,
+      "explicacao": "O ecocardiograma é indispensável para avaliar ectasias e aneurismas das artérias coronárias."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Resultados",
+      "texto": "Hemograma mostra leucocitose de 18.900/mm³ e plaquetas de 685.000/mm³. PCR 184 mg/L e VHS 92 mm/h. Ecocardiograma demonstra discreta ectasia da coronária direita."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Tratamento",
+      "texto": "O diagnóstico foi confirmado.",
+      "pergunta": "Qual é o tratamento recomendado na fase aguda?",
+      "opcoes": [
+        "Penicilina benzatina e prednisona",
+        "Ceftriaxona intravenosa por 10 dias",
+        "Imunoglobulina intravenosa associada ao ácido acetilsalicílico",
+        "Ibuprofeno em dose anti-inflamatória"
+      ],
+      "correta": 2,
+      "explicacao": "A imunoglobulina intravenosa (2 g/kg) administrada preferencialmente até o 10º dia de doença reduz significativamente o risco de aneurismas coronarianos. O AAS é utilizado conforme a fase da doença."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Evolução",
+      "texto": "Após 36 horas do tratamento, a criança permanece febril.",
+      "pergunta": "Como esse quadro é classificado?",
+      "opcoes": [
+        "Falha terapêutica com Doença de Kawasaki resistente à imunoglobulina",
+        "Tratamento concluído com sucesso",
+        "Complicação obrigatória da doença",
+        "Sepse bacteriana confirmada"
+      ],
+      "correta": 0,
+      "explicacao": "Persistência ou recorrência da febre após 36 horas da infusão de imunoglobulina caracteriza Doença de Kawasaki resistente, podendo exigir nova dose de imunoglobulina ou outras terapias imunomoduladoras."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Seguimento",
+      "texto": "A criança apresenta melhora clínica e os pais perguntam sobre o acompanhamento.",
+      "pergunta": "Qual acompanhamento é indispensável?",
+      "opcoes": [
+        "Apenas consulta com pediatra geral",
+        "Ecocardiogramas seriados e seguimento cardiológico",
+        "Hemograma semanal por seis meses",
+        "Tomografia cardíaca anual para todos os pacientes"
+      ],
+      "correta": 1,
+      "explicacao": "Todos os pacientes devem realizar acompanhamento cardiológico com ecocardiogramas seriados, especialmente aqueles com alterações coronarianas."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Discussão do caso",
+      "texto": "A Doença de Kawasaki é a principal causa de cardiopatia adquirida na infância em países desenvolvidos. O reconhecimento precoce e a administração de imunoglobulina intravenosa reduzem drasticamente o risco de aneurismas coronarianos."
+    },
+
+    {
+  "id": "cetoacidose-02",
+  "titulo": "Adolescente com dor abdominal e vômitos",
+  "resumo": "Menina de 12 anos apresenta dor abdominal intensa e rebaixamento progressivo do estado geral.",
+  "nivel": "difícil",
+  "etapas": [
+    {
+      "tipo": "info",
+      "titulo": "Queixa principal",
+      "texto": "Menina de 12 anos é levada ao pronto-socorro por dor abdominal intensa, vômitos repetidos e fraqueza há cerca de 24 horas."
+    },
+    {
+      "tipo": "info",
+      "titulo": "História clínica",
+      "texto": "A mãe relata que, nas últimas quatro semanas, a filha apresentou aumento importante da sede, urinava diversas vezes ao dia, perdeu aproximadamente 6 kg e passou a acordar durante a noite para beber água. Nega febre, diarreia ou uso de medicamentos."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Avaliação inicial",
+      "texto": "FC 148 bpm, FR 36 irpm com respiração profunda, PA 94x58 mmHg, SatO₂ 98%, mucosas secas, enchimento capilar de 4 segundos e hálito adocicado.",
+      "pergunta": "Qual hipótese diagnóstica deve ser priorizada?",
+      "opcoes": [
+        "Pancreatite aguda",
+        "Apendicite perfurada",
+        "Cetoacidose diabética",
+        "Sepse abdominal"
+      ],
+      "correta": 2,
+      "explicacao": "Poliúria, polidipsia, perda ponderal e respiração de Kussmaul são altamente sugestivos de cetoacidose diabética."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Exames iniciais",
+      "texto": "Você solicita exames laboratoriais.",
+      "pergunta": "Qual exame é indispensável para confirmar a hipótese diagnóstica?",
+      "opcoes": [
+        "Gasometria venosa",
+        "Ultrassonografia abdominal",
+        "Hemocultura",
+        "Amilase sérica"
+      ],
+      "correta": 0,
+      "explicacao": "A gasometria confirma a acidose metabólica e auxilia na classificação da gravidade."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Resultados laboratoriais",
+      "texto": "Glicemia 598 mg/dL. pH 7,05. HCO₃ 6 mEq/L. Cetonemia positiva. Potássio 5,7 mEq/L. Sódio corrigido 134 mEq/L."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Tratamento inicial",
+      "texto": "O diagnóstico está estabelecido.",
+      "pergunta": "Qual a melhor conduta inicial?",
+      "opcoes": [
+        "Insulina em bolus seguida de infusão",
+        "Reposição volêmica inicial com SF 0,9%, seguida posteriormente de insulina intravenosa contínua",
+        "Bicarbonato intravenoso imediatamente",
+        "Alta com insulina subcutânea"
+      ],
+      "correta": 1,
+      "explicacao": "A hidratação precede a insulinoterapia. Bolus de insulina não é recomendado em Pediatria devido ao risco aumentado de edema cerebral."
+    },
+    {
+      "tipo": "evento",
+      "titulo": "Complicação inesperada",
+      "texto": "Após quatro horas de tratamento, a paciente passa a apresentar cefaleia intensa, irritabilidade, queda da frequência cardíaca para 62 bpm e aumento da pressão arterial."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Reavaliação",
+      "texto": "Você suspeita de uma complicação potencialmente fatal.",
+      "pergunta": "Qual deve ser a conduta imediata?",
+      "opcoes": [
+        "Solicitar tomografia antes de qualquer intervenção",
+        "Suspender toda hidratação",
+        "Administrar manitol (ou solução salina hipertônica) e acionar a UTI imediatamente",
+        "Aumentar a velocidade da infusão de insulina"
+      ],
+      "correta": 2,
+      "explicacao": "Edema cerebral é a complicação mais grave da cetoacidose diabética pediátrica. O tratamento deve ser iniciado imediatamente, sem aguardar exames de imagem."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Evolução",
+      "texto": "Após tratamento imediato, a paciente estabiliza neurologicamente, mantém melhora da acidose e é transferida para a UTI Pediátrica."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Alta hospitalar",
+      "texto": "Cinco dias depois, encontra-se estável e inicia preparo para alta.",
+      "pergunta": "Qual orientação reduz mais o risco de nova cetoacidose?",
+      "opcoes": [
+        "Retirar carboidratos completamente da dieta",
+        "Suspender insulina quando a glicemia estiver normal",
+        "Educação em diabetes, monitorização glicêmica e reconhecimento precoce dos sinais de descompensação",
+        "Trocar insulina por hipoglicemiante oral"
+      ],
+      "correta": 2,
+      "explicacao": "A educação diabetológica é um dos pilares do tratamento e reduz significativamente novas internações por cetoacidose."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Discussão do caso",
+      "texto": "A cetoacidose diabética é uma emergência endocrinológica. O manejo adequado depende de reposição volêmica cuidadosa, insulinoterapia contínua, monitorização frequente dos eletrólitos e vigilância para edema cerebral, principal causa de mortalidade nessa condição."
+    },
+
+    {
+  "id": "sepse-neonatal-02",
+  "titulo": "Recém-nascido com recusa alimentar e hipotermia",
+  "resumo": "RN de 36 horas evolui com piora clínica progressiva.",
+  "nivel": "difícil",
+  "etapas": [
+    {
+      "tipo": "info",
+      "titulo": "Queixa principal",
+      "texto": "Recém-nascido masculino, 36 horas de vida, é levado ao alojamento conjunto por apresentar dificuldade para mamar e permanecer excessivamente sonolento nas últimas horas."
+    },
+    {
+      "tipo": "info",
+      "titulo": "História perinatal",
+      "texto": "Nascimento com 38 semanas, parto vaginal. A mãe apresentou febre intraparto (38,7°C), ruptura de membranas por aproximadamente 22 horas e líquido amniótico com odor fétido. Não recebeu antibioticoterapia antes do parto."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Primeira avaliação",
+      "texto": "Temperatura axilar 35,4°C, FC 182 bpm, FR 68 irpm, SatO₂ 93% em ar ambiente. Perfusão capilar de 4 segundos. Hipotônico e pouco reativo.",
+      "pergunta": "Qual deve ser sua principal hipótese diagnóstica?",
+      "opcoes": [
+        "Hipoglicemia transitória",
+        "Sepse neonatal precoce",
+        "Cardiopatia congênita crítica",
+        "Icterícia fisiológica"
+      ],
+      "correta": 1,
+      "explicacao": "Os fatores de risco maternos associados à hipotermia, recusa alimentar e letargia tornam a sepse neonatal precoce a principal hipótese."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Conduta inicial",
+      "texto": "Enquanto o acesso venoso está sendo obtido, o recém-nascido mantém má perfusão.",
+      "pergunta": "Qual deve ser a sequência mais adequada?",
+      "opcoes": [
+        "Coletar culturas, iniciar antibióticos empíricos e suporte hemodinâmico",
+        "Solicitar ultrassonografia transfontanelar antes do tratamento",
+        "Aguardar resultado da hemocultura",
+        "Administrar apenas glicose intravenosa"
+      ],
+      "correta": 0,
+      "explicacao": "Na suspeita de sepse neonatal, culturas devem ser coletadas antes da antibioticoterapia, porém o tratamento não deve ser retardado."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Primeiros exames",
+      "texto": "Hemograma: leucócitos 4.200/mm³, neutrófilos 900/mm³. PCR 48 mg/L. Gasometria: pH 7,24; lactato 4,8 mmol/L. Glicemia 61 mg/dL."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Interpretação",
+      "texto": "Os exames reforçam sua suspeita clínica.",
+      "pergunta": "Qual esquema antimicrobiano empírico é o mais utilizado para sepse neonatal precoce em recém-nascidos a termo, na ausência de fatores epidemiológicos especiais?",
+      "opcoes": [
+        "Vancomicina + Meropenem",
+        "Ampicilina + Gentamicina",
+        "Oxacilina + Ceftriaxona",
+        "Cefepime isoladamente"
+      ],
+      "correta": 1,
+      "explicacao": "Ampicilina associada à gentamicina permanece o esquema empírico clássico para sepse neonatal precoce em muitos protocolos."
+    },
+    {
+      "tipo": "evento",
+      "titulo": "Mudança do quadro",
+      "texto": "Trinta minutos após o início do tratamento, o monitor evidencia queda progressiva da saturação para 84%, aumento da FR para 82 irpm e episódios de apneia de aproximadamente 15 segundos."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Nova prioridade",
+      "texto": "O recém-nascido apresenta piora respiratória importante.",
+      "pergunta": "Qual deve ser a prioridade imediata?",
+      "opcoes": [
+        "Transferência imediata para UTI neonatal com estabilização da via aérea e suporte ventilatório",
+        "Suspender os antibióticos",
+        "Administrar apenas oxigênio em baixo fluxo e observar",
+        "Solicitar ecocardiograma antes de qualquer intervenção"
+      ],
+      "correta": 0,
+      "explicacao": "A presença de apneia e insuficiência respiratória exige estabilização imediata da via aérea e suporte intensivo."
+    },
+    {
+      "tipo": "evento",
+      "titulo": "Resultado da hemocultura",
+      "texto": "Após 36 horas, a hemocultura evidencia crescimento de Streptococcus agalactiae (Estreptococo do grupo B), sensível ao esquema instituído."
+    },
+    {
+      "tipo": "decisao",
+      "titulo": "Orientação aos pais",
+      "texto": "Após melhora clínica, os pais perguntam se a doença poderia ter sido prevenida.",
+      "pergunta": "Qual medida reduz significativamente a incidência de sepse neonatal precoce por estreptococo do grupo B?",
+      "opcoes": [
+        "Vacinação da gestante no terceiro trimestre",
+        "Antibioticoterapia do recém-nascido logo após o nascimento",
+        "Profilaxia antibiótica intraparto nas gestantes elegíveis",
+        "Cesariana eletiva para todas as gestantes colonizadas"
+      ],
+      "correta": 2,
+      "explicacao": "A profilaxia antibiótica intraparto nas gestantes colonizadas ou com fatores de risco reduz drasticamente a sepse neonatal precoce por estreptococo do grupo B."
+    },
+    {
+      "tipo": "info",
+      "titulo": "Discussão do caso",
+      "texto": "A sepse neonatal precoce permanece uma das principais causas de morbimortalidade neonatal. O reconhecimento precoce dos fatores de risco maternos, associado ao tratamento imediato, é determinante para o prognóstico."
+    },
+
+    
+    {
       "id": "diarreia-01",
       "titulo": "Criança com diarreia e vômitos",
       "resumo": "Menina de 18 meses com diarreia aquosa há 2 dias.",

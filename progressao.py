@@ -10,12 +10,12 @@ from __future__ import annotations
 
 NIVEIS = [
     {"id": "interno", "emoji": "🩺", "nome": "Interno(a)", "xp": 0},
-    {"id": "plantonista", "emoji": "🥼", "nome": "Médico(a) Plantonista", "xp": 250},
-    {"id": "r1", "emoji": "📋", "nome": "Residente R1", "xp": 700},
-    {"id": "r2", "emoji": "📈", "nome": "Residente R2", "xp": 1400},
-    {"id": "especialista", "emoji": "🎓", "nome": "Especialista", "xp": 2400},
-    {"id": "preceptor", "emoji": "🧑‍🏫", "nome": "Preceptor(a)", "xp": 3800},
-    {"id": "professor", "emoji": "👑", "nome": "Professor(a)", "xp": 5500},
+    {"id": "plantonista", "emoji": "🥼", "nome": "Médico(a) Plantonista", "xp": 500},
+    {"id": "r1", "emoji": "📋", "nome": "Residente R1", "xp": 1500},
+    {"id": "r2", "emoji": "📈", "nome": "Residente R2", "xp": 3500},
+    {"id": "especialista", "emoji": "🎓", "nome": "Especialista", "xp": 7000},
+    {"id": "preceptor", "emoji": "🧑‍🏫", "nome": "Preceptor(a)", "xp": 12000},
+    {"id": "professor", "emoji": "👑", "nome": "Professor(a)", "xp": 18000},
 ]
 
 

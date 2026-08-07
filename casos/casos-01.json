@@ -678,7 +678,455 @@
       "titulo": "Discussão do caso",
       "texto": "A sepse neonatal precoce permanece uma das principais causas de morbimortalidade neonatal. O reconhecimento precoce dos fatores de risco maternos, associado ao tratamento imediato, é determinante para o prognóstico."
     },
+    {
+      "id": "estado-mal-epileptico-01",
+      "titulo": "Lactente com crise convulsiva prolongada",
+      "resumo": "Primeira convulsão prolongada em lactente previamente hígido.",
+      "nivel": "difícil",
+      "etapas": [
+        {
+          "tipo": "info",
+          "titulo": "Chegada ao pronto-socorro",
+          "texto": "Lactente de 14 meses chega ao pronto-socorro em crise convulsiva tônico-clônica generalizada há aproximadamente 8 minutos, segundo os pais."
+        },
+        {
+          "tipo": "info",
+          "titulo": "História clínica",
+          "texto": "Apresentou febre de 38,9°C iniciada há cerca de 4 horas. Sem antecedentes neurológicos. Vacinação em dia."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Primeira conduta",
+          "texto": "FC 168 bpm, FR irregular, SatO₂ 91%, glicemia capilar 104 mg/dL.",
+          "pergunta": "Qual deve ser a primeira medicação?",
+          "opcoes": [
+            "Fenitoína intravenosa",
+            "Diazepam ou Midazolam como primeira linha",
+            "Fenobarbital imediatamente",
+            "Aguardar completar 20 minutos"
+          ],
+          "correta": 1,
+          "explicacao": "Convulsões com duração ≥5 minutos devem ser tratadas como estado de mal epiléptico. Benzodiazepínicos são a primeira linha."
+        },
+        {
+          "tipo": "evento",
+          "titulo": "Nova evolução",
+          "texto": "Após a primeira dose, a crise persiste por mais 5 minutos."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Próximo passo",
+          "texto": "A equipe mantém monitorização contínua.",
+          "pergunta": "Qual a conduta mais adequada?",
+          "opcoes": [
+            "Iniciar antibiótico",
+            "Administrar segunda dose de benzodiazepínico e preparar anticonvulsivante de segunda linha",
+            "Solicitar EEG antes de tratar",
+            "Realizar punção lombar imediatamente"
+          ],
+          "correta": 1,
+          "explicacao": "Persistindo a crise, pode-se repetir benzodiazepínico e iniciar anticonvulsivante de segunda linha conforme protocolos."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Resultado",
+          "texto": "Após levetiracetam intravenoso, a crise é interrompida. A criança permanece sonolenta, porém desperta ao estímulo."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Investigação",
+          "texto": "A criança recupera progressivamente a consciência.",
+          "pergunta": "Qual exame é prioritário neste momento?",
+          "opcoes": [
+            "Glicemia já realizada; investigar a causa da febre conforme avaliação clínica",
+            "Tomografia obrigatória para todos",
+            "EEG de urgência para todos",
+            "Ressonância magnética imediata"
+          ],
+          "correta": 0,
+          "explicacao": "Nem toda primeira convulsão febril necessita neuroimagem. A investigação deve ser individualizada."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Discussão",
+          "texto": "O tratamento precoce reduz significativamente morbidade. O tempo até a administração do primeiro benzodiazepínico é um dos principais determinantes do sucesso terapêutico."
+        }
+      ]
+    },
+    {
+      "id": "torsao-testicular-02",
+      "titulo": "Dor escrotal de início súbito",
+      "resumo": "Adolescente com dor intensa em bolsa escrotal.",
+      "nivel": "intermediário",
+      "etapas": [
+        {
+          "tipo": "info",
+          "titulo": "Queixa principal",
+          "texto": "Adolescente de 13 anos acorda durante a madrugada com dor intensa em bolsa escrotal esquerda."
+        },
+        {
+          "tipo": "info",
+          "titulo": "História",
+          "texto": "Nega trauma, febre ou sintomas urinários. Refere náuseas desde o início da dor."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Exame físico",
+          "texto": "Testículo esquerdo elevado, horizontalizado e extremamente doloroso. Reflexo cremastérico ausente.",
+          "pergunta": "Qual o diagnóstico mais provável?",
+          "opcoes": [
+            "Torção testicular",
+            "Epididimite",
+            "Hérnia encarcerada",
+            "Orquite viral"
+          ],
+          "correta": 0,
+          "explicacao": "Dor súbita, reflexo cremastérico ausente e testículo elevado são altamente sugestivos de torção testicular."
+        },
+        {
+          "tipo": "evento",
+          "titulo": "Mudança do cenário",
+          "texto": "O ultrassom Doppler demorará aproximadamente 2 horas para ficar disponível."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Conduta",
+          "texto": "A dor iniciou há aproximadamente 3 horas.",
+          "pergunta": "Qual a melhor decisão?",
+          "opcoes": [
+            "Aguardar o Doppler",
+            "Solicitar tomografia",
+            "Encaminhar imediatamente para exploração cirúrgica",
+            "Iniciar antibiótico"
+          ],
+          "correta": 2,
+          "explicacao": "Quando a suspeita clínica é alta, a exploração cirúrgica não deve ser atrasada por exames."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Centro cirúrgico",
+          "texto": "A torção é confirmada, sendo realizada destorção e orquidopexia bilateral."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Seguimento",
+          "texto": "A família pergunta por que o outro testículo também foi fixado.",
+          "pergunta": "Qual a resposta correta?",
+          "opcoes": [
+            "Para prevenir torção contralateral futura",
+            "Porque ambos estavam torcidos",
+            "Por questão estética",
+            "Não há benefício"
+          ],
+          "correta": 0,
+          "explicacao": "A anomalia anatômica geralmente é bilateral, justificando a orquidopexia preventiva do lado contralateral."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Discussão",
+          "texto": "A viabilidade testicular reduz-se rapidamente após 6 horas de isquemia, tornando o diagnóstico e tratamento precoces fundamentais."
+        }
+      ]
+    },
+    {
+      "id": "coqueluche-02",
+      "titulo": "Lactente com episódios de cianose",
+      "resumo": "Lactente jovem apresenta crises de tosse progressivas.",
+      "nivel": "difícil",
+      "etapas": [
+        {
+          "tipo": "info",
+          "titulo": "Chegada",
+          "texto": "Lactente de 45 dias chega ao pronto-socorro por episódios de tosse intensa há 6 dias."
+        },
+        {
+          "tipo": "info",
+          "titulo": "História",
+          "texto": "Inicialmente apresentava apenas coriza. Nas últimas 24 horas iniciou crises de tosse seguidas de arroxeamento e dificuldade para respirar. Ainda não iniciou vacinação."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Avaliação",
+          "texto": "Durante o atendimento apresenta crise de tosse em salvas com cianose e vômito pós-tosse.",
+          "pergunta": "Qual hipótese deve ser priorizada?",
+          "opcoes": [
+            "Bronquiolite",
+            "Coqueluche",
+            "Pneumonia bacteriana",
+            "Refluxo gastroesofágico"
+          ],
+          "correta": 1,
+          "explicacao": "Lactentes pequenos frequentemente não apresentam o guincho inspiratório clássico, mas podem evoluir com apneia e cianose."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Exames",
+          "texto": "Hemograma: leucócitos 39.800/mm³ com linfocitose importante."
+        },
+        {
+          "tipo": "evento",
+          "titulo": "Complicação",
+          "texto": "Durante nova crise, ocorre apneia de aproximadamente 18 segundos, necessitando ventilação com bolsa-válvula-máscara."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Conduta",
+          "texto": "Após estabilização, a criança permanece internada.",
+          "pergunta": "Qual tratamento específico deve ser iniciado?",
+          "opcoes": [
+            "Oseltamivir",
+            "Azitromicina",
+            "Amoxicilina",
+            "Ceftriaxona"
+          ],
+          "correta": 1,
+          "explicacao": "Macrolídeos são o tratamento de escolha para Bordetella pertussis e reduzem a transmissão."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Medida epidemiológica",
+          "texto": "Os pais perguntam se os irmãos precisam de alguma medida preventiva.",
+          "pergunta": "Qual orientação está correta?",
+          "opcoes": [
+            "Somente observar sintomas",
+            "Quimioprofilaxia para contatos próximos",
+            "Solicitar radiografia de tórax para toda a família",
+            "Nenhuma medida adicional é necessária"
+          ],
+          "correta": 1,
+          "explicacao": "Todos os contatos domiciliares devem receber quimioprofilaxia conforme protocolos vigentes."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Discussão",
+          "texto": "A coqueluche é especialmente grave em lactentes menores de 3 meses, nos quais apneia pode ser a principal manifestação clínica. A vacinação materna durante a gestação reduz significativamente os casos graves."
+        },
 
+         {
+      "id": "epiglotite-03",
+      "titulo": "Pré-escolar com dificuldade respiratória súbita",
+      "resumo": "Menino de 4 anos com febre alta e estridor.",
+      "nivel": "difícil",
+      "etapas": [
+        {
+          "tipo": "info",
+          "titulo": "Queixa principal",
+          "texto": "Menino de 4 anos é levado ao pronto-socorro por febre alta iniciada há cerca de 12 horas e dificuldade crescente para respirar."
+        },
+        {
+          "tipo": "info",
+          "titulo": "História clínica",
+          "texto": "Os pais relatam que a criança passou a recusar líquidos devido à dor intensa para engolir. Nas últimas horas permanece sentada inclinada para frente e evita falar."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Avaliação inicial",
+          "texto": "Temperatura 39,6°C. SatO₂ 91%. Estridor inspiratório intenso. Sialorreia importante. Voz abafada.",
+          "pergunta": "Qual deve ser a conduta mais adequada neste momento?",
+          "opcoes": [
+            "Inspecionar detalhadamente a orofaringe com abaixador de língua.",
+            "Garantir via aérea em ambiente controlado e iniciar antibioticoterapia intravenosa.",
+            "Solicitar radiografia antes de qualquer intervenção.",
+            "Administrar salbutamol inalatório."
+          ],
+          "correta": 1,
+          "explicacao": "Na suspeita de epiglotite, a manipulação da orofaringe pode precipitar obstrução completa da via aérea. A prioridade é estabilizar a via aérea em ambiente adequado e iniciar antibiótico."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Evolução",
+          "texto": "A equipe de anestesia realiza intubação orotraqueal sem intercorrências. A criança é encaminhada para a UTI Pediátrica."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Tratamento",
+          "texto": "Após estabilização, inicia-se o tratamento específico.",
+          "pergunta": "Qual esquema é o mais indicado como tratamento empírico inicial?",
+          "opcoes": [
+            "Azitromicina oral.",
+            "Ceftriaxona intravenosa.",
+            "Amoxicilina oral.",
+            "Oxacilina isoladamente."
+          ],
+          "correta": 1,
+          "explicacao": "Ceftriaxona ou cefotaxima são opções de primeira linha para epiglotite bacteriana."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Resultados",
+          "texto": "Hemocultura posteriormente identifica Haemophilus influenzae sensível ao tratamento instituído."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Prevenção",
+          "texto": "Os pais perguntam como reduzir o risco dessa doença em outras crianças.",
+          "pergunta": "Qual medida apresenta maior impacto epidemiológico?",
+          "opcoes": [
+            "Vacinação contra Haemophilus influenzae tipo b.",
+            "Uso profilático de antibióticos em todas as crianças da escola.",
+            "Radiografia anual de tórax.",
+            "Evitar atividades físicas."
+          ],
+          "correta": 0,
+          "explicacao": "A vacinação contra Hib reduziu drasticamente a incidência de epiglotite na infância."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Discussão do caso",
+          "texto": "A epiglotite é uma emergência pediátrica. O maior erro é manipular a orofaringe antes da estabilização da via aérea."
+        }
+      ]
+    },
+    {
+      "id": "estenose-piloro-01",
+      "titulo": "Lactente com vômitos progressivos",
+      "resumo": "Lactente de 40 dias apresenta vômitos após todas as mamadas.",
+      "nivel": "intermediário",
+      "etapas": [
+        {
+          "tipo": "info",
+          "titulo": "Queixa principal",
+          "texto": "Lactente de 40 dias apresenta vômitos progressivos há uma semana."
+        },
+        {
+          "tipo": "info",
+          "titulo": "História clínica",
+          "texto": "Os vômitos ocorrem logo após as mamadas, são em jato, sem bile. Após vomitar, o lactente demonstra fome novamente."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Avaliação inicial",
+          "texto": "Encontra-se emagrecido, discretamente desidratado, sem febre.",
+          "pergunta": "Qual hipótese diagnóstica deve ser priorizada?",
+          "opcoes": [
+            "Refluxo gastroesofágico fisiológico.",
+            "Estenose hipertrófica do piloro.",
+            "Alergia à proteína do leite de vaca.",
+            "Invaginação intestinal."
+          ],
+          "correta": 1,
+          "explicacao": "Vômitos em jato, não biliosos, entre a 3ª e a 8ª semana de vida são clássicos da estenose hipertrófica do piloro."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Exames",
+          "texto": "Gasometria demonstra alcalose metabólica hipoclorêmica. Ultrassonografia evidencia espessamento do músculo pilórico."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Conduta",
+          "texto": "O diagnóstico foi confirmado.",
+          "pergunta": "Qual deve ser a primeira medida antes da cirurgia?",
+          "opcoes": [
+            "Realizar piloromiotomia imediatamente, independentemente do estado clínico.",
+            "Corrigir desidratação e distúrbios hidroeletrolíticos.",
+            "Iniciar antibióticos intravenosos.",
+            "Administrar procinéticos."
+          ],
+          "correta": 1,
+          "explicacao": "A cirurgia deve ser realizada após estabilização clínica e correção dos distúrbios metabólicos."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Evolução",
+          "texto": "Após hidratação venosa, realiza-se piloromiotomia com boa evolução pós-operatória."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Alta",
+          "texto": "A família pergunta sobre o prognóstico.",
+          "pergunta": "Qual orientação está correta?",
+          "opcoes": [
+            "Após correção cirúrgica, o prognóstico costuma ser excelente.",
+            "Será necessária dieta especial por toda a infância.",
+            "A doença costuma recidivar frequentemente.",
+            "A criança não poderá receber leite materno."
+          ],
+          "correta": 0,
+          "explicacao": "Após piloromiotomia, a evolução costuma ser excelente e a maioria dos lactentes apresenta recuperação completa."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Discussão do caso",
+          "texto": "A estenose hipertrófica do piloro é a principal causa de obstrução da saída gástrica em lactentes e apresenta excelente prognóstico quando diagnosticada precocemente."
+        }
+      ]
+    },
+    {
+      "id": "crise-falcemica-02",
+      "titulo": "Escolar com dor intensa em membros",
+      "resumo": "Paciente com doença falciforme apresenta dor óssea intensa.",
+      "nivel": "difícil",
+      "etapas": [
+        {
+          "tipo": "info",
+          "titulo": "Queixa principal",
+          "texto": "Menino de 9 anos com doença falciforme apresenta dor intensa em pernas e braços iniciada há aproximadamente 8 horas."
+        },
+        {
+          "tipo": "info",
+          "titulo": "História clínica",
+          "texto": "Os pais relatam episódio semelhante há cerca de um ano. Hoje apresenta febre de 38,4°C."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Primeira avaliação",
+          "texto": "FC 138 bpm. Dor intensa à palpação de tíbias e úmeros. Sem sinais neurológicos.",
+          "pergunta": "Qual deve ser a primeira abordagem?",
+          "opcoes": [
+            "Analgesia precoce, hidratação e investigação de infecção.",
+            "Alta com dipirona oral.",
+            "Imobilização dos membros.",
+            "Anticoagulação plena."
+          ],
+          "correta": 0,
+          "explicacao": "O tratamento inicial da crise vaso-oclusiva inclui analgesia adequada, hidratação criteriosa e investigação de possíveis infecções precipitantes."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Resultados",
+          "texto": "Hemoglobina semelhante ao basal. Reticulócitos elevados. PCR discretamente aumentada."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Nova avaliação",
+          "texto": "Após algumas horas, a criança desenvolve dor torácica e queda da saturação para 89%.",
+          "pergunta": "Qual complicação deve ser considerada prioritariamente?",
+          "opcoes": [
+            "Síndrome torácica aguda.",
+            "Bronquiolite viral.",
+            "Pneumotórax espontâneo.",
+            "Crise hipertensiva."
+          ],
+          "correta": 0,
+          "explicacao": "Dor torácica, febre e hipoxemia em paciente com doença falciforme devem levantar suspeita imediata de síndrome torácica aguda."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Exames",
+          "texto": "Radiografia de tórax evidencia infiltrado pulmonar basal esquerdo."
+        },
+        {
+          "tipo": "decisao",
+          "titulo": "Tratamento",
+          "texto": "O diagnóstico foi estabelecido.",
+          "pergunta": "Qual conduta faz parte do tratamento?",
+          "opcoes": [
+            "Oxigenoterapia, antibióticos, analgesia e considerar transfusão conforme gravidade.",
+            "Somente broncodilatador inalatório.",
+            "Alta imediata.",
+            "Suspender hidratação."
+          ],
+          "correta": 0,
+          "explicacao": "A síndrome torácica aguda é uma das principais causas de mortalidade na doença falciforme e requer tratamento agressivo e monitorização hospitalar."
+        },
+        {
+          "tipo": "info",
+          "titulo": "Discussão do caso",
+          "texto": "A síndrome torácica aguda deve sempre ser lembrada quando um paciente falcêmico apresenta dor torácica, febre ou hipoxemia durante uma crise vaso-oclusiva."
+        },
+
+        
     
     {
       "id": "diarreia-01",

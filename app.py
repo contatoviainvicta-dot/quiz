@@ -38,7 +38,10 @@ from quiz_engine import (
 # ---------------------------------------------------------------------------
 # Configuração da página
 # ---------------------------------------------------------------------------
-st.set_page_config(page_title="Quiz de Pediatria", page_icon="🩺", layout="centered")
+st.set_page_config(
+    page_title="Quiz de Pediatria", page_icon="🩺", layout="centered",
+    initial_sidebar_state="collapsed",
+)
 
 st.markdown(
     """
@@ -63,6 +66,12 @@ st.markdown(
         'Apple Color Emoji', 'Noto Color Emoji', sans-serif; letter-spacing:.2px;
     }
     .stApp code, .stApp pre { font-family:ui-monospace, monospace; }
+
+    /* Sem barra lateral */
+    [data-testid="stSidebar"],
+    [data-testid="stSidebarCollapsedControl"],
+    [data-testid="collapsedControl"],
+    [data-testid="stSidebarCollapseButton"] { display:none !important; }
 
     /* Botões */
     .stButton > button {
@@ -194,7 +203,8 @@ st.markdown(
       justify-content:space-between; gap:10px; }
     .status-user .nome { font-family:'Baloo 2',system-ui,sans-serif;
       font-weight:800; font-size:1.2rem; line-height:1; }
-    .status-user .patente { font-size:.8rem; opacity:.92; margin-top:3px; }
+    .status-user .patente { font-size:.82rem; opacity:1; margin-top:3px;
+      font-weight:600; }
     .status-moedas { background:rgba(255,255,255,.18);
       border:1px solid rgba(255,255,255,.4); color:#fff; font-weight:800;
       padding:6px 13px; border-radius:999px; font-size:1.05rem;
@@ -388,38 +398,32 @@ if "iniciado" not in st.session_state:
 # ---------------------------------------------------------------------------
 # Barra lateral: quem está estudando + trocar de usuário
 # ---------------------------------------------------------------------------
-with st.sidebar:
-    st.caption(f"Estudando como **{IDENTIFICADOR}**")
-    if persistencia.disponivel():
-        st.caption("✅ Progresso salvo na nuvem.")
-    else:
-        st.warning("Sem persistência: o progresso não está sendo salvo.")
-    if st.button("Trocar de usuário", use_container_width=True):
-        for chave in [
-            "identificador",
-            "perfil",
-            "iniciado",
-            "quiz",
-            "indice",
-            "acertos",
-            "respondida",
-            "escolha",
-            "ultimo_resultado",
-            "ultimo_sr",
-            "modo",
-            "novas_conquistas",
-            "dica_usada",
-            "dica_eliminada",
-            "ultima_carta",
-        ]:
+def _trocar_usuario() -> None:
+    for chave in [
+        "identificador",
+        "perfil",
+        "iniciado",
+        "quiz",
+        "indice",
+        "acertos",
+        "respondida",
+        "escolha",
+        "ultimo_resultado",
+        "ultimo_sr",
+        "modo",
+        "novas_conquistas",
+        "dica_usada",
+        "dica_eliminada",
+        "ultima_carta",
+    ]:
+        st.session_state.pop(chave, None)
+    for chave in list(st.session_state.keys()):
+        if (chave.startswith("plantao_") or chave.startswith("caso")
+                or chave.startswith("diag") or chave.startswith("pac")
+                or chave.startswith("boss")):
             st.session_state.pop(chave, None)
-        for chave in list(st.session_state.keys()):
-            if (chave.startswith("plantao_") or chave.startswith("caso")
-                    or chave.startswith("diag") or chave.startswith("pac")
-                    or chave.startswith("boss")):
-                st.session_state.pop(chave, None)
-        st.query_params.clear()
-        st.rerun()
+    st.query_params.clear()
+    st.rerun()
 
 
 # ---------------------------------------------------------------------------
@@ -684,6 +688,11 @@ def render_dashboard(perfil) -> None:
 
     st.divider()
     _grafico_tendencia(perfil)
+
+    st.divider()
+    st.markdown("**Calendário de estudo**")
+    with st.expander("Ver calendário do mês"):
+        _render_calendario(perfil)
 
     st.divider()
     _render_medalhas(perfil)
@@ -1572,8 +1581,10 @@ def render_status(perfil) -> None:
 
 
 render_status(st.session_state.perfil)
-with st.expander("📅 Calendário do mês"):
-    _render_calendario(st.session_state.perfil)
+_e1, _e2 = st.columns([2, 1])
+with _e2:
+    if st.button("Trocar de usuário", use_container_width=True):
+        _trocar_usuario()
 st.divider()
 
 

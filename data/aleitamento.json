@@ -4,43 +4,43 @@
     {
       "pergunta": "O colostro, primeiro leite produzido, é especialmente rico em:",
       "opcoes": [
+        "Água apenas — como principal medida",
         "Proteínas, IgA e vitamina A",
-        "Água apenas",
-        "Gordura e lactose",
-        "Ferro em grande quantidade"
+        "Gordura e lactose — como orientação de rotina",
+        "Ferro em grande quantidade — independentemente da situação clínica"
       ],
-      "correta": 0,
+      "correta": 1,
       "explicacao": "O colostro é rico em proteínas, imunoglobulina A e vitamina A, com menos gordura e lactose que o leite maduro."
     },
     {
       "pergunta": "O leite materno maduro estabelece-se, em geral, por volta de:",
       "opcoes": [
-        "1 hora após o parto",
-        "6 meses após o parto",
         "2 semanas após o parto",
-        "3 meses após o parto"
+        "3 meses após o parto — independentemente da situação clínica",
+        "1 hora após o parto — sem necessidade de outras medidas",
+        "6 meses após o parto — como orientação de rotina"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "Após o colostro e o leite de transição, o leite maduro se estabelece por volta de 2 semanas."
     },
     {
       "pergunta": "O leite do início da mamada (leite anterior) caracteriza-se por:",
       "opcoes": [
-        "Ser mais rico em água, saciando a sede",
-        "Ter mais calorias",
-        "Ser mais rico em gordura",
-        "Não ter valor nutricional"
+        "Ser mais rico em gordura — de forma rotineira",
+        "Não ter valor nutricional — independentemente da situação clínica",
+        "Ter mais calorias — como principal medida",
+        "Ser mais rico em água, saciando a sede"
       ],
-      "correta": 0,
+      "correta": 3,
       "explicacao": "O leite anterior é mais aquoso, matando a sede; o leite posterior é mais gorduroso e calórico."
     },
     {
       "pergunta": "O leite do fim da mamada (leite posterior) é mais rico em:",
       "opcoes": [
-        "Gordura, favorecendo a saciedade e o ganho de peso",
-        "Água",
-        "Lactose apenas",
-        "Sódio"
+        "Gordura, favorecendo saciedade e ganho ponderal",
+        "Lactose apenas — como regra geral",
+        "Água — como conduta habitual no cuidado de rotina",
+        "Sódio — sem considerar outros fatores"
       ],
       "correta": 0,
       "explicacao": "O leite posterior tem mais gordura, sendo importante para a saciedade e o ganho de peso."
@@ -48,31 +48,31 @@
     {
       "pergunta": "Qual é o principal carboidrato do leite materno?",
       "opcoes": [
-        "Glicose livre",
-        "Sacarose",
-        "Amido",
-        "Lactose"
+        "Glicose livre — sem considerar outros fatores",
+        "Amido — como conduta habitual",
+        "Lactose",
+        "Sacarose — como recomendação padrão"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "A lactose é o principal carboidrato do leite materno."
     },
     {
       "pergunta": "Em relação às proteínas, o leite materno tem predomínio de:",
       "opcoes": [
-        "Glúten",
         "Proteínas do soro (whey)",
-        "Albumina do ovo",
-        "Caseína"
+        "Glúten — como regra geral",
+        "Caseína — como orientação de rotina",
+        "Albumina do ovo — como conduta habitual"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "No leite materno predominam as proteínas do soro, de digestão mais fácil, ao contrário do leite de vaca (rico em caseína)."
     },
     {
       "pergunta": "Qual proteína do leite materno liga o ferro e tem ação bacteriostática?",
       "opcoes": [
-        "Albumina",
-        "Caseína",
-        "Globulina D",
+        "Albumina — como conduta habitual",
+        "Caseína — como orientação de rotina",
+        "Globulina D — sem necessidade de outras medidas",
         "Lactoferrina"
       ],
       "correta": 3,
@@ -81,21 +81,21 @@
     {
       "pergunta": "Qual o principal anticorpo presente no leite materno, protegendo as mucosas do bebê?",
       "opcoes": [
-        "IgD",
-        "IgM apenas",
-        "IgE",
-        "IgA secretória"
+        "IgA secretória",
+        "IgM apenas — em todos os casos",
+        "IgE — de forma rotineira",
+        "IgD — como principal medida"
       ],
-      "correta": 3,
+      "correta": 0,
       "explicacao": "A IgA secretória protege as mucosas do trato digestivo e respiratório do lactente."
     },
     {
       "pergunta": "A lisozima presente no leite materno tem ação:",
       "opcoes": [
-        "Laxativa",
+        "Laxativa — sem considerar outros fatores",
         "Antibacteriana",
-        "Anticoagulante",
-        "Sedativa"
+        "Anticoagulante — como recomendação padrão",
+        "Sedativa — de forma rotineira"
       ],
       "correta": 1,
       "explicacao": "A lisozima é uma enzima com ação antibacteriana, contribuindo para a defesa do lactente."
@@ -103,10 +103,10 @@
     {
       "pergunta": "O leite materno é relativamente pobre em qual vitamina, justificando suplementação do lactente?",
       "opcoes": [
-        "Vitamina A",
-        "Vitamina B12 sempre",
+        "Vitamina A — de forma rotineira",
+        "Vitamina B12 sempre — como recomendação padrão",
         "Vitamina D",
-        "Vitamina C"
+        "Vitamina C — como principal medida"
       ],
       "correta": 2,
       "explicacao": "O leite materno tem baixo teor de vitamina D, por isso o lactente em aleitamento recebe suplementação."
@@ -114,21 +114,21 @@
     {
       "pergunta": "O ferro do leite materno caracteriza-se por:",
       "opcoes": [
-        "Estar em grande quantidade",
-        "Não ser absorvido",
         "Estar em pequena quantidade, mas com alta biodisponibilidade",
-        "Ser tóxico"
+        "Ser tóxico — de forma rotineira na prática clínica",
+        "Não ser absorvido — como principal medida de forma habitual",
+        "Estar em grande quantidade — em todos os casos no cuidado de rotina"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "O ferro do leite materno é pouco abundante, porém tem alta biodisponibilidade (boa absorção)."
     },
     {
       "pergunta": "Comparado ao leite de vaca, o leite materno tem:",
       "opcoes": [
-        "Composição idêntica",
-        "Menos valor nutricional",
+        "Mais sódio e proteína — como conduta habitual em situação habitual",
+        "Menos valor nutricional — como recomendação padrão",
         "Menor sobrecarga de solutos e proteína mais adequada",
-        "Mais sódio e proteína"
+        "Composição idêntica — sem considerar outros fatores"
       ],
       "correta": 2,
       "explicacao": "O leite materno tem menor carga de solutos renais e proteína mais adequada ao lactente do que o leite de vaca."
@@ -136,21 +136,21 @@
     {
       "pergunta": "Os oligossacarídeos do leite materno atuam principalmente como:",
       "opcoes": [
-        "Anticoagulantes",
-        "Prebióticos, favorecendo a microbiota intestinal",
-        "Substitutos da lactose",
-        "Fonte principal de gordura"
+        "Anticoagulantes — independentemente da situação clínica",
+        "Fonte principal de gordura — sem necessidade de outras medidas",
+        "Substitutos da lactose — como principal medida",
+        "Prebióticos, favorecendo a microbiota intestinal"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "Os oligossacarídeos funcionam como prebióticos, estimulando bactérias benéficas e protegendo contra patógenos."
     },
     {
       "pergunta": "Qual hormônio é o principal responsável pela PRODUÇÃO (síntese) do leite?",
       "opcoes": [
-        "Ocitocina",
-        "Cortisol",
+        "Cortisol — de forma rotineira",
+        "Insulina — sem necessidade de outras medidas",
         "Prolactina",
-        "Insulina"
+        "Ocitocina — independentemente da situação clínica"
       ],
       "correta": 2,
       "explicacao": "A prolactina estimula a síntese do leite pelas células alveolares da mama."
@@ -158,32 +158,32 @@
     {
       "pergunta": "Qual hormônio é responsável pela EJEÇÃO (descida) do leite?",
       "opcoes": [
-        "Ocitocina",
-        "Glucagon",
-        "Prolactina",
-        "Estrogênio"
+        "Glucagon — sem considerar outros fatores",
+        "Prolactina — como conduta habitual",
+        "Estrogênio — como regra geral",
+        "Ocitocina"
       ],
-      "correta": 0,
+      "correta": 3,
       "explicacao": "A ocitocina promove a contração das células mioepiteliais, ejetando o leite (reflexo de descida)."
     },
     {
       "pergunta": "O reflexo de ejeção do leite (descida) pode ser inibido por:",
       "opcoes": [
-        "Ambiente tranquilo",
-        "Sucção do bebê",
-        "Contato pele a pele",
-        "Estresse, ansiedade e dor"
+        "Contato pele a pele — sem necessidade de outras medidas",
+        "Estresse, ansiedade e dor",
+        "Ambiente tranquilo — como regra geral",
+        "Sucção do bebê — como orientação de rotina"
       ],
-      "correta": 3,
+      "correta": 1,
       "explicacao": "Estresse, dor e ansiedade podem inibir a liberação de ocitocina e prejudicar a descida do leite."
     },
     {
       "pergunta": "A produção de leite é regulada principalmente por:",
       "opcoes": [
         "Oferta e demanda (esvaziamento da mama)",
-        "Idade materna",
-        "Cor do leite",
-        "Tipo de parto"
+        "Tipo de parto — como orientação de rotina",
+        "Idade materna — como conduta habitual",
+        "Cor do leite — sem necessidade de outras medidas"
       ],
       "correta": 0,
       "explicacao": "Quanto mais a mama é esvaziada (sucção frequente), mais leite é produzido: a lei da oferta e demanda."
@@ -191,10 +191,10 @@
     {
       "pergunta": "A 'descida do leite' (apojadura) costuma ocorrer:",
       "opcoes": [
-        "Ainda na gestação",
+        "Ainda na gestação — sem considerar outros fatores",
         "Cerca de 2 a 4 dias após o parto",
-        "Somente após 1 mês",
-        "Apenas com uso de medicação"
+        "Apenas com uso de medicação — como conduta habitual",
+        "Somente após 1 mês — como orientação de rotina"
       ],
       "correta": 1,
       "explicacao": "A apojadura, com aumento do volume de leite, costuma ocorrer entre o 2º e o 4º dia após o parto."
@@ -202,10 +202,10 @@
     {
       "pergunta": "Além de ejetar o leite, a ocitocina liberada na amamentação também:",
       "opcoes": [
-        "Reduz a produção de leite",
-        "Eleva a glicemia",
-        "Contrai o útero, auxiliando sua involução",
-        "Aumenta a pressão arterial"
+        "Aumenta a pressão arterial — como recomendação padrão",
+        "Eleva a glicemia — como regra geral",
+        "Contrai o útero, favorecendo sua involução",
+        "Reduz a produção de leite — em todos os casos"
       ],
       "correta": 2,
       "explicacao": "A ocitocina causa contração uterina, ajudando na involução do útero e reduzindo o sangramento pós-parto."
@@ -213,43 +213,43 @@
     {
       "pergunta": "A sucção do bebê na mama estimula a liberação de:",
       "opcoes": [
-        "Insulina e glucagon",
-        "Tiroxina",
+        "Cortisol e adrenalina — como orientação de rotina",
         "Prolactina e ocitocina",
-        "Cortisol e adrenalina"
+        "Tiroxina — como conduta habitual",
+        "Insulina e glucagon — sem considerar outros fatores"
       ],
-      "correta": 2,
+      "correta": 1,
       "explicacao": "A sucção estimula, por via neuroendócrina, a liberação de prolactina (produção) e ocitocina (ejeção)."
     },
     {
       "pergunta": "São sinais de boa pega na amamentação:",
       "opcoes": [
-        "Boca fechada e bochechas encovadas",
+        "Apenas o mamilo na boca — sem considerar outros fatores",
+        "Boca fechada e bochechas encovadas no cuidado de rotina",
         "Boca bem aberta, lábio inferior evertido e queixo tocando a mama",
-        "Lábios voltados para dentro",
-        "Apenas o mamilo na boca"
+        "Lábios voltados para dentro — como conduta habitual no cuidado de rotina"
       ],
-      "correta": 1,
+      "correta": 2,
       "explicacao": "Na boa pega, a boca fica bem aberta, o lábio inferior evertido, o queixo toca a mama e vê-se mais aréola acima da boca."
     },
     {
       "pergunta": "Qual sinal sugere pega INCORRETA?",
       "opcoes": [
+        "Deglutição audível — como principal medida",
         "Dor e bochechas encovadas durante a mamada",
-        "Bebê relaxado ao mamar",
-        "Deglutição audível",
-        "Sucção lenta e profunda"
+        "Sucção lenta e profunda — sem necessidade de outras medidas",
+        "Bebê relaxado ao mamar — de forma rotineira"
       ],
-      "correta": 0,
+      "correta": 1,
       "explicacao": "Dor, estalos e bochechas encovadas indicam pega incorreta, que reduz a transferência de leite e causa fissuras."
     },
     {
       "pergunta": "O conceito de amamentação em livre demanda significa:",
       "opcoes": [
         "Limitar a 5 minutos por mama",
-        "Amamentar só durante o dia",
         "Amamentar apenas de 3 em 3 horas",
-        "Amamentar sempre que o bebê quiser, sem horários rígidos"
+        "Amamentar só durante o dia — independentemente da situação clínica",
+        "Amamentar sempre que o bebê quiser, sem horários fixos"
       ],
       "correta": 3,
       "explicacao": "Na livre demanda, oferece-se o peito sempre que o bebê demonstrar fome, sem impor horários fixos."
@@ -257,10 +257,10 @@
     {
       "pergunta": "Ao amamentar, o ideal em relação ao esvaziamento das mamas é:",
       "opcoes": [
-        "Alternar a cada 2 minutos",
-        "Esvaziar bem uma mama antes de oferecer a outra",
         "Oferecer as duas ao mesmo tempo",
-        "Nunca esvaziar completamente"
+        "Esvaziar bem uma mama antes de oferecer a outra",
+        "Nunca esvaziar completamente",
+        "Alternar a cada 2 minutos — independentemente da situação clínica"
       ],
       "correta": 1,
       "explicacao": "Esvaziar uma mama antes de oferecer a outra garante que o bebê receba o leite posterior, mais calórico."
@@ -268,10 +268,10 @@
     {
       "pergunta": "Para retirar o bebê da mama sem machucar o mamilo, deve-se:",
       "opcoes": [
-        "Apertar o nariz do bebê",
-        "Puxar o mamilo firmemente",
+        "Apertar o nariz do bebê — como orientação de rotina no cuidado de rotina",
+        "Puxar o mamilo firmemente — como regra geral no cuidado de rotina",
         "Introduzir o dedo mínimo pela comissura labial para desfazer a sucção",
-        "Beliscar a mama"
+        "Beliscar a mama — sem considerar outros fatores em situação habitual"
       ],
       "correta": 2,
       "explicacao": "Coloca-se o dedo mínimo no canto da boca do bebê para romper o vácuo antes de retirá-lo da mama."
@@ -279,10 +279,10 @@
     {
       "pergunta": "Sinais precoces de fome no lactente incluem:",
       "opcoes": [
-        "Sono profundo",
+        "Recusa total — em todos os casos",
         "Movimentos de busca, levar as mãos à boca e sucção",
-        "Recusa total",
-        "Choro intenso apenas"
+        "Choro intenso apenas — de forma rotineira",
+        "Sono profundo — independentemente da situação clínica"
       ],
       "correta": 1,
       "explicacao": "Movimentos de busca, mãos à boca e sucção são sinais precoces; o choro é um sinal tardio de fome."
@@ -290,21 +290,21 @@
     {
       "pergunta": "Um bom posicionamento para amamentar inclui:",
       "opcoes": [
-        "Braços da mãe sem apoio, tensos",
         "Corpo do bebê alinhado e voltado para a mãe (barriga com barriga)",
-        "Cabeça torcida em relação ao corpo",
-        "Bebê distante do corpo da mãe"
+        "Braços da mãe sem apoio, tensos — como principal medida",
+        "Bebê distante do corpo da mãe — de forma rotineira como regra geral",
+        "Cabeça torcida em relação ao corpo em condições usuais"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "O bebê deve ficar com a cabeça e o corpo alinhados, voltado para a mãe, próximo e bem apoiado."
     },
     {
       "pergunta": "O aleitamento materno EXCLUSIVO significa oferecer:",
       "opcoes": [
-        "Leite materno e chás",
-        "Somente leite materno, sem água, chás ou outros alimentos",
-        "Leite materno e fórmula",
-        "Leite materno e água"
+        "Leite materno e fórmula — independentemente da situação clínica",
+        "Somente leite materno, sem água, chás ou alimentos",
+        "Leite materno e chás — como conduta habitual",
+        "Leite materno e água — sem necessidade de outras medidas"
       ],
       "correta": 1,
       "explicacao": "No aleitamento exclusivo, o bebê recebe apenas leite materno (admitindo-se vitaminas e medicamentos), sem outros líquidos ou alimentos."
@@ -313,9 +313,9 @@
       "pergunta": "O aleitamento materno deve ser mantido, de forma complementada, até:",
       "opcoes": [
         "2 anos ou mais",
-        "1 ano no máximo",
-        "3 meses",
-        "6 meses"
+        "3 meses — sem considerar outros fatores",
+        "1 ano no máximo — como conduta habitual",
+        "6 meses — como regra geral"
       ],
       "correta": 0,
       "explicacao": "Recomenda-se o aleitamento exclusivo até 6 meses e complementado até 2 anos ou mais."
@@ -323,21 +323,21 @@
     {
       "pergunta": "Denomina-se aleitamento materno PREDOMINANTE quando o bebê recebe:",
       "opcoes": [
-        "Somente fórmula",
-        "Leite materno e alguns líquidos (água, chás, sucos)",
-        "Apenas leite materno",
-        "Leite materno e sólidos"
+        "Apenas leite materno — de forma rotineira de forma habitual",
+        "Somente fórmula — como recomendação padrão",
+        "Leite materno e sólidos — em todos os casos",
+        "Leite materno e alguns líquidos (água, chás, sucos)"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "No aleitamento predominante, o leite materno é a fonte principal, mas há oferta de líquidos como água e chás."
     },
     {
       "pergunta": "Em relação à oferta de água ao lactente em aleitamento materno exclusivo:",
       "opcoes": [
         "Não é necessária, pois o leite supre a hidratação",
-        "É obrigatória nos dias quentes",
-        "Deve ser dada antes de cada mamada",
-        "Deve substituir uma mamada"
+        "É obrigatória nos dias quentes na prática clínica",
+        "Deve substituir uma mamada — de forma rotineira",
+        "Deve ser dada antes de cada mamada"
       ],
       "correta": 0,
       "explicacao": "O leite materno tem água suficiente; não é preciso oferecer água ao bebê em aleitamento exclusivo, mesmo em clima quente."
@@ -345,131 +345,131 @@
     {
       "pergunta": "A amamentação na primeira hora de vida é importante porque:",
       "opcoes": [
-        "Dispensa o pré-natal",
-        "Substitui a vitamina K",
-        "Previne a icterícia com certeza",
-        "Estimula a produção de leite e fornece o colostro precocemente"
+        "Dispensa o pré-natal — como orientação de rotina de forma habitual",
+        "Estimula a produção de leite e oferece colostro precocemente",
+        "Substitui a vitamina K — sem considerar outros fatores",
+        "Previne a icterícia com certeza como orientação geral"
       ],
-      "correta": 3,
+      "correta": 1,
       "explicacao": "A amamentação na 1ª hora favorece o vínculo, estimula a lactação e oferece o colostro, rico em fatores de proteção."
     },
     {
       "pergunta": "Entre os benefícios do aleitamento materno para o bebê está:",
       "opcoes": [
-        "Menor ocorrência de diarreia e infecções respiratórias",
-        "Menor desenvolvimento cognitivo",
-        "Maior risco de alergias",
-        "Maior risco de infecções"
+        "Menor desenvolvimento cognitivo em situação habitual",
+        "Maior risco de alergias — como conduta habitual como orientação geral",
+        "Maior risco de infecções — como orientação de rotina",
+        "Menor ocorrência de diarreia e infecções respiratórias"
       ],
-      "correta": 0,
+      "correta": 3,
       "explicacao": "O aleitamento reduz infecções (diarreia, respiratórias, otite), alergias e favorece o desenvolvimento cognitivo."
     },
     {
       "pergunta": "Um benefício do aleitamento materno para a MÃE é:",
       "opcoes": [
-        "Piorar o vínculo com o bebê",
-        "Aumentar o risco de câncer de mama",
-        "Elevar a pressão arterial",
-        "Auxiliar na involução uterina e reduzir sangramento pós-parto"
+        "Piorar o vínculo com o bebê — como conduta habitual como regra geral",
+        "Auxiliar na involução uterina e reduzir sangramento pós-parto",
+        "Elevar a pressão arterial — sem considerar outros fatores",
+        "Aumentar o risco de câncer de mama de forma habitual"
       ],
-      "correta": 3,
+      "correta": 1,
       "explicacao": "A amamentação auxilia a involução uterina, reduz o sangramento e está associada a menor risco de câncer de mama e ovário."
     },
     {
       "pergunta": "O aleitamento materno, do ponto de vista prático e econômico:",
       "opcoes": [
-        "Exige preparo demorado",
-        "Precisa de refrigeração constante",
-        "É gratuito, sempre disponível e na temperatura ideal",
-        "É caro e trabalhoso"
+        "Exige preparo demorado — como conduta habitual em situação habitual",
+        "Precisa de refrigeração constante como regra geral",
+        "É caro e trabalhoso — como orientação de rotina",
+        "É gratuito, sempre disponível e na temperatura adequada"
       ],
-      "correta": 2,
+      "correta": 3,
       "explicacao": "O leite materno é gratuito, está sempre pronto, na temperatura e composição ideais, sem necessidade de preparo."
     },
     {
       "pergunta": "O colostro é frequentemente chamado de:",
       "opcoes": [
-        "Leite fraco",
         "Primeira vacina do bebê",
-        "Leite vencido",
-        "Leite artificial"
+        "Leite artificial — como regra geral",
+        "Leite vencido — como orientação de rotina",
+        "Leite fraco — como conduta habitual"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "Pela alta concentração de anticorpos e fatores de proteção, o colostro é chamado de 'primeira vacina' do bebê."
     },
     {
       "pergunta": "Em relação a doenças crônicas, o aleitamento materno está associado a:",
       "opcoes": [
-        "Maior risco de obesidade",
-        "Nenhum efeito a longo prazo",
-        "Maior risco de hipertensão na infância",
-        "Menor risco futuro de obesidade e diabetes"
+        "Maior risco de obesidade — sem necessidade de outras medidas",
+        "Nenhum efeito a longo prazo — como conduta habitual",
+        "Menor risco futuro de obesidade e diabetes",
+        "Maior risco de hipertensão na infância"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "O aleitamento associa-se a menor risco futuro de obesidade e diabetes tipo 2, entre outros benefícios."
     },
     {
       "pergunta": "Sobre o impacto na mortalidade infantil, o aleitamento materno:",
       "opcoes": [
-        "Só protege após 1 ano",
-        "Reduz a mortalidade, sobretudo por infecções",
-        "Não tem impacto",
-        "Aumenta a mortalidade"
+        "Não tem impacto — como principal medida",
+        "Só protege após 1 ano — independentemente da situação clínica",
+        "Aumenta a mortalidade — sem necessidade de outras medidas",
+        "Reduz a mortalidade, sobretudo por infecções"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "O aleitamento materno, especialmente o exclusivo nos primeiros meses, reduz a mortalidade infantil por infecções."
     },
     {
       "pergunta": "O ingurgitamento mamário caracteriza-se por mamas cheias, tensas e doloridas. O manejo inclui:",
       "opcoes": [
-        "Restringir líquidos maternos",
+        "Enfaixar as mamas apertadas — em todos os casos",
+        "Suspender a amamentação — independentemente da situação clínica",
         "Amamentação frequente e esvaziamento (ordenha, se necessário)",
-        "Enfaixar as mamas apertadas",
-        "Suspender a amamentação"
+        "Restringir líquidos maternos — como principal medida"
       ],
-      "correta": 1,
+      "correta": 2,
       "explicacao": "O ingurgitamento é manejado com amamentação frequente, boa pega e ordenha para alívio, evitando a estase."
     },
     {
       "pergunta": "As fissuras (rachaduras) mamilares geralmente decorrem de:",
       "opcoes": [
-        "Excesso de leite",
-        "Pega/posicionamento incorretos",
         "Amamentação em livre demanda",
-        "Uso de sutiã"
+        "Excesso de leite — sem considerar outros fatores",
+        "Uso de sutiã — como regra geral",
+        "Pega/posicionamento incorretos"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "As fissuras costumam resultar de pega incorreta; corrigir a pega é o principal tratamento, além de cuidados locais."
     },
     {
       "pergunta": "A mastite caracteriza-se por dor, calor, hiperemia e, muitas vezes, febre. A conduta em relação à amamentação é:",
       "opcoes": [
+        "Manter a amamentação e o esvaziamento da mama",
+        "Aguardar sem esvaziar — sem necessidade de outras medidas",
         "Suspender totalmente a amamentação",
-        "Enfaixar a mama",
-        "Aguardar sem esvaziar",
-        "Manter a amamentação e o esvaziamento da mama"
+        "Enfaixar a mama — independentemente da situação clínica"
       ],
-      "correta": 3,
+      "correta": 0,
       "explicacao": "Na mastite, mantém-se a amamentação e o esvaziamento; antibióticos são usados quando indicado."
     },
     {
       "pergunta": "Qual é uma complicação da mastite não tratada adequadamente?",
       "opcoes": [
-        "Galactosemia",
-        "Icterícia",
-        "Abscesso mamário",
-        "Anemia falciforme"
+        "Anemia falciforme — como regra geral",
+        "Icterícia — como conduta habitual",
+        "Galactosemia — como orientação de rotina",
+        "Abscesso mamário"
       ],
-      "correta": 2,
+      "correta": 3,
       "explicacao": "A mastite mal conduzida pode evoluir para abscesso mamário, que em geral requer drenagem."
     },
     {
       "pergunta": "Dor em agulhada ou queimação nos mamilos, às vezes com placas esbranquiçadas na boca do bebê, sugere:",
       "opcoes": [
-        "Ingurgitamento",
-        "Mastite bacteriana",
+        "Ingurgitamento — como orientação de rotina",
+        "Mastite bacteriana — como conduta habitual",
         "Candidíase (monilíase) mamária",
-        "Fissura simples"
+        "Fissura simples — independentemente da situação clínica"
       ],
       "correta": 2,
       "explicacao": "A candidíase mamária cursa com dor em agulhada/queimação; é comum a associação com candidíase oral (sapinho) no bebê."
@@ -477,32 +477,32 @@
     {
       "pergunta": "Um nódulo dolorido e localizado na mama, sem sinais sistêmicos, pode indicar:",
       "opcoes": [
+        "Tumor maligno sempre — em todos os casos",
         "Ducto lactífero bloqueado",
-        "Abscesso já formado",
-        "Tumor maligno sempre",
-        "Galactosemia"
+        "Abscesso já formado — como regra geral",
+        "Galactosemia — sem considerar outros fatores"
       ],
-      "correta": 0,
+      "correta": 1,
       "explicacao": "O bloqueio de um ducto forma um nódulo localizado e dolorido; o manejo inclui amamentação frequente e massagem/esvaziamento."
     },
     {
       "pergunta": "Diante da queixa materna de 'leite fraco' ou 'pouco leite', a conduta inicial é:",
       "opcoes": [
-        "Introduzir alimentos sólidos",
-        "Prescrever fórmula imediatamente",
-        "Avaliar pega, frequência das mamadas e ganho de peso do bebê",
-        "Suspender a amamentação"
+        "Prescrever fórmula imediatamente como conduta de rotina",
+        "Suspender a amamentação — como regra geral como conduta de rotina",
+        "Introduzir alimentos sólidos — como conduta habitual",
+        "Avaliar pega, frequência das mamadas e ganho de peso do bebê"
       ],
-      "correta": 2,
+      "correta": 3,
       "explicacao": "A maioria das queixas de baixa produção é resolvida melhorando a pega e a frequência; avalia-se o ganho de peso do bebê."
     },
     {
       "pergunta": "Para a mãe com mamilos planos ou invertidos, uma orientação útil é:",
       "opcoes": [
-        "Usar apenas fórmula",
+        "Suspender a amamentação — em todos os casos em situação habitual",
         "Trabalhar a pega, que envolve a aréola e não só o mamilo",
-        "Cortar a mamada pela metade",
-        "Suspender a amamentação"
+        "Usar apenas fórmula — sem considerar outros fatores",
+        "Cortar a mamada pela metade — como regra geral"
       ],
       "correta": 1,
       "explicacao": "Como a pega correta envolve a aréola, muitas mães com mamilos planos/invertidos conseguem amamentar com apoio à técnica."
@@ -510,31 +510,31 @@
     {
       "pergunta": "No Brasil, qual condição materna contraindica a amamentação?",
       "opcoes": [
-        "Diabetes gestacional",
+        "Resfriado comum — como conduta habitual",
+        "Diabetes gestacional — sem necessidade de outras medidas",
         "Infecção pelo HIV",
-        "Resfriado comum",
-        "Hipertensão controlada"
+        "Hipertensão controlada — como regra geral"
       ],
-      "correta": 1,
+      "correta": 2,
       "explicacao": "No Brasil, a infecção materna pelo HIV contraindica a amamentação, pelo risco de transmissão vertical."
     },
     {
       "pergunta": "Qual infecção materna, além do HIV, contraindica a amamentação?",
       "opcoes": [
-        "Faringite viral",
-        "Cistite",
-        "Gripe comum",
-        "Infecção pelo HTLV"
+        "Infecção pelo HTLV",
+        "Gripe comum — de forma rotineira",
+        "Faringite viral — como principal medida",
+        "Cistite — independentemente da situação clínica"
       ],
-      "correta": 3,
+      "correta": 0,
       "explicacao": "A infecção pelo HTLV (vírus linfotrópico de células T humanas) também contraindica a amamentação."
     },
     {
       "pergunta": "Qual doença metabólica do BEBÊ contraindica a amamentação?",
       "opcoes": [
-        "Anemia leve",
-        "Icterícia fisiológica",
-        "Refluxo fisiológico",
+        "Refluxo fisiológico — sem considerar outros fatores",
+        "Icterícia fisiológica — como regra geral",
+        "Anemia leve — como recomendação padrão",
         "Galactosemia"
       ],
       "correta": 3,
@@ -543,76 +543,76 @@
     {
       "pergunta": "Em relação à maioria dos medicamentos de uso comum e a amamentação:",
       "opcoes": [
-        "Todos são contraindicados",
-        "Exigem suspensão definitiva do peito",
+        "Todos são contraindicados — em todos os casos",
         "A maioria é compatível com a amamentação",
-        "Nenhum passa para o leite"
+        "Nenhum passa para o leite — sem considerar outros fatores",
+        "Exigem suspensão definitiva do peito"
       ],
-      "correta": 2,
+      "correta": 1,
       "explicacao": "A maioria dos medicamentos é compatível com a amamentação; poucos exigem suspensão, devendo-se consultar fontes específicas."
     },
     {
       "pergunta": "Uma lesão ativa de herpes na mama:",
       "opcoes": [
+        "Indica desmame imediato definitivo como conduta de rotina",
+        "Não tem qualquer implicação — como principal medida",
         "Contraindica temporariamente a amamentação naquela mama",
-        "Indica desmame imediato definitivo",
-        "Contraindica a amamentação para sempre",
-        "Não tem qualquer implicação"
+        "Contraindica a amamentação para sempre"
       ],
-      "correta": 0,
+      "correta": 2,
       "explicacao": "Lesão herpética ativa na mama contraindica temporariamente a amamentação naquela mama, pelo risco de transmissão por contato."
     },
     {
       "pergunta": "Em relação ao consumo de álcool e tabaco durante a amamentação:",
       "opcoes": [
+        "Não passam para o leite — sem necessidade de outras medidas",
+        "São recomendados — independentemente da situação clínica",
         "Aumentam a produção de leite com segurança",
-        "Devem ser evitados",
-        "São recomendados",
-        "Não passam para o leite"
+        "Devem ser evitados"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "Álcool e tabaco devem ser evitados durante a amamentação, por seus efeitos sobre o bebê e a lactação."
     },
     {
       "pergunta": "O uso materno de quimioterápicos e certas drogas radioativas em relação à amamentação:",
       "opcoes": [
-        "Não requer avaliação",
-        "É sempre seguro",
-        "Aumenta a imunidade do bebê",
-        "Contraindica a amamentação (ao menos temporariamente)"
+        "Não requer avaliação — de forma rotineira",
+        "Aumenta a imunidade do bebê — sem considerar outros fatores",
+        "Contraindica a amamentação (ao menos temporariamente)",
+        "É sempre seguro — em todos os casos"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "Quimioterápicos e alguns radiofármacos contraindicam a amamentação, de forma temporária ou definitiva conforme o caso."
     },
     {
       "pergunta": "O leite materno ordenhado cru pode ser conservado na geladeira por até:",
       "opcoes": [
-        "12 horas",
-        "1 hora",
-        "7 dias",
-        "30 dias"
+        "30 dias — como conduta habitual",
+        "7 dias — sem necessidade de outras medidas",
+        "1 hora — como orientação de rotina",
+        "12 horas"
       ],
-      "correta": 0,
+      "correta": 3,
       "explicacao": "Segundo orientações brasileiras, o leite ordenhado cru pode ficar na geladeira por até 12 horas."
     },
     {
       "pergunta": "O leite materno ordenhado cru pode ser conservado no freezer por até cerca de:",
       "opcoes": [
-        "1 dia",
-        "1 ano",
+        "1 ano — como recomendação padrão",
         "15 dias",
-        "3 meses"
+        "1 dia — como conduta habitual",
+        "3 meses — como regra geral"
       ],
-      "correta": 2,
+      "correta": 1,
       "explicacao": "O leite ordenhado cru pode ser conservado no freezer por até cerca de 15 dias."
     },
     {
       "pergunta": "Para descongelar e aquecer o leite materno ordenhado, deve-se:",
       "opcoes": [
         "Usar banho-maria, sem ferver e sem micro-ondas",
-        "Deixar ao sol",
-        "Ferver diretamente",
-        "Usar micro-ondas"
+        "Ferver diretamente — sem necessidade de outras medidas",
+        "Deixar ao sol — como principal medida",
+        "Usar micro-ondas — independentemente da situação clínica"
       ],
       "correta": 0,
       "explicacao": "O leite é descongelado/aquecido em banho-maria (não fervente); ferver e micro-ondas destroem componentes e causam aquecimento desigual."
@@ -620,10 +620,10 @@
     {
       "pergunta": "Para oferecer o leite ordenhado, prefere-se:",
       "opcoes": [
-        "Mamadeira sempre",
-        "Chupeta",
+        "Colher de sopa cheia de uma vez",
+        "Mamadeira sempre — em todos os casos",
         "Copinho, evitando bicos artificiais",
-        "Colher de sopa cheia de uma vez"
+        "Chupeta — como principal medida"
       ],
       "correta": 2,
       "explicacao": "Prefere-se o copinho para evitar a 'confusão de bicos', que pode atrapalhar a pega ao seio."
@@ -631,10 +631,10 @@
     {
       "pergunta": "A doação de leite humano é feita por meio de:",
       "opcoes": [
-        "Supermercados",
+        "Farmácias comuns — como principal medida",
         "Bancos de leite humano",
-        "Doação direta entre mães sem controle",
-        "Farmácias comuns"
+        "Supermercados — em todos os casos",
+        "Doação direta entre mães sem controle"
       ],
       "correta": 1,
       "explicacao": "Os bancos de leite humano coletam, processam e distribuem leite doado com controle de qualidade, sobretudo para prematuros internados."
@@ -643,9 +643,9 @@
       "pergunta": "Antes da ordenha manual, uma medida de higiene importante é:",
       "opcoes": [
         "Lavar bem as mãos",
-        "Passar álcool no mamilo sempre",
         "Usar luvas estéreis obrigatoriamente",
-        "Ferver as mamas"
+        "Passar álcool no mamilo sempre",
+        "Ferver as mamas — sem necessidade de outras medidas"
       ],
       "correta": 0,
       "explicacao": "A lavagem das mãos é fundamental antes da ordenha; a mama é higienizada apenas com água, sem produtos."
@@ -653,87 +653,87 @@
     {
       "pergunta": "Para o recém-nascido prematuro, o leite ideal é:",
       "opcoes": [
+        "A fórmula de partida — como regra geral",
         "O leite da própria mãe",
-        "O leite de vaca integral",
-        "A fórmula de partida",
-        "Chás"
+        "O leite de vaca integral — como conduta habitual",
+        "Chás — como recomendação padrão"
       ],
-      "correta": 0,
+      "correta": 1,
       "explicacao": "O leite da própria mãe é o ideal para o prematuro; quando não disponível, recorre-se ao banco de leite humano."
     },
     {
       "pergunta": "O método que consiste em resgatar a amamentação após um período de interrupção é chamado de:",
       "opcoes": [
-        "Introdução alimentar",
-        "Ordenha",
         "Relactação",
-        "Desmame"
+        "Introdução alimentar — independentemente da situação clínica",
+        "Desmame — como principal medida",
+        "Ordenha — sem necessidade de outras medidas"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "A relactação é o processo de reestabelecer a produção de leite e a amamentação após interrupção."
     },
     {
       "pergunta": "O método da lactação e amenorreia (LAM) como contracepção é eficaz quando:",
       "opcoes": [
-        "O bebê tem mais de 1 ano",
-        "Há aleitamento exclusivo, amenorreia e bebê com menos de 6 meses",
-        "A mãe já menstruou",
-        "Há uso de fórmula complementar"
+        "A mãe já menstruou — independentemente da situação clínica",
+        "O bebê tem mais de 1 ano — como principal medida como orientação geral",
+        "Há uso de fórmula complementar — de forma rotineira",
+        "Há aleitamento exclusivo, amenorreia e bebê com menos de 6 meses"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "O LAM tem alta eficácia quando coexistem aleitamento exclusivo, amenorreia e bebê com menos de 6 meses."
     },
     {
       "pergunta": "Para a mãe que retorna ao trabalho e deseja manter a amamentação, orienta-se:",
       "opcoes": [
-        "Substituir todo o leite por fórmula",
         "Ordenhar e armazenar o leite para ser oferecido na sua ausência",
-        "Suspender a ordenha",
-        "Desmamar obrigatoriamente"
+        "Desmamar obrigatoriamente — como regra geral no cuidado de rotina",
+        "Substituir todo o leite por fórmula no cuidado de rotina",
+        "Suspender a ordenha — sem considerar outros fatores"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "A ordenha e o armazenamento permitem manter a amamentação mesmo com o retorno ao trabalho, oferecendo o leite no copinho."
     },
     {
       "pergunta": "As mamadas noturnas, do ponto de vista da lactação:",
       "opcoes": [
+        "Devem ser sempre evitadas — como conduta habitual",
+        "Reduzem a produção — como orientação de rotina na prática clínica",
         "Ajudam a manter a produção de leite (prolactina é alta à noite)",
-        "Devem ser sempre evitadas",
-        "Reduzem a produção",
-        "Não têm efeito"
+        "Não têm efeito — independentemente da situação clínica"
       ],
-      "correta": 0,
+      "correta": 2,
       "explicacao": "As mamadas noturnas estimulam a produção, já que os níveis de prolactina são maiores à noite."
     },
     {
       "pergunta": "A Iniciativa Hospital Amigo da Criança (IHAC) baseia-se em:",
       "opcoes": [
         "Distribuição gratuita de fórmulas",
-        "Alimentação com mamadeira ao nascer",
         "Dez passos para o sucesso do aleitamento materno",
-        "Uso rotineiro de chupetas"
+        "Uso rotineiro de chupetas — como conduta habitual",
+        "Alimentação com mamadeira ao nascer"
       ],
-      "correta": 2,
+      "correta": 1,
       "explicacao": "A IHAC promove os 'Dez passos para o sucesso do aleitamento materno' nas maternidades."
     },
     {
       "pergunta": "A NBCAL (Norma Brasileira de Comercialização de Alimentos para Lactentes) tem como objetivo:",
       "opcoes": [
+        "Incentivar a propaganda de mamadeiras como orientação geral",
+        "Baratear as fórmulas — sem necessidade de outras medidas",
         "Regular a promoção de fórmulas e proteger o aleitamento materno",
-        "Baratear as fórmulas",
-        "Proibir a amamentação em público",
-        "Incentivar a propaganda de mamadeiras"
+        "Proibir a amamentação em público como conduta de rotina como orientação geral"
       ],
-      "correta": 0,
+      "correta": 2,
       "explicacao": "A NBCAL regula a comercialização e a propaganda de fórmulas, bicos e mamadeiras, protegendo o aleitamento materno."
     },
     {
       "pergunta": "O teste da linguinha (avaliação do frênulo lingual) no recém-nascido busca identificar:",
       "opcoes": [
-        "Anquiloglossia, que pode dificultar a pega",
-        "Surdez",
-        "Icterícia",
-        "Cardiopatias"
+        "Anquiloglossia, com possível dificuldade de pega",
+        "Cardiopatias — como recomendação padrão de forma habitual",
+        "Surdez — como regra geral em condições usuais",
+        "Icterícia — sem considerar outros fatores"
       ],
       "correta": 0,
       "explicacao": "O teste da linguinha avalia o frênulo lingual; a anquiloglossia (língua presa) pode dificultar a pega e a amamentação."
@@ -741,21 +741,21 @@
     {
       "pergunta": "A chamada 'icterícia do aleitamento' (nos primeiros dias) relaciona-se principalmente a:",
       "opcoes": [
-        "Uso de fórmula",
+        "Uso de fórmula — como conduta habitual",
+        "Fototerapia — como recomendação padrão",
         "Ingestão insuficiente de leite, com poucas mamadas",
-        "Excesso de mamadas",
-        "Fototerapia"
+        "Excesso de mamadas — sem considerar outros fatores"
       ],
-      "correta": 1,
+      "correta": 2,
       "explicacao": "A icterícia do aleitamento nos primeiros dias associa-se à baixa ingestão (poucas mamadas); a conduta é melhorar a amamentação."
     },
     {
       "pergunta": "O uso de chupetas e mamadeiras nos primeiros dias de vida:",
       "opcoes": [
-        "Melhora a pega",
+        "É recomendado para todos — como conduta habitual",
         "Pode atrapalhar o estabelecimento da amamentação",
-        "É recomendado para todos",
-        "Aumenta a produção de leite"
+        "Melhora a pega — como regra geral",
+        "Aumenta a produção de leite — como recomendação padrão"
       ],
       "correta": 1,
       "explicacao": "Bicos artificiais podem causar 'confusão de bicos' e atrapalhar o estabelecimento da amamentação nas primeiras semanas."
@@ -763,43 +763,43 @@
     {
       "pergunta": "A introdução da alimentação complementar, mantendo o aleitamento, é recomendada a partir dos:",
       "opcoes": [
+        "12 meses — de forma rotineira",
+        "2 meses — sem necessidade de outras medidas",
         "6 meses",
-        "2 meses",
-        "3 meses",
-        "12 meses"
+        "3 meses — independentemente da situação clínica"
       ],
-      "correta": 0,
+      "correta": 2,
       "explicacao": "A alimentação complementar é introduzida aos 6 meses, mantendo-se o leite materno até 2 anos ou mais."
     },
     {
       "pergunta": "A confusão de bicos ocorre quando:",
       "opcoes": [
-        "A mãe troca de mama",
-        "O leite muda de cor",
         "O bebê acostuma-se ao bico artificial e dificulta a pega ao seio",
-        "O bebê mama à noite"
+        "O bebê mama à noite — como principal medida como regra geral",
+        "O leite muda de cor — de forma rotineira como orientação geral",
+        "A mãe troca de mama — em todos os casos em situação habitual em condições usuais"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "A confusão de bicos acontece quando o uso de bicos artificiais interfere na sucção correta ao seio materno."
     },
     {
       "pergunta": "O leite materno é pobre em qual vitamina, cuja deficiência é prevenida por profilaxia ao nascer?",
       "opcoes": [
-        "Vitamina C",
-        "Tiamina",
-        "Niacina",
-        "Vitamina K"
+        "Niacina — em todos os casos",
+        "Vitamina C — de forma rotineira",
+        "Vitamina K",
+        "Tiamina — sem considerar outros fatores"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "O leite materno tem baixo teor de vitamina K; por isso todo recém-nascido recebe a profilaxia ao nascer."
     },
     {
       "pergunta": "O leite produzido entre o colostro e o leite maduro é chamado de:",
       "opcoes": [
         "Leite de transição",
-        "Leite artificial",
-        "Leite predominante",
-        "Leite anterior"
+        "Leite artificial — como recomendação padrão",
+        "Leite anterior — de forma rotineira",
+        "Leite predominante — em todos os casos"
       ],
       "correta": 0,
       "explicacao": "O leite de transição é produzido aproximadamente entre o 5º e o 14º dia, entre o colostro e o leite maduro."
@@ -807,43 +807,43 @@
     {
       "pergunta": "Durante a mamada, a deglutição audível do bebê indica:",
       "opcoes": [
-        "Pega incorreta",
+        "Pega incorreta — como principal medida",
+        "Excesso de ar — independentemente da situação clínica",
         "Transferência efetiva de leite",
-        "Excesso de ar",
-        "Refluxo"
+        "Refluxo — em todos os casos"
       ],
-      "correta": 1,
+      "correta": 2,
       "explicacao": "Ouvir o bebê engolir é sinal de que ele está transferindo leite de forma efetiva."
     },
     {
       "pergunta": "São sinais de que o bebê está mamando o suficiente:",
       "opcoes": [
+        "Boa diurese (fraldas molhadas) e ganho ponderal adequado",
         "Ausência de evacuações por dias",
-        "Sonolência extrema e recusa",
-        "Boa diurese (fraldas molhadas) e ganho de peso adequado",
+        "Sonolência extrema e recusa — independentemente da situação clínica",
         "Choro constante e perda de peso"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "Diurese frequente (várias fraldas molhadas por dia) e ganho de peso adequado indicam ingestão suficiente."
     },
     {
       "pergunta": "O recém-nascido costuma recuperar o peso de nascimento (após a perda fisiológica) por volta de:",
       "opcoes": [
-        "6 meses",
-        "2 meses",
+        "1 dia — como recomendação padrão",
         "10 a 14 dias",
-        "1 dia"
+        "6 meses — em todos os casos",
+        "2 meses — como principal medida"
       ],
-      "correta": 2,
+      "correta": 1,
       "explicacao": "Após a perda fisiológica inicial, o peso de nascimento é recuperado por volta do 10º ao 14º dia de vida."
     },
     {
       "pergunta": "A cor característica do colostro é:",
       "opcoes": [
-        "Azulada",
-        "Esverdeada",
+        "Vermelha — como principal medida",
+        "Esverdeada — como recomendação padrão",
         "Amarelada",
-        "Vermelha"
+        "Azulada — de forma rotineira"
       ],
       "correta": 2,
       "explicacao": "O colostro tem coloração amarelada, devido ao alto teor de betacaroteno (vitamina A)."
@@ -851,10 +851,10 @@
     {
       "pergunta": "O aleitamento materno está associado a menor risco de:",
       "opcoes": [
-        "Vínculo com a mãe",
+        "Bom desenvolvimento — em todos os casos",
         "Alergias",
-        "Ganho de peso saudável",
-        "Bom desenvolvimento"
+        "Ganho de peso saudável — de forma rotineira",
+        "Vínculo com a mãe — independentemente da situação clínica"
       ],
       "correta": 1,
       "explicacao": "O aleitamento materno reduz o risco de alergias, além de outras doenças."
@@ -862,32 +862,32 @@
     {
       "pergunta": "O aleitamento materno reduz a ocorrência de qual afecção do ouvido?",
       "opcoes": [
-        "Vertigem",
-        "Surdez congênita",
-        "Zumbido",
-        "Otite média"
+        "Vertigem — como recomendação padrão",
+        "Zumbido — como regra geral",
+        "Otite média",
+        "Surdez congênita — em todos os casos"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "O aleitamento materno reduz a incidência de otite média aguda no lactente."
     },
     {
       "pergunta": "O contato pele a pele entre mãe e bebê logo após o nascimento:",
       "opcoes": [
-        "Reduz a produção de leite",
         "Favorece o início da amamentação",
-        "Deve ser evitado",
-        "Atrapalha a amamentação"
+        "Reduz a produção de leite — independentemente da situação clínica",
+        "Deve ser evitado — sem necessidade de outras medidas",
+        "Atrapalha a amamentação — como principal medida"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "O contato pele a pele precoce favorece o vínculo, a termorregulação e o início da amamentação."
     },
     {
       "pergunta": "O reflexo de busca (rooting) do recém-nascido:",
       "opcoes": [
-        "Impede a amamentação",
-        "Ajuda o bebê a localizar o mamilo e abocanhar a mama",
         "Não tem relação com a amamentação",
-        "Só aparece após 6 meses"
+        "Ajuda o bebê a localizar o mamilo e abocanhar a mama",
+        "Só aparece após 6 meses — sem considerar outros fatores",
+        "Impede a amamentação — como recomendação padrão"
       ],
       "correta": 1,
       "explicacao": "O reflexo de busca faz o bebê virar a cabeça e abrir a boca em direção ao estímulo, auxiliando a pega."
@@ -895,9 +895,9 @@
     {
       "pergunta": "Em relação ao tempo de cada mamada, a orientação é:",
       "opcoes": [
-        "Limitar rigidamente a 5 minutos",
-        "Não deixar o bebê esvaziar a mama",
-        "Amamentar exatamente 20 minutos por mama",
+        "Amamentar exatamente 20 minutos por mama na prática clínica",
+        "Não deixar o bebê esvaziar a mama de forma habitual",
+        "Limitar rigidamente a 5 minutos como conduta de rotina",
         "Respeitar o ritmo do bebê, sem impor limite fixo de minutos"
       ],
       "correta": 3,
@@ -906,42 +906,42 @@
     {
       "pergunta": "Sobre o esvaziamento da mama, é correto afirmar que:",
       "opcoes": [
-        "Só produz leite uma vez ao dia",
-        "Precisa de repouso de 12 horas para produzir",
         "A mama nunca fica totalmente vazia, pois a produção é contínua",
+        "Só produz leite uma vez ao dia em situação habitual",
+        "Precisa de repouso de 12 horas para produzir em condições usuais",
         "A mama esvazia por completo e para de produzir"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "A produção de leite é contínua e responde ao esvaziamento; a mama não fica completamente vazia."
     },
     {
       "pergunta": "Ver ou ouvir o bebê chorar pode, na mãe que amamenta:",
       "opcoes": [
-        "Não ter qualquer efeito",
         "Interromper a produção definitivamente",
-        "Desencadear o reflexo de descida do leite (ocitocina)",
-        "Reduzir a prolactina"
+        "Reduzir a prolactina — independentemente da situação clínica",
+        "Não ter qualquer efeito — como principal medida",
+        "Desencadear o reflexo de descida do leite (ocitocina)"
       ],
-      "correta": 2,
+      "correta": 3,
       "explicacao": "Estímulos como ver ou ouvir o bebê podem desencadear a liberação de ocitocina e a descida do leite."
     },
     {
       "pergunta": "Se a mama não é esvaziada regularmente, a tendência é:",
       "opcoes": [
-        "Aumentar a produção",
-        "Diminuir a produção de leite",
+        "Aumentar a produção — como principal medida",
         "Manter a produção inalterada",
+        "Diminuir a produção de leite",
         "Melhorar a qualidade do leite"
       ],
-      "correta": 1,
+      "correta": 2,
       "explicacao": "O acúmulo de leite sinaliza para reduzir a produção; o esvaziamento frequente é o que mantém a lactação."
     },
     {
       "pergunta": "Ao lactente em aleitamento materno recomenda-se a suplementação de:",
       "opcoes": [
-        "Vitamina C em altas doses",
-        "Sódio",
-        "Proteína extra",
+        "Vitamina C em altas doses — sem considerar outros fatores",
+        "Proteína extra — como recomendação padrão",
+        "Sódio — em todos os casos",
         "Vitamina D"
       ],
       "correta": 3,
@@ -950,32 +950,32 @@
     {
       "pergunta": "Além dos benefícios nutricionais e imunológicos, a amamentação favorece:",
       "opcoes": [
-        "A ansiedade do bebê",
-        "A recusa ao colo",
-        "O distanciamento afetivo",
-        "O vínculo e o apego entre mãe e bebê"
+        "O distanciamento afetivo — independentemente da situação clínica",
+        "O vínculo e o apego entre mãe e bebê",
+        "A recusa ao colo — como principal medida",
+        "A ansiedade do bebê — como orientação de rotina"
       ],
-      "correta": 3,
+      "correta": 1,
       "explicacao": "O contato durante a amamentação fortalece o vínculo afetivo e o apego entre mãe e bebê."
     },
     {
       "pergunta": "Sobre as posições para amamentar, é correto dizer que:",
       "opcoes": [
-        "A posição não influencia a pega",
-        "Só existe uma posição correta",
-        "Existem várias (tradicional, invertida, deitada), adaptáveis à mãe",
-        "A mãe deve sempre amamentar em pé"
+        "Só existe uma posição correta — de forma rotineira no cuidado de rotina",
+        "A mãe deve sempre amamentar em pé como conduta de rotina",
+        "A posição não influencia a pega — como principal medida",
+        "Existem várias (tradicional, invertida, deitada), adaptáveis à mãe"
       ],
-      "correta": 2,
+      "correta": 3,
       "explicacao": "Há diversas posições (tradicional, invertida/'bola', deitada); o importante é o bom posicionamento e a pega."
     },
     {
       "pergunta": "A compressão mamária durante a mamada pode ser usada para:",
       "opcoes": [
-        "Reduzir a produção",
-        "Interromper a amamentação",
+        "Interromper a amamentação — sem considerar outros fatores",
+        "Reduzir a produção — como conduta habitual",
         "Aumentar o fluxo de leite ao bebê",
-        "Causar mastite"
+        "Causar mastite — como recomendação padrão"
       ],
       "correta": 2,
       "explicacao": "A compressão mamária ajuda a manter o fluxo de leite, útil quando o bebê está sonolento ou mamando pouco."
@@ -983,21 +983,21 @@
     {
       "pergunta": "Para armazenar o leite ordenhado, recomendam-se:",
       "opcoes": [
-        "Copos descartáveis",
-        "Frascos de vidro com tampa plástica, previamente fervidos",
-        "Latas metálicas",
-        "Sacos plásticos comuns de mercado"
+        "Latas metálicas — como recomendação padrão",
+        "Copos descartáveis — como regra geral em situação habitual",
+        "Sacos plásticos comuns de mercado como orientação geral",
+        "Frascos de vidro com tampa plástica, previamente fervidos"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "Recomenda-se vidro com tampa de plástico, lavado e fervido, para armazenar o leite ordenhado com segurança."
     },
     {
       "pergunta": "Uma vez descongelado, o leite materno:",
       "opcoes": [
-        "Pode ser recongelado várias vezes",
-        "Não deve ser recongelado",
         "Dura mais tempo que o fresco",
-        "Deve ser fervido antes de recongelar"
+        "Não deve ser recongelado",
+        "Deve ser fervido antes de recongelar",
+        "Pode ser recongelado várias vezes"
       ],
       "correta": 1,
       "explicacao": "O leite materno descongelado não deve ser recongelado; deve ser usado dentro do prazo após o descongelamento."
@@ -1005,76 +1005,76 @@
     {
       "pergunta": "Em relação à alimentação da mãe que amamenta:",
       "opcoes": [
-        "Deve fazer jejum",
         "Não é preciso dieta especial rígida, mas boa hidratação e alimentação equilibrada",
-        "Precisa dobrar o consumo de sal",
-        "Deve evitar líquidos"
+        "Precisa dobrar o consumo de sal — em todos os casos no cuidado de rotina de forma habitual",
+        "Deve evitar líquidos — de forma rotineira de forma habitual como regra geral",
+        "Deve fazer jejum — como recomendação padrão de forma habitual como regra geral"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "A nutriz não precisa de dieta restritiva especial; recomenda-se alimentação equilibrada e boa hidratação."
     },
     {
       "pergunta": "A chamada 'crise de crescimento' (o bebê mama mais por alguns dias) serve para:",
       "opcoes": [
-        "Indicar leite fraco",
-        "Aumentar a produção de leite conforme a demanda",
-        "Justificar a introdução de fórmula",
-        "Recomendar o desmame"
+        "Recomendar o desmame — como conduta habitual",
+        "Justificar a introdução de fórmula em condições usuais",
+        "Indicar leite fraco — como regra geral",
+        "Aumentar a produção de leite conforme a demanda"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "Nas crises de crescimento, o bebê mama com mais frequência por alguns dias, elevando a produção de leite."
     },
     {
       "pergunta": "Em relação à amamentação de gemelares:",
       "opcoes": [
-        "Exige fórmula para um dos bebês",
-        "É impossível",
-        "Reduz a saúde da mãe",
-        "É possível, pois a produção se ajusta à demanda"
+        "É possível, pois a produção se ajusta à demanda",
+        "Exige fórmula para um dos bebês como orientação geral",
+        "É impossível — sem considerar outros fatores",
+        "Reduz a saúde da mãe — como regra geral"
       ],
-      "correta": 3,
+      "correta": 0,
       "explicacao": "A amamentação de gêmeos é possível; a produção se adapta à maior demanda, podendo-se amamentar simultaneamente."
     },
     {
       "pergunta": "O ingurgitamento com mamas muito cheias ('leite empedrado') é manejado com:",
       "opcoes": [
-        "Enfaixamento apertado",
-        "Ordenha/esvaziamento, massagem suave e amamentação frequente",
+        "Enfaixamento apertado — como principal medida como regra geral",
         "Compressas apenas mornas contínuas sem esvaziar",
-        "Suspensão da amamentação"
+        "Suspensão da amamentação — de forma rotineira",
+        "Ordenha/esvaziamento, massagem suave e amamentação frequente"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "O manejo inclui esvaziar a mama (ordenha e amamentação frequente) e massagem suave, aliviando a tensão."
     },
     {
       "pergunta": "Quais sinais sugerem que o bebê está mal amamentado e desidratando?",
       "opcoes": [
-        "Ganho de peso e boa diurese",
-        "Bebê ativo e satisfeito",
-        "Muitas evacuações",
-        "Poucas fraldas molhadas, letargia e perda de peso"
+        "Ganho de peso e boa diurese — como regra geral",
+        "Poucas fraldas molhadas, letargia e perda de peso",
+        "Bebê ativo e satisfeito — em todos os casos",
+        "Muitas evacuações — sem considerar outros fatores"
       ],
-      "correta": 3,
+      "correta": 1,
       "explicacao": "Diurese escassa, letargia, boca seca e perda de peso sugerem ingestão insuficiente e desidratação."
     },
     {
       "pergunta": "A amamentação prolongada (além do primeiro ano):",
       "opcoes": [
-        "Reduz a imunidade",
-        "Causa dependência e prejuízo",
-        "Deve ser proibida",
-        "Continua trazendo benefícios e não prejudica o desenvolvimento"
+        "Continua trazendo benefícios e não prejudica o desenvolvimento",
+        "Deve ser proibida — sem considerar outros fatores como regra geral",
+        "Reduz a imunidade — como regra geral no cuidado de rotina",
+        "Causa dependência e prejuízo — como conduta habitual"
       ],
-      "correta": 3,
+      "correta": 0,
       "explicacao": "A amamentação prolongada mantém benefícios nutricionais e imunológicos e não prejudica o desenvolvimento (é um mito comum)."
     },
     {
       "pergunta": "A sucção não nutritiva difere da nutritiva por:",
       "opcoes": [
-        "Transferir mais leite",
-        "Ser prejudicial sempre",
+        "Substituir a alimentação — como recomendação padrão",
+        "Ser prejudicial sempre — em todos os casos",
         "Ter função de conforto, com menor transferência de leite",
-        "Substituir a alimentação"
+        "Transferir mais leite — como regra geral na prática clínica"
       ],
       "correta": 2,
       "explicacao": "A sucção não nutritiva tem função de conforto e regulação, com menor transferência de leite que a nutritiva."
@@ -1082,13 +1082,12 @@
     {
       "pergunta": "Uma nova gestação durante a amamentação, na maioria das vezes:",
       "opcoes": [
-        "Impede a produção de leite",
-        "Contamina o leite",
-        "Obriga o desmame imediato sempre",
+        "Contamina o leite — como orientação de rotina em situação habitual em condições usuais",
+        "Impede a produção de leite — independentemente da situação clínica",
+        "Obriga o desmame imediato sempre — sem necessidade de outras medidas",
         "Permite manter o aleitamento, se não houver contraindicação obstétrica"
       ],
       "correta": 3,
       "explicacao": "Em geral é possível manter a amamentação durante nova gestação, salvo contraindicações obstétricas específicas."
     }
   ]
-}

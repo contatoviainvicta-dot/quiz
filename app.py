@@ -54,11 +54,13 @@ st.markdown(
     /* Tipografia global */
     .stApp, .stApp p, .stApp li, .stApp label, .stApp span,
     .stApp div, .stMarkdown {
-      font-family:'Nunito Sans', system-ui, sans-serif;
+      font-family:'Nunito Sans', system-ui, 'Segoe UI Emoji',
+        'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
     }
     .stApp h1, .stApp h2, .stApp h3, .cabecalho, .kpi .valor,
     .patente .nome, .carta-reveal .nome {
-      font-family:'Baloo 2', system-ui, sans-serif; letter-spacing:.2px;
+      font-family:'Baloo 2', system-ui, 'Segoe UI Emoji',
+        'Apple Color Emoji', 'Noto Color Emoji', sans-serif; letter-spacing:.2px;
     }
     .stApp code, .stApp pre { font-family:ui-monospace, monospace; }
 
@@ -97,10 +99,7 @@ st.markdown(
 
     /* Hero */
     .cabecalho { font-size:2.35rem; font-weight:800; letter-spacing:-.5px;
-                 line-height:1.08; margin-bottom:.1rem;
-                 background:linear-gradient(90deg,var(--teal),#13A6AC);
-                 -webkit-background-clip:text; background-clip:text;
-                 -webkit-text-fill-color:transparent; }
+                 line-height:1.08; margin-bottom:.1rem; color:var(--teal); }
     .subtitulo { color:var(--cinza); margin-top:0; margin-bottom:1.1rem;
                  font-size:.95rem; }
     .tag { display:inline-block; background:#EAF3F3; color:#0E8388;
@@ -186,15 +185,39 @@ st.markdown(
     .patente.atual { background:#EAF3F3; border:2px solid #0E8388; }
     .patente.bloq { opacity:.5; }
 
+    /* Cartão de status da carreira */
+    .status { border-radius:18px; overflow:hidden; background:#fff;
+      border:1px solid var(--menta-borda);
+      box-shadow:0 6px 22px rgba(14,131,136,.10); margin-bottom:1rem; }
+    .status-cab { background:linear-gradient(135deg,#0E8388,#0A6A6E);
+      color:#fff; padding:14px 16px; display:flex; align-items:center;
+      justify-content:space-between; gap:10px; }
+    .status-user .nome { font-family:'Baloo 2',system-ui,sans-serif;
+      font-weight:800; font-size:1.2rem; line-height:1; }
+    .status-user .patente { font-size:.8rem; opacity:.92; margin-top:3px; }
+    .status-moedas { background:rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.4); color:#fff; font-weight:800;
+      padding:6px 13px; border-radius:999px; font-size:1.05rem;
+      white-space:nowrap; }
+    .status-corpo { padding:13px 16px 15px; }
+    .status-xp-linha { display:flex; justify-content:space-between;
+      font-size:.86rem; font-weight:700; color:var(--tinta); }
+    .status-xp-linha .nivel { color:var(--teal); }
+    .status .barra { height:10px; margin-top:5px; }
+    .status-prox { color:var(--cinza); font-size:.72rem; margin-top:5px; }
+    .status-chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:11px; }
+    .status-chip { background:var(--menta); border:1px solid var(--menta-borda);
+      color:var(--tinta); font-weight:700; font-size:.78rem; padding:5px 11px;
+      border-radius:999px; }
+    .status-chip.fogo { background:#FFF1E8; border-color:#F6D3BE;
+      color:#B5541F; }
+
     /* Micro-interações e refinos */
     .kpi, .medalha, .carta, .patente {
       transition:transform .08s ease, box-shadow .15s ease; }
     .kpi:hover, .medalha:hover, .patente:hover, .carta:hover {
       transform:translateY(-1px); box-shadow:0 5px 16px rgba(14,131,136,.12); }
     .barra > span { background:linear-gradient(90deg,#0E8388,#13A6AC); }
-    .kpi .valor { background:linear-gradient(90deg,#0E8388,#13A6AC);
-      -webkit-background-clip:text; background-clip:text;
-      -webkit-text-fill-color:transparent; }
     .patente.atual { box-shadow:0 4px 16px rgba(14,131,136,.16); }
     </style>
     """,
@@ -1513,8 +1536,44 @@ def render_carreira(perfil) -> None:
     )
 
 
-barra_xp()
-bloco_ofensiva()
+def render_status(perfil) -> None:
+    """Cartão de status: identidade + patente + moedas + nível/XP + ofensiva."""
+    nome = st.session_state.identificador
+    xp = perfil.xp_total
+    nivel, xp_no_nivel, xp_prox = gam.nivel_por_xp(xp)
+    patente = progressao.patente_atual(xp)
+    ofensiva = gam.ofensiva_atual(perfil, HOJE)
+    concluiu = HOJE in perfil.dias_estudados
+    feito = perfil.respondidas_no_dia if perfil.data_corrente == HOJE else 0
+    pct = int(round(100 * xp_no_nivel / xp_prox)) if xp_prox else 0
+    falta = xp_prox - xp_no_nivel
+    melhor = f" · melhor {perfil.melhor_ofensiva}" if perfil.melhor_ofensiva else ""
+    meta = (
+        "meta de hoje concluída ✓" if concluiu
+        else f"meta hoje {min(feito, gam.META_DIARIA)}/{gam.META_DIARIA}"
+    )
+    st.markdown(
+        f'<div class="status">'
+        f'<div class="status-cab">'
+        f'<div class="status-user"><div class="nome">{nome}</div>'
+        f'<div class="patente">{patente["emoji"]} {patente["nome"]}</div></div>'
+        f'<div class="status-moedas">🪙 {perfil.moedas}</div></div>'
+        f'<div class="status-corpo">'
+        f'<div class="status-xp-linha"><span class="nivel">Nível {nivel}</span>'
+        f'<span>{xp_no_nivel} / {xp_prox} XP</span></div>'
+        f'<div class="barra"><span style="width:{pct}%"></span></div>'
+        f'<div class="status-prox">faltam {falta} XP para o nível {nivel + 1}</div>'
+        f'<div class="status-chips">'
+        f'<div class="status-chip fogo">🔥 {ofensiva} dia(s){melhor}</div>'
+        f'<div class="status-chip">🎯 {meta}</div>'
+        f'</div></div></div>',
+        unsafe_allow_html=True,
+    )
+
+
+render_status(st.session_state.perfil)
+with st.expander("📅 Calendário do mês"):
+    _render_calendario(st.session_state.perfil)
 st.divider()
 
 
